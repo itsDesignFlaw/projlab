@@ -1,0 +1,12 @@
+'Test file
+'For UML diagram
+@startuml Test
+scale 2
+title Sima page
+alice->bob:hello
+alice->bob:yes
+bob->alice:no
+clare->bob:bye
+clare->bob:bye3
+alice->clare:hi bitch
+@enduml
