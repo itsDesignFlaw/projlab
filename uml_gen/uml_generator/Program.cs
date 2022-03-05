@@ -4,46 +4,77 @@
 namespace CatchThemAll
 {
 
-    public interface iSteppable { 
-        void Step(double curTime) { return; } 
+    public interface iSteppable
+    {
+        void Step(double curTime);
     }
-    public class Virologist : iSteppable {
+    public class Virologist : iSteppable
+    {
         List<InvItem> items = new List<InvItem>();
-        List<GeneticCode> learntCodes = new List<GeneticCode>(); 
+        List<GeneticCode> learntCodes = new List<GeneticCode>();
 
         //Amin áll
         Field mezo;
         private Resource resource;
         private System.Collections.Generic.List<Equipment> equipments;
 
-        void MoveTo(Field targetField) {  }
+        public void MoveTo(Field targetField)
+        { }
 
         public void AddResource(Resource resource)
         {
             throw new System.NotImplementedException();
         }
+
+        public void Step(double curTime)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void CraftAgent(GeneticCode code)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void ApplyAgent(Agent agent, Virologist source)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void UseAgent(Agent agent, Virologist target)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void InteractWithMap()
+        {
+            throw new System.NotImplementedException();
+        }
     }
-    public class Map { List<Field> fields = new List<Field>();
+    public class Map
+    {
+        List<Field> fields = new List<Field>();
 
         public void GenerateMap()
         {
             throw new System.NotImplementedException();
         }
     }
-    public class Field 
+    public class Field
     {
         List<Virologist> virologists;
-        public virtual bool AcceptViro(Virologist v) { return false; }
+        public void AcceptViro(Virologist v) { }
+        public virtual bool Interact(Virologist v) { return false; }
         public virtual bool RemoveViro(Virologist v) { return false; }
     }
     public class FieldLab : Field
     {
-        private GeneticCode code; public override bool AcceptViro(Virologist v) { return true; }
+        private GeneticCode code; public override bool Interact(Virologist v) { return true; }
     }
-    public class FieldBunker : Field { private Resource resources; public override bool AcceptViro(Virologist v) { return true; } }
+    public class FieldBunker : Field { private Resource resources; public override bool Interact(Virologist v) { return true; } }
     public class FieldWarehouse : Field
     {
-        private Equipment equipment; public override bool AcceptViro(Virologist v) { return true; }
+        private Equipment equipment; public override bool Interact(Virologist v) { return true; }
     }
     public abstract class InvItem
     {
@@ -51,7 +82,7 @@ namespace CatchThemAll
         {
             throw new System.NotImplementedException();
         }
-        public virtual bool CanAgentBeApplied()
+        public virtual bool CanAgentBeApplied(Agent agent, Virologist source)
         {
             throw new System.NotImplementedException();
         }
@@ -59,7 +90,7 @@ namespace CatchThemAll
         {
             throw new System.NotImplementedException();
         }
-        public virtual bool Move(Virologist v)
+        public virtual bool CanMove(Virologist v)
         {
             throw new System.NotImplementedException();
         }
@@ -95,14 +126,14 @@ namespace CatchThemAll
     }
     public class EquipmentGloves : Equipment
     {
-        public override bool CanAgentBeApplied()
+        public override bool CanAgentBeApplied(Agent agent, Virologist source)
         {
             throw new System.NotImplementedException();
         }
     }
     public class EquipmentCoat : Equipment
     {
-        public override bool CanAgentBeApplied()
+        public override bool CanAgentBeApplied(Agent agent, Virologist source)
         {
             throw new System.NotImplementedException();
         }
@@ -136,22 +167,32 @@ namespace CatchThemAll
     }
     public abstract class Agent : InvItem, iSteppable
     {
+        int activeTime;
         public void Apply(Virologist target)
         {
             throw new System.NotImplementedException();
+        }
+
+        public void Step(double curTime)
+        {
+            throw new NotImplementedException();
         }
     }
 
     //manager classes
 
-    public class Timer { List<iSteppable> steppable_reg = new List<iSteppable>();
+    public class Timer
+    {
+        List<iSteppable> steppable_reg = new List<iSteppable>();
 
         public void Step()
         {
             throw new System.NotImplementedException();
         }
     }
-    public class GameManager { Map gameMap = new Map();
+    public class GameManager
+    {
+        Map gameMap = new Map();
 
         internal Map Map
         {
@@ -161,7 +202,7 @@ namespace CatchThemAll
             }
         }
 
-        void startGame() { } 
+        void startGame() { }
     }
 
     public class Resource
@@ -177,29 +218,30 @@ namespace CatchThemAll
         {
             throw new System.NotImplementedException();
         }
-            /*public void AddAmi(int ami)
-            {
-                throw new System.NotImplementedException();
-            }
-
-            public void RemoveAmi(int ami)
-            {
-                throw new System.NotImplementedException();
-            }
-            public void AddNuki(int nuki)
-            {
-                throw new System.NotImplementedException();
-            }
-
-            public void RemoveNuki(int nuki)
-            {
-                throw new System.NotImplementedException();
-            }*/
+        /*public void AddAmi(int ami)
+        {
+            throw new System.NotImplementedException();
         }
+
+        public void RemoveAmi(int ami)
+        {
+            throw new System.NotImplementedException();
+        }
+        public void AddNuki(int nuki)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void RemoveNuki(int nuki)
+        {
+            throw new System.NotImplementedException();
+        }*/
+    }
 
     public class Dance : Agent
     {
-        public override bool Move(Virologist v)
+        //Vagy tudja kire van rákenve, akkor nem kell átadni Virologist-ot
+        public override bool CanMove(Virologist v)
         {
             throw new System.NotImplementedException();
         }
@@ -215,7 +257,7 @@ namespace CatchThemAll
 
     public class Paralyze : Agent
     {
-        public override bool Move(Virologist v)
+        public override bool CanMove(Virologist v)
         {
             throw new System.NotImplementedException();
         }
@@ -237,7 +279,7 @@ namespace CatchThemAll
 
     public class Protect : Agent
     {
-        public override bool Move(Virologist v)
+        public override bool CanMove(Virologist v)
         {
             throw new System.NotImplementedException();
         }
