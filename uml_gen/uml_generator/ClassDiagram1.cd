@@ -4,8 +4,8 @@
     <Position X="21.25" Y="1.75" Width="3.5" />
     <AssociationLine Name="learntCodes" Type="CatchThemAll.GeneticCode" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="21.25" Y="5.72" />
-        <Point X="19.389" Y="5.72" />
+        <Point X="21.25" Y="6.097" />
+        <Point X="19.389" Y="6.097" />
         <Point X="19.389" Y="4.421" />
         <Point X="16.833" Y="4.421" Type="JumpStart" />
         <Point X="16.667" Y="4.421" Type="JumpEnd" />
@@ -14,7 +14,7 @@
     </AssociationLine>
     <AssociationLine Name="equipments" Type="CatchThemAll.Equipment" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="23.159" Y="5.805" />
+        <Point X="23.159" Y="6.19" />
         <Point X="23.159" Y="9.838" />
         <Point X="14.083" Y="9.838" Type="JumpStart" />
         <Point X="13.917" Y="9.838" Type="JumpEnd" />
@@ -24,18 +24,18 @@
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>CAAGAAABBAAAACAAAAgAAAAAgAMIoAAEIAIAAAQAAAQ=</HashCode>
+      <HashCode>AAAGAAABBAAAACAAAAgAAAAAgAcIoAAkIAIgAAQAAAQ=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
+      <Field Name="items" />
       <Field Name="learntCodes" />
       <Field Name="equipments" />
-      <Field Name="items" />
     </ShowAsCollectionAssociation>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="CatchThemAll.Map">
-    <Position X="15.5" Y="1" Width="1.75" />
+    <Position X="15.75" Y="0.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AACAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
@@ -60,8 +60,8 @@
       <Path>
         <Point X="17.438" Y="6.733" />
         <Point X="17.438" Y="6.816" />
-        <Point X="12.302" Y="6.816" Type="JumpStart" />
-        <Point X="12.135" Y="6.816" Type="JumpEnd" />
+        <Point X="12.271" Y="6.816" Type="JumpStart" />
+        <Point X="12.104" Y="6.816" Type="JumpEnd" />
         <Point X="11.625" Y="6.816" />
         <Point X="11.625" Y="4.738" />
       </Path>
