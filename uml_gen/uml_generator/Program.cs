@@ -35,12 +35,12 @@ namespace CatchThemAll
         {
             throw new System.NotImplementedException();
         }
-
+        //When somebody uses an agent on you
         public void ApplyAgent(Agent agent, Virologist source)
         {
             throw new System.NotImplementedException();
         }
-
+        //When you want to apply an agent on somebody
         public void UseAgent(Agent agent, Virologist target)
         {
             throw new System.NotImplementedException();
