@@ -21,6 +21,8 @@ namespace CatchThemAll
         public void MoveTo(Field targetField)
         { }
 
+
+        //Összeadja az items listán a GetMaxResource értékét, majd hozzáaadja az alap értéket
         public void AddResource(Resource resource)
         {
             throw new System.NotImplementedException();
@@ -31,7 +33,12 @@ namespace CatchThemAll
             throw new NotImplementedException();
         }
 
-        public void CraftAgent(GeneticCode code)
+        //Craftol egy vírust
+        public void CraftVirus(GeneticCode code)
+        {
+            throw new System.NotImplementedException();
+        }
+        public void CraftVaccine(GeneticCode code)
         {
             throw new System.NotImplementedException();
         }
@@ -46,16 +53,19 @@ namespace CatchThemAll
             throw new System.NotImplementedException();
         }
 
+        //Felszedi a mezőn lévő cuccokat, azaz meghívja az Interact fv-ét
         public void InteractWithMap()
         {
             throw new System.NotImplementedException();
         }
 
-        public void StealFromViro(Virologist target)
+        //A target-tól ellopja az equipment-et
+        public void StealFromViro(Virologist target, Equipment equipment)
         {
             throw new System.NotImplementedException();
         }
 
+        //Eltávolítja a virológustól az equipment-et
         public void RemoveEquipment(Equipment equipment)
         {
             throw new System.NotImplementedException();
@@ -66,7 +76,13 @@ namespace CatchThemAll
             throw new System.NotImplementedException();
         }
 
+        //Elveszi a item-et
         public void RemoveItem(InvItem item)
+        {
+            throw new System.NotImplementedException();
+        }
+        //Hozzáadja a item-et
+        public void AddItem(InvItem item)
         {
             throw new System.NotImplementedException();
         }
@@ -162,13 +178,7 @@ namespace CatchThemAll
     {
         private Resource cost;
 
-        public Agent agent
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        private Agent agent;
 
         public Agent CreateVirus()
         {
@@ -214,15 +224,10 @@ namespace CatchThemAll
     {
         Map gameMap = new Map();
 
-        internal Map Map
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        Map Map;
 
-        void startGame() { }
+        public void StartGame() { }
+        public void EndGame() { }
     }
 
     public class Resource
