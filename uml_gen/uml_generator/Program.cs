@@ -25,7 +25,9 @@ namespace CatchThemAll
         List<DeployedVaccine> vaccines = new List<DeployedVaccine>();
         List<DeployedVirus> viruses = new List<DeployedVirus>();
 
-        internal iSteppable iSteppable
+        //Amin áll
+        Field mezo;
+        /*iSteppable iSteppable
         {
             get => default;
             set
@@ -33,13 +35,13 @@ namespace CatchThemAll
             }
         }
 
-        internal Map Map
+        Map Map
         {
             get => default;
             set
             {
             }
-        }
+        }*/
 
         bool hasItem(string item) { return false; }
         bool canMoveTo(Field targetField) { return false; }
