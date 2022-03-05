@@ -50,6 +50,21 @@ namespace CatchThemAll
         {
             throw new System.NotImplementedException();
         }
+
+        public void StealFromViro(Virologist target)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void RemoveEquipment(Equipment equipment)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void AddEquipment(Equipment equipment)
+        {
+            throw new System.NotImplementedException();
+        }
     }
     public class Map
     {

@@ -4,8 +4,10 @@
     <Position X="21.25" Y="1.75" Width="3.25" />
     <AssociationLine Name="learntCodes" Type="CatchThemAll.GeneticCode" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="21.25" Y="4.779" />
-        <Point X="19.389" Y="4.779" />
+        <Point X="21.25" Y="5.343" />
+        <Point X="19.958" Y="5.343" Type="JumpStart" />
+        <Point X="19.792" Y="5.343" Type="JumpEnd" />
+        <Point X="19.389" Y="5.343" />
         <Point X="19.389" Y="4.421" />
         <Point X="16.833" Y="4.421" Type="JumpStart" />
         <Point X="16.667" Y="4.421" Type="JumpEnd" />
@@ -14,7 +16,7 @@
     </AssociationLine>
     <AssociationLine Name="equipments" Type="CatchThemAll.Equipment" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="23.023" Y="4.844" />
+        <Point X="23.023" Y="5.42" />
         <Point X="23.023" Y="9.838" />
         <Point X="11.536" Y="9.838" />
         <Point X="11.536" Y="8.938" />
@@ -22,7 +24,7 @@
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAACAAABAAAAACAAAAgAAAAAAgMIAAAAIAIAAAQAAAQ=</HashCode>
+      <HashCode>CAAGAAABAAAAACAAAAgAAAAAAgMIIAAAIAIAAAQAAAQ=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
