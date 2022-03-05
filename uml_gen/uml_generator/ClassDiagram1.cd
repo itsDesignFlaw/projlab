@@ -24,12 +24,13 @@
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>CAAGAAABAAAAACAAAAgAAAAAAgMIIAAAIAIAAAQAAAQ=</HashCode>
+      <HashCode>CAAGAAABAAAAACAAAAgAAAAAAgMIIAAEIAIAAAQAAAQ=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
       <Field Name="learntCodes" />
       <Field Name="equipments" />
+      <Field Name="items" />
     </ShowAsCollectionAssociation>
     <Lollipop Position="0.2" />
   </Class>
@@ -138,10 +139,10 @@
       <Path>
         <Point X="10.75" Y="3.966" />
         <Point X="10.375" Y="3.966" />
-        <Point X="10.375" Y="5.421" />
-        <Point X="10.333" Y="5.421" Type="JumpStart" />
-        <Point X="10.167" Y="5.421" Type="JumpEnd" />
-        <Point X="8.25" Y="5.421" />
+        <Point X="10.375" Y="5.171" />
+        <Point X="10.333" Y="5.171" Type="JumpStart" />
+        <Point X="10.167" Y="5.171" Type="JumpEnd" />
+        <Point X="7.25" Y="5.171" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
@@ -154,7 +155,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="CatchThemAll.Agent">
-    <Position X="6" Y="4" Width="2.25" />
+    <Position X="5" Y="3.75" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAABIAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
@@ -189,28 +190,28 @@
     </TypeIdentifier>
   </Class>
   <Class Name="CatchThemAll.Dance">
-    <Position X="0.5" Y="6" Width="2" />
+    <Position X="0.5" Y="3.25" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="CatchThemAll.Protect">
-    <Position X="2.75" Y="6" Width="2" />
+    <Position X="0.5" Y="5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAACAAAAAAAAAAIAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="CatchThemAll.Paralyze">
-    <Position X="7.25" Y="6" Width="2" />
+    <Position X="3.5" Y="7.25" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAACIAAAAAAAAAIAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="CatchThemAll.Forget">
-    <Position X="5" Y="6" Width="2" />
+    <Position X="0.75" Y="7" Width="2" />
     <TypeIdentifier>
       <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
@@ -222,6 +223,21 @@
       <HashCode>AABAACIAAAAAACAAIAAAAACQAAAAAAAAAQAAAAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
+  </Class>
+  <Class Name="CatchThemAll.Vaccine">
+    <Position X="6.25" Y="7.25" Width="2.25" />
+    <AssociationLine Name="agentToCure" Type="CatchThemAll.Agent">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.134" Y="0.06" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="agentToCure" />
+    </ShowAsAssociation>
   </Class>
   <Interface Name="CatchThemAll.iSteppable">
     <Position X="18.75" Y="8.5" Width="2.25" />

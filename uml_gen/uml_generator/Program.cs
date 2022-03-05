@@ -65,6 +65,11 @@ namespace CatchThemAll
         {
             throw new System.NotImplementedException();
         }
+
+        public void RemoveItem(InvItem item)
+        {
+            throw new System.NotImplementedException();
+        }
     }
     public class Map
     {
@@ -183,12 +188,12 @@ namespace CatchThemAll
     public abstract class Agent : InvItem, iSteppable
     {
         int activeTime;
-        public void Apply(Virologist target)
+        public virtual void Apply(Virologist target)
         {
             throw new System.NotImplementedException();
         }
 
-        public void Step(double curTime)
+        public virtual void Step(double curTime)
         {
             throw new NotImplementedException();
         }
@@ -305,6 +310,16 @@ namespace CatchThemAll
         }
 
         public override void CanAttack()
+        {
+            throw new System.NotImplementedException();
+        }
+    }
+
+    public class Vaccine : Agent
+    {
+        private Agent agentToCure;
+
+        public override void Apply(Virologist target)
         {
             throw new System.NotImplementedException();
         }
