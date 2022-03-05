@@ -23,7 +23,11 @@ namespace CatchThemAll
 
 
         //Összeadja az items listán a GetMaxResource értékét, majd hozzáaadja az alap értéket
-        public void AddResource(Resource resource)
+        public void AddResource(Resource ammount)
+        {
+            throw new System.NotImplementedException();
+        }
+        public void RemoveResource(Resource ammount)
         {
             throw new System.NotImplementedException();
         }
@@ -60,7 +64,11 @@ namespace CatchThemAll
         }
 
         //A target-tól ellopja az equipment-et
-        public void StealFromViro(Virologist target, Equipment equipment)
+        public void StealEquipmentFromViro(Virologist target, Equipment equipment)
+        {
+            throw new System.NotImplementedException();
+        }
+        public void StealResourceFromViro(Virologist target, Resource ammount)
         {
             throw new System.NotImplementedException();
         }
