@@ -206,7 +206,7 @@ namespace CatchThemAll
     public abstract class Agent : InvItem, iSteppable
     {
         int activeTime;
-        public virtual void Apply(Virologist target)
+        public virtual void Apply(Virologist source, Virologist target)
         {
             throw new System.NotImplementedException();
         }

@@ -4,8 +4,8 @@
     <Position X="21.25" Y="1.25" Width="3.5" />
     <AssociationLine Name="items" Type="CatchThemAll.InvItem" ManuallyRouted="true">
       <Path>
-        <Point X="21.25" Y="2.374" />
-        <Point X="17.538" Y="2.374" />
+        <Point X="21.25" Y="2.211" />
+        <Point X="17.538" Y="2.211" />
         <Point X="17.538" Y="2.163" />
         <Point X="16.708" Y="2.163" Type="JumpStart" />
         <Point X="16.542" Y="2.163" Type="JumpEnd" />
@@ -16,8 +16,8 @@
     </AssociationLine>
     <AssociationLine Name="learntCodes" Type="CatchThemAll.GeneticCode" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="21.25" Y="5.597" />
-        <Point X="19.389" Y="5.597" />
+        <Point X="21.25" Y="4.966" />
+        <Point X="19.389" Y="4.966" />
         <Point X="19.389" Y="4.421" />
         <Point X="16.833" Y="4.421" Type="JumpStart" />
         <Point X="16.667" Y="4.421" Type="JumpEnd" />
@@ -26,7 +26,7 @@
     </AssociationLine>
     <AssociationLine Name="equipments" Type="CatchThemAll.Equipment" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="23.159" Y="5.69" />
+        <Point X="23.159" Y="5.046" />
         <Point X="23.159" Y="9.838" />
         <Point X="14.083" Y="9.838" Type="JumpStart" />
         <Point X="13.917" Y="9.838" Type="JumpEnd" />
@@ -39,6 +39,10 @@
       <HashCode>AAAGAAABBAAAACAAAAgAAAAAgAcIoAAkIAIgAAQAAAQ=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="resource" />
+      <Field Name="mezo" />
+    </ShowAsAssociation>
     <ShowAsCollectionAssociation>
       <Field Name="items" />
       <Field Name="learntCodes" />
@@ -116,6 +120,13 @@
     <ShowAsAssociation>
       <Field Name="equipment" />
     </ShowAsAssociation>
+  </Class>
+  <Class Name="CatchThemAll.InvItem">
+    <Position X="6" Y="0.75" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AABAACIAAAAAACAAIAAAAACQAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
   </Class>
   <Class Name="CatchThemAll.Equipment">
     <Position X="9.5" Y="8.25" Width="1.5" />
@@ -207,10 +218,10 @@
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="CatchThemAll.Protect">
-    <Position X="0.5" Y="5" Width="2.25" />
+  <Class Name="CatchThemAll.Forget">
+    <Position X="0.75" Y="7" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAACAAAAAAAAAAIAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -221,17 +232,10 @@
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="CatchThemAll.Forget">
-    <Position X="0.75" Y="7" Width="2" />
+  <Class Name="CatchThemAll.Protect">
+    <Position X="0.5" Y="5" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Program.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="CatchThemAll.InvItem">
-    <Position X="6" Y="0.75" Width="4" />
-    <TypeIdentifier>
-      <HashCode>AABAACIAAAAAACAAIAAAAACQAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <HashCode>AAAAACAAAAAAAAAAIAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
