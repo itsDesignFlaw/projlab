@@ -1,49 +1,40 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
-  <Class Name="CatchThemAll.Program">
-    <Position X="23.5" Y="2.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
-      <FileName>Program.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="CatchThemAll.Virologist" BaseTypeListCollapsed="true">
-    <Position X="14.25" Y="6.5" Width="1.5" />
-    <AssociationLine Name="iSteppable" Type="CatchThemAll.iSteppable" FixedFromPoint="true" FixedToPoint="true">
+    <Position X="20.75" Y="2.75" Width="2.75" />
+    <AssociationLine Name="learntCodes" Type="CatchThemAll.GeneticCode" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="15.75" Y="8" />
-        <Point X="21" Y="8" />
-        <Point X="21" Y="4.853" />
+        <Point X="20.75" Y="4.837" />
+        <Point X="19.389" Y="4.837" />
+        <Point X="19.389" Y="4.421" />
+        <Point X="16.833" Y="4.421" Type="JumpStart" />
+        <Point X="16.667" Y="4.421" Type="JumpEnd" />
+        <Point X="12.75" Y="4.421" />
       </Path>
     </AssociationLine>
-    <AssociationLine Name="Map" Type="CatchThemAll.Map" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+    <AssociationLine Name="equipments" Type="CatchThemAll.Equipment" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="15.75" Y="7.625" />
-        <Point X="19.944" Y="7.625" />
-        <Point X="19.944" Y="4.605" />
-        <Point X="20.094" Y="4.605" />
-        <Point X="20.094" Y="3.118" />
+        <Point X="22.25" Y="4.882" />
+        <Point X="22.25" Y="9.838" />
+        <Point X="11.536" Y="9.838" />
+        <Point X="11.536" Y="8.938" />
+        <Point X="11" Y="8.938" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAABAAAAAAAAgAAAAAAAAAAIGDAAAgAAAAAAE=</HashCode>
+      <HashCode>AAACAAAAAAAAACAAAAgAAAAAAAIIAAAAAAIAAAQAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="iSteppable" />
-      <Property Name="Map" />
-    </ShowAsAssociation>
     <ShowAsCollectionAssociation>
-      <Field Name="items" />
-      <Field Name="vaccines" />
-      <Field Name="viruses" />
+      <Field Name="learntCodes" />
+      <Field Name="equipments" />
     </ShowAsCollectionAssociation>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="CatchThemAll.Map">
-    <Position X="20" Y="2.25" Width="1.5" />
+    <Position X="15.5" Y="1" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
@@ -51,179 +42,127 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="CatchThemAll.Field">
-    <Position X="18.25" Y="0.5" Width="1.5" />
+    <Position X="15.5" Y="2.75" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAABA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="virologists" />
+    </ShowAsCollectionAssociation>
   </Class>
   <Class Name="CatchThemAll.FieldLab">
-    <Position X="21.75" Y="0.5" Width="1.5" />
-    <InheritanceLine Type="CatchThemAll.Field" FixedFromPoint="true" FixedToPoint="true">
+    <Position X="15.75" Y="5.5" Width="2.25" />
+    <AssociationLine Name="code" Type="CatchThemAll.GeneticCode" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="19" Y="0.5" />
-        <Point X="19" Y="0.366" />
-        <Point X="22.438" Y="0.366" />
-        <Point X="22.438" Y="0.5" />
-      </Path>
-    </InheritanceLine>
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Program.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="CatchThemAll.FieldBunker">
-    <Position X="20" Y="0.5" Width="1.5" />
-    <InheritanceLine Type="CatchThemAll.Field" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="19" Y="0.5" />
-        <Point X="19" Y="0.366" />
-        <Point X="20.75" Y="0.366" />
-        <Point X="20.75" Y="0.5" />
-      </Path>
-    </InheritanceLine>
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAE=</HashCode>
-      <FileName>Program.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="CatchThemAll.FieldWarehouse">
-    <Position X="23.5" Y="0.5" Width="1.5" />
-    <InheritanceLine Type="CatchThemAll.Field" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="19" Y="0.5" />
-        <Point X="19" Y="0.366" />
-        <Point X="24.25" Y="0.366" />
-        <Point X="24.25" Y="0.5" />
-      </Path>
-    </InheritanceLine>
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Program.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="CatchThemAll.Equipment">
-    <Position X="11" Y="0.5" Width="1.5" />
-    <AssociationLine Name="iInvItem" Type="CatchThemAll.iInvItem" ManuallyRouted="true">
-      <Path>
-        <Point X="12.5" Y="1.052" />
-        <Point X="16.08" Y="1.052" />
-        <Point X="16.08" Y="3.132" />
-        <Point X="17.494" Y="3.132" />
-        <Point X="17.494" Y="3.546" />
-        <Point X="18.5" Y="3.546" />
-        <Point X="18.5" Y="3.75" />
+        <Point X="17.438" Y="6.733" />
+        <Point X="17.438" Y="6.816" />
+        <Point X="12.302" Y="6.816" Type="JumpStart" />
+        <Point X="12.135" Y="6.816" Type="JumpEnd" />
+        <Point X="11.625" Y="6.816" />
+        <Point X="11.625" Y="4.738" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAQAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="iInvItem" />
+      <Field Name="code" />
     </ShowAsAssociation>
-    <Lollipop Position="0.2" />
   </Class>
-  <Class Name="CatchThemAll.EquipmentSack">
-    <Position X="8.75" Y="2.25" Width="1.5" />
+  <Class Name="CatchThemAll.FieldBunker">
+    <Position X="13.25" Y="5.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="resources" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="CatchThemAll.FieldWarehouse">
+    <Position X="18.75" Y="5.5" Width="2.25" />
+    <AssociationLine Name="equipment" Type="CatchThemAll.Equipment" ManuallyRouted="true">
+      <Path>
+        <Point X="18.75" Y="6.116" />
+        <Point X="18.25" Y="6.116" />
+        <Point X="18.25" Y="9.621" />
+        <Point X="13.33" Y="9.621" />
+        <Point X="13.33" Y="7.799" />
+        <Point X="10.625" Y="7.799" />
+        <Point X="10.625" Y="8.25" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="equipment" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="CatchThemAll.Equipment">
+    <Position X="9.5" Y="8.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CatchThemAll.EquipmentSack">
+    <Position X="5.25" Y="10" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="CatchThemAll.EquipmentGloves">
-    <Position X="11" Y="2.25" Width="1.5" />
+    <Position X="7.5" Y="10" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="CatchThemAll.EquipmentCoat">
-    <Position X="13.25" Y="2.25" Width="1.5" />
+    <Position X="10" Y="10" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="CatchThemAll.GeneticCode" BaseTypeListCollapsed="true">
-    <Position X="16.25" Y="0.5" Width="1.5" />
-    <AssociationLine Name="iInvItem" Type="CatchThemAll.iInvItem" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+    <Position X="10.75" Y="3.25" Width="2" />
+    <AssociationLine Name="agent" Type="CatchThemAll.Agent" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="17.5" Y="1.603" />
-        <Point X="17.5" Y="3.558" />
-        <Point X="18.52" Y="3.558" />
-        <Point X="18.52" Y="3.75" />
-        <Point X="18.5" Y="3.75" />
+        <Point X="10.75" Y="3.966" />
+        <Point X="10.375" Y="3.966" />
+        <Point X="10.375" Y="4.934" />
+        <Point X="10.333" Y="4.934" Type="JumpStart" />
+        <Point X="10.167" Y="4.934" Type="JumpEnd" />
+        <Point X="8.25" Y="4.934" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAQAAAAAAAAA=</HashCode>
+      <HashCode>AQAAAAAAAAAAAQAAAAAAAABAAAASAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="iInvItem" />
+      <Field Name="cost" />
+      <Property Name="agent" />
     </ShowAsAssociation>
-    <Lollipop Position="0.2" />
   </Class>
   <Class Name="CatchThemAll.Agent">
-    <Position X="14.75" Y="3.5" Width="1.5" />
+    <Position X="6" Y="4" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAIAAAAAAQAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="iInvItem" />
-      <Property Name="DeployedAgent" />
-    </ShowAsAssociation>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="CatchThemAll.AgentVirus">
-    <Position X="13.5" Y="4.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Program.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="CatchThemAll.AgentVaccine">
-    <Position X="15.75" Y="4.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Program.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="CatchThemAll.DeployedAgent">
-    <Position X="9.75" Y="3.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Program.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="CatchThemAll.DeployedVaccine">
-    <Position X="8.5" Y="4.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Program.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="CatchThemAll.DeployedVirus">
-    <Position X="10.75" Y="4.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Program.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="CatchThemAll.Timer">
-    <Position X="24" Y="4.25" Width="1.5" />
-    <AssociationLine Name="steppable_reg" Type="CatchThemAll.iSteppable" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="24" Y="4.312" />
-        <Point X="23.625" Y="4.312" />
-        <Point X="23.625" Y="4.302" />
-        <Point X="21.75" Y="4.302" />
-      </Path>
-    </AssociationLine>
+    <Position X="19.25" Y="7" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAIAAAAAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
@@ -231,7 +170,7 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="CatchThemAll.GameManager">
-    <Position X="21.75" Y="2.25" Width="1.5" />
+    <Position X="18.75" Y="0.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAABAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
@@ -240,15 +179,50 @@
       <Property Name="Map" />
     </ShowAsAssociation>
   </Class>
-  <Interface Name="CatchThemAll.iInvItem">
-    <Position X="17.75" Y="3.75" Width="1.5" />
+  <Class Name="CatchThemAll.Resource">
+    <Position X="14.5" Y="7.25" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAQAAAAAAAAA=</HashCode>
+      <HashCode>AAIAAAAAAAAAABAAAAAABAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
-  </Interface>
+  </Class>
+  <Class Name="CatchThemAll.Dance">
+    <Position X="0.5" Y="6" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CatchThemAll.Protect">
+    <Position X="2.75" Y="6" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAIAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CatchThemAll.Paralyze">
+    <Position X="7.25" Y="6" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAIAAAAAAIAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CatchThemAll.Forget">
+    <Position X="5" Y="6" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CatchThemAll.InvItem">
+    <Position X="7.5" Y="1" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AABAAAIAAIAAACAAIAAAAACQAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Interface Name="CatchThemAll.iSteppable">
-    <Position X="20.25" Y="3.75" Width="1.5" />
+    <Position X="18.75" Y="8.5" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>

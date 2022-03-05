@@ -4,12 +4,6 @@
 namespace CatchThemAll
 {
 
-    public abstract class InvItem { 
-        
-
-
-
-    }
     public interface iSteppable { 
         void Step(double curTime) { return; } 
     }
@@ -51,33 +45,71 @@ namespace CatchThemAll
     {
         private Equipment equipment; public override bool AcceptViro(Virologist v) { return true; }
     }
+    public abstract class InvItem
+    {
+        public virtual int GetMaxResource()
+        {
+            throw new System.NotImplementedException();
+        }
+        public virtual bool CanAgentBeApplied()
+        {
+            throw new System.NotImplementedException();
+        }
+        public virtual bool CanRemember()
+        {
+            throw new System.NotImplementedException();
+        }
+        public virtual bool Move(Virologist v)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public virtual bool CanApplyAgent()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public virtual void CanAttack()
+        {
+            throw new System.NotImplementedException();
+        }
+        public virtual bool CanBeInfected()
+        {
+            throw new System.NotImplementedException();
+        }
+        public virtual bool IsParalyzed()
+        {
+            return false;
+        }
+
+    }
     public abstract class Equipment : InvItem
     {
     }
     public class EquipmentSack : Equipment
     {
-        public int GetMaxResource()
+        public override int GetMaxResource()
         {
             throw new System.NotImplementedException();
         }
     }
     public class EquipmentGloves : Equipment
     {
-        public bool CanAgentBeApplied()
+        public override bool CanAgentBeApplied()
         {
             throw new System.NotImplementedException();
         }
     }
     public class EquipmentCoat : Equipment
     {
-        public bool CanAgentBeApplied()
+        public override bool CanAgentBeApplied()
         {
             throw new System.NotImplementedException();
         }
     }
     public class GeneticCode
     {
-        public string Type { get; set; }
+        private Resource cost;
 
         public Agent agent
         {
@@ -93,6 +125,11 @@ namespace CatchThemAll
         }
 
         public Agent CreateVaccine()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Resource GetCost()
         {
             throw new System.NotImplementedException();
         }
@@ -131,30 +168,38 @@ namespace CatchThemAll
     {
         private int ami;
         private int nuki;
-
-        public void AddAmi(int ami)
+        public void Add(Resource resource)
         {
             throw new System.NotImplementedException();
         }
 
-        public void RemoveAmi(int ami)
+        public bool Remove(Resource resource)
         {
             throw new System.NotImplementedException();
         }
-        public void AddNuki(int nuki)
-        {
-            throw new System.NotImplementedException();
-        }
+            /*public void AddAmi(int ami)
+            {
+                throw new System.NotImplementedException();
+            }
 
-        public void RemoveNuki(int nuki)
-        {
-            throw new System.NotImplementedException();
+            public void RemoveAmi(int ami)
+            {
+                throw new System.NotImplementedException();
+            }
+            public void AddNuki(int nuki)
+            {
+                throw new System.NotImplementedException();
+            }
+
+            public void RemoveNuki(int nuki)
+            {
+                throw new System.NotImplementedException();
+            }*/
         }
-    }
 
     public class Dance : Agent
     {
-        public bool Move(Virologist v)
+        public override bool Move(Virologist v)
         {
             throw new System.NotImplementedException();
         }
@@ -162,7 +207,7 @@ namespace CatchThemAll
 
     public class Forget : Agent
     {
-        public bool CanRemember()
+        public override bool CanRemember()
         {
             throw new System.NotImplementedException();
         }
@@ -170,25 +215,39 @@ namespace CatchThemAll
 
     public class Paralyze : Agent
     {
-        public bool Move(Virologist v)
+        public override bool Move(Virologist v)
         {
             throw new System.NotImplementedException();
         }
 
-        public void CanCastSpell()
+        public override bool CanApplyAgent()
         {
             throw new System.NotImplementedException();
         }
 
-        public void CanAttack()
+        public override void CanAttack()
         {
             throw new System.NotImplementedException();
+        }
+        public override bool IsParalyzed()
+        {
+            return true;
         }
     }
 
     public class Protect : Agent
     {
-        public bool CanBeInfected()
+        public override bool Move(Virologist v)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public override bool CanApplyAgent()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public override void CanAttack()
         {
             throw new System.NotImplementedException();
         }
