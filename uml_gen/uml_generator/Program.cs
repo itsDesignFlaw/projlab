@@ -103,12 +103,22 @@ namespace CatchThemAll
         {
             throw new System.NotImplementedException();
         }
+
+        public Field GetField()
+        {
+            throw new System.NotImplementedException();
+        }
     }
     public class Map
     {
         List<Field> fields = new List<Field>();
 
         public void GenerateMap()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Field GetRandomNeighbour(Field mezo)
         {
             throw new System.NotImplementedException();
         }
