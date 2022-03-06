@@ -134,8 +134,8 @@ namespace CatchThemAll
     {
         private GeneticCode code; public override bool Interact(Virologist v) { return true; }
     }
-    public class FieldBunker : Field { private Resource resources; public override bool Interact(Virologist v) { return true; } }
-    public class FieldWarehouse : Field
+    public class FieldWarehouse : Field { private Resource resources; public override bool Interact(Virologist v) { return true; } }
+    public class FieldBunker : Field
     {
         private Equipment equipment;
         private bool hasEquipment;
@@ -157,15 +157,6 @@ namespace CatchThemAll
             throw new System.NotImplementedException();
         }
         public virtual bool CanMove(Virologist v)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public virtual void CanAttack()
-        {
-            throw new System.NotImplementedException();
-        }
-        public virtual bool CanBeInfected()
         {
             throw new System.NotImplementedException();
         }
@@ -225,6 +216,8 @@ namespace CatchThemAll
     public abstract class Agent : InvItem, iSteppable
     {
         int activeTime;
+        //Akin van
+        Virologist host;
         public virtual void Apply(Virologist source, Virologist target)
         {
             throw new System.NotImplementedException();
