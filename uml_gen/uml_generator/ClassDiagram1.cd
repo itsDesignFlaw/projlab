@@ -18,14 +18,24 @@
       <Path>
         <Point X="21.25" Y="5.154" />
         <Point X="19.389" Y="5.154" />
-        <Point X="19.389" Y="4.421" />
-        <Point X="16.833" Y="4.421" Type="JumpStart" />
-        <Point X="16.667" Y="4.421" Type="JumpEnd" />
-        <Point X="12.75" Y="4.421" />
+        <Point X="19.389" Y="6.171" />
+        <Point X="12.75" Y="6.171" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="stash" Type="CatchThemAll.Agent" ManuallyRouted="true">
+      <Path>
+        <Point X="21.25" Y="4.352" />
+        <Point X="16.833" Y="4.352" Type="JumpStart" />
+        <Point X="16.667" Y="4.352" Type="JumpEnd" />
+        <Point X="14.25" Y="4.352" />
+        <Point X="14.25" Y="4.257" />
+        <Point X="10.333" Y="4.257" Type="JumpStart" />
+        <Point X="10.167" Y="4.257" Type="JumpEnd" />
+        <Point X="7.25" Y="4.257" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAQGAAIBBAAAACAAAAgAAAAAgAcIoAAkIAIgAAQAAAQ=</HashCode>
+      <HashCode>AAQGAAIBBAABACAAAAgAAAAAgAcIoABkAAIgAAQAAAQ=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -36,8 +46,8 @@
       <Field Name="items" />
       <Field Name="learntCodes" />
       <Field Name="equipments" />
+      <Field Name="stash" />
     </ShowAsCollectionAssociation>
-    <Lollipop Position="0.2" />
   </Class>
   <Class Name="CatchThemAll.Map">
     <Position X="15.75" Y="0.5" Width="1.75" />
@@ -68,7 +78,7 @@
         <Point X="12.271" Y="6.816" Type="JumpStart" />
         <Point X="12.104" Y="6.816" Type="JumpEnd" />
         <Point X="11.625" Y="6.816" />
-        <Point X="11.625" Y="4.738" />
+        <Point X="11.625" Y="6.488" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
@@ -113,7 +123,7 @@
   <Class Name="CatchThemAll.InvItem">
     <Position X="6" Y="0.75" Width="4" />
     <TypeIdentifier>
-      <HashCode>AABAACIAAAAAACAAIAAAAACQAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <HashCode>AABAACIAAAAAACAAIAAAAACQAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -146,16 +156,18 @@
     </TypeIdentifier>
   </Class>
   <Class Name="CatchThemAll.GeneticCode" BaseTypeListCollapsed="true">
-    <Position X="10.75" Y="3.25" Width="2" />
+    <Position X="10.75" Y="5" Width="2" />
     <AssociationLine Name="agent" Type="CatchThemAll.Agent" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="11.25" Y="4.738" />
-        <Point X="11.25" Y="5.171" />
-        <Point X="10.521" Y="5.171" Type="JumpStart" />
-        <Point X="10.354" Y="5.171" Type="JumpEnd" />
-        <Point X="10.333" Y="5.171" Type="JumpStart" />
-        <Point X="10.167" Y="5.171" Type="JumpEnd" />
-        <Point X="7.25" Y="5.171" />
+        <Point X="11.25" Y="6.488" />
+        <Point X="11.25" Y="6.738" />
+        <Point X="10.625" Y="6.738" />
+        <Point X="10.625" Y="5.317" />
+        <Point X="10.521" Y="5.317" Type="JumpStart" />
+        <Point X="10.354" Y="5.317" Type="JumpEnd" />
+        <Point X="10.333" Y="5.317" Type="JumpStart" />
+        <Point X="10.167" Y="5.317" Type="JumpEnd" />
+        <Point X="7.25" Y="5.317" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
@@ -170,13 +182,13 @@
   <Class Name="CatchThemAll.Agent">
     <Position X="5" Y="3.75" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAABIAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAABIAAAAAAAAAAAAAAAAAAAAAIAAAAAAAABA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="CatchThemAll.Timer">
-    <Position X="19.25" Y="7" Width="1.5" />
+    <Position X="21.75" Y="8.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAIAAAAAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
@@ -219,14 +231,14 @@
   <Class Name="CatchThemAll.Paralyze">
     <Position X="3.5" Y="7.25" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAACIAAAAAAAAAIAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <HashCode>AAAAACIAAAAAAAAAIAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="CatchThemAll.Protect">
-    <Position X="0.5" Y="5" Width="2.25" />
+    <Position X="0.5" Y="5" Width="3" />
     <TypeIdentifier>
-      <HashCode>AAAAACAAAAAAAAAAIAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <HashCode>AAAAACAAAAAAAAAAIAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>

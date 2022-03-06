@@ -6,12 +6,13 @@ namespace CatchThemAll
 
     public interface iSteppable
     {
-        void Step(double curTime);
+        void Step();
     }
-    public class Virologist : iSteppable
+    public class Virologist
     {
         List<InvItem> items = new List<InvItem>();
         List<GeneticCode> learntCodes = new List<GeneticCode>();
+        List<Agent> stash = new List<Agent>();
 
         //Amin áll
         Field mezo;
@@ -32,11 +33,6 @@ namespace CatchThemAll
         public void RemoveResource(Resource ammount)
         {
             throw new System.NotImplementedException();
-        }
-
-        public void Step(double curTime)
-        {
-            throw new NotImplementedException();
         }
 
         //Craftol egy vírust
@@ -102,6 +98,11 @@ namespace CatchThemAll
         {
             throw new System.NotImplementedException();
         }
+
+        public void AddIAgentToStash(Agent agent)
+        {
+            throw new System.NotImplementedException();
+        }
     }
     public class Map
     {
@@ -150,7 +151,7 @@ namespace CatchThemAll
             throw new System.NotImplementedException();
         }
 
-        public virtual bool CanApplyAgent()
+        public virtual bool CanAgentBeApplied()
         {
             throw new System.NotImplementedException();
         }
@@ -222,9 +223,14 @@ namespace CatchThemAll
             throw new System.NotImplementedException();
         }
 
-        public virtual void Step(double curTime)
+        public virtual void Step()
         {
             throw new NotImplementedException();
+        }
+
+        public Agent Clone()
+        {
+            throw new System.NotImplementedException();
         }
     }
 
@@ -241,7 +247,6 @@ namespace CatchThemAll
     }
     public class GameManager
     {
-        Map gameMap = new Map();
 
         Map Map;
 
@@ -306,7 +311,7 @@ namespace CatchThemAll
             throw new System.NotImplementedException();
         }
 
-        public override bool CanApplyAgent()
+        public override bool CanAgentBeApplied()
         {
             throw new System.NotImplementedException();
         }
@@ -328,7 +333,7 @@ namespace CatchThemAll
             throw new System.NotImplementedException();
         }
 
-        public override bool CanApplyAgent()
+        public override bool CanAgentBeApplied(Agent agent, Virologist source)
         {
             throw new System.NotImplementedException();
         }
@@ -343,7 +348,12 @@ namespace CatchThemAll
     {
         private Agent agentToCure;
 
-        public override void Apply(Virologist target)
+        public Vaccine(Agent agentToCure)
+        {
+
+        }
+
+        public override void Apply(Virologist source, Virologist target)
         {
             throw new System.NotImplementedException();
         }
