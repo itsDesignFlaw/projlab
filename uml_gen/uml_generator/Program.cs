@@ -161,11 +161,19 @@ namespace CatchThemAll
         {
             throw new System.NotImplementedException();
         }
+        public virtual bool CanSteal()
+        {
+            throw new System.NotImplementedException();
+        }
         public virtual bool CanMove(Virologist v)
         {
             throw new System.NotImplementedException();
         }
         public virtual bool IsParalyzed()
+        {
+            return false;
+        }
+        public virtual bool CanCraft()
         {
             return false;
         }
@@ -337,6 +345,15 @@ namespace CatchThemAll
         {
             throw new System.NotImplementedException();
         }
+        public override bool CanSteal()
+        {
+            throw new System.NotImplementedException();
+        }
+        public override bool CanCraft()
+        {
+            throw new System.NotImplementedException();
+        }
+
     }
 
     public class Protect : Agent
