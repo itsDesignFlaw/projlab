@@ -4,11 +4,11 @@
     <Position X="21.25" Y="1.25" Width="3.5" />
     <AssociationLine Name="items" Type="CatchThemAll.InvItem" ManuallyRouted="true">
       <Path>
-        <Point X="21.25" Y="2.26" />
-        <Point X="17.538" Y="2.26" />
+        <Point X="21.25" Y="2.306" />
+        <Point X="17.538" Y="2.306" />
         <Point X="17.538" Y="2.163" />
-        <Point X="16.708" Y="2.163" Type="JumpStart" />
-        <Point X="16.542" Y="2.163" Type="JumpEnd" />
+        <Point X="16.458" Y="2.163" Type="JumpStart" />
+        <Point X="16.292" Y="2.163" Type="JumpEnd" />
         <Point X="13.712" Y="2.163" />
         <Point X="13.712" Y="2.247" />
         <Point X="10" Y="2.247" />
@@ -16,18 +16,20 @@
     </AssociationLine>
     <AssociationLine Name="learntCodes" Type="CatchThemAll.GeneticCode" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="21.25" Y="5.154" />
-        <Point X="19.389" Y="5.154" />
+        <Point X="21.25" Y="5.334" />
+        <Point X="19.958" Y="5.334" Type="JumpStart" />
+        <Point X="19.792" Y="5.334" Type="JumpEnd" />
+        <Point X="19.389" Y="5.334" />
         <Point X="19.389" Y="6.171" />
         <Point X="12.75" Y="6.171" />
       </Path>
     </AssociationLine>
     <AssociationLine Name="stash" Type="CatchThemAll.Agent" ManuallyRouted="true">
       <Path>
-        <Point X="21.25" Y="4.352" />
-        <Point X="16.833" Y="4.352" Type="JumpStart" />
-        <Point X="16.667" Y="4.352" Type="JumpEnd" />
-        <Point X="14.25" Y="4.352" />
+        <Point X="21.25" Y="4.495" />
+        <Point X="16.833" Y="4.495" Type="JumpStart" />
+        <Point X="16.667" Y="4.495" Type="JumpEnd" />
+        <Point X="14.25" Y="4.495" />
         <Point X="14.25" Y="4.257" />
         <Point X="10.333" Y="4.257" Type="JumpStart" />
         <Point X="10.167" Y="4.257" Type="JumpEnd" />
@@ -35,7 +37,7 @@
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAQGAAIBBAABACAAAAgAAAAAgAcIoABkAAIgAAQAAAQ=</HashCode>
+      <HashCode>AAQGAAIBhAABACAAAAgAAAAAgAcIoABkAAIgAAQAAAQ=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -50,9 +52,9 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="CatchThemAll.Map">
-    <Position X="15.75" Y="0.5" Width="1.75" />
+    <Position X="14.25" Y="0.5" Width="3" />
     <TypeIdentifier>
-      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AACAAAEAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
