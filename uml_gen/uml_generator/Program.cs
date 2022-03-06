@@ -108,6 +108,11 @@ namespace CatchThemAll
         {
             throw new System.NotImplementedException();
         }
+
+        public void MoveDirectly(Field mezo)
+        {
+            throw new System.NotImplementedException();
+        }
     }
     public class Map
     {
@@ -127,20 +132,20 @@ namespace CatchThemAll
     {
         List<Virologist> virologists;
         public void AcceptViro(Virologist v) { }
-        public virtual bool Interact(Virologist v) { return false; }
-        public virtual bool RemoveViro(Virologist v) { return false; }
+        public virtual void Interact(Virologist v) { return false; }
+        public virtual void RemoveViro(Virologist v) { return false; }
     }
     public class FieldLab : Field
     {
-        private GeneticCode code; public override bool Interact(Virologist v) { return true; }
+        private GeneticCode code; public override void Interact(Virologist v) { return true; }
     }
-    public class FieldWarehouse : Field { private Resource resources; public override bool Interact(Virologist v) { return true; } }
+    public class FieldWarehouse : Field { private Resource resources; public override void Interact(Virologist v) { return true; } }
     public class FieldBunker : Field
     {
         private Equipment equipment;
         private bool hasEquipment;
 
-        public override bool Interact(Virologist v) { return true; }
+        public override void Interact(Virologist v) { return true; }
     }
     public abstract class InvItem
     {
@@ -241,6 +246,16 @@ namespace CatchThemAll
         List<iSteppable> steppable_reg = new List<iSteppable>();
 
         public void Step()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void AddSteppable(iSteppable item)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void RemoveSteppable(iSteppable step)
         {
             throw new System.NotImplementedException();
         }
