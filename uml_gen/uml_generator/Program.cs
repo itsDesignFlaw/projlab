@@ -57,7 +57,7 @@ namespace CatchThemAll
         }
 
         //Felszedi a mezőn lévő cuccokat, azaz meghívja az Interact fv-ét
-        public void InteractWithMap()
+        public void InteractWithField()
         {
             throw new System.NotImplementedException();
         }
@@ -132,20 +132,20 @@ namespace CatchThemAll
     {
         List<Virologist> virologists;
         public void AcceptViro(Virologist v) { }
-        public virtual void Interact(Virologist v) { return false; }
-        public virtual void RemoveViro(Virologist v) { return false; }
+        public virtual void Interact(Virologist v) {  }
+        public virtual void RemoveViro(Virologist v) {  }
     }
     public class FieldLab : Field
     {
-        private GeneticCode code; public override void Interact(Virologist v) { return true; }
+        private GeneticCode code; public override void Interact(Virologist v) {  }
     }
-    public class FieldWarehouse : Field { private Resource resources; public override void Interact(Virologist v) { return true; } }
+    public class FieldWarehouse : Field { private Resource resources; public override void Interact(Virologist v) {  } }
     public class FieldBunker : Field
     {
         private Equipment equipment;
         private bool hasEquipment;
 
-        public override void Interact(Virologist v) { return true; }
+        public override void Interact(Virologist v) {  }
     }
     public abstract class InvItem
     {
@@ -170,6 +170,10 @@ namespace CatchThemAll
             return false;
         }
 
+        public virtual bool CanApplyAgent()
+        {
+            throw new System.NotImplementedException();
+        }
     }
     public abstract class Equipment : InvItem
     {
@@ -324,6 +328,14 @@ namespace CatchThemAll
         public override bool IsParalyzed()
         {
             return true;
+        }
+        public override bool CanMove(Virologist v)
+        {
+            throw new System.NotImplementedException();
+        }
+        public override bool CanApplyAgent()
+        {
+            throw new System.NotImplementedException();
         }
     }
 
