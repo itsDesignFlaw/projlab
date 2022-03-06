@@ -4,8 +4,8 @@
     <Position X="21.25" Y="1.25" Width="3.5" />
     <AssociationLine Name="items" Type="CatchThemAll.InvItem" ManuallyRouted="true">
       <Path>
-        <Point X="21.25" Y="2.211" />
-        <Point X="17.538" Y="2.211" />
+        <Point X="21.25" Y="2.26" />
+        <Point X="17.538" Y="2.26" />
         <Point X="17.538" Y="2.163" />
         <Point X="16.708" Y="2.163" Type="JumpStart" />
         <Point X="16.542" Y="2.163" Type="JumpEnd" />
@@ -16,8 +16,8 @@
     </AssociationLine>
     <AssociationLine Name="learntCodes" Type="CatchThemAll.GeneticCode" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="21.25" Y="4.966" />
-        <Point X="19.389" Y="4.966" />
+        <Point X="21.25" Y="5.154" />
+        <Point X="19.389" Y="5.154" />
         <Point X="19.389" Y="4.421" />
         <Point X="16.833" Y="4.421" Type="JumpStart" />
         <Point X="16.667" Y="4.421" Type="JumpEnd" />
@@ -26,7 +26,7 @@
     </AssociationLine>
     <AssociationLine Name="equipments" Type="CatchThemAll.Equipment" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="23.159" Y="5.046" />
+        <Point X="23.159" Y="5.238" />
         <Point X="23.159" Y="9.838" />
         <Point X="14.083" Y="9.838" Type="JumpStart" />
         <Point X="13.917" Y="9.838" Type="JumpEnd" />
@@ -36,12 +36,12 @@
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAGAAABBAAAACAAAAgAAAAAgAcIoAAkIAIgAAQAAAQ=</HashCode>
+      <HashCode>AAAGAAIBBAAAACAAAAgAAAAAgAcIoAAkIAIgAAQAAAQ=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Field Name="resource" />
       <Field Name="mezo" />
+      <Field Name="resource" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
       <Field Name="items" />

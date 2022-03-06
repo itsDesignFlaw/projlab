@@ -21,6 +21,8 @@ namespace CatchThemAll
         public void MoveTo(Field targetField)
         { }
 
+        public bool IsParalyzed()
+        { return false; }
 
         //Összeadja az items listán a GetMaxResource értékét, majd hozzáaadja az alap értéket
         public void AddResource(Resource ammount)
@@ -46,6 +48,7 @@ namespace CatchThemAll
         {
             throw new System.NotImplementedException();
         }
+        //Mindegyiknél feltételezzük, hogy meg tudja érinteni, előtte ellenőrizzük
         //When somebody uses an agent on you
         public void ApplyAgent(Agent agent, Virologist source)
         {
