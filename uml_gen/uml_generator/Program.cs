@@ -97,6 +97,11 @@ namespace CatchThemAll
         {
             throw new System.NotImplementedException();
         }
+
+        public void LearnGeneticCode(GeneticCode code)
+        {
+            throw new System.NotImplementedException();
+        }
     }
     public class Map
     {
@@ -121,7 +126,10 @@ namespace CatchThemAll
     public class FieldBunker : Field { private Resource resources; public override bool Interact(Virologist v) { return true; } }
     public class FieldWarehouse : Field
     {
-        private Equipment equipment; public override bool Interact(Virologist v) { return true; }
+        private Equipment equipment;
+        private bool hasEquipment;
+
+        public override bool Interact(Virologist v) { return true; }
     }
     public abstract class InvItem
     {
@@ -238,7 +246,7 @@ namespace CatchThemAll
         Map Map;
 
         public void StartGame() { }
-        public void EndGame() { }
+        public void EndGame(Virologist winner) { }
     }
 
     public class Resource
