@@ -4,16 +4,16 @@
     <Position X="11.75" Y="2.5" Width="3.5" />
     <AssociationLine Name="items" Type="CatchThemAll.InvItem" ManuallyRouted="true">
       <Path>
-        <Point X="11.75" Y="3.556" />
-        <Point X="11.43" Y="3.556" />
+        <Point X="11.75" Y="3.603" />
+        <Point X="11.43" Y="3.603" />
         <Point X="11.43" Y="1.742" />
         <Point X="11" Y="1.742" />
       </Path>
     </AssociationLine>
     <AssociationLine Name="learntCodes" Type="CatchThemAll.GeneticCode" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="11.75" Y="5.375" />
-        <Point X="11.375" Y="5.375" />
+        <Point X="11.75" Y="5.501" />
+        <Point X="11.375" Y="5.501" />
         <Point X="11.375" Y="5.421" />
         <Point X="10.333" Y="5.421" Type="JumpStart" />
         <Point X="10.167" Y="5.421" Type="JumpEnd" />
@@ -22,7 +22,7 @@
     </AssociationLine>
     <AssociationLine Name="resource" Type="CatchThemAll.Resource" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="14.125" Y="6.873" />
+        <Point X="14.125" Y="7.065" />
         <Point X="14.125" Y="8.312" />
         <Point X="18.167" Y="8.312" Type="JumpStart" />
         <Point X="18.333" Y="8.312" Type="JumpEnd" />
@@ -31,16 +31,16 @@
     </AssociationLine>
     <AssociationLine Name="equipments" Type="CatchThemAll.Equipment" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="12.812" Y="6.873" />
+        <Point X="12.812" Y="7.065" />
         <Point X="12.812" Y="8.749" />
         <Point X="11" Y="8.749" />
       </Path>
     </AssociationLine>
     <AssociationLine Name="stash" Type="CatchThemAll.Agent" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="11.75" Y="3.75" />
-        <Point X="10.333" Y="3.752" Type="JumpStart" />
-        <Point X="10.167" Y="3.752" Type="JumpEnd" />
+        <Point X="11.75" Y="3.805" />
+        <Point X="10.333" Y="3.793" Type="JumpStart" />
+        <Point X="10.167" Y="3.791" Type="JumpEnd" />
         <Point X="6.25" Y="3.757" />
       </Path>
       <MemberNameLabel ManuallyPlaced="true">
@@ -48,7 +48,7 @@
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAQGAAIBhAABACAAAAgAAAAAgAcIoABkAAIgAAQAAAQ=</HashCode>
+      <HashCode>AAQGAAIBhAABACAAAAgAAAAAgAcIoABkAAIkAAQAAAQ=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>

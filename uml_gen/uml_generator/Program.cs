@@ -108,6 +108,11 @@ namespace CatchThemAll
         {
             throw new System.NotImplementedException();
         }
+
+        public void MoveDirectly(Field mezo)
+        {
+            throw new System.NotImplementedException();
+        }
     }
     public class Map
     {
