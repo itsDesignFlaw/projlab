@@ -177,6 +177,10 @@ namespace CatchThemAll
         {
             return false;
         }
+        public virtual bool CanInteract()
+        {
+            return false;
+        }
 
         public virtual bool CanApplyAgent()
         {
@@ -350,6 +354,10 @@ namespace CatchThemAll
             throw new System.NotImplementedException();
         }
         public override bool CanCraft()
+        {
+            throw new System.NotImplementedException();
+        }
+        public override bool CanInteract()
         {
             throw new System.NotImplementedException();
         }
