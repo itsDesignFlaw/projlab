@@ -248,7 +248,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="CatchThemAll.Vaccine">
-    <Position X="6.25" Y="7.25" Width="2.25" />
+    <Position X="6.25" Y="7.25" Width="3.25" />
     <AssociationLine Name="agentToCure" Type="CatchThemAll.Agent">
       <MemberNameLabel ManuallyPlaced="true">
         <Position X="-1.134" Y="0.06" />
