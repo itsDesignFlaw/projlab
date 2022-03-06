@@ -67,7 +67,7 @@ namespace CatchThemAll
         {
             throw new System.NotImplementedException();
         }
-        public void StealResourceFromViro(Virologist target, Resource ammount)
+        public void StealResourceFromViro(Virologist target, Resource amount)
         {
             throw new System.NotImplementedException();
         }
@@ -294,7 +294,7 @@ namespace CatchThemAll
             throw new System.NotImplementedException();
         }
 
-        public bool Remove(Resource resource)
+        public void Remove(Resource resource)
         {
             throw new System.NotImplementedException();
         }
