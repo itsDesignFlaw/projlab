@@ -10,8 +10,8 @@
         <Point X="16.708" Y="2.163" Type="JumpStart" />
         <Point X="16.542" Y="2.163" Type="JumpEnd" />
         <Point X="13.712" Y="2.163" />
-        <Point X="13.712" Y="2.374" />
-        <Point X="10" Y="2.374" />
+        <Point X="13.712" Y="2.247" />
+        <Point X="10" Y="2.247" />
       </Path>
     </AssociationLine>
     <AssociationLine Name="learntCodes" Type="CatchThemAll.GeneticCode" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
@@ -137,9 +137,12 @@
   <Class Name="CatchThemAll.EquipmentSack">
     <Position X="5.25" Y="10" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="amount" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="CatchThemAll.EquipmentGloves">
     <Position X="7.5" Y="10" Width="4" />
@@ -231,14 +234,14 @@
   <Class Name="CatchThemAll.Paralyze">
     <Position X="3.5" Y="7.25" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAACIAAAAAAAAAIAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="CatchThemAll.Protect">
     <Position X="0.5" Y="5" Width="3" />
     <TypeIdentifier>
-      <HashCode>AAAAACAAAAAAAAAAIAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>

@@ -151,11 +151,6 @@ namespace CatchThemAll
             throw new System.NotImplementedException();
         }
 
-        public virtual bool CanAgentBeApplied()
-        {
-            throw new System.NotImplementedException();
-        }
-
         public virtual void CanAttack()
         {
             throw new System.NotImplementedException();
@@ -175,6 +170,8 @@ namespace CatchThemAll
     }
     public class EquipmentSack : Equipment
     {
+        private Resource amount;
+
         public override int GetMaxResource()
         {
             throw new System.NotImplementedException();
@@ -306,20 +303,6 @@ namespace CatchThemAll
 
     public class Paralyze : Agent
     {
-        public override bool CanMove(Virologist v)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public override bool CanAgentBeApplied()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public override void CanAttack()
-        {
-            throw new System.NotImplementedException();
-        }
         public override bool IsParalyzed()
         {
             return true;
@@ -328,17 +311,8 @@ namespace CatchThemAll
 
     public class Protect : Agent
     {
-        public override bool CanMove(Virologist v)
-        {
-            throw new System.NotImplementedException();
-        }
 
         public override bool CanAgentBeApplied(Agent agent, Virologist source)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public override void CanAttack()
         {
             throw new System.NotImplementedException();
         }
