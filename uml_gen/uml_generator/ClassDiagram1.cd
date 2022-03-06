@@ -24,19 +24,8 @@
         <Point X="12.75" Y="4.421" />
       </Path>
     </AssociationLine>
-    <AssociationLine Name="equipments" Type="CatchThemAll.Equipment" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="23.159" Y="5.238" />
-        <Point X="23.159" Y="9.838" />
-        <Point X="14.083" Y="9.838" Type="JumpStart" />
-        <Point X="13.917" Y="9.838" Type="JumpEnd" />
-        <Point X="11.536" Y="9.838" />
-        <Point X="11.536" Y="8.938" />
-        <Point X="11" Y="8.938" />
-      </Path>
-    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAGAAIBBAAAACAAAAgAAAAAgAcIoAAkIAIgAAQAAAQ=</HashCode>
+      <HashCode>AAQGAAIBBAAAACAAAAgAAAAAgAcIoAAkIAIgAAQAAAQ=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -114,7 +103,7 @@
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAEAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAIAAEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -162,6 +151,8 @@
       <Path>
         <Point X="11.25" Y="4.738" />
         <Point X="11.25" Y="5.171" />
+        <Point X="10.521" Y="5.171" Type="JumpStart" />
+        <Point X="10.354" Y="5.171" Type="JumpEnd" />
         <Point X="10.333" Y="5.171" Type="JumpStart" />
         <Point X="10.167" Y="5.171" Type="JumpEnd" />
         <Point X="7.25" Y="5.171" />
