@@ -74,7 +74,7 @@ namespace CatchThemAll
         }
 
         //Eltávolítja a virológustól az equipment-et
-        public void RemoveEquipment(Equipment equipment)
+        public bool RemoveEquipment(Equipment equipment)
         {
             throw new System.NotImplementedException();
         }
