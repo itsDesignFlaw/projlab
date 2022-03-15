@@ -5,8 +5,8 @@
     <AssociationLine Name="items" Type="CatchThemAll.InvItem" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="12.843" Y="2.25" />
-        <Point X="12.843" Y="1.997" />
-        <Point X="11" Y="1.997" />
+        <Point X="12.843" Y="1.888" />
+        <Point X="11" Y="1.888" />
       </Path>
     </AssociationLine>
     <AssociationLine Name="learntCodes" Type="CatchThemAll.GeneticCode" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
@@ -243,7 +243,7 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="CatchThemAll.GameManager">
-    <Position X="18.25" Y="0.5" Width="1.75" />
+    <Position X="18.25" Y="0.5" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAABAAAAAAAAAAAAAgAAAAAAAAAAAAAAAQAAA=</HashCode>
       <FileName>Program.cs</FileName>
@@ -260,9 +260,9 @@
     </TypeIdentifier>
   </Class>
   <Class Name="CatchThemAll.Dance">
-    <Position X="1.25" Y="1" Width="2.25" />
+    <Position X="1.25" Y="1" Width="3.25" />
     <TypeIdentifier>
-      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -284,7 +284,7 @@
   <Class Name="CatchThemAll.Paralyze">
     <Position X="1" Y="6.75" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAACIgAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <HashCode>AAAAACIgABABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
