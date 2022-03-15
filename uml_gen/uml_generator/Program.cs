@@ -19,9 +19,7 @@ namespace CatchThemAll
         Field mezo;
         private Resource resource;
         private System.Collections.Generic.List<Equipment> equipments;
-
-        public void MoveTo(Field targetField)
-        { }
+        
 
         public bool IsParalyzed()
         { return false; }
@@ -100,7 +98,7 @@ namespace CatchThemAll
             throw new System.NotImplementedException();
         }
 
-        public void AddIAgentToStash(Agent agent)
+        public void AddAgentToStash(Agent agent)
         {
             throw new System.NotImplementedException();
         }
