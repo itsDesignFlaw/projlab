@@ -10,6 +10,7 @@ namespace CatchThemAll
     }
     public class Virologist
     {
+        MoveStrategy moveStrategy;
         List<InvItem> items = new List<InvItem>();
         List<GeneticCode> learntCodes = new List<GeneticCode>();
         List<Agent> stash = new List<Agent>();
@@ -109,7 +110,7 @@ namespace CatchThemAll
             throw new System.NotImplementedException();
         }
 
-        public void MoveDirectly(Field mezo)
+        public void ChangeMoveStrategy(MoveStrategy strategy)
         {
             throw new System.NotImplementedException();
         }
@@ -385,6 +386,35 @@ namespace CatchThemAll
         public override void Apply(Virologist source, Virologist target)
         {
             throw new System.NotImplementedException();
+        }
+    }
+
+    interface MoveStrategy
+    {
+        void ExecuteMove(Virologist v);
+    }
+
+    class SimpleMoveStrategy : MoveStrategy
+    {
+        public void ExecuteMove(Virologist v)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    class VitusDanceMoveStrategy : MoveStrategy
+    {
+        public void ExecuteMove(Virologist v)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    class ParalysedMoveStrategy : MoveStrategy
+    {
+        public void ExecuteMove(Virologist v)
+        {
+            throw new NotImplementedException();
         }
     }
 }
