@@ -241,12 +241,12 @@
         <Point X="10.167" Y="5.988" Type="JumpStart" />
         <Point X="10.333" Y="5.988" Type="JumpEnd" />
         <Point X="10.5" Y="5.988" />
-        <Point X="10.5" Y="2.046" />
-        <Point X="12.447" Y="2.046" Type="JumpStart" />
-        <Point X="12.614" Y="2.046" Type="JumpEnd" />
-        <Point X="17.542" Y="2.046" Type="JumpStart" />
-        <Point X="17.708" Y="2.046" Type="JumpEnd" />
-        <Point X="21" Y="2.046" />
+        <Point X="10.5" Y="2.056" />
+        <Point X="12.447" Y="2.056" Type="JumpStart" />
+        <Point X="12.614" Y="2.056" Type="JumpEnd" />
+        <Point X="17.542" Y="2.056" Type="JumpStart" />
+        <Point X="17.708" Y="2.056" Type="JumpEnd" />
+        <Point X="21" Y="2.056" />
         <Point X="21" Y="4.125" />
         <Point X="23.042" Y="4.125" Type="JumpStart" />
         <Point X="23.208" Y="4.125" Type="JumpEnd" />
@@ -282,11 +282,11 @@
   <Class Name="CatchThemAll.GameManager">
     <Position X="18.25" Y="0.5" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAABAAAAAAAAAAAAAgAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAQAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Field Name="Map" />
+      <Field Name="map" />
     </ShowAsAssociation>
   </Class>
   <Class Name="CatchThemAll.Resource">

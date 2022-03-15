@@ -281,7 +281,7 @@ namespace CatchThemAll
     public static class GameManager
     {
 
-        static Map Map;
+        static Map map;
 
         public static void StartGame() { }
         public static void EndGame(Virologist winner) { }
