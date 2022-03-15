@@ -19,9 +19,7 @@ namespace CatchThemAll
         Field mezo;
         private Resource resource;
         private System.Collections.Generic.List<Equipment> equipments;
-
-        public void MoveTo(Field targetField)
-        { }
+        
 
         public bool IsParalyzed()
         { return false; }
@@ -31,7 +29,7 @@ namespace CatchThemAll
         {
             throw new System.NotImplementedException();
         }
-        public void RemoveResource(Resource ammount)
+        public Resource RemoveResource(Resource ammount)
         {
             throw new System.NotImplementedException();
         }
@@ -47,7 +45,7 @@ namespace CatchThemAll
         }
         //Mindegyiknél feltételezzük, hogy meg tudja érinteni, előtte ellenőrizzük
         //When somebody uses an agent on you
-        public void ApplyAgent(Agent agent, Virologist source)
+        public bool ApplyAgent(Agent agent, Virologist source)
         {
             throw new System.NotImplementedException();
         }
@@ -58,7 +56,7 @@ namespace CatchThemAll
         }
 
         //Felszedi a mezőn lévő cuccokat, azaz meghívja az Interact fv-ét
-        public void InteractWithMap()
+        public void InteractWithField()
         {
             throw new System.NotImplementedException();
         }
@@ -68,13 +66,13 @@ namespace CatchThemAll
         {
             throw new System.NotImplementedException();
         }
-        public void StealResourceFromViro(Virologist target, Resource ammount)
+        public void StealResourceFromViro(Virologist target, Resource amount)
         {
             throw new System.NotImplementedException();
         }
 
         //Eltávolítja a virológustól az equipment-et
-        public void RemoveEquipment(Equipment equipment)
+        public bool RemoveEquipment(Equipment equipment)
         {
             throw new System.NotImplementedException();
         }
@@ -100,7 +98,7 @@ namespace CatchThemAll
             throw new System.NotImplementedException();
         }
 
-        public void AddIAgentToStash(Agent agent)
+        public void AddAgentToStash(Agent agent)
         {
             throw new System.NotImplementedException();
         }
@@ -114,6 +112,12 @@ namespace CatchThemAll
         {
             throw new System.NotImplementedException();
         }
+        //Hiper szuper magic függvény, mindent is tud
+        public void RemoveMoveStrategy(MoveStrategy strategy)
+        {
+            return //42
+                ;
+        }
     }
     public class Map
     {
@@ -124,29 +128,31 @@ namespace CatchThemAll
             throw new System.NotImplementedException();
         }
 
-        public Field GetRandomNeighbour(Field mezo)
-        {
-            throw new System.NotImplementedException();
-        }
     }
     public class Field
     {
         List<Virologist> virologists;
+        private List<Field> neighbours;
         public void AcceptViro(Virologist v) { }
-        public virtual bool Interact(Virologist v) { return false; }
-        public virtual bool RemoveViro(Virologist v) { return false; }
+        public virtual void Interact(Virologist v) { }
+        public virtual void RemoveViro(Virologist v) { }
+
+        public Field GetRandomNeighbour()
+        {
+            throw new System.NotImplementedException();
+        }
     }
     public class FieldLab : Field
     {
-        private GeneticCode code; public override bool Interact(Virologist v) { return true; }
+        private GeneticCode code; public override void Interact(Virologist v) { }
     }
-    public class FieldBunker : Field { private Resource resources; public override bool Interact(Virologist v) { return true; } }
-    public class FieldWarehouse : Field
+    public class FieldWarehouse : Field { private Resource resources; public override void Interact(Virologist v) { } }
+    public class FieldBunker : Field
     {
         private Equipment equipment;
         private bool hasEquipment;
 
-        public override bool Interact(Virologist v) { return true; }
+        public override void Interact(Virologist v) { }
     }
     public abstract class InvItem
     {
@@ -158,20 +164,7 @@ namespace CatchThemAll
         {
             throw new System.NotImplementedException();
         }
-        public virtual bool CanRemember()
-        {
-            throw new System.NotImplementedException();
-        }
-        public virtual bool CanMove(Virologist v)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public virtual void CanAttack()
-        {
-            throw new System.NotImplementedException();
-        }
-        public virtual bool CanBeInfected()
+        public virtual bool CanSteal()
         {
             throw new System.NotImplementedException();
         }
@@ -179,7 +172,19 @@ namespace CatchThemAll
         {
             return false;
         }
+        public virtual bool CanCraft()
+        {
+            return false;
+        }
+        public virtual bool CanInteract()
+        {
+            return false;
+        }
 
+        public virtual bool CanApplyAgent()
+        {
+            throw new System.NotImplementedException();
+        }
     }
     public abstract class Equipment : InvItem
     {
@@ -231,6 +236,9 @@ namespace CatchThemAll
     public abstract class Agent : InvItem, iSteppable
     {
         int activeTime;
+        //Akin van
+        Virologist host;
+        MoveStrategy strategy;
         public virtual void Apply(Virologist source, Virologist target)
         {
             throw new System.NotImplementedException();
@@ -257,14 +265,24 @@ namespace CatchThemAll
         {
             throw new System.NotImplementedException();
         }
+
+        public void AddSteppable(iSteppable item)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void RemoveSteppable(iSteppable step)
+        {
+            throw new System.NotImplementedException();
+        }
     }
-    public class GameManager
+    public static class GameManager
     {
 
-        Map Map;
+        static Map map;
 
-        public void StartGame() { }
-        public void EndGame(Virologist winner) { }
+        public static void StartGame() { }
+        public static void EndGame(Virologist winner) { }
     }
 
     public class Resource
@@ -276,7 +294,7 @@ namespace CatchThemAll
             throw new System.NotImplementedException();
         }
 
-        public bool Remove(Resource resource)
+        public void Remove(Resource resource)
         {
             throw new System.NotImplementedException();
         }
@@ -302,16 +320,15 @@ namespace CatchThemAll
 
     public class Dance : Agent
     {
-        //Vagy tudja kire van rákenve, akkor nem kell átadni Virologist-ot
-        public override bool CanMove(Virologist v)
+        public override void Apply(Virologist source, Virologist target)
         {
-            throw new System.NotImplementedException();
+            base.Apply(source, target);
         }
     }
 
     public class Forget : Agent
     {
-        public override bool CanRemember()
+        public override bool CanCraft()
         {
             throw new System.NotImplementedException();
         }
@@ -323,6 +340,27 @@ namespace CatchThemAll
         {
             return true;
         }
+        public override bool CanApplyAgent()
+        {
+            throw new System.NotImplementedException();
+        }
+        public override bool CanSteal()
+        {
+            throw new System.NotImplementedException();
+        }
+        public override bool CanCraft()
+        {
+            throw new System.NotImplementedException();
+        }
+        public override bool CanInteract()
+        {
+            throw new System.NotImplementedException();
+        }
+        public override void Apply(Virologist source, Virologist target)
+        {
+            base.Apply(source, target);
+        }
+
     }
 
     public class Protect : Agent
@@ -349,14 +387,14 @@ namespace CatchThemAll
         }
     }
 
-    interface MoveStrategy
+    public interface MoveStrategy
     {
-        void ExecuteMove(Virologist v);
+        public void ExecuteMove(Virologist v, Field from, Field to);
     }
 
     class SimpleMoveStrategy : MoveStrategy
     {
-        public void ExecuteMove(Virologist v)
+        public void ExecuteMove(Virologist v, Field from, Field to)
         {
             throw new NotImplementedException();
         }
@@ -364,7 +402,7 @@ namespace CatchThemAll
 
     class VitusDanceMoveStrategy : MoveStrategy
     {
-        public void ExecuteMove(Virologist v)
+        public void ExecuteMove(Virologist v, Field from, Field to)
         {
             throw new NotImplementedException();
         }
@@ -372,7 +410,7 @@ namespace CatchThemAll
 
     class ParalysedMoveStrategy : MoveStrategy
     {
-        public void ExecuteMove(Virologist v)
+        public void ExecuteMove(Virologist v, Field from, Field to)
         {
             throw new NotImplementedException();
         }
