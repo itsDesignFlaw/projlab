@@ -123,15 +123,15 @@ namespace CatchThemAll
         {
             throw new System.NotImplementedException();
         }
-        
+
     }
     public class Field
     {
         List<Virologist> virologists;
         private List<Field> neighbours;
         public void AcceptViro(Virologist v) { }
-        public virtual void Interact(Virologist v) {  }
-        public virtual void RemoveViro(Virologist v) {  }
+        public virtual void Interact(Virologist v) { }
+        public virtual void RemoveViro(Virologist v) { }
 
         public Field GetRandomNeighbour()
         {
@@ -140,15 +140,15 @@ namespace CatchThemAll
     }
     public class FieldLab : Field
     {
-        private GeneticCode code; public override void Interact(Virologist v) {  }
+        private GeneticCode code; public override void Interact(Virologist v) { }
     }
-    public class FieldWarehouse : Field { private Resource resources; public override void Interact(Virologist v) {  } }
+    public class FieldWarehouse : Field { private Resource resources; public override void Interact(Virologist v) { } }
     public class FieldBunker : Field
     {
         private Equipment equipment;
         private bool hasEquipment;
 
-        public override void Interact(Virologist v) {  }
+        public override void Interact(Virologist v) { }
     }
     public abstract class InvItem
     {
@@ -386,14 +386,14 @@ namespace CatchThemAll
         }
     }
 
-    public abstract class MoveStrategy
+    public interface MoveStrategy
     {
-        public abstract void ExecuteMove(Virologist v, Field from, Field to);
+        public void ExecuteMove(Virologist v, Field from, Field to);
     }
 
     class SimpleMoveStrategy : MoveStrategy
     {
-        public override void ExecuteMove(Virologist v, Field from, Field to)
+        public void ExecuteMove(Virologist v, Field from, Field to)
         {
             throw new NotImplementedException();
         }
@@ -401,7 +401,7 @@ namespace CatchThemAll
 
     class VitusDanceMoveStrategy : MoveStrategy
     {
-        public override void ExecuteMove(Virologist v, Field from, Field to)
+        public void ExecuteMove(Virologist v, Field from, Field to)
         {
             throw new NotImplementedException();
         }
@@ -409,7 +409,7 @@ namespace CatchThemAll
 
     class ParalysedMoveStrategy : MoveStrategy
     {
-        public override void ExecuteMove(Virologist v, Field from, Field to)
+        public void ExecuteMove(Virologist v, Field from, Field to)
         {
             throw new NotImplementedException();
         }
