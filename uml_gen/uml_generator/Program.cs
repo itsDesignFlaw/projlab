@@ -389,14 +389,14 @@ namespace CatchThemAll
         }
     }
 
-    interface MoveStrategy
+    public abstract class MoveStrategy
     {
-        void ExecuteMove(Virologist v);
+        public abstract void ExecuteMove(Virologist v);
     }
 
     class SimpleMoveStrategy : MoveStrategy
     {
-        public void ExecuteMove(Virologist v)
+        public override void ExecuteMove(Virologist v)
         {
             throw new NotImplementedException();
         }
@@ -404,7 +404,7 @@ namespace CatchThemAll
 
     class VitusDanceMoveStrategy : MoveStrategy
     {
-        public void ExecuteMove(Virologist v)
+        public override void ExecuteMove(Virologist v)
         {
             throw new NotImplementedException();
         }
@@ -412,7 +412,7 @@ namespace CatchThemAll
 
     class ParalysedMoveStrategy : MoveStrategy
     {
-        public void ExecuteMove(Virologist v)
+        public override void ExecuteMove(Virologist v)
         {
             throw new NotImplementedException();
         }
