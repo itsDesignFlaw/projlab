@@ -391,12 +391,12 @@ namespace CatchThemAll
 
     public abstract class MoveStrategy
     {
-        public abstract void ExecuteMove(Virologist v);
+        public abstract void ExecuteMove(Virologist v, Field from, Field to);
     }
 
     class SimpleMoveStrategy : MoveStrategy
     {
-        public override void ExecuteMove(Virologist v)
+        public override void ExecuteMove(Virologist v, Field from, Field to)
         {
             throw new NotImplementedException();
         }
@@ -404,7 +404,7 @@ namespace CatchThemAll
 
     class VitusDanceMoveStrategy : MoveStrategy
     {
-        public override void ExecuteMove(Virologist v)
+        public override void ExecuteMove(Virologist v, Field from, Field to)
         {
             throw new NotImplementedException();
         }
@@ -412,7 +412,7 @@ namespace CatchThemAll
 
     class ParalysedMoveStrategy : MoveStrategy
     {
-        public override void ExecuteMove(Virologist v)
+        public override void ExecuteMove(Virologist v, Field from, Field to)
         {
             throw new NotImplementedException();
         }
