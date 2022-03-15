@@ -31,7 +31,7 @@ namespace CatchThemAll
         {
             throw new System.NotImplementedException();
         }
-        public void RemoveResource(Resource ammount)
+        public Resource RemoveResource(Resource ammount)
         {
             throw new System.NotImplementedException();
         }
@@ -279,13 +279,13 @@ namespace CatchThemAll
             throw new System.NotImplementedException();
         }
     }
-    public class GameManager
+    public static class GameManager
     {
 
-        Map Map;
+        static Map Map;
 
-        public void StartGame() { }
-        public void EndGame(Virologist winner) { }
+        public static void StartGame() { }
+        public static void EndGame(Virologist winner) { }
     }
 
     public class Resource
