@@ -123,18 +123,20 @@ namespace CatchThemAll
         {
             throw new System.NotImplementedException();
         }
-
-        public Field GetRandomNeighbour(Field mezo)
-        {
-            throw new System.NotImplementedException();
-        }
+        
     }
     public class Field
     {
         List<Virologist> virologists;
+        private List<Field> neighbours;
         public void AcceptViro(Virologist v) { }
         public virtual void Interact(Virologist v) {  }
         public virtual void RemoveViro(Virologist v) {  }
+
+        public Field GetRandomNeighbour()
+        {
+            throw new System.NotImplementedException();
+        }
     }
     public class FieldLab : Field
     {
