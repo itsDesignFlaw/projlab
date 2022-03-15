@@ -109,6 +109,11 @@ namespace CatchThemAll
         {
             throw new System.NotImplementedException();
         }
+
+        public void ChangeMoveStrategy(MoveStrategy strategy)
+        {
+            throw new System.NotImplementedException();
+        }
     }
     public class Map
     {

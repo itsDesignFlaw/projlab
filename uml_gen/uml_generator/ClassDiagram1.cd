@@ -1,30 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
   <Class Name="CatchThemAll.Virologist" BaseTypeListCollapsed="true">
-    <Position X="11.5" Y="2.5" Width="3.5" />
-    <AssociationLine Name="items" Type="CatchThemAll.InvItem" ManuallyRouted="true">
+    <Position X="11.5" Y="2.25" Width="3.5" />
+    <AssociationLine Name="items" Type="CatchThemAll.InvItem" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="11.5" Y="3.556" />
-        <Point X="11.43" Y="3.556" />
-        <Point X="11.43" Y="1.997" />
+        <Point X="12.812" Y="2.25" />
+        <Point X="12.812" Y="1.997" />
         <Point X="11" Y="1.997" />
       </Path>
     </AssociationLine>
     <AssociationLine Name="learntCodes" Type="CatchThemAll.GeneticCode" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="11.5" Y="5.375" />
-        <Point X="11.375" Y="5.375" />
+        <Point X="11.5" Y="5.251" />
+        <Point X="11.375" Y="5.251" />
         <Point X="11.375" Y="5.421" />
         <Point X="10.333" Y="5.421" Type="JumpStart" />
         <Point X="10.167" Y="5.421" Type="JumpEnd" />
         <Point X="9.75" Y="5.421" />
       </Path>
     </AssociationLine>
-    <AssociationLine Name="stash" Type="CatchThemAll.Agent" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+    <AssociationLine Name="stash" Type="CatchThemAll.Agent" ManuallyRouted="true" FixedFromPoint="true">
       <Path>
-        <Point X="11.5" Y="3.75" />
-        <Point X="10.333" Y="3.752" Type="JumpStart" />
-        <Point X="10.167" Y="3.752" Type="JumpEnd" />
+        <Point X="11.5" Y="3.816" />
+        <Point X="10.333" Y="3.803" Type="JumpStart" />
+        <Point X="10.167" Y="3.801" Type="JumpEnd" />
         <Point X="6.25" Y="3.757" />
       </Path>
       <MemberNameLabel ManuallyPlaced="true">
@@ -33,26 +32,26 @@
     </AssociationLine>
     <AssociationLine Name="resource" Type="CatchThemAll.Resource" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="13.875" Y="6.873" />
+        <Point X="13.875" Y="6.815" />
         <Point X="13.875" Y="8.312" />
         <Point X="19" Y="8.312" />
       </Path>
     </AssociationLine>
     <AssociationLine Name="equipments" Type="CatchThemAll.Equipment" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="12.562" Y="6.873" />
+        <Point X="12.562" Y="6.815" />
         <Point X="12.562" Y="8.749" />
         <Point X="11" Y="8.749" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAQGAAIBhAABACAAAAgAAAAAoAcIoABkAAIgAAQAAAQ=</HashCode>
+      <HashCode>AAQGAAIBhAABACAAAAgAAAAAoAcIoABmAAIgAAQAAAQ=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
+      <Field Name="moveStrategy" />
       <Field Name="mezo" />
       <Field Name="resource" />
-      <Field Name="moveStrategy" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
       <Field Name="items" />
@@ -94,6 +93,8 @@
         <Point X="19" Y="6.062" />
         <Point X="18.5" Y="6.062" />
         <Point X="18.5" Y="7.184" />
+        <Point X="16.958" Y="7.184" Type="JumpStart" />
+        <Point X="16.792" Y="7.184" Type="JumpEnd" />
         <Point X="13.958" Y="7.184" Type="JumpStart" />
         <Point X="13.792" Y="7.184" Type="JumpEnd" />
         <Point X="12.645" Y="7.184" Type="JumpStart" />
@@ -187,6 +188,8 @@
         <Point X="12.645" Y="7.4" Type="JumpEnd" />
         <Point X="13.792" Y="7.4" Type="JumpStart" />
         <Point X="13.958" Y="7.4" Type="JumpEnd" />
+        <Point X="16.792" Y="7.4" Type="JumpStart" />
+        <Point X="16.958" Y="7.4" Type="JumpEnd" />
         <Point X="19" Y="7.4" />
       </Path>
       <MemberNameLabel ManuallyPlaced="true">
@@ -334,6 +337,9 @@
       <HashCode>AAAAAAAAAAAAACAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="resources" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="CatchThemAll.FieldWarehouse">
     <Position X="23.5" Y="5.25" Width="2.25" />
