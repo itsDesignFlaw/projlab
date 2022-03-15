@@ -114,6 +114,12 @@ namespace CatchThemAll
         {
             throw new System.NotImplementedException();
         }
+        //Hiper szuper magic függvény, mindent is tud
+        public void RemoveMoveStrategy(MoveStrategy strategy)
+        {
+            return //42
+                ;
+        }
     }
     public class Map
     {
