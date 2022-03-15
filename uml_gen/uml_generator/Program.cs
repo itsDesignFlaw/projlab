@@ -47,7 +47,7 @@ namespace CatchThemAll
         }
         //Mindegyiknél feltételezzük, hogy meg tudja érinteni, előtte ellenőrizzük
         //When somebody uses an agent on you
-        public void ApplyAgent(Agent agent, Virologist source)
+        public bool ApplyAgent(Agent agent, Virologist source)
         {
             throw new System.NotImplementedException();
         }
@@ -160,10 +160,6 @@ namespace CatchThemAll
         {
             throw new System.NotImplementedException();
         }
-        public virtual bool CanRemember()
-        {
-            throw new System.NotImplementedException();
-        }
         public virtual bool CanSteal()
         {
             throw new System.NotImplementedException();
@@ -238,6 +234,7 @@ namespace CatchThemAll
         int activeTime;
         //Akin van
         Virologist host;
+        MoveStrategy strategy;
         public virtual void Apply(Virologist source, Virologist target)
         {
             throw new System.NotImplementedException();
@@ -327,7 +324,7 @@ namespace CatchThemAll
 
     public class Forget : Agent
     {
-        public override bool CanRemember()
+        public override bool CanCraft()
         {
             throw new System.NotImplementedException();
         }
