@@ -166,7 +166,7 @@ namespace CatchThemAll
         {
             throw new System.NotImplementedException();
         }
-        public virtual bool CanMove(Virologist v)
+        public virtual bool CanMove()
         {
             throw new System.NotImplementedException();
         }
@@ -322,7 +322,7 @@ namespace CatchThemAll
     public class Dance : Agent
     {
         //Vagy tudja kire van rákenve, akkor nem kell átadni Virologist-ot
-        public override bool CanMove(Virologist v)
+        public override bool CanMove()
         {
             throw new System.NotImplementedException();
         }
@@ -342,7 +342,7 @@ namespace CatchThemAll
         {
             return true;
         }
-        public override bool CanMove(Virologist v)
+        public override bool CanMove()
         {
             throw new System.NotImplementedException();
         }
