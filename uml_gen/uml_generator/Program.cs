@@ -10,7 +10,7 @@ namespace CatchThemAll
     }
     public class Virologist
     {
-        MoveStrategy moveStrategy;
+        iMoveStrategy moveStrategy;
         List<InvItem> items = new List<InvItem>();
         List<GeneticCode> learntCodes = new List<GeneticCode>();
         List<Agent> stash = new List<Agent>();
@@ -108,12 +108,12 @@ namespace CatchThemAll
             throw new System.NotImplementedException();
         }
 
-        public void ChangeMoveStrategy(MoveStrategy strategy)
+        public void ChangeMoveStrategy(iMoveStrategy strategy)
         {
             throw new System.NotImplementedException();
         }
         //Hiper szuper magic függvény, mindent is tud
-        public void RemoveMoveStrategy(MoveStrategy strategy)
+        public void RemoveMoveStrategy(iMoveStrategy strategy)
         {
             return //42
                 ;
@@ -238,7 +238,7 @@ namespace CatchThemAll
         int activeTime;
         //Akin van
         Virologist host;
-        MoveStrategy strategy;
+        iMoveStrategy strategy;
         public virtual void Apply(Virologist source, Virologist target)
         {
             throw new System.NotImplementedException();
@@ -387,12 +387,21 @@ namespace CatchThemAll
         }
     }
 
-    public interface MoveStrategy
+    public interface iMoveStrategy
     {
         public void ExecuteMove(Virologist v, Field from, Field to);
     }
 
-    class SimpleMoveStrategy : MoveStrategy
+    class MSSimple : iMoveStrategy
+    {
+
+        public void ExecuteMove(Virologist v, Field from, Field to)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    class MSVitusDance : iMoveStrategy
     {
         public void ExecuteMove(Virologist v, Field from, Field to)
         {
@@ -400,15 +409,7 @@ namespace CatchThemAll
         }
     }
 
-    class VitusDanceMoveStrategy : MoveStrategy
-    {
-        public void ExecuteMove(Virologist v, Field from, Field to)
-        {
-            throw new NotImplementedException();
-        }
-    }
-
-    class ParalysedMoveStrategy : MoveStrategy
+    class MSParalysed : iMoveStrategy
     {
         public void ExecuteMove(Virologist v, Field from, Field to)
         {
