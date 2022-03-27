@@ -1,37 +1,56 @@
 package VeryGoodViroGame;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 public class Main
 {
 
+
+    static void print(String str) {
+        System.out.println(str);
+    }
+
+    static void AskRunTest()
+    {
+        System.out.print("Select test: ");
+        int ID;
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
+        while (true) {
+            try {
+                ID = Integer.parseInt(reader.readLine().toLowerCase());
+                print("\n");
+                Tester.RunTest(ID-1);
+                Thread.sleep(1000);
+                System.out.print(".");
+                Thread.sleep(1000);
+                System.out.print(".");
+                Thread.sleep(1000);
+                System.out.print(".");
+            } catch (IOException ex) {
+                ex.printStackTrace();
+                return;
+            }
+            catch (NumberFormatException ex){
+                print("Invalid input.");
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
     public static void main(String[] args)
     {
-        //buziintellij //miafasz
-        System.out.println("Hello Kopasz Qgli"); // TODO: grafika házi
-        System.out.println("HELO");
+        System.out.println("--== Goldshit Teszteloprogramja©®™ ==--"); //todo ne hagyjuk itt plsspls
 
-        tesztteszt();
-
-
-        System.out.println("Teszt vége");
+        while(true)
+        {
+            Tester.ListTests();
+            AskRunTest();
+        }
 
     }
 
-    public static void tesztteszt()
-    {
-        //Kommunikacios diagram alapjan:
-        Map map = new Map();
-        Field field = new Field();
-        Field field2 = new Field();
-        map.fields.add(field);
-        map.fields.add(field2);
-        Virologist viro = new Virologist();
-        viro.mezo = field;
-
-        //teszt: szekvenciadiagram:
-        //viro.movestrategy.DoMoves() --->
-        Logger.NewFunctionCall("Test main test");
-        if (Logger.AskQuestion("Buzi-e vagy"))
-            field2.AcceptViro(viro);
-        Logger.ReturnFunction();
-    }
 }

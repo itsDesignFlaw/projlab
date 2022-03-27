@@ -10,18 +10,19 @@ package VeryGoodViroGame;//
 //
 
 
-public class FieldBunker extends Field
-{
+public class FieldBunker extends Field {
     private Equipment equipment;
     private boolean hasEquipment;
-    
-    public void Interact(Virologist v)
-    {
+
+    public void Interact(Virologist v) {
         Logger.NewFunctionCall("FieldBunker.Interact");
-        if(Logger.AskQuestion("Does the bunker have equipment in it?"))
-        {
+        if (Logger.AskQuestion("Does the bunker have equipment in it?")) {
             v.AddEquipment(equipment);
         }
         Logger.ReturnFunction();
+    }
+
+    public void setEquipment(Equipment equipment) {
+        this.equipment = equipment;
     }
 }

@@ -10,14 +10,16 @@ package VeryGoodViroGame;//
 //
 
 
-public class FieldLab extends Field
-{
+public class FieldLab extends Field {
     private GeneticCode code;
-    
-    public void Interact(Virologist v)
-    {
+
+    public void Interact(Virologist v) {
         Logger.NewFunctionCall("FieldLab.Interact");
         v.LearnGeneticCode(code);
         Logger.ReturnFunction();
+    }
+
+    public void setCode(GeneticCode geneticCode) {
+        code = geneticCode;
     }
 }

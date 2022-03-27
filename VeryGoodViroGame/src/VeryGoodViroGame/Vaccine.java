@@ -16,13 +16,15 @@ public class Vaccine extends Agent
     
     public Vaccine(Agent agentToCure)
     {
-    
+
     }
     
     public void Apply(Virologist source, Virologist target)
     {
+        Logger.NewFunctionCall("Vaccine.Apply");
         target.RemoveItem(agentToCure);
         Timer.RemoveSteppable(agentToCure);
         Timer.RemoveSteppable(this);
+        Logger.ReturnFunction();
     }
 }

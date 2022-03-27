@@ -17,10 +17,14 @@ public class Resource
     
     public void Add(Resource resource)
     {
+        Logger.NewFunctionCall("Resource.Add");
+        Logger.ReturnFunction();
     }
     
     public void Remove(Resource resource)
     {
+        Logger.NewFunctionCall("Resource.Remove");
+        Logger.ReturnFunction();
     }
         /*public void AddAmi(int ami)
         {

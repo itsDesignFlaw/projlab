@@ -19,17 +19,23 @@ public class Timer
     
     public static void Step()
     {
+        Logger.NewFunctionCall("Timer.Step");
         for(iSteppable s : steppable_reg)
         {
             s.Step();
         }
+        Logger.ReturnFunction();
     }
     
     public static void AddSteppable(iSteppable item)
     {
+        Logger.NewFunctionCall("Timer.AddSteppable");
+        Logger.ReturnFunction();
     }
     
     public static void RemoveSteppable(iSteppable step)
     {
+        Logger.NewFunctionCall("Timer.RemoveSteppable");
+        Logger.ReturnFunction();
     }
 }

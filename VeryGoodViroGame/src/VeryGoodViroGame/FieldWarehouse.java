@@ -10,15 +10,17 @@ package VeryGoodViroGame;//
 //
 
 
-public class FieldWarehouse extends Field
-{
+public class FieldWarehouse extends Field {
     private Resource resources;
-    
-    public void Interact(Virologist v)
-    {
+
+    public void Interact(Virologist v) {
         Logger.NewFunctionCall("FieldWarehouse.Interact");
         v.AddResource(resources);
         Logger.ReturnFunction();
+    }
+
+    public void setResource(Resource r) {
+        resources = r;
     }
 }
 

@@ -12,18 +12,33 @@ package VeryGoodViroGame;//
 
 import java.util.List;
 
-public class Field
-{
-	List<Virologist> virologists;
-	private List<Field> neighbours;
-	public void AcceptViro(Virologist v) { }
-	public void Interact(Virologist v) { }
-	public void RemoveViro(Virologist v) { }
-	
-	public Field GetRandomNeighbour()
-	{
-		Logger.NewFunctionCall("Field.GetRandomNeighbour");
-		Logger.ReturnFunction();
-		return null;
-	}
+public class Field {
+    List<Virologist> virologists;
+    private List<Field> neighbours;
+
+    public void AcceptViro(Virologist v) {
+        Logger.NewFunctionCall("Field.AcceptViro");
+        Logger.ReturnFunction();
+    }
+
+    public void Interact(Virologist v) {
+        Logger.NewFunctionCall("Field.Interact");
+        Logger.ReturnFunction();
+    }
+
+    public void RemoveViro(Virologist v) {
+        Logger.NewFunctionCall("Field.RemoveViro");
+        Logger.ReturnFunction();
+    }
+
+    public void AddNeighbour(Field f) {
+        Logger.NewFunctionCall("Field.AddNeighbour");
+        Logger.ReturnFunction();
+    }
+
+    public Field GetRandomNeighbour() {
+        Logger.NewFunctionCall("Field.GetRandomNeighbour");
+        Logger.ReturnFunction();
+        return null;
+    }
 }
