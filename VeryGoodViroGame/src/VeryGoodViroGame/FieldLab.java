@@ -9,16 +9,29 @@ package VeryGoodViroGame;//
 //
 //
 
-
+ /**
+ * Egy speciális mező, a labort valósítja meg.
+ * Felelőssége a letapogathatóság biztosítása, valamint egy genetikai kód létezésének biztosítása.
+ */
 public class FieldLab extends Field {
     private GeneticCode code;
 
+      /**
+      * Ez a metódus valósítja meg a genetikai kód letapogatást.
+      *
+      * @param v A virológus aki letapogatja a kódot.
+      */
     public void Interact(Virologist v) {
         Logger.NewFunctionCall("FieldLab.Interact");
         v.LearnGeneticCode(code);
         Logger.ReturnFunction();
     }
 
+      /**
+      * Ez a metódus valósítja beállítja a laborban fellelhető genetikai kódot.
+      *
+      * @param geneticCode A kód amit beállítunk, hogy le lehessen tapogatni a laborban.
+      */
     public void setCode(GeneticCode geneticCode) {
         code = geneticCode;
     }

@@ -4,16 +4,14 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Main
-{
+public class Main {
 
 
     static void print(String str) {
         System.out.println(str);
     }
 
-    static boolean AskRunTest()
-    {
+    static boolean AskRunTest() {
         int ID;
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String str = "";
@@ -24,7 +22,7 @@ public class Main
                 str = reader.readLine();
                 ID = Integer.parseInt(str.toLowerCase());
                 print("\n");
-                Tester.RunTest(ID-1);
+                Tester.RunTest(ID - 1);
                 Thread.sleep(1000);
                 System.out.print(".");
                 Thread.sleep(1000);
@@ -34,23 +32,20 @@ public class Main
             } catch (IOException ex) {
                 ex.printStackTrace();
                 return true;
-            }
-            catch (NumberFormatException ex){
-                print("Invalid input: " + str);
+            } catch (NumberFormatException ex) {
                 if (str.trim().toLowerCase().equals("exit"))
                     return true;
+                print("Invalid input: " + str);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
     }
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         System.out.println("--== Biden Teszteloprogramja©®™ ==--");
 
-        while(true)
-        {
+        while (true) {
             Tester.ListTests();
             if (AskRunTest())
                 break;

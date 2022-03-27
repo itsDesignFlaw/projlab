@@ -10,9 +10,14 @@ package VeryGoodViroGame;//
 //
 
 
-
-
+/**
+ * Ez egy interface, ami előírja, hogy milyen metódusokkal kell rendelkeznie azoknak az osztályoknak,
+ * melyek entitásai az idő hatására változnak.
+ */
 public interface iSteppable
 {
+	/**
+	 * Ezt a metódust kell implementálnia az időben változó entitásoknak.
+	 */
 	void Step();
 }

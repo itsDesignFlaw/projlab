@@ -9,18 +9,33 @@ package VeryGoodViroGame;//
 //
 //
 
-
-public class Vaccine extends Agent
-{
+/**
+ * Ez az osztály felelős az azonos genetikai kód alapján készített vírusok semlegesítéséért.
+ */
+public class Vaccine extends Agent {
+    /**
+     * Az az ágens amihez a vakcinát létrehozzuk
+     */
     private Agent agentToCure;
-    
-    public Vaccine(Agent agentToCure)
-    {
 
+    /**
+     * Vaccine osztály konstruktora, inicializálásért felelős
+     *
+     * @param agentToCure az inicializálandó attribútum
+     */
+    public Vaccine(Agent agentToCure) {
+        this.agentToCure = agentToCure;
     }
-    
-    public void Apply(Virologist source, Virologist target)
-    {
+
+    /**
+     * A forrás virológus beadja a vakcinát a targetnek,
+     * és amennyiben a targeton épp hatást gyakorol egy ágens,
+     * melyet gyógyít a vakcina, a hatás megszűnik.
+     *
+     * @param source az ágenst felkenő virológus
+     * @param target az a virológus akire felkenik az ágenst
+     */
+    public void Apply(Virologist source, Virologist target) {
         Logger.NewFunctionCall("Vaccine.Apply");
         target.RemoveItem(agentToCure);
         Timer.RemoveSteppable(agentToCure);

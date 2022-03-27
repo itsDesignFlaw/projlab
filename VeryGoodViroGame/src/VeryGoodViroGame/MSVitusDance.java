@@ -9,13 +9,21 @@ package VeryGoodViroGame;//
 //
 //
 
-
+/**
+ * Ez az osztály felelős a virológus vítustánc hatása alatti mozgási stratégiájánaknak a megvalósításáért.
+ */
 public class MSVitusDance implements iMoveStrategy
 {
+    /**
+     * Ennek a metódusnak a hatására a virológus egy véletlenszerűen választott mezőre lép.
+     * @param v A virológus, akin a mozgást végrehajtjuk.
+     * @param from a Mező amiről mozgatjuk a virológust
+     * @param to a Mező amire mozgatjuk a virológust
+     */
     @Override
     public void ExecuteMove(Virologist v, Field from, Field to)
     {
-        Logger.NewFunctionCall("MSVitusDance");
+        Logger.NewFunctionCall("MSVitusDance.ExecuteMove");
         Field random = from.GetRandomNeighbour();
         from.RemoveViro(v);
         random.AcceptViro(v);

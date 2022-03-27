@@ -48,6 +48,13 @@ public class Logger {
         }
     }
 
+    static void Start()
+    {
+        Timer.steppable_reg = new ArrayList<iSteppable>();
+        GameManager.map = null;
+        SetEnabled(true);
+    }
+
     static void NewFunctionCall(String mes) {
         if (!isEnabled)
             return;
@@ -57,16 +64,20 @@ public class Logger {
         if (isFirst)
             str = "---" + mes + "--->[]";
         else
+        {
+            Print("[]");
             str = "[]---" + mes + "--->[]";
+        }
+
 
         Print(str);
-        putEltolas(str.length());
+        putEltolas(str.length()-2);
         isFirst = false;
     }
 
     static void ReturnFunction() {
         if (isEnabled) {
-            int elt = lastEltolas()-5;
+            int elt = lastEltolas()-3;
             popEltolas();
             Print("[]<" + "-".repeat(elt)  + "[]");
         }
@@ -84,8 +95,9 @@ public class Logger {
 
     static boolean AskQuestion(String question) {
         if (isEnabled) {
-            System.out.println(separator.repeat(getEltolas()) + question + "?(Y/N):");
-            System.out.print(separator.repeat(getEltolas()));
+            String msg = separator.repeat(getEltolas()) + "[]>" + question + "?(Y/N): ";
+            System.out.print(msg);
+            //System.out.print(separator.repeat(getEltolas()));
             String answer = "";
             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 

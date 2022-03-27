@@ -9,11 +9,19 @@ package VeryGoodViroGame;//
 //
 //
 
-
+/**
+ * Egy mező, melyben egy felszerelés található, és vehető fel a virológusok által.
+ * Tárolja a tartalmazott felszerelést, mindaddig, amíg azt el nem távolítják.
+ */
 public class FieldBunker extends Field {
     private Equipment equipment;
     private boolean hasEquipment;
 
+    /**
+     * Ez a metódus valósítja meg a feladat szövege szerinti felszerelés felvételét.
+     *
+     * @param v A virológus aki a mezőn van.
+     */
     public void Interact(Virologist v) {
         Logger.NewFunctionCall("FieldBunker.Interact");
         if (Logger.AskQuestion("Does the bunker have equipment in it?")) {
@@ -22,7 +30,13 @@ public class FieldBunker extends Field {
         Logger.ReturnFunction();
     }
 
+    /**
+     * Ez a metódus valósítja meg, hogy az adott mezőn milyen felszerelés jelenjen meg.
+     *
+     * @param equipment felszerelés
+     */
     public void setEquipment(Equipment equipment) {
         this.equipment = equipment;
+        hasEquipment = true;
     }
 }

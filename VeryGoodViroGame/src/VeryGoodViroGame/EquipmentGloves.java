@@ -16,10 +16,12 @@ package VeryGoodViroGame;//
 public class EquipmentGloves extends Equipment
 {
     /**
-     * A source paraméterként kapott virológus megkísérli felkenni az ágenst a targetként megkapott virológusra.
+     * (InvItem metódus) hamis érték visszaadásával blokkolja
+     * az ágens felkenődését, illetve véletlenszerűen, előre
+     * megadott eséllyel visszakeni az ágenst az eredeti kenőre.
      *
+     * @param  agent maga az ágens amivel kenni próbálnak
      * @param  source az ágenst felkenő virológus
-     * @param  target az a virológus akire felkenik az ágenst
      */
     public boolean CanAgentBeApplied(Agent agent, Virologist source)
     {

@@ -13,10 +13,15 @@ package VeryGoodViroGame;//
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Az osztály felelős a játéktér létrehozásáért, és annak kezeléséért.
+ */
 public class Map
 {
     List<Field> fields = new ArrayList<>();
-    
+    /**
+     * Ez a metódus generálja a játékteret
+     */
     public void GenerateMap()
     {
         Logger.NewFunctionCall("Map.GenerateMap");
