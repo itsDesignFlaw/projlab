@@ -17,15 +17,15 @@ public class Timer
 {
     List<iSteppable> steppable_reg = new ArrayList<>();
     
-    public void Step()
+    public static void Step()
     {
     }
     
-    public void AddSteppable(iSteppable item)
+    public static void AddSteppable(iSteppable item)
     {
     }
     
-    public void RemoveSteppable(iSteppable step)
+    public static void RemoveSteppable(iSteppable step)
     {
     }
 }
