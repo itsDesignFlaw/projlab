@@ -17,12 +17,17 @@ public class GeneticCode
     
     public Agent CreateVirus()
     {
-        return null;
+        Agent clone = a.Clone();
+        Timer.AddSteppable(clone);
+        return clone;
     }
     
     public Agent CreateVaccine()
     {
-        return null;
+        Agent clone = a.Clone();
+        Vaccine vaccine = new Vaccine(clone);
+        Timer.AddSteppable(vaccine);
+        return vaccine;
     }
     
     public Resource GetCost()

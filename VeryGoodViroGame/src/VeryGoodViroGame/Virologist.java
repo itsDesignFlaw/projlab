@@ -44,10 +44,34 @@ public class Virologist
     //Craftol egy vírust
     public void CraftVirus(GeneticCode code)
     {
+        for(InvItem item : items)
+        {
+            if(!item.CanCraft())
+            {
+                return;
+            }
+        }
+        Resource cost = code.GetCost();
+        //has enough resource:
+        resource.Remove(cost);
+        Agent created = code.CreateVirus();
+        AddAgentToStash(created);
     }
     
     public void CraftVaccine(GeneticCode code)
     {
+        for(InvItem item : items)
+        {
+            if(!item.CanCraft())
+            {
+                return;
+            }
+        }
+        Resource cost = code.GetCost();
+        //has enough resource:
+        resource.Remove(cost);
+        Agent created = code.CreateVaccine();
+        AddAgentToStash(created);
     }
     
     //Mindegyiknél feltételezzük, hogy meg tudja érinteni, előtte ellenőrizzük
