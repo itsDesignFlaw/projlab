@@ -36,7 +36,7 @@ public class GeneticCode {
      * @return a leklónozott ágens
      */
     public Agent CreateVirus() {
-        Logger.NewFunctionCall("GeneticCode.CreateVirus");
+        Logger.NewFunctionCall(this, "CreateVirus");
         Agent clone = a.Clone();
         Timer.AddSteppable(clone);
         Logger.ReturnFunction();
@@ -47,7 +47,7 @@ public class GeneticCode {
      * @return a leklónozott ágenshez tartozó vakcina
      */
     public Agent CreateVaccine() {
-        Logger.NewFunctionCall("GeneticCode.CreateVaccine");
+        Logger.NewFunctionCall(this, "CreateVaccine");
         Agent clone = a.Clone();
         Vaccine vaccine = new Vaccine(clone);
         Timer.AddSteppable(vaccine);
@@ -60,7 +60,7 @@ public class GeneticCode {
      * @return a megadott kőltség
      */
     public Resource GetCost() {
-        Logger.NewFunctionCall("GeneticCode.GetCost");
+        Logger.NewFunctionCall(this, "GetCost");
         Logger.ReturnFunction();
         return cost;
     }

@@ -13,9 +13,15 @@ public class Tester {
             Field from = new Field();
             Field to = new Field();
             Virologist virologist = new Virologist();
-            virologist.ChangeMoveStrategy(new MSSimple());
+            MSSimple ms = new MSSimple();
+            virologist.ChangeMoveStrategy(ms);
+            virologist.SetField(from);
             //ENTER
-            Logger.SetEnabled(true);
+
+            Logger.Start();
+            Object[] obdzss = {from, to, virologist, ms};
+            String[] neveqh = {"f1", "f2", "v1", "ms"};
+            Logger.AddObjectNames(obdzss, neveqh);
 
             virologist.MoveTo(to);
         }));
@@ -26,10 +32,17 @@ public class Tester {
         {
             Field from = new Field();
             Field to = new Field();
+            from.AddNeighbour(to);
             Virologist virologist = new Virologist();
-            virologist.ChangeMoveStrategy(new MSVitusDance());
+            virologist.SetField(from);
+            MSVitusDance dm = new MSVitusDance();
+            virologist.ChangeMoveStrategy(dm);
             //ENTER
-            Logger.SetEnabled(true);
+            Logger.Start();
+            Object[] obdzss = {from, to, virologist, dm};
+            String[] neveqh = {"f1", "f2", "v1", "dm"};
+            Logger.AddObjectNames(obdzss, neveqh);
+
             virologist.MoveTo(to);
         }));
 
@@ -40,9 +53,14 @@ public class Tester {
             Field from = new Field();
             Field to = new Field();
             Virologist virologist = new Virologist();
-            virologist.ChangeMoveStrategy(new MSParalyzed());
+            virologist.SetField(from);
+            MSParalyzed pm = new MSParalyzed();
+            virologist.ChangeMoveStrategy(pm);
             //ENTER
-            Logger.SetEnabled(true);
+            Logger.Start();
+            Object[] obdzss = {from, to, virologist, pm};
+            String[] neveqh = {"f1", "f2", "v1", "pm"};
+            Logger.AddObjectNames(obdzss, neveqh);
             virologist.MoveTo(to);
 
         }));
@@ -53,11 +71,16 @@ public class Tester {
         {
             Virologist v = new Virologist();
             FieldBunker b = new FieldBunker();
+            v.SetField(b);
             EquipmentGloves e = new EquipmentGloves();
             b.setEquipment(e);
             b.AcceptViro(v);
             //ENTER
-            Logger.SetEnabled(true);
+            Logger.Start();
+            Object[] obdzss = {v, b, e};
+            String[] neveqh = {"v", "b", "e"};
+            Logger.AddObjectNames(obdzss, neveqh);
+
             v.InteractWithField();
         }));
 
@@ -71,7 +94,10 @@ public class Tester {
                     lab.setCode(geneticCode);
                     lab.AcceptViro(virologist);
                     //ENTER
-                    Logger.SetEnabled(true);
+                    Logger.Start();
+                    Object[] obdzss = {virologist, lab, geneticCode};
+                    String[] neveqh = {"v", "l", "code"};
+                    Logger.AddObjectNames(obdzss, neveqh);
                     virologist.InteractWithField();
                 }));
 
@@ -81,11 +107,18 @@ public class Tester {
         {
             Virologist v = new Virologist();
             FieldWarehouse w = new FieldWarehouse();
+            v.SetField(w);
             Resource r = new Resource();
+            Resource r2 = new Resource(); //todo: diagrammok rosszak: ez a virologus resource-ja
+
+            v.SetResource(r2);
             w.setResource(r);
             w.AcceptViro(v);
             //ENTER
-            Logger.SetEnabled(true);
+            Logger.Start();
+            Object[] obdzss = {v, w, r, r2};
+            String[] neveqh = {"v", "w", "r", "r2"};
+            Logger.AddObjectNames(obdzss, neveqh);
             v.InteractWithField();
         }));
 
@@ -103,7 +136,10 @@ public class Tester {
             v1.AddEquipment(e);
             v2.AddEquipment(e2);
             //ENTER
-            Logger.SetEnabled(true);
+            Logger.Start();
+            Object[] obdzss = {v1, v2, agent, e, e2};
+            String[] neveqh = {"v1", "v2", "a", "e","e2"};
+            Logger.AddObjectNames(obdzss, neveqh);
             v1.UseAgent(agent, v2);
         }));
 
@@ -115,7 +151,10 @@ public class Tester {
             Virologist v2 = new Virologist();
             Agent agent = new Forget();
             //ENTER
-            Logger.SetEnabled(true);
+            Logger.Start();
+            Object[] obdzss = {v1, v2, agent};
+            String[] neveqh = {"v1", "v2", "agent"};
+            Logger.AddObjectNames(obdzss, neveqh);
             v1.UseAgent(agent, v2);
         }));
 
@@ -128,8 +167,10 @@ public class Tester {
             Forget forget = new Forget();   // lehetne barmi mas agens is
             Vaccine vc = new Vaccine(forget);
             //ENTER
-            //TODO: hulye vagy, szopd ki dani, nem kell kettospont
-            Logger.SetEnabled(true);
+            Logger.Start();
+            Object[] obdzss = {v1, v2, forget, vc};
+            String[] neveqh = {"v1", "2", "f","vc"};
+            Logger.AddObjectNames(obdzss, neveqh);
             v1.UseAgent(vc, v2);
         }));
         testcases.add(new TestCase("Virologist tries to craft virus", "Annak a  folyamatnak a modellezése, melyben a " +
@@ -141,13 +182,17 @@ public class Tester {
             EquipmentSack e = new EquipmentSack();
             Forget a = new Forget();
             Resource r = new Resource();
+            v.SetResource(r);
             v.AddEquipment(e);
             v.LearnGeneticCode(code);
             code.setCost(r);
             code.setAgent(a);
             //TODO: ez nemtom h jo e remelem nem......
             //ENTER
-            Logger.SetEnabled(true);
+            Logger.Start();
+            Object[] obdzss = {v, code, e, a , r};
+            String[] neveqh = {"v", "code", "e", "a", "r"};
+            Logger.AddObjectNames(obdzss, neveqh);
 
             v.CraftVirus(code);
         }));
@@ -158,12 +203,16 @@ public class Tester {
             GeneticCode code = new GeneticCode();
             Forget a = new Forget();
             Resource r = new Resource();
+            v.SetResource(r);
             v.LearnGeneticCode(code);
             code.setCost(r);
             code.setAgent(a);
 
             //ENTER
-            Logger.SetEnabled(true);
+            Logger.Start();
+            Object[] obdzss = {v, code, a, r};
+            String[] neveqh = {"v", "code", "a", "r"};
+            Logger.AddObjectNames(obdzss, neveqh);
 
             v.CraftVirus(code);
 
@@ -180,19 +229,26 @@ public class Tester {
             v2.AddEquipment(e);
             v.AddItem(a);
             //ENTER
-            Logger.SetEnabled(true);
+            Logger.Start();
+            Object[] obdzss = {v, v2, a, e};
+            String[] neveqh = {"v", "v2","a", "e"};
+            Logger.AddObjectNames(obdzss, neveqh);
             v.StealEquipmentFromViro(v2, e);
 
         }));
         testcases.add(new TestCase("Virologist steals equipment", "Lemodellezzük a folyamatot, amelyben a virológus " +
                 "felszerelést lop egy másik virológustól.", () ->
         {
+            //TODO:kép nem jó (Márk: Hát igazából jó, csak itt lefut végig a próbálkozás, egészen a sikerig)
             Virologist v = new Virologist();
             Virologist v2 = new Virologist();
             EquipmentSack e = new EquipmentSack();
             v2.AddEquipment(e);
             //ENTER
-            Logger.SetEnabled(true);
+            Logger.Start();
+            Object[] obdzss = {v, v2, e};
+            String[] neveqh = {"v", "v2", "e"};
+            Logger.AddObjectNames(obdzss, neveqh);
 
             v.StealEquipmentFromViro(v2, e);
         }));
@@ -209,7 +265,11 @@ public class Tester {
             v2.SetResource(r2);
             v.AddEquipment(e);
             //ENTER
-            Logger.SetEnabled(true); //VÉGE AZ INICIALIZÁLÁSNAK
+            Logger.Start();
+            Object[] obdzss = {v, r, v2, r2, e};
+            String[] neveqh = {"v", "r", "v2", "r2", "e"};
+            Logger.AddObjectNames(obdzss, neveqh);
+
             v.StealResourceFromViro(v2, new Resource());
             //es aztan maga a teszt szia Zoli szia Dani  szijjaaaaa szijjjjjjjasztooooook
         }));
@@ -218,7 +278,7 @@ public class Tester {
                 "Lemodellezzük a folyamatot, amelyben a virológus " + "anyagot lop egy másik virológustól.",
         () -> {
             //todo: szekvencia diagram szar: nincs rajta a resource
-            //todo: itt hozzaadjuk a resourcet, pedig csak meg kéne próbálnia
+            //todo: itt hozzaadjuk a resourcet, pedig csak meg kéne próbálnia (Zoli: itt már ténylegesen csináljuk, nem próbáljuk)
             Virologist v = new Virologist();
             Resource r = new Resource();
             Virologist v2 = new Virologist();
@@ -226,7 +286,10 @@ public class Tester {
             v.SetResource(r);
             v2.SetResource(r2);
             //ENTER
-            Logger.SetEnabled(true); //VÉGE AZ INICIALIZÁLÁSNAK
+            Logger.Start(); //VÉGE AZ INICIALIZÁLÁSNAK
+            Object[] obdzss = {v, r, v2, r2};
+            String[] neveqh = {"v", "r", "v2", "r2"};
+            Logger.AddObjectNames(obdzss, neveqh);
             v.StealResourceFromViro(v2, new Resource());
             //es aztan maga a teszt szia Zoli szia Dani  szijjaaaaa szijjjjjjjasztooooook
         }));
@@ -243,7 +306,10 @@ public class Tester {
             v.AddItem(a);
             v.AddEquipment(e2);
             //ENTER
-            Logger.SetEnabled(true); //VÉGE AZ INICIALIZÁLÁSNAK
+            Logger.Start(); //VÉGE AZ INICIALIZÁLÁSNAK
+            Object[] obdzss = {v, e, a, e2};
+            String[] neveqh = {"v", "e", "a", "e2"};
+            Logger.AddObjectNames(obdzss, neveqh);
             v.IsParalyzed();
 
             //es aztan maga a teszt szia Zoli szia Dani  szijjaaaaa szijjjjjjjasztooooook
@@ -258,25 +324,14 @@ public class Tester {
                     a.Apply(v, v);
                     Timer.AddSteppable(a);
                     //ENTER
-                    Logger.SetEnabled(true); //VÉGE AZ INICIALIZÁLÁSNAK
-                    Timer.Step(); //todo: nem mukodik :(
+                    Logger.Start();
+                    Object[] obdzss = {v, a};
+                    String[] neveqh = {"v", "a"};
+                    Logger.AddObjectNames(obdzss, neveqh);
+
+                    Timer.Step(); //todo: nem mukodik :( (Zoli: már talán működik)
 
                     //es aztan maga a tesz
-                }));
-        testcases.add(new TestCase(
-                "Test question",
-                "Kerdeseket tesztel - metateszt ikszde - laszti az arcba, indulas a harcba",
-                () -> {
-                    Logger.SetEnabled(true); //VÉGE AZ INICIALIZÁLÁSNAK
-                    Logger.NewFunctionCall("XY.Method");
-                    Logger.NewFunctionCall("YY.Method2");
-                    Logger.ReturnFunction();
-                    Logger.NewFunctionCall("YY.Method3.Nagyon");
-                    Logger.NewFunctionCall("YYX.Kabitoszer");
-                    Logger.AskQuestion("Mukodik-e ez a kerdes");
-                    Logger.ReturnFunction();
-                    Logger.ReturnFunction();
-                    Logger.ReturnFunction();
                 }));
         testcases.add(new TestCase("All tests", "Minden feljebbi teszt egymás után sorrendben", () ->
         {
@@ -322,6 +377,8 @@ public class Tester {
         Logger.SetEnabled(false);
 
         print("\n________________test over________________");
+        if (Logger.getEltolas()>0)
+            print("\n\n\n\nBajvan bajvan! Valahol hianyzik egy visszateres!"); // EZ MAGA A TÉBOLY
     }
     //TODO: setEnable(false) teszt után!!
 }

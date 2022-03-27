@@ -23,7 +23,7 @@ public class FieldWarehouse extends Field {
      * @param v A virológus aki a mezőn van.
      */
     public void Interact(Virologist v) {
-        Logger.NewFunctionCall("FieldWarehouse.Interact");
+        Logger.NewFunctionCall(this, "Interact");
         v.AddResource(resources);
         Logger.ReturnFunction();
     }

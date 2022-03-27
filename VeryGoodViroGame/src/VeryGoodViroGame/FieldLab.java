@@ -22,7 +22,7 @@ public class FieldLab extends Field {
       * @param v A virológus aki letapogatja a kódot.
       */
     public void Interact(Virologist v) {
-        Logger.NewFunctionCall("FieldLab.Interact");
+        Logger.NewFunctionCall(this, "Interact");
         v.LearnGeneticCode(code);
         Logger.ReturnFunction();
     }
@@ -33,6 +33,8 @@ public class FieldLab extends Field {
       * @param geneticCode A kód amit beállítunk, hogy le lehessen tapogatni a laborban.
       */
     public void setCode(GeneticCode geneticCode) {
+        Logger.NewFunctionCall(this, "setCode");
         code = geneticCode;
+        Logger.ReturnFunction();
     }
 }

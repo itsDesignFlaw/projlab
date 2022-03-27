@@ -24,7 +24,7 @@ public class Dance extends Agent
      */
     public void Apply(Virologist source, Virologist target)
     {
-        Logger.NewFunctionCall("Agent.Apply");
+        Logger.NewFunctionCall(this, "Apply");
         Logger.ReturnFunction();
     }
 }

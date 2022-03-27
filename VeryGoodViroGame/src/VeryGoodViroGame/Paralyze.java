@@ -24,7 +24,7 @@ public class Paralyze extends Agent
      */
     public boolean IsParalyzed()
     {
-        Logger.NewFunctionCall("Paralyze.IsParalyzed");
+        Logger.NewFunctionCall(this, "IsParalyzed");
         Logger.ReturnFunction();
         return true;
     }
@@ -37,7 +37,7 @@ public class Paralyze extends Agent
      */
     public boolean CanApplyAgent()
     {
-        Logger.NewFunctionCall("Paralyze.CanApplyAgent");
+        Logger.NewFunctionCall(this, "CanApplyAgent");
         Logger.ReturnFunction();
         return false;
     }
@@ -49,7 +49,7 @@ public class Paralyze extends Agent
      */
     public boolean CanSteal()
     {
-        Logger.NewFunctionCall("Paralyze.CanSteal");
+        Logger.NewFunctionCall(this, "CanSteal");
         Logger.ReturnFunction();
         return false;
     }
@@ -61,7 +61,7 @@ public class Paralyze extends Agent
      */
     public boolean CanCraft()
     {
-        Logger.NewFunctionCall("Paralyze.CanCraft");
+        Logger.NewFunctionCall(this, "CanCraft");
         Logger.ReturnFunction();
         return false;
     }
@@ -73,7 +73,7 @@ public class Paralyze extends Agent
      */
     public boolean CanInteract()
     {
-        Logger.NewFunctionCall("Paralyze.CanInteract");
+        Logger.NewFunctionCall(this, "CanInteract");
         Logger.ReturnFunction();
         return false;
     }
@@ -86,7 +86,7 @@ public class Paralyze extends Agent
      */
     public void Apply(Virologist source, Virologist target)
     {
-        Logger.NewFunctionCall("Paralyze.Apply");
+        Logger.NewFunctionCall(this, "Apply");
         Logger.ReturnFunction();
     }
 }

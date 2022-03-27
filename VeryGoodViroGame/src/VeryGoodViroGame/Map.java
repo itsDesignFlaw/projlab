@@ -24,7 +24,7 @@ public class Map
      */
     public void GenerateMap()
     {
-        Logger.NewFunctionCall("Map.GenerateMap");
+        Logger.NewFunctionCall(this, "GenerateMap");
         Logger.ReturnFunction();
     }
 }

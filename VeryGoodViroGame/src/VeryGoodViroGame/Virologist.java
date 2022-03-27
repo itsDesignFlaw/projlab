@@ -55,7 +55,7 @@ public class Virologist {
      * @return Igaz, ha a virológus le van bénulva, másképp hamis.
      */
     public boolean IsParalyzed() {
-        Logger.NewFunctionCall("Virologist.IsParalyzed");
+        Logger.NewFunctionCall(this, "IsParalyzed");
 
         for (InvItem item : items) {
             if (item.IsParalyzed()) {
@@ -70,35 +70,40 @@ public class Virologist {
     /**
      * A virológus tartalékát növeli a kapott anyaggal.
      *
-     * @param ammount Az anyagmennyiség amit a virológusnak adunk.
+     * @param amount Az anyagmennyiség amit a virológusnak adunk.
      */
-    public void AddResource(Resource ammount) {
-        Logger.NewFunctionCall("Virologist.AddResource");
+    public void AddResource(Resource amount) {
+        Logger.NewFunctionCall(this, "AddResource");
         //Összeadja az items listán a GetMaxResource értékét, majd hozzáaadja az alap értéket
         int maxResource = 20;
         for (InvItem item : items) {
             maxResource += item.GetMaxResource();
         }
-        resource.Add(ammount);
+        resource.Add(amount);
         Logger.ReturnFunction();
     }
 
     /**
+     * Elvesz a virológustól anyagot.
      *
-     *
-     * @param ammount
+     * @param amount Az elvett anyag mennyisége.
      * @return
      */
-    public Resource RemoveResource(Resource ammount) {
-        Logger.NewFunctionCall("Virologist.RemoveResource");
-        IsParalyzed();
+    public Resource RemoveResource(Resource amount) {
+        Logger.NewFunctionCall(this, "RemoveResource");
+        if (IsParalyzed())
+            resource.Remove(amount);
         Logger.ReturnFunction();
         return new Resource();
     }
 
-    //Craftol egy vírust
+     /**
+     * Craftol egy vírust
+     *
+     * @param code a genetikai kód amivel a vírus előáll
+     */
     public void CraftVirus(GeneticCode code) {
-        Logger.NewFunctionCall("Virologist.CraftVirus");
+        Logger.NewFunctionCall(this, "CraftVirus");
         for (InvItem item : items) {
             if (!item.CanCraft()) {
                 Logger.ReturnFunction();
@@ -115,15 +120,25 @@ public class Virologist {
         Logger.ReturnFunction();
     }
 
+    /**
+     * Egy ágenst hozzáad a virológus tárolójához.
+     *
+     * @param agent Az ágens amit hozzáadunk a virológus tárolójához.
+     */
     public void AddAgentToStash(Agent agent) {
-        Logger.NewFunctionCall("Virologist.AddAgentToStash");
+        Logger.NewFunctionCall(this, "AddAgentToStash");
         stash.add(agent);
         Logger.ReturnFunction();
 
     }
 
+    /**
+     * Ezzel a függvénnyel  a virológus lecraftolja az adott genetikai kódhoz tartozó vakcinát.
+     *
+     * @param code Az előállítandó vakcinához tartozó genetikai kód.
+     */
     public void CraftVaccine(GeneticCode code) {
-        Logger.NewFunctionCall("Virologist.CraftVaccine");
+        Logger.NewFunctionCall(this, "CraftVaccine");
         for (InvItem item : items) {
             if (!item.CanCraft()) {
                 Logger.ReturnFunction();
@@ -142,8 +157,16 @@ public class Virologist {
 
     //Mindegyiknél feltételezzük, hogy meg tudja érinteni, előtte ellenőrizzük
     //When somebody uses an agent on you
+
+    /**
+     *Az ágenst virológushoz adó metódus.
+     *
+     * @param agent  a felkenődő ágens
+     * @param source a virológus aki az ágenst felkente
+     * @return boolean visszatérési érték, sikeres volt-e a kenés
+     */
     public boolean ApplyAgent(Agent agent, Virologist source) {
-        Logger.NewFunctionCall("Virologist.ApplyAgent");
+        Logger.NewFunctionCall(this, "ApplyAgent");
         for (InvItem item : items) {
             if (!item.CanAgentBeApplied(agent, source)) {
                 Logger.ReturnFunction();
@@ -156,8 +179,15 @@ public class Virologist {
     }
 
     //When you want to apply an agent on somebody
+
+    /**
+     *Ágens másik virológusra való felkenését megvalósító metódus.
+     *
+     * @param agent a felkenni kívánt metódus
+     * @param target virológus akire az ágens felkenjük
+     */
     public void UseAgent(Agent agent, Virologist target) {
-        Logger.NewFunctionCall("Virologist.UseAgent");
+        Logger.NewFunctionCall(this, "UseAgent");
         for (InvItem item : items) {
             if (!item.CanApplyAgent()) {
                 Logger.ReturnFunction();
@@ -169,8 +199,12 @@ public class Virologist {
     }
 
     //Felszedi a mezőn lévő cuccokat, azaz meghívja az Interact fv-ét
+
+    /**
+     * A virológus kapcsolatba lép az adott mezővel, amin tartózkodik.
+     */
     public void InteractWithField() {
-        Logger.NewFunctionCall("Virologist.InteractWithField");
+        Logger.NewFunctionCall(this, "InteractWithField");
         for (InvItem item : items) {
             if (!item.CanInteract()) {
                 Logger.ReturnFunction();
@@ -181,9 +215,16 @@ public class Virologist {
         Logger.ReturnFunction();
     }
 
-    //A target-tól ellopja az equipment-et
+
+    /**
+     * A paraméterként kapott célponttól ellopja a szintén paraméterben jelölt felszerelést,
+     * amennyiben a célpont lebénult állapotban van.
+     *
+     * @param target A célpont akitől el akarja lopni.
+     * @param equipment A felszerelés amit el akar lopni.
+     */
     public void StealEquipmentFromViro(Virologist target, Equipment equipment) {
-        Logger.NewFunctionCall("Virologist.StealEquipmentFromViro");
+        Logger.NewFunctionCall(this, "StealEquipmentFromViro");
         for (InvItem item : items) {
             if (!item.CanSteal()) {
                 Logger.ReturnFunction();
@@ -196,8 +237,14 @@ public class Virologist {
         Logger.ReturnFunction();
     }
 
+    /**
+     *A paraméterként kapott célponttól ellopja
+     * a szintén paraméterben jelölt mennyiségű anyagot, amennyiben a célpont lebénult állapotban van.
+     * @param target a virolügus akitől lop
+     * @param amount a mennyiség amit ellop
+     */
     public void StealResourceFromViro(Virologist target, Resource amount) {
-        Logger.NewFunctionCall("Virologist.StealResourceFromViro");
+        Logger.NewFunctionCall(this, "StealResourceFromViro");
         for (InvItem item : items) {
             if (!item.CanSteal()) {
                 Logger.ReturnFunction();
@@ -209,36 +256,57 @@ public class Virologist {
         Logger.ReturnFunction();
     }
 
-    //Eltávolítja a virológustól az equipment-et
+    /**
+     *Eltávolítja a virológustól az equipment-et
+     * @param equipment amit eltávolit
+     * @return visszaadja, hogy el tudta-e távolitani
+     */
     public boolean RemoveEquipment(Equipment equipment) {
-        Logger.NewFunctionCall("Virologist.RemoveEquipment");
+        Logger.NewFunctionCall(this, "RemoveEquipment");
         IsParalyzed();
         Logger.ReturnFunction();
         return true;
     }
 
+    /**
+     *Hozzáadjuk a virológushoz az equipmentet.
+     *
+     * @param equipment a felszerelés amit a virológushoz adunk
+     */
     public void AddEquipment(Equipment equipment) {
-        Logger.NewFunctionCall("Virologist.AddEquipment");
+        Logger.NewFunctionCall(this, "AddEquipment");
         this.equipments.add(equipment);
         AddItem(equipment);
         Logger.ReturnFunction();
     }
 
-    //Elveszi a item-et
+     /**
+     * A metódus eltávolítja a paraméterül kapott hatást a virológusról.
+     * @param item A hatás amit eltávolít.
+     */
     public void RemoveItem(InvItem item) {
-        Logger.NewFunctionCall("Virologist.RemoveItem");
+        Logger.NewFunctionCall(this, "RemoveItem");
         Logger.ReturnFunction();
     }
 
-    //Hozzáadja a item-et
+    /**
+     * A metódus kifejti a paraméterül kapott hatást a virológusra, és hozzéadja az itemekhez
+     *
+     * @param item -ezt adja hozzá
+     */
     public void AddItem(InvItem item) {
-        Logger.NewFunctionCall("Virologist.AddItem");
+        Logger.NewFunctionCall(this, "AddItem");
         items.add(item);
         Logger.ReturnFunction();
     }
 
+    /**
+     * A virológus megtanulja az adott genetikai kódot.
+     *
+     * @param code ezt tanulja meg éppen
+     */
     public void LearnGeneticCode(GeneticCode code) {
-        Logger.NewFunctionCall("Virologist.LearnGeneticCode");
+        Logger.NewFunctionCall(this, "LearnGeneticCode");
         learntCodes.add(code);
         //if(learnt all codes)
         if (Logger.AskQuestion("Did she/he learned all the genetikus codes?"))
@@ -247,27 +315,46 @@ public class Virologist {
         Logger.ReturnFunction();
     }
 
+    /**
+     * Visszaadja a mezőt amin a virológus tartózkodik.
+     *
+     * @return A mező amin a virológus tartózkodik.
+     */
     public Field GetField() {
-        Logger.NewFunctionCall("Virologist.GetField");
+        Logger.NewFunctionCall(this, "GetField");
         Logger.ReturnFunction();
         return mezo;
     }
 
+    /**
+     * Megváltoztatja a virológus aktuális mozgási stratégiáját.
+     *
+     * @param strategy erre változtatja meg
+     */
     public void ChangeMoveStrategy(iMoveStrategy strategy) {
-        Logger.NewFunctionCall("Virologist.ChangeMoveStrategy");
+        Logger.NewFunctionCall(this, "ChangeMoveStrategy");
         moveStrategy = strategy;
         Logger.ReturnFunction();
     }
 
+    /**
+     * Eltávolítja az átadott mozgási stratégiát, és visszarakja az éppen érvényeset.
+     * @param strategy ezt távolitja el
+     */
     //Hiper szuper magic függvény, mindent is tud
     public void RemoveMoveStrategy(iMoveStrategy strategy) {
-        Logger.NewFunctionCall("Virologist.RemoveMoveStrategy");
+        Logger.NewFunctionCall(this, "RemoveMoveStrategy");
         //42
         Logger.ReturnFunction();
     }
 
+    /**
+     *Másik mezőre lépést megvalósító metódus
+     *
+     * @param to a mező amire lépni szeretnénk
+     */
     public void MoveTo(Field to) {
-        Logger.NewFunctionCall("Virologist.MoveTo");
+        Logger.NewFunctionCall(this, "MoveTo");
         moveStrategy.ExecuteMove(this, mezo, to);
         Logger.ReturnFunction();
     }

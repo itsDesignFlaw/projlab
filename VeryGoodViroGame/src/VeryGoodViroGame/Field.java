@@ -10,6 +10,7 @@ package VeryGoodViroGame;//
 //
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -20,13 +21,16 @@ public class Field {
     List<Virologist> virologists;
     private List<Field> neighbours;
 
+    public Field(){
+        neighbours = new ArrayList<Field>();
+    }
     /**
      * A virológus mezőre lépésekor ezt a függvényt kell meghívni a virolgóust paraméterként átadva, ezáltal tudja a mező befogadni.
      *
      * @param v A virológus aki a mezőre lép.
      */
     public void AcceptViro(Virologist v) {
-        Logger.NewFunctionCall("Field.AcceptViro");
+        Logger.NewFunctionCall(this, "AcceptViro");
         v.SetField(this);
         Logger.ReturnFunction();
     }
@@ -37,7 +41,7 @@ public class Field {
      * @param v A virológus aki a mezőn van.
      */
     public void Interact(Virologist v) {
-        Logger.NewFunctionCall("Field.Interact");
+        Logger.NewFunctionCall(this, "Interact");
         Logger.ReturnFunction();
     }
 
@@ -47,7 +51,7 @@ public class Field {
      * @param v A virológus aki a mezőt el akarja hagyni.
      */
     public void RemoveViro(Virologist v) {
-        Logger.NewFunctionCall("Field.RemoveViro");
+        Logger.NewFunctionCall(this, "RemoveViro");
         Logger.ReturnFunction();
     }
 
@@ -57,7 +61,8 @@ public class Field {
      * @param f A leendő szomszédos mező.
      */
     public void AddNeighbour(Field f) {
-        Logger.NewFunctionCall("Field.AddNeighbour");
+        Logger.NewFunctionCall(this, "AddNeighbour");
+        neighbours.add(f);
         Logger.ReturnFunction();
     }
 
@@ -65,8 +70,9 @@ public class Field {
      * Visszaad egyet a környező mezők közül, random.
      */
     public Field GetRandomNeighbour() {
-        Logger.NewFunctionCall("Field.GetRandomNeighbour");
+        Logger.NewFunctionCall(this, "GetRandomNeighbour");
         Logger.ReturnFunction();
-        return new Field();
+        //majd itt randomot kell visszaadnia
+        return neighbours.get(0);
     }
 }

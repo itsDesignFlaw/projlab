@@ -36,7 +36,7 @@ public class Vaccine extends Agent {
      * @param target az a virológus akire felkenik az ágenst
      */
     public void Apply(Virologist source, Virologist target) {
-        Logger.NewFunctionCall("Vaccine.Apply");
+        Logger.NewFunctionCall(this,"Apply");
         target.RemoveItem(agentToCure);
         Timer.RemoveSteppable(agentToCure);
         Timer.RemoveSteppable(this);

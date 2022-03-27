@@ -28,7 +28,7 @@ public abstract class Agent extends InvItem implements iSteppable
      */
     public void Apply(Virologist source, Virologist target)
     {
-        Logger.NewFunctionCall("Agent.Apply");
+        Logger.NewFunctionCall(this, "Apply");
         if(target.ApplyAgent(this, source))
         {
             target.ChangeMoveStrategy(strategy);
@@ -40,7 +40,7 @@ public abstract class Agent extends InvItem implements iSteppable
      */
     public void Step()
     {
-        Logger.NewFunctionCall("Agent.Step");
+        Logger.NewFunctionCall(this, "Step");
         activeTime--;
         if(activeTime <= 0)
         {
@@ -60,7 +60,7 @@ public abstract class Agent extends InvItem implements iSteppable
      */
     public Agent Clone()
     {
-        Logger.NewFunctionCall("Agent.Clone");
+        Logger.NewFunctionCall(this, "Clone");
         Logger.ReturnFunction();
         return this;
     }

@@ -28,7 +28,7 @@ public class Resource
      */
     public void Add(Resource resource)
     {
-        Logger.NewFunctionCall("Resource.Add");
+        Logger.NewFunctionCall(this, "Add");
         Logger.ReturnFunction();
     }
 
@@ -39,7 +39,7 @@ public class Resource
      */
     public void Remove(Resource resource)
     {
-        Logger.NewFunctionCall("Resource.Remove");
+        Logger.NewFunctionCall(this, "Remove");
         Logger.ReturnFunction();
     }
         /*public void AddAmi(int ami)

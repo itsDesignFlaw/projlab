@@ -23,7 +23,7 @@ public class FieldBunker extends Field {
      * @param v A virológus aki a mezőn van.
      */
     public void Interact(Virologist v) {
-        Logger.NewFunctionCall("FieldBunker.Interact");
+        Logger.NewFunctionCall(this, "Interact");
         if (Logger.AskQuestion("Does the bunker have equipment in it?")) {
             v.AddEquipment(equipment);
         }

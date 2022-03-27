@@ -25,7 +25,9 @@ public class EquipmentGloves extends Equipment
      */
     public boolean CanAgentBeApplied(Agent agent, Virologist source)
     {
+        Logger.NewFunctionCall(this,"CanAgentBeApplied");
         source.ApplyAgent(agent, host);
+        Logger.ReturnFunction();
         return false;
     }
 }
