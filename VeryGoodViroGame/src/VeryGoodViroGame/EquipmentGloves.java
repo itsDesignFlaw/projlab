@@ -14,6 +14,7 @@ public class EquipmentGloves extends Equipment
 {
     public boolean CanAgentBeApplied(Agent agent, Virologist source)
     {
+        source.ApplyAgent(agent, host);
         return false;
     }
 }

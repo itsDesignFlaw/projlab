@@ -10,13 +10,13 @@ package VeryGoodViroGame;//
 //
 
 
-
-
 public class MSVitusDance implements iMoveStrategy
 {
     @Override
     public void ExecuteMove(Virologist v, Field from, Field to)
     {
-    
+        Field random = from.GetRandomNeighbour();
+        from.RemoveViro(v);
+        random.AcceptViro(v);
     }
 }

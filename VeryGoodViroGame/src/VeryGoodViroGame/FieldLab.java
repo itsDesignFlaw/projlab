@@ -16,5 +16,6 @@ public class FieldLab extends Field
     
     public void Interact(Virologist v)
     {
+        v.LearnGeneticCode(code);
     }
 }

@@ -17,5 +17,9 @@ public class FieldBunker extends Field
     
     public void Interact(Virologist v)
     {
+        if(hasEquipment)
+        {
+            v.AddEquipment(equipment);
+        }
     }
 }

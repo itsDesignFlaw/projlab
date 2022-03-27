@@ -19,10 +19,25 @@ public abstract class Agent extends InvItem implements iSteppable
     
     public void Apply(Virologist source, Virologist target)
     {
+        if(target.ApplyAgent(this, source))
+        {
+            target.ChangeMoveStrategy(strategy);
+        }
+        
     }
     
     public void Step()
     {
+        activeTime--;
+        if(activeTime <= 0)
+        {
+            host.RemoveMoveStrategy(strategy);
+            host.RemoveItem(this);
+            //Ezzel gáz lesz, mert nem szereti a java
+            //ha foreach közben kiszedünk a listából
+            //Megoldás: klónozás, vagy dead flag
+            Timer.RemoveSteppable(this);
+        }
     }
     
     public Agent Clone()

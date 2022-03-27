@@ -16,6 +16,7 @@ public class FieldWarehouse extends Field
     
     public void Interact(Virologist v)
     {
+        v.AddResource(resources);
     }
 }
 

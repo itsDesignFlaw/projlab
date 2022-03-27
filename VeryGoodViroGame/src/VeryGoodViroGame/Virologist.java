@@ -28,16 +28,31 @@ public class Virologist
     
     public boolean IsParalyzed()
     {
+        for(InvItem item : items)
+        {
+            if(item.IsParalyzed())
+            {
+                return true;
+            }
+        }
         return false;
     }
     
     //Összeadja az items listán a GetMaxResource értékét, majd hozzáaadja az alap értéket
     public void AddResource(Resource ammount)
     {
+        int maxResource = 20;
+        for(InvItem item : items)
+        {
+            maxResource += item.GetMaxResource();
+        }
+        
+        resource.Add(ammount);
     }
     
     public Resource RemoveResource(Resource ammount)
     {
+        IsParalyzed();
         return null;
     }
     
@@ -56,6 +71,10 @@ public class Virologist
         resource.Remove(cost);
         Agent created = code.CreateVirus();
         AddAgentToStash(created);
+    }
+    
+    public void AddAgentToStash(Agent agent)
+    {
     }
     
     public void CraftVaccine(GeneticCode code)
@@ -78,36 +97,82 @@ public class Virologist
     //When somebody uses an agent on you
     public boolean ApplyAgent(Agent agent, Virologist source)
     {
+        for(InvItem item : items)
+        {
+            if(!item.CanAgentBeApplied(agent, source))
+            {
+                return false;
+            }
+        }
+        AddItem(agent);
         return true;
     }
     
     //When you want to apply an agent on somebody
     public void UseAgent(Agent agent, Virologist target)
     {
+        for(InvItem item : items)
+        {
+            if(!item.CanApplyAgent())
+            {
+                return;
+            }
+        }
+        agent.Apply(this, target);
     }
     
     //Felszedi a mezőn lévő cuccokat, azaz meghívja az Interact fv-ét
     public void InteractWithField()
     {
+        for(InvItem item : items)
+        {
+            if(!item.CanInteract())
+            {
+                return;
+            }
+        }
+        mezo.Interact(this);
     }
     
     //A target-tól ellopja az equipment-et
     public void StealEquipmentFromViro(Virologist target, Equipment equipment)
     {
+        for(InvItem item : items)
+        {
+            if(!item.CanSteal())
+            {
+                return;
+            }
+        }
+        if(target.RemoveEquipment(equipment))
+        {
+            AddEquipment(equipment);
+        }
     }
     
     public void StealResourceFromViro(Virologist target, Resource amount)
     {
+        for(InvItem item : items)
+        {
+            if(!item.CanSteal())
+            {
+                return;
+            }
+        }
+        Resource removed = target.RemoveResource(amount);
+        AddResource(removed);
     }
     
     //Eltávolítja a virológustól az equipment-et
     public boolean RemoveEquipment(Equipment equipment)
     {
+        IsParalyzed();
         return true;
     }
     
     public void AddEquipment(Equipment equipment)
     {
+        AddItem(equipment);
     }
     
     //Elveszi a item-et
@@ -122,10 +187,8 @@ public class Virologist
     
     public void LearnGeneticCode(GeneticCode code)
     {
-    }
-    
-    public void AddAgentToStash(Agent agent)
-    {
+        //if(learnt all codes)
+        // GameManager.EndGame(this);
     }
     
     public Field GetField()
@@ -141,6 +204,11 @@ public class Virologist
     public void RemoveMoveStrategy(iMoveStrategy strategy)
     {
         //42
+    }
+    
+    public void MoveTo(Field to)
+    {
+        moveStrategy.ExecuteMove(this, mezo, to);
     }
 }
 

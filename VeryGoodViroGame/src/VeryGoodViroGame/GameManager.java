@@ -17,6 +17,8 @@ public class GameManager
     
     public static void StartGame()
     {
+        map = new Map();
+        map.GenerateMap();
     }
     
     public static void EndGame(Virologist winner)

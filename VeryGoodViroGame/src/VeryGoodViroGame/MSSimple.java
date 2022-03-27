@@ -10,13 +10,12 @@ package VeryGoodViroGame;//
 //
 
 
-
-
 public class MSSimple implements iMoveStrategy
 {
     @Override
     public void ExecuteMove(Virologist v, Field from, Field to)
     {
-    
+        from.RemoveViro(v);
+        to.AcceptViro(v);
     }
 }

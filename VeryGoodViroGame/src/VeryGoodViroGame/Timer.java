@@ -15,10 +15,14 @@ import java.util.List;
 
 public class Timer
 {
-    List<iSteppable> steppable_reg = new ArrayList<>();
+    static List<iSteppable> steppable_reg = new ArrayList<>();
     
     public static void Step()
     {
+        for(iSteppable s : steppable_reg)
+        {
+            s.Step();
+        }
     }
     
     public static void AddSteppable(iSteppable item)
