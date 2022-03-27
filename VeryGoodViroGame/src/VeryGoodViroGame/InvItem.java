@@ -10,39 +10,40 @@ package VeryGoodViroGame;//
 //
 
 
-
-
 public abstract class InvItem
 {
-	public int GetMaxResource()
-	{
-	}
-	
-	public bool CanAgentBeApplied(Agent agent, Virologist source)
-	{
-	}
-	
-	public bool CanRemember()
-	{
-	}
-	
-	public bool CanMove(Virologist v)
-	{
-	}
-	
-	public bool CanApplyAgent()
-	{
-	}
-	
-	public void CanAttack()
-	{
-	}
-	
-	public bool CanBeInfected()
-	{
-	}
-	
-	public bool IsParalyzed()
-	{
-	}
+    public int GetMaxResource()
+    {
+        return 0;
+    }
+    
+    public boolean CanAgentBeApplied(Agent agent, Virologist source)
+    {
+        return true;
+    }
+    
+    public boolean CanSteal()
+    {
+        return true;
+    }
+    
+    public boolean IsParalyzed()
+    {
+        return false;
+    }
+    
+    public boolean CanCraft()
+    {
+        return true;
+    }
+    
+    public boolean CanInteract()
+    {
+        return true;
+    }
+    
+    public boolean CanApplyAgent()
+    {
+        return true;
+    }
 }

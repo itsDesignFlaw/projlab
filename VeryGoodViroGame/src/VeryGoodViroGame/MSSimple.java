@@ -12,6 +12,11 @@ package VeryGoodViroGame;//
 
 
 
-public class SimpleMoveStrategy extends MoveStrategy
+public class MSSimple implements iMoveStrategy
 {
+    @Override
+    public void ExecuteMove(Virologist v, Field from, Field to)
+    {
+    
+    }
 }

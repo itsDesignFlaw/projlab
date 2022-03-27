@@ -10,12 +10,12 @@ package VeryGoodViroGame;//
 //
 
 
-
-
 public class FieldWarehouse extends Field
 {
-	private Equipment equipment;
-	public bool Interact(Virologist v)
-	{
-	}
+    private Resource resources;
+    
+    public void Interact(Virologist v)
+    {
+    }
 }
+

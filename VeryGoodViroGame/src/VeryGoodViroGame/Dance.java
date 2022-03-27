@@ -10,13 +10,10 @@ package VeryGoodViroGame;//
 //
 
 
-
-
 public class Dance extends Agent
 {
-	public bool CanMove(Virologist v)
-	{
-	}
-	
-	public void Step();
+    public void Apply(Virologist source, Virologist target)
+    {
+    
+    }
 }

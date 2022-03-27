@@ -10,13 +10,11 @@ package VeryGoodViroGame;//
 //
 
 
-
-
 public class Forget extends Agent
 {
-	public bool CanRemember()
-	{
-	}
-	
-	public void Step();
+    public boolean CanCraft()
+    {
+        return false;
+    }
+    
 }

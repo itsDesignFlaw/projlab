@@ -10,12 +10,11 @@ package VeryGoodViroGame;//
 //
 
 
-
-
 public class FieldLab extends Field
 {
-	private GeneticCode code;
-	public bool Interact(Virologist v)
-	{
-	}
+    private GeneticCode code;
+    
+    public void Interact(Virologist v)
+    {
+    }
 }

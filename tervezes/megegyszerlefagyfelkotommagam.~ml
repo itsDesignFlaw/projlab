@@ -1899,7 +1899,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="+k3ecu4bhUmly3mbLKJw4gAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="wnarxKPcKE2dCA9YrzwtyQAA">
 <XPD:ATTR name="FontStyle" type="integer">1</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">VeryGoodViroGame.SimpleMoveStrategy</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">VeryGoodViroGame.MSSimple</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="ts57ZIS8xEWmQu1dhVoZJwAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -1930,7 +1930,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="OUEjcy2ayUa/IA3NjQotgwAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="FaVukX9ol0+DRLFNRfRz+QAA">
 <XPD:ATTR name="FontStyle" type="integer">1</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">VeryGoodViroGame.VitusDanceMoveStrategy</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">VeryGoodViroGame.MSVitusDance</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="wHUiT7Bo7kOSsTxlAfmwWgAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -4376,7 +4376,7 @@
 <XPD:REF name="Instances[0]">j5qQjZV/kU2UdEeeWygU0QAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[39]" type="UMLClass" guid="ItKOWCSNpk2TkKN88hvUTwAA">
-<XPD:ATTR name="Name" type="string">VeryGoodViroGame.SimpleMoveStrategy</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.MSSimple</XPD:ATTR>
 <XPD:REF name="Namespace">wGZUrP/caka5boI08dFSzwAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
 <XPD:REF name="Views[0]">I/Z55ZahHEes1TLBJ2LHtAAA</XPD:REF>
@@ -4389,7 +4389,7 @@
 <XPD:REF name="Instances[0]">wek3ZWj9pUqOjI+MOcYQEAAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[40]" type="UMLClass" guid="6DCIGLcS5UqKEsssBsNfoQAA">
-<XPD:ATTR name="Name" type="string">VeryGoodViroGame.VitusDanceMoveStrategy</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.MSVitusDance</XPD:ATTR>
 <XPD:REF name="Namespace">wGZUrP/caka5boI08dFSzwAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
 <XPD:REF name="Views[0]">HB/Wa1kSTUOlV1BllEKg4gAA</XPD:REF>
@@ -4552,7 +4552,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="qxjo1xZ/3kOwcLV3wQdqcwAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="JrMYxekciUOMVUAvmhy8MwAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">dm : VeryGoodViroGame.VitusDanceMoveStrategy</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">dm : VeryGoodViroGame.MSVitusDance</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="QcjZE5zM7UGlV628L+eppwAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -5099,7 +5099,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="XKQgZUE8/UKjFYs1RLevVwAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="6Td9M29akkmffpelGtHvqAAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">dm : VeryGoodViroGame.VitusDanceMoveStrategy</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">dm : VeryGoodViroGame.MSVitusDance</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="RTZntxuB2kWU98abTff3ZgAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -12735,11 +12735,11 @@
 </XPD:OBJ>
 </XPD:OBJ>
 <XPD:OBJ name="InteractionInstanceSets[1]" type="UMLInteractionInstanceSet" guid="x/OpcQ+w1EqyxyH5HTLwuAAA">
-<XPD:ATTR name="Name" type="string">VeryGoodViroGame.SimpleMoveStrategy</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.MSSimple</XPD:ATTR>
 <XPD:REF name="Context">+zyB/dhjXESGN6Rv8RvP6wAA</XPD:REF>
 <XPD:ATTR name="#OwnedDiagrams" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="OwnedDiagrams[0]" type="UMLSequenceDiagram" guid="fSSfZm8+U0uOK5gvSaVQGQAA">
-<XPD:ATTR name="Name" type="string">VeryGoodViroGame.SimpleMoveStrategy</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.MSSimple</XPD:ATTR>
 <XPD:ATTR name="ShowSequenceNumber" type="boolean">False</XPD:ATTR>
 <XPD:ATTR name="MessageSignature" type="UMLMessageSignatureKind">mskNameOnly</XPD:ATTR>
 <XPD:REF name="DiagramOwner">x/OpcQ+w1EqyxyH5HTLwuAAA</XPD:REF>
@@ -12756,7 +12756,7 @@
 <XPD:ATTR name="Height" type="integer">281</XPD:ATTR>
 <XPD:REF name="Model">ZwI/Vn34CEGvORt60IcfTAAA</XPD:REF>
 <XPD:OBJ name="NameLabel" type="LabelView" guid="p2mmu05f7UeJ/qhzlgjNIQAA">
-<XPD:ATTR name="Text" type="string">VeryGoodViroGame.SimpleMoveStrategy</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">VeryGoodViroGame.MSSimple</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="FrameTypeLabel" type="LabelView" guid="EFdqsjllZkO8uRDswpgfbwAA">
 <XPD:ATTR name="FontStyle" type="integer">1</XPD:ATTR>
@@ -12798,7 +12798,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="Zeb0tZ2dKEWMR8JluUM34wAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="k6WGjskQJUK014xxvpNqXAAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">sms : VeryGoodViroGame.SimpleMoveStrategy</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">sms : VeryGoodViroGame.MSSimple</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="Auqhb/gmp0m9zsugEk45QAAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -13148,7 +13148,7 @@
 </XPD:OBJ>
 <XPD:ATTR name="#OwnedFrames" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="OwnedFrames[0]" type="UMLFrame" guid="ZwI/Vn34CEGvORt60IcfTAAA">
-<XPD:ATTR name="Name" type="string">VeryGoodViroGame.SimpleMoveStrategy</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.MSSimple</XPD:ATTR>
 <XPD:ATTR name="FrameKind" type="string">sd</XPD:ATTR>
 <XPD:REF name="InteractionInstanceSet">x/OpcQ+w1EqyxyH5HTLwuAAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">1</XPD:ATTR>
@@ -13156,11 +13156,11 @@
 </XPD:OBJ>
 </XPD:OBJ>
 <XPD:OBJ name="InteractionInstanceSets[2]" type="UMLInteractionInstanceSet" guid="fqd07oBXIEuisYk7NKmINgAA">
-<XPD:ATTR name="Name" type="string">VeryGoodViroGame.VitusDanceMoveStrategy</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.MSVitusDance</XPD:ATTR>
 <XPD:REF name="Context">+zyB/dhjXESGN6Rv8RvP6wAA</XPD:REF>
 <XPD:ATTR name="#OwnedDiagrams" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="OwnedDiagrams[0]" type="UMLSequenceDiagram" guid="T6BaM1QjXUqFKP4bGQqPSwAA">
-<XPD:ATTR name="Name" type="string">VeryGoodViroGame.VitusDanceMoveStrategy</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.MSVitusDance</XPD:ATTR>
 <XPD:ATTR name="ShowSequenceNumber" type="boolean">False</XPD:ATTR>
 <XPD:ATTR name="MessageSignature" type="UMLMessageSignatureKind">mskNameOnly</XPD:ATTR>
 <XPD:REF name="DiagramOwner">fqd07oBXIEuisYk7NKmINgAA</XPD:REF>
@@ -13177,7 +13177,7 @@
 <XPD:ATTR name="Height" type="integer">421</XPD:ATTR>
 <XPD:REF name="Model">gvnRckWGZ0y3003LoDjlfwAA</XPD:REF>
 <XPD:OBJ name="NameLabel" type="LabelView" guid="tCfRtBbQOkegxtdY7ASikgAA">
-<XPD:ATTR name="Text" type="string">VeryGoodViroGame.VitusDanceMoveStrategy</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">VeryGoodViroGame.MSVitusDance</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="FrameTypeLabel" type="LabelView" guid="umTIbk0PBU24lRIQeJRS5wAA">
 <XPD:ATTR name="FontStyle" type="integer">1</XPD:ATTR>
@@ -13219,7 +13219,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="Zrda8nONpECYQMWRk69dAAAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="muUbkepZt0yFjeH2u1Y8GgAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">strategy : VeryGoodViroGame.VitusDanceMoveStrategy</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">strategy : VeryGoodViroGame.MSVitusDance</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="QtdqlyfGvEilIb251YS7qgAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -13664,7 +13664,7 @@
 </XPD:OBJ>
 <XPD:ATTR name="#OwnedFrames" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="OwnedFrames[0]" type="UMLFrame" guid="gvnRckWGZ0y3003LoDjlfwAA">
-<XPD:ATTR name="Name" type="string">VeryGoodViroGame.VitusDanceMoveStrategy</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.MSVitusDance</XPD:ATTR>
 <XPD:ATTR name="FrameKind" type="string">sd</XPD:ATTR>
 <XPD:REF name="InteractionInstanceSet">fqd07oBXIEuisYk7NKmINgAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">1</XPD:ATTR>
@@ -24392,11 +24392,11 @@
 <XPD:REF name="RepresentedClassifier">wGZUrP/caka5boI08dFSzwAA</XPD:REF>
 <XPD:ATTR name="#InteractionInstanceSets" type="integer">3</XPD:ATTR>
 <XPD:OBJ name="InteractionInstanceSets[0]" type="UMLInteractionInstanceSet" guid="8GLPIXZ9t0uKSRRnbxDiIAAA">
-<XPD:ATTR name="Name" type="string">542 VeryGoodViroGame.SimpleMoveStrategy</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">542 VeryGoodViroGame.MSSimple</XPD:ATTR>
 <XPD:REF name="Context">Cf8AJnhA3UGofvs5Se3PVQAA</XPD:REF>
 <XPD:ATTR name="#OwnedDiagrams" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="OwnedDiagrams[0]" type="UMLCollaborationDiagram" guid="GVy0B6DA3kKgDWOaZqZ2AAAA">
-<XPD:ATTR name="Name" type="string">542 VeryGoodViroGame.SimpleMoveStrategy</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">542 VeryGoodViroGame.MSSimple</XPD:ATTR>
 <XPD:ATTR name="MessageSignature" type="UMLMessageSignatureKind">mskNameAndType</XPD:ATTR>
 <XPD:REF name="DiagramOwner">8GLPIXZ9t0uKSRRnbxDiIAAA</XPD:REF>
 <XPD:OBJ name="DiagramView" type="UMLCollaborationDiagramView" guid="gCGyvndIs0uROyTfz/1yQwAA">
@@ -24412,7 +24412,7 @@
 <XPD:ATTR name="Height" type="integer">381</XPD:ATTR>
 <XPD:REF name="Model">BX2MitxRp0OSoqh0dbEx1gAA</XPD:REF>
 <XPD:OBJ name="NameLabel" type="LabelView" guid="GL1yZkNAgUGsqOAPMY3eWgAA">
-<XPD:ATTR name="Text" type="string">VeryGoodViroGame.SimpleMoveStrategy moves virologist</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">VeryGoodViroGame.MSSimple moves virologist</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="FrameTypeLabel" type="LabelView" guid="tsR5vSq8kEi2gcI7WAbelgAA">
 <XPD:ATTR name="FontStyle" type="integer">1</XPD:ATTR>
@@ -25233,7 +25233,7 @@
 </XPD:OBJ>
 <XPD:ATTR name="#OwnedFrames" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="OwnedFrames[0]" type="UMLFrame" guid="BX2MitxRp0OSoqh0dbEx1gAA">
-<XPD:ATTR name="Name" type="string">VeryGoodViroGame.SimpleMoveStrategy moves virologist</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.MSSimple moves virologist</XPD:ATTR>
 <XPD:ATTR name="FrameKind" type="string">sd</XPD:ATTR>
 <XPD:REF name="InteractionInstanceSet">8GLPIXZ9t0uKSRRnbxDiIAAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">1</XPD:ATTR>
@@ -25261,7 +25261,7 @@
 <XPD:ATTR name="Height" type="integer">373</XPD:ATTR>
 <XPD:REF name="Model">Ia+8E08F1U+4I14z/WTKhwAA</XPD:REF>
 <XPD:OBJ name="NameLabel" type="LabelView" guid="E0q/uX2qP0WJkkrCqNK+DgAA">
-<XPD:ATTR name="Text" type="string">VeryGoodViroGame.SimpleMoveStrategy moves virologist</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">VeryGoodViroGame.MSSimple moves virologist</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="FrameTypeLabel" type="LabelView" guid="zGaC2LwLmEaqqiNMRebTxgAA">
 <XPD:ATTR name="FontStyle" type="integer">1</XPD:ATTR>
@@ -25758,7 +25758,7 @@
 </XPD:OBJ>
 <XPD:ATTR name="#OwnedFrames" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="OwnedFrames[0]" type="UMLFrame" guid="Ia+8E08F1U+4I14z/WTKhwAA">
-<XPD:ATTR name="Name" type="string">VeryGoodViroGame.SimpleMoveStrategy moves virologist</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.MSSimple moves virologist</XPD:ATTR>
 <XPD:ATTR name="FrameKind" type="string">sd</XPD:ATTR>
 <XPD:REF name="InteractionInstanceSet">nqrRg/bGNECbYDEzCpNEUgAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">1</XPD:ATTR>

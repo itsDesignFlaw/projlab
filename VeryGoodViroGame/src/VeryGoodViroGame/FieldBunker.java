@@ -10,12 +10,12 @@ package VeryGoodViroGame;//
 //
 
 
-
-
 public class FieldBunker extends Field
 {
-	private Resource resources;
-	public boolean Interact(Virologist v)
-	{
-	}
+    private Equipment equipment;
+    private boolean hasEquipment;
+    
+    public void Interact(Virologist v)
+    {
+    }
 }

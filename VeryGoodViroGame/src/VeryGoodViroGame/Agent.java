@@ -10,17 +10,24 @@ package VeryGoodViroGame;//
 //
 
 
-
-
 public abstract class Agent extends InvItem implements iSteppable
 {
-	private int activeTime;
-	public void Apply(Virologist target)
-	{
-	}
-	
-	public void Step()
-	{
-	}
-	
+    int activeTime;
+    //Akin van
+    Virologist host;
+    iMoveStrategy strategy;
+    
+    public void Apply(Virologist source, Virologist target)
+    {
+    }
+    
+    public void Step()
+    {
+    }
+    
+    public Agent Clone()
+    {
+        return null;
+    }
+    
 }

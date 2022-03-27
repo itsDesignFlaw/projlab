@@ -14,5 +14,5 @@ package VeryGoodViroGame;//
 
 public interface iSteppable
 {
-	public void Step();
+	void Step();
 }

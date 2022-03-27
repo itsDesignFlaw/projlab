@@ -10,11 +10,10 @@ package VeryGoodViroGame;//
 //
 
 
-
-
 public class EquipmentGloves extends Equipment
 {
-	public bool CanAgentBeApplied(Agent agent, Virologist source)
-	{
-	}
+    public boolean CanAgentBeApplied(Agent agent, Virologist source)
+    {
+        return false;
+    }
 }

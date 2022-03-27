@@ -10,25 +10,34 @@ package VeryGoodViroGame;//
 //
 
 
-
-
 public class Paralyze extends Agent
 {
-	public bool CanMove(Virologist v)
-	{
-	}
-	
-	public bool CanApplyAgent()
-	{
-	}
-	
-	public void CanAttack()
-	{
-	}
-	
-	public bool IsParalyzed()
-	{
-	}
-	
-	public void Step();
+    public boolean IsParalyzed()
+    {
+        return true;
+    }
+    
+    public boolean CanApplyAgent()
+    {
+        return false;
+    }
+    
+    public boolean CanSteal()
+    {
+        return false;
+    }
+    
+    public boolean CanCraft()
+    {
+        return false;
+    }
+    
+    public boolean CanInteract()
+    {
+        return false;
+    }
+    
+    public void Apply(Virologist source, Virologist target)
+    {
+    }
 }

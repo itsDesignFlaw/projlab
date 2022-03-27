@@ -10,17 +10,34 @@ package VeryGoodViroGame;//
 //
 
 
-
-
 public class Resource
 {
-	private int ami;
-	private int nuki;
-	public void Add(Resource resource)
-	{
-	}
-	
-	public bool Remove(Resource resource)
-	{
-	}
+    private int ami;
+    private int nuki;
+    
+    public void Add(Resource resource)
+    {
+    }
+    
+    public void Remove(Resource resource)
+    {
+    }
+        /*public void AddAmi(int ami)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void RemoveAmi(int ami)
+        {
+            throw new System.NotImplementedException();
+        }
+        public void AddNuki(int nuki)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void RemoveNuki(int nuki)
+        {
+            throw new System.NotImplementedException();
+        }*/
 }

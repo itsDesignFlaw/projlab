@@ -10,11 +10,14 @@ package VeryGoodViroGame;//
 //
 
 
-
+import java.util.ArrayList;
+import java.util.List;
 
 public class Map
 {
-	public void GenerateMap()
-	{
-	}
+    List<Field> fields = new ArrayList<>();
+    
+    public void GenerateMap()
+    {
+    }
 }

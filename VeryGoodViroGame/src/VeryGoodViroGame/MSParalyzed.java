@@ -10,8 +10,11 @@ package VeryGoodViroGame;//
 //
 
 
-
-
-public class MSParalyzed
+public class MSParalyzed implements iMoveStrategy
 {
+    @Override
+    public void ExecuteMove(Virologist v, Field from, Field to)
+    {
+    
+    }
 }

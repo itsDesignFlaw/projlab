@@ -10,11 +10,15 @@ package VeryGoodViroGame;//
 //
 
 
-
-
 public class EquipmentSack extends Equipment
 {
-	public int GetMaxResource()
-	{
-	}
+    
+    //Nem lehet, hogy inkánn int?
+    //Mert ez az a mennyiség, amivel megnöveli a kapacitást
+    private Resource amount;
+    
+    public int GetMaxResource()
+    {
+        return 20;
+    }
 }

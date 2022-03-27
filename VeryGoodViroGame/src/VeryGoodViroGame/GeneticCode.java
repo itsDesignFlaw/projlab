@@ -10,21 +10,23 @@ package VeryGoodViroGame;//
 //
 
 
-
-
 public class GeneticCode
 {
-	private Resource cost;
-	private Agent a;
-	public Agent CreateVirus()
-	{
-	}
-	
-	public Agent CreateVaccine()
-	{
-	}
-	
-	public Resource GetCost()
-	{
-	}
+    private Resource cost;
+    private Agent a;
+    
+    public Agent CreateVirus()
+    {
+        return null;
+    }
+    
+    public Agent CreateVaccine()
+    {
+        return null;
+    }
+    
+    public Resource GetCost()
+    {
+        return cost;
+    }
 }

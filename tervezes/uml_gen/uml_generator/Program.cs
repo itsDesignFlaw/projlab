@@ -19,7 +19,7 @@ namespace CatchThemAll
         Field mezo;
         private Resource resource;
         private System.Collections.Generic.List<Equipment> equipments;
-        
+
 
         public bool IsParalyzed()
         { return false; }

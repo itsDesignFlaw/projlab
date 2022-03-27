@@ -10,17 +10,16 @@ package VeryGoodViroGame;//
 //
 
 
-
-
 public class GameManager
 {
-	private Map gameMap;
-	private Map Map;
-	public void StartGame()
-	{
-	}
-	
-	public void EndGame()
-	{
-	}
+    
+    static Map map;
+    
+    public static void StartGame()
+    {
+    }
+    
+    public static void EndGame(Virologist winner)
+    {
+    }
 }

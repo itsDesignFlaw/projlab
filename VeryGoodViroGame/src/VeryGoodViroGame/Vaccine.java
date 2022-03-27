@@ -10,14 +10,16 @@ package VeryGoodViroGame;//
 //
 
 
-
-
 public class Vaccine extends Agent
 {
-	private Agent agentToCure;
-	public void Apply(Virologist target)
-	{
-	}
-	
-	public void Step();
+    private Agent agentToCure;
+    
+    public Vaccine(Agent agentToCure)
+    {
+    
+    }
+    
+    public void Apply(Virologist source, Virologist target)
+    {
+    }
 }

@@ -10,79 +10,113 @@ package VeryGoodViroGame;//
 //
 
 
+import java.util.ArrayList;
+import java.util.List;
 
-
-public class Virologist implements iSteppable
+public class Virologist
 {
-	private Field mezo;
-	private Resource resource;
-	public void MoveTo(Field targetField)
-	{
-	}
-	
-	public void AddResource(Resource ammount)
-	{
-	}
-	
-	public void RemoveResource(Resource ammount)
-	{
-	}
-	
-	public void Step(double curTime)
-	{
-	}
-	
-	public void CraftVirus(GeneticCode code)
-	{
-	}
-	
-	public void CraftVaccine(GeneticCode code)
-	{
-	}
-	
-	public void ApplyAgent(Agent agent, Virologist source)
-	{
-	}
-	
-	public void UseAgent(Agent agent, Virologist target)
-	{
-	}
-	
-	public void InteractWithMap()
-	{
-	}
-	
-	public void StealEquipmentFromViro(Virologist target, Equipment equipment)
-	{
-	}
-	
-	public void StealResourceFromViro(Virologist target, Resource ammount)
-	{
-	}
-	
-	public void RemoveEquipment(Equipment equipment)
-	{
-	}
-	
-	public void AddEquipment(Equipment equipment)
-	{
-	}
-	
-	public void RemoveItem(InvItem item)
-	{
-	}
-	
-	public void AddAgentToStash(Agent agent)
-	{
-	}
-	
-	public void AddItem(InvItem item)
-	{
-	}
-	
-	public void LearnGeneticCode(GeneticCode code)
-	{
-	}
-	
-	public void Step();
+    iMoveStrategy moveStrategy;
+    List<InvItem> items = new ArrayList<>();
+    List<GeneticCode> learntCodes = new ArrayList<>();
+    List<Agent> stash = new ArrayList<>();
+    
+    //Amin áll
+    Field mezo;
+    private Resource resource;
+    private List<Equipment> equipments;
+    
+    
+    public boolean IsParalyzed()
+    {
+        return false;
+    }
+    
+    //Összeadja az items listán a GetMaxResource értékét, majd hozzáaadja az alap értéket
+    public void AddResource(Resource ammount)
+    {
+    }
+    
+    public Resource RemoveResource(Resource ammount)
+    {
+        return null;
+    }
+    
+    //Craftol egy vírust
+    public void CraftVirus(GeneticCode code)
+    {
+    }
+    
+    public void CraftVaccine(GeneticCode code)
+    {
+    }
+    
+    //Mindegyiknél feltételezzük, hogy meg tudja érinteni, előtte ellenőrizzük
+    //When somebody uses an agent on you
+    public boolean ApplyAgent(Agent agent, Virologist source)
+    {
+        return true;
+    }
+    
+    //When you want to apply an agent on somebody
+    public void UseAgent(Agent agent, Virologist target)
+    {
+    }
+    
+    //Felszedi a mezőn lévő cuccokat, azaz meghívja az Interact fv-ét
+    public void InteractWithField()
+    {
+    }
+    
+    //A target-tól ellopja az equipment-et
+    public void StealEquipmentFromViro(Virologist target, Equipment equipment)
+    {
+    }
+    
+    public void StealResourceFromViro(Virologist target, Resource amount)
+    {
+    }
+    
+    //Eltávolítja a virológustól az equipment-et
+    public boolean RemoveEquipment(Equipment equipment)
+    {
+        return true;
+    }
+    
+    public void AddEquipment(Equipment equipment)
+    {
+    }
+    
+    //Elveszi a item-et
+    public void RemoveItem(InvItem item)
+    {
+    }
+    
+    //Hozzáadja a item-et
+    public void AddItem(InvItem item)
+    {
+    }
+    
+    public void LearnGeneticCode(GeneticCode code)
+    {
+    }
+    
+    public void AddAgentToStash(Agent agent)
+    {
+    }
+    
+    public Field GetField()
+    {
+        return null;
+    }
+    
+    public void ChangeMoveStrategy(iMoveStrategy strategy)
+    {
+    }
+    
+    //Hiper szuper magic függvény, mindent is tud
+    public void RemoveMoveStrategy(iMoveStrategy strategy)
+    {
+        //42
+    }
 }
+

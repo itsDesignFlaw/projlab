@@ -12,6 +12,11 @@ package VeryGoodViroGame;//
 
 
 
-public class VitusDanceMoveStrategy extends MoveStrategy
+public class MSVitusDance implements iMoveStrategy
 {
+    @Override
+    public void ExecuteMove(Virologist v, Field from, Field to)
+    {
+    
+    }
 }

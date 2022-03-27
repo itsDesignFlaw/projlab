@@ -10,19 +10,18 @@ package VeryGoodViroGame;//
 //
 
 
-
+import java.util.List;
 
 public class Field
 {
-	public void AcceptViro(Virologist v)
-	{
-	}
+	List<Virologist> virologists;
+	private List<Field> neighbours;
+	public void AcceptViro(Virologist v) { }
+	public void Interact(Virologist v) { }
+	public void RemoveViro(Virologist v) { }
 	
-	public bool Interact(Virologist v)
+	public Field GetRandomNeighbour()
 	{
-	}
-	
-	public bool RemoveViro(Virologist v)
-	{
+		return null;
 	}
 }

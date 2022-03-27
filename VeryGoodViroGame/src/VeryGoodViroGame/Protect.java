@@ -10,21 +10,10 @@ package VeryGoodViroGame;//
 //
 
 
-
-
 public class Protect extends Agent
 {
-	public bool CanMove(Virologist v)
-	{
-	}
-	
-	public bool CanApplyAgent()
-	{
-	}
-	
-	public void CanAttack()
-	{
-	}
-	
-	public void Step();
+    public boolean CanAgentBeApplied(Agent agent, Virologist source)
+    {
+        return false;
+    }
 }

@@ -10,11 +10,22 @@ package VeryGoodViroGame;//
 //
 
 
-
+import java.util.ArrayList;
+import java.util.List;
 
 public class Timer
 {
-	public void Step()
-	{
-	}
+    List<iSteppable> steppable_reg = new ArrayList<>();
+    
+    public void Step()
+    {
+    }
+    
+    public void AddSteppable(iSteppable item)
+    {
+    }
+    
+    public void RemoveSteppable(iSteppable step)
+    {
+    }
 }
