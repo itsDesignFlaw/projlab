@@ -10,8 +10,7 @@ package VeryGoodViroGame;//
 //
 
 
-
-
 public abstract class Equipment extends InvItem
 {
+    Virologist host;
 }
