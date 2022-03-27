@@ -12,15 +12,17 @@ public class Main
         System.out.println(str);
     }
 
-    static void AskRunTest()
+    static boolean AskRunTest()
     {
-        System.out.print("Select test: ");
         int ID;
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        String str = "";
 
         while (true) {
             try {
-                ID = Integer.parseInt(reader.readLine().toLowerCase());
+                System.out.print("Select test: ");
+                str = reader.readLine();
+                ID = Integer.parseInt(str.toLowerCase());
                 print("\n");
                 Tester.RunTest(ID-1);
                 Thread.sleep(1000);
@@ -28,13 +30,15 @@ public class Main
                 Thread.sleep(1000);
                 System.out.print(".");
                 Thread.sleep(1000);
-                System.out.print(".");
+                System.out.print(".\n");
             } catch (IOException ex) {
                 ex.printStackTrace();
-                return;
+                return true;
             }
             catch (NumberFormatException ex){
-                print("Invalid input.");
+                print("Invalid input: " + str);
+                if (str.trim().toLowerCase().equals("exit"))
+                    return true;
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -43,14 +47,14 @@ public class Main
 
     public static void main(String[] args)
     {
-        System.out.println("--== Goldshit Teszteloprogramja©®™ ==--"); //todo ne hagyjuk itt plsspls
+        System.out.println("--== Biden Teszteloprogramja©®™ ==--");
 
         while(true)
         {
             Tester.ListTests();
-            AskRunTest();
+            if (AskRunTest())
+                break;
         }
-
     }
 
 }

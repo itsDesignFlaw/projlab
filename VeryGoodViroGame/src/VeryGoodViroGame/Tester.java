@@ -110,7 +110,8 @@ public class Tester {
                     Virologist v1 = new Virologist();
                     Virologist v2 = new Virologist();
                     Agent agent = new Forget();
-
+                    EquipmentGloves gloves = new EquipmentGloves();
+                    v1.AddEquipment(gloves);
                     //ENTER
                     Logger.SetEnabled(true);
                     v1.UseAgent(agent, v2);
@@ -122,7 +123,7 @@ public class Tester {
                 () -> {
                     Virologist v1 = new Virologist();
                     Virologist v2 = new Virologist();
-                    Agent agent = new Forget();// TODO meg kell különböztetni a tries to-tól
+                    Agent agent = new Forget();
                     //ENTER
                     Logger.SetEnabled(true);
                     v1.UseAgent(agent, v2);
@@ -132,24 +133,32 @@ public class Tester {
                 "Virologist vaccinates a Virologist",
                 "Lemodellezzük a folyamatot, ahogy egy virológus vakcinát ad be egy másik virológusnak.",
                 () -> {
-                    //kommunikacios diagram alapjan inicializalas:
                     Virologist v1 = new Virologist();
                     Virologist v2 = new Virologist();
-                    //Vaccine vc = new Vaccine();
+                    Forget forget = new Forget();   // lehetne barmi mas agens is
+                    Vaccine vc = new Vaccine(forget);
                     //ENTER
-                    Logger.SetEnabled(true); //VÉGE AZ INICIALIZÁLÁSNAK
-
-                    //es aztan maga a teszt szia Zoli szia Dani  szijjaaaaa szijjjjjjjasztooooook
+                    //TODO: hulye vagy, szopd ki dani, nem kell kettospont
+                    Logger.SetEnabled(true);
+                    v1.UseAgent(vc, v2);
                 }));
         testcases.add(new TestCase(
                 "Virologist tries to craft virus",
                 "Annak a  folyamatnak a modellezése, melyben a virológus megpróbál vírust kraftolni.",
                 () -> {
-                    //kommunikacios diagram alapjan inicializalas:
+                    Virologist v = new Virologist();
+                    GeneticCode code = new GeneticCode();
+                    EquipmentSack e = new EquipmentSack();
+                    Forget a = new Forget();
+                    Resource r = new Resource();
+                    v.AddEquipment(e);
+                    v.LearnGeneticCode(code);
+                    code.setCost(r);
+                    //TODO: ez nemtom h jo e remelem nem......
                     //ENTER
-                    Logger.SetEnabled(true); //VÉGE AZ INICIALIZÁLÁSNAK
+                    Logger.SetEnabled(true);
 
-                    //es aztan maga a teszt szia Zoli szia Dani  szijjaaaaa szijjjjjjjasztooooook
+                    v.CraftVirus(code);
                 }));
         testcases.add(new TestCase(
                 "Virologist crafts virus",
@@ -162,10 +171,12 @@ public class Tester {
                     Resource r = new Resource();
                     v.AddEquipment(e);
                     v.LearnGeneticCode(code);
-
+                    code.setCost(r);
 
                     //ENTER
-                    Logger.SetEnabled(true); //VÉGE AZ INICIALIZÁLÁSNAK
+                    Logger.SetEnabled(true);
+
+                    v.CraftVirus(code);
 
                     //es aztan maga a teszt szia Zoli szia Dani  szijjaaaaa szijjjjjjjasztooooook
                 }));
@@ -201,10 +212,17 @@ public class Tester {
                 "Virologist tries to steal resource",
                 "Lemodellezzük a folyamatot, amelyben a virológus anyagot  kísérel meg lopni egy másik virológustól.",
                 () -> {
-                    //kommunikacios diagram alapjan inicializalas:
+                    Virologist v = new Virologist();
+                    Resource r = new Resource();
+                    Virologist v2 = new Virologist();
+                    Resource r2 = new Resource();
+                    EquipmentSack e = new EquipmentSack();
+                    v.SetResource(r);
+                    v2.SetResource(r2);
+                    v.AddEquipment(e);
                     //ENTER
                     Logger.SetEnabled(true); //VÉGE AZ INICIALIZÁLÁSNAK
-
+                    v.StealResourceFromViro(v2, new Resource());
                     //es aztan maga a teszt szia Zoli szia Dani  szijjaaaaa szijjjjjjjasztooooook
                 }));
         testcases.add(new TestCase(
@@ -215,10 +233,11 @@ public class Tester {
                     Resource r = new Resource();
                     Virologist v2 = new Virologist();
                     Resource r2 = new Resource();
-
+                    v.SetResource(r);
+                    v2.SetResource(r2);
                     //ENTER
                     Logger.SetEnabled(true); //VÉGE AZ INICIALIZÁLÁSNAK
-
+                    v.StealResourceFromViro(v2, new Resource());
                     //es aztan maga a teszt szia Zoli szia Dani  szijjaaaaa szijjjjjjjasztooooook
                 }));
         testcases.add(new TestCase(
@@ -251,6 +270,18 @@ public class Tester {
 
                     //es aztan maga a tesz
                 }));
+        testcases.add(new TestCase(
+                "All tests",
+                "Minden feljebbi teszt egymás után sorrendben",
+                () -> {
+                    for (int i = 0; i < testcases.size(); i++) {
+                        if (testcases.get(i).name.equals("All tests"))
+                            continue;
+                        RunTest(i);
+                    }
+
+                    //es aztan maga a tesz
+                }));
     }
 
     static void print(String str) {
@@ -274,11 +305,11 @@ public class Tester {
     }
 
     static void RunTest(int id) {
-        TestCase curtest = testcases.get(id);
-        if (curtest == null) {
+        if (id >= testcases.size()) {
             print("Ez nem jo ID!");
             return;
         }
+        TestCase curtest = testcases.get(id);
         print("\n\n\n\nID: " + (id + 1) + "\nName: " + curtest.name + "\nDescription: " + curtest.desc + "\n");
         Logger.SetEnabled(false);
         curtest.mRun.run();

@@ -10,22 +10,27 @@ package VeryGoodViroGame;//
 //
 
 
-public class GeneticCode
-{
+public class GeneticCode {
     private Resource cost;
     private Agent a;
-    
-    public Agent CreateVirus()
-    {
+
+    public void setCost(Resource r) {
+        cost = r;
+    }
+
+    public void setAgent(Agent agent) {
+        a = agent;
+    }
+
+    public Agent CreateVirus() {
         Logger.NewFunctionCall("GeneticCode.CreateVirus");
         Agent clone = a.Clone();
         Timer.AddSteppable(clone);
         Logger.ReturnFunction();
         return clone;
     }
-    
-    public Agent CreateVaccine()
-    {
+
+    public Agent CreateVaccine() {
         Logger.NewFunctionCall("GeneticCode.CreateVaccine");
         Agent clone = a.Clone();
         Vaccine vaccine = new Vaccine(clone);
@@ -33,10 +38,9 @@ public class GeneticCode
         Logger.ReturnFunction();
         return vaccine;
     }
-    
-    public Resource GetCost()
-    {
-        Logger.NewFunctionCall("GenetiCode.GetCost");
+
+    public Resource GetCost() {
+        Logger.NewFunctionCall("GeneticCode.GetCost");
         Logger.ReturnFunction();
         return cost;
     }

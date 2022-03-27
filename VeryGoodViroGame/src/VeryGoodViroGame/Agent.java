@@ -47,7 +47,7 @@ public abstract class Agent extends InvItem implements iSteppable
     {
         Logger.NewFunctionCall("Agent.Clone");
         Logger.ReturnFunction();
-        return null;
+        return this;
     }
     
 }

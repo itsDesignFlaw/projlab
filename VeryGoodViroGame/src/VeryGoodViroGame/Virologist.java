@@ -14,15 +14,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Virologist {
-    iMoveStrategy moveStrategy;
+    iMoveStrategy moveStrategy = new MSSimple();
     List<InvItem> items = new ArrayList<>();
     List<GeneticCode> learntCodes = new ArrayList<>();
     List<Agent> stash = new ArrayList<>();
 
     //Amin áll
-    Field mezo;
+    Field mezo = new Field();
     private Resource resource;
     private List<Equipment> equipments;
+
+    public void SetResource(Resource r) {
+        resource = r;
+    }
 
     public void SetField(Field f) {
         mezo = f;
@@ -55,7 +59,7 @@ public class Virologist {
         Logger.NewFunctionCall("Virologist.RemoveResource");
         IsParalyzed();
         Logger.ReturnFunction();
-        return null;
+        return new Resource();
     }
 
     //Craftol egy vírust
@@ -206,7 +210,7 @@ public class Virologist {
     public Field GetField() {
         Logger.NewFunctionCall("Virologist.GetField");
         Logger.ReturnFunction();
-        return null;
+        return mezo;
     }
 
     public void ChangeMoveStrategy(iMoveStrategy strategy) {
