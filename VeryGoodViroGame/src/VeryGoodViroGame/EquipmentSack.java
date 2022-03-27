@@ -19,6 +19,7 @@ public class EquipmentSack extends Equipment
     
     public int GetMaxResource()
     {
+        Logger.NewFunctionCall("EquipmentSack.GetMaxResource");
         return 20;
     }
 }

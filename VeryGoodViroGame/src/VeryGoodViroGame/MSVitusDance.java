@@ -15,8 +15,10 @@ public class MSVitusDance implements iMoveStrategy
     @Override
     public void ExecuteMove(Virologist v, Field from, Field to)
     {
+        Logger.NewFunctionCall("MSVitusDance");
         Field random = from.GetRandomNeighbour();
         from.RemoveViro(v);
         random.AcceptViro(v);
+        Logger.ReturnFunction();
     }
 }

@@ -14,6 +14,8 @@ public class Paralyze extends Agent
 {
     public boolean IsParalyzed()
     {
+        Logger.NewFunctionCall("Paralyze.");
+        Logger.ReturnFunction();
         return true;
     }
     

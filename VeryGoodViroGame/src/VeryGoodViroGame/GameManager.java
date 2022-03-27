@@ -17,11 +17,15 @@ public class GameManager
     
     public static void StartGame()
     {
+        Logger.NewFunctionCall("GameManager.StartGame");
         map = new Map();
         map.GenerateMap();
+        Logger.ReturnFunction();
     }
     
     public static void EndGame(Virologist winner)
     {
+        Logger.NewFunctionCall("GameManager.EndGame");
+        Logger.ReturnFunction();
     }
 }

@@ -16,7 +16,9 @@ public class FieldWarehouse extends Field
     
     public void Interact(Virologist v)
     {
+        Logger.NewFunctionCall("FieldWarehouse.Interact");
         v.AddResource(resources);
+        Logger.ReturnFunction();
     }
 }
 

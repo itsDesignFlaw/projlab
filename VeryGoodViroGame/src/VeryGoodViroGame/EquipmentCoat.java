@@ -14,7 +14,9 @@ public class EquipmentCoat extends Equipment
 {
     public boolean CanAgentBeApplied(Agent agent, Virologist source)
     {
-        if(Logger.AskQuestion(""))
-        return false;
+        Logger.NewFunctionCall("Agent.Clone");
+        boolean answer = Logger.AskQuestion("Can the agent be applied to the virologist");
+        Logger.ReturnFunction();
+        return answer;
     }
 }

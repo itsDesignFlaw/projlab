@@ -15,7 +15,9 @@ public class MSSimple implements iMoveStrategy
     @Override
     public void ExecuteMove(Virologist v, Field from, Field to)
     {
+        Logger.NewFunctionCall("MSSimple.ExecuteMove");
         from.RemoveViro(v);
         to.AcceptViro(v);
+        Logger.ReturnFunction();
     }
 }

@@ -14,36 +14,50 @@ public abstract class InvItem
 {
     public int GetMaxResource()
     {
+        Logger.NewFunctionCall("InvItem.GetMaxResource");
+        Logger.ReturnFunction();
         return 0;
     }
     
     public boolean CanAgentBeApplied(Agent agent, Virologist source)
     {
+        Logger.NewFunctionCall("InvItem.CanAgentBeApplied");
+        Logger.ReturnFunction();
         return true;
     }
     
     public boolean CanSteal()
     {
+        Logger.NewFunctionCall("InvItem.CanSteal");
+        Logger.ReturnFunction();
         return true;
     }
     
     public boolean IsParalyzed()
     {
+        Logger.NewFunctionCall("InvItem.IsParalyzed");
+        Logger.ReturnFunction();
         return false;
     }
     
     public boolean CanCraft()
     {
+        Logger.NewFunctionCall("InvItem.CanCraft");
+        Logger.ReturnFunction();
         return true;
     }
     
     public boolean CanInteract()
     {
+        Logger.NewFunctionCall("InvItem.CanInteract");
+        Logger.ReturnFunction();
         return true;
     }
     
     public boolean CanApplyAgent()
     {
+        Logger.NewFunctionCall("InvItem.CanApplyAgent");
+        Logger.ReturnFunction();
         return true;
     }
 }

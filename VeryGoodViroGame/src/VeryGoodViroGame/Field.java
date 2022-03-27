@@ -22,6 +22,8 @@ public class Field
 	
 	public Field GetRandomNeighbour()
 	{
+		Logger.NewFunctionCall("Field.GetRandomNeighbour");
+		Logger.ReturnFunction();
 		return null;
 	}
 }
