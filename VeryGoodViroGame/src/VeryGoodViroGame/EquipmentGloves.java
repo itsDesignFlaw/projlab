@@ -9,9 +9,18 @@ package VeryGoodViroGame;//
 //
 //
 
-
+/**
+ * A kesztyű védőfelszerelést reprezentálja, az ezt viselő virológusra
+ * kent ágens visszadobódik arra a virológusra aki felkente.
+ */
 public class EquipmentGloves extends Equipment
 {
+    /**
+     * A source paraméterként kapott virológus megkísérli felkenni az ágenst a targetként megkapott virológusra.
+     *
+     * @param  source az ágenst felkenő virológus
+     * @param  target az a virológus akire felkenik az ágenst
+     */
     public boolean CanAgentBeApplied(Agent agent, Virologist source)
     {
         source.ApplyAgent(agent, host);

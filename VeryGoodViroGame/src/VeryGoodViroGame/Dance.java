@@ -10,8 +10,18 @@ package VeryGoodViroGame;//
 //
 
 
+/**
+ * Egy vírust reprezentál a játékban, amíg egy virológuson hatást gyakorol,
+ * a virológus fel-alá mozog, ekkor a játékban nem irányítható.
+ */
 public class Dance extends Agent
 {
+    /**
+     * Vitustánc vírus felkenéséért felelős metódus.
+     *
+     * @param  source az ágenst felkenő virológus
+     * @param  target az a virológus akire felkenik az ágenst
+     */
     public void Apply(Virologist source, Virologist target)
     {
         Logger.NewFunctionCall("Agent.Apply");

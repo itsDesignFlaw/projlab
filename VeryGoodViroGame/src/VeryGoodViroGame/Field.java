@@ -12,15 +12,29 @@ package VeryGoodViroGame;//
 
 import java.util.List;
 
+
+/**
+ * Az egyszerű mezőt reprezentálja, melyen a virológusok mozoghatnak. Ismernie kell, adott mezőn, mely virológusok állnak.
+ */
 public class Field {
     List<Virologist> virologists;
     private List<Field> neighbours;
 
+     /**
+     * A virológus mezőre lépésekor ezt a függvényt kell meghívni a virolgóust paraméterként átadva, ezáltal tudja a mező befogadni.
+     *
+     * @param  v  A virológus aki a mezőre lép.
+     */
     public void AcceptViro(Virologist v) {
         Logger.NewFunctionCall("Field.AcceptViro");
         Logger.ReturnFunction();
     }
 
+    /**
+     * Ha egy virológus rajta van egy mezőn, akkor lehetősége van a mezővel interaktálni.
+     *
+     * @param  v  A virológus aki a mezőn van.
+     */
     public void Interact(Virologist v) {
         Logger.NewFunctionCall("Field.Interact");
         Logger.ReturnFunction();

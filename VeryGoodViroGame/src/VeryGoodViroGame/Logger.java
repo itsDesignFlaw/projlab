@@ -3,28 +3,49 @@ package VeryGoodViroGame;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Locale;
 
 public class Logger {
-    static int eltolas = 0;
     static boolean isEnabled = true;
     static boolean isFirst = true;
     private static String separator = " ";
 
-    static int[] eltolasok;
+    static ArrayList<Integer> eltolasok = new ArrayList<Integer>();
     static int getEltolas()
     {
-        return 0;
+        int e = 0;
+        for (int i = 0; i < eltolasok.size(); i++)
+        {
+            e += eltolasok.get(i);
+        }
+        return e;
     }
 
-    static int putEltolas(int elt)
+    static void putEltolas(int elt)
     {
-        return 0;
+        eltolasok.add(elt);
+    }
+
+    static void popEltolas()
+    {
+        if (eltolasok.isEmpty())
+            return;
+        eltolasok.remove(eltolasok.size()-1);
+    }
+
+    static int lastEltolas()
+    {
+        return eltolasok.get(eltolasok.size()-1);
     }
 
     static void SetEnabled(boolean enabled) {
         isEnabled = enabled;
-        isFirst = enabled;
+        if (enabled)
+        {
+            isFirst = true;
+            eltolasok = new ArrayList<Integer>();
+        }
     }
 
     static void NewFunctionCall(String mes) {
@@ -36,29 +57,35 @@ public class Logger {
         if (isFirst)
             str = "---" + mes + "--->[]";
         else
-            str = "\n---" + mes + "--->[]";
+            str = "[]---" + mes + "--->[]";
 
-        eltolas += str.length();
         Print(str);
+        putEltolas(str.length());
         isFirst = false;
     }
 
     static void ReturnFunction() {
         if (isEnabled) {
-            eltolas--;
-            Print("[]<-------");
+            int elt = lastEltolas()-5;
+            popEltolas();
+            Print("[]<" + "-".repeat(elt)  + "[]");
         }
     }
 
     static void Print(String mes) {
-        if (isEnabled)
-            System.out.println(separator.repeat(eltolas * 2) + mes);
+        if (!isEnabled)
+            return;
+
+        //System.out.println("printing: " + getEltolas());
+        //System.out.println("printing: " + mes);
+        //System.out.println("printing: " + separator.repeat(getEltolas()).length());
+        System.out.println(separator.repeat(getEltolas()) + mes);
     }
 
     static boolean AskQuestion(String question) {
         if (isEnabled) {
-            System.out.println(separator.repeat(eltolas * 2) + question + "?(Y/N):");
-            System.out.print(separator.repeat(eltolas * 2));
+            System.out.println(separator.repeat(getEltolas()) + question + "?(Y/N):");
+            System.out.print(separator.repeat(getEltolas()));
             String answer = "";
             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 

@@ -9,14 +9,20 @@ package VeryGoodViroGame;//
 //
 //
 
-
+/**
+ * A zsák virológus felszerelést reprezentálja, az ezt viselő virológus által szállítható anyagmennyiségek megnövelődnek.
+ */
 public class EquipmentSack extends Equipment
 {
     
     //Nem lehet, hogy inkánn int?
     //Mert ez az a mennyiség, amivel megnöveli a kapacitást
     private Resource amount;
-    
+
+    /**
+     * 0-nál nagyobb számot ad vissza, ezzel jelezve a tartalmazó virológusnak, hogy több nyersanyagot is tud tárolni/szállítani
+     *
+     */
     public int GetMaxResource()
     {
         Logger.NewFunctionCall("EquipmentSack.GetMaxResource");

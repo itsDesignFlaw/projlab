@@ -7,19 +7,6 @@ public class Tester {
 
     static {
         testcases.add(new TestCase(
-                "Virologist Move",
-                "Ez a teszteset leellenőrzi a virológus mozgását.",
-                () -> {
-                    //ENTER
-                    Logger.SetEnabled(true);
-                    Field from = new Field();
-                    Field to = new Field();
-                    Virologist virologist = new Virologist();
-                    virologist.MoveTo(to);
-                }
-        )); //todo megbaszni goldit
-
-        testcases.add(new TestCase(
                 "SimpleMoveStrategy moves virologist",
                 "Modellezzük a folyamatot, amikor a virológus bármiféle ágens hatása nélkül mozog",
                 () -> {
@@ -30,7 +17,7 @@ public class Tester {
                     //ENTER
                     Logger.SetEnabled(true);
 
-                    virologist.moveStrategy.ExecuteMove(virologist, from, to);
+                    virologist.MoveTo(to);
                 }
         ));
 
@@ -44,7 +31,7 @@ public class Tester {
                     virologist.ChangeMoveStrategy(new MSVitusDance());
                     //ENTER
                     Logger.SetEnabled(true);
-                    virologist.moveStrategy.ExecuteMove(virologist, from, to);
+                    virologist.MoveTo(to);
                 }));
 
         testcases.add(new TestCase(
@@ -57,7 +44,7 @@ public class Tester {
                     virologist.ChangeMoveStrategy(new MSParalyzed());
                     //ENTER
                     Logger.SetEnabled(true);
-                    virologist.moveStrategy.ExecuteMove(virologist, from, to);
+                    virologist.MoveTo(to);
 
                 }));
 
@@ -72,7 +59,7 @@ public class Tester {
                     b.AcceptViro(v);
                     //ENTER
                     Logger.SetEnabled(true);
-                    b.Interact(v);
+                    v.InteractWithField();
                 }));
 
         testcases.add(new TestCase(
@@ -86,7 +73,7 @@ public class Tester {
                     lab.AcceptViro(virologist);
                     //ENTER
                     Logger.SetEnabled(true);
-                    lab.Interact(virologist);
+                    virologist.InteractWithField();
                 }));
 
         testcases.add(new TestCase(
@@ -100,7 +87,7 @@ public class Tester {
                     w.AcceptViro(v);
                     //ENTER
                     Logger.SetEnabled(true);
-                    w.Interact(v);
+                    v.InteractWithField();
                 }));
 
         testcases.add(new TestCase(
