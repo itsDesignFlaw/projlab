@@ -94,7 +94,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="SPVTiqCd7UKw+7MkDajA7QAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="WLgRd6Q0xEO1EplUZ9keYQAA">
 <XPD:ATTR name="FontStyle" type="integer">1</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">iSteppable</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">VeryGoodViroGame.iSteppable</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="OBQpX00EFUideYpyMj9wJwAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -122,7 +122,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="TiSXGLt4pkS15JxlkXeioQAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="E1aJLxfGWEaCP76mv1T4MgAA">
 <XPD:ATTR name="FontStyle" type="integer">3</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">InvItem</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">VeryGoodViroGame.InvItem</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="NNxA1FDmIky1ekMHFLOtzQAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -153,7 +153,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="19Hhro/+e0aGTprpxhMs0wAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="7V+tiN97nk+MKDMGPZMalQAA">
 <XPD:ATTR name="FontStyle" type="integer">3</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">Equipment</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">VeryGoodViroGame.Equipment</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="OvQVs5Z9rEWuxv2OZqS7UgAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -207,7 +207,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="4VY23C+WY0yb9pUGSP+gowAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="w9GkE2KRNkyRem1WI3yA0AAA">
 <XPD:ATTR name="FontStyle" type="integer">1</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">Virologist</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">VeryGoodViroGame.Virologist</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="0cBuSigZD0CwmV2dhMIRRgAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -261,7 +261,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="yNLj/KHH+EKqdFOLJAt2YQAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="YO0f8LKRm0KAco5CJKpMgQAA">
 <XPD:ATTR name="FontStyle" type="integer">1</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">Map</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">VeryGoodViroGame.Map</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="pY08OgLlkkazVsTnQgvxrQAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -292,7 +292,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="6Bmcv4OSv0yZdCPkoD9qzAAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="KvPvCyWvskOkBgWVdETfZgAA">
 <XPD:ATTR name="FontStyle" type="integer">1</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">Field</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">VeryGoodViroGame.Field</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="uhQ4A8MWIkW/Bj47eWcRSwAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -398,7 +398,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="QFOj2mJ/PUKbMXXwhYvlgQAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="33W/o1+6n0eLD4qrndsG2QAA">
 <XPD:ATTR name="FontStyle" type="integer">1</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">FieldLab</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">VeryGoodViroGame.FieldLab</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="t+iXqIlKVEKKZeuXgMHKFQAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -452,7 +452,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="s9fwREVVyEmDTo/hMPntEQAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="jM/NRETZHkGDHEQmujf42gAA">
 <XPD:ATTR name="FontStyle" type="integer">1</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">FieldBunker</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">VeryGoodViroGame.FieldBunker</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="dyIcxAm5fkaqSN/xxtM/lQAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -506,7 +506,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="MBwYMfIlFU+eoA3Rbn4cywAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="FOfOl85cY0Gb9xEM4ixEQgAA">
 <XPD:ATTR name="FontStyle" type="integer">1</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">FieldWarehouse</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">VeryGoodViroGame.FieldWarehouse</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="SOJ7p0wFd0+1PQUr4F0OJwAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -635,7 +635,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="+EYQCzjfJEyGgRVoVwKMMgAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="Sfc6KemxcUq8piPjm+Dr+AAA">
 <XPD:ATTR name="FontStyle" type="integer">1</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">EquipmentSack</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">VeryGoodViroGame.EquipmentSack</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="NwIHqBUQmECcPCMgGNfvbAAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -689,7 +689,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="/vhzKziRckSqQCHsWXX5pQAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="uQ+VGwsq3kuwS5h2Y44YbQAA">
 <XPD:ATTR name="FontStyle" type="integer">1</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">EquipmentGloves</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">VeryGoodViroGame.EquipmentGloves</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="cG8ATru2RUSrqcEfGD8XGwAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -743,7 +743,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="RRm90NK5AEee18oZ1wJ9BQAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="FV4w848fBE+mIxHHRcXbgAAA">
 <XPD:ATTR name="FontStyle" type="integer">1</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">EquipmentCoat</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">VeryGoodViroGame.EquipmentCoat</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="W+si3+YdcU+6LEvrqwFV4AAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -797,7 +797,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="dgnIlifc1Ums/PagXqd+FQAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="pGKr4U4HiUaKsTLuato4lQAA">
 <XPD:ATTR name="FontStyle" type="integer">1</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">GeneticCode</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">VeryGoodViroGame.GeneticCode</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="9n2DjsGYp0meGXIV3csIBQAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -903,7 +903,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="ErED2bSbPUWJjPH5IFnx7AAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="AUNQXEdzwUuwgVpB4senrQAA">
 <XPD:ATTR name="FontStyle" type="integer">3</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">Agent</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">VeryGoodViroGame.Agent</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="c/3lBlUgnk2u3g2oiAJodAAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -1055,7 +1055,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="v8pl3Za5ok2lIXhgosVL4QAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="ZqspuaS4e0aXvQS4wM0sPQAA">
 <XPD:ATTR name="FontStyle" type="integer">1</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">Timer</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">VeryGoodViroGame.Timer</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="0dnxy9BeXkSh6MlsKMyTAgAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -1086,7 +1086,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="FHJzMveg1E+WnafX3opQVwAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="3sfbX8lV4k6e88hCSn7pJgAA">
 <XPD:ATTR name="FontStyle" type="integer">1</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">GameManager</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">VeryGoodViroGame.GameManager</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="87lPZ6qSx0GOF4oyI4/mewAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -1206,7 +1206,7 @@
 <XPD:OBJ name="HeadRoleNameLabel" type="EdgeLabelView" guid="H9huoWgY5UyESSvT/kuh2AAA">
 <XPD:ATTR name="Distance" type="real">30</XPD:ATTR>
 <XPD:ATTR name="EdgePosition" type="EdgePositionKind">epHead</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">-Map</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">-VeryGoodViroGame.Map</XPD:ATTR>
 <XPD:REF name="Model">s+8+Yq8iYEiGDZhvTK48/AAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="TailRoleNameLabel" type="EdgeLabelView" guid="oQsl6OFJeUWulJwSM+ouaQAA">
@@ -1267,7 +1267,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="ZKtIOEmoZkq5K5c1OZW4tQAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="oFPCbQGLYUeGqDnLYgdJPgAA">
 <XPD:ATTR name="FontStyle" type="integer">1</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">Resource</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">VeryGoodViroGame.Resource</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="9beD/THbbU+2dF0/e8jDkAAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -1523,7 +1523,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="HZ/9n8J6ZUaOyy4TwKyomAAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="PAaOijs8nUCRaB6JsbAdjQAA">
 <XPD:ATTR name="FontStyle" type="integer">1</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">Dance</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">VeryGoodViroGame.Dance</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="o8qTmRYCaUCNEJUlSzrVVgAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -1577,7 +1577,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="5R/1qgBI9kitb4U67yDpkAAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="AfqB8Zp5OECqpSFHn9HVRgAA">
 <XPD:ATTR name="FontStyle" type="integer">1</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">Forget</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">VeryGoodViroGame.Forget</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="I+JlqIKwzkWP4rayQAYo3wAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -1631,7 +1631,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="bgDOuFhruEKETRzdAR9UgAAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="+Dm8DBrrUUWAIxASFvbI1AAA">
 <XPD:ATTR name="FontStyle" type="integer">1</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">Paralyze</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">VeryGoodViroGame.Paralyze</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="NrQWtjnyUUqpixb+Lob7lQAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -1685,7 +1685,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="6e1cHmpHP02UzFAJKFIC2wAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="eKiU3TGfQkGbhOpHDcWO0wAA">
 <XPD:ATTR name="FontStyle" type="integer">1</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">Protect</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">VeryGoodViroGame.Protect</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="b7hUy/98jEO075jYfd7+/wAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -1739,7 +1739,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="HC1zf71Kmki+MY9MxrfjLwAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="vXsplGDnGkmlYohoV0fY/QAA">
 <XPD:ATTR name="FontStyle" type="integer">1</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">Vaccine</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">VeryGoodViroGame.Vaccine</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="PQ4Ogla5Y0i3sCdw9lQDhAAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -1868,7 +1868,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="MmCg+GlcBEWhwYzkbYxhRwAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="A6OwN07XOUiBoyEz7eVQ+wAA">
 <XPD:ATTR name="FontStyle" type="integer">1</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">MoveStrategy</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">VeryGoodViroGame.MoveStrategy</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="UMkwf24CG0uQlhB9sOxyOwAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -1899,7 +1899,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="+k3ecu4bhUmly3mbLKJw4gAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="wnarxKPcKE2dCA9YrzwtyQAA">
 <XPD:ATTR name="FontStyle" type="integer">1</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">SimpleMoveStrategy</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">VeryGoodViroGame.SimpleMoveStrategy</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="ts57ZIS8xEWmQu1dhVoZJwAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -1930,7 +1930,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="OUEjcy2ayUa/IA3NjQotgwAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="FaVukX9ol0+DRLFNRfRz+QAA">
 <XPD:ATTR name="FontStyle" type="integer">1</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">VitusDanceMoveStrategy</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">VeryGoodViroGame.VitusDanceMoveStrategy</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="wHUiT7Bo7kOSsTxlAfmwWgAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -2007,7 +2007,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="WJ0eq9RPFkm8Ooaaf3k7KAAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="EW/sbg8RDEiQjDflu7YaXQAA">
 <XPD:ATTR name="FontStyle" type="integer">1</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">ParalyzedMoveStrategy</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">VeryGoodViroGame.ParalyzedMoveStrategy</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="NNuyNLHWG0O3Tc/vmb+n5wAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -2194,7 +2194,7 @@
 <XPD:REF name="Head">8kiydz8j1kibO/kDC/y/VwAA</XPD:REF>
 <XPD:REF name="Tail">0z7bICa9DU2/4aZUzAty7gAA</XPD:REF>
 <XPD:OBJ name="NameLabel" type="EdgeLabelView" guid="oHcpDLfvc0qpjnlLoMw0XgAA">
-<XPD:ATTR name="Text" type="string">Step : [ effectTime==0 ] / host.RemoveItem(this), Timer.RemoveSteppable(this)</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">Step : [ effectTime==0 ] / host.RemoveItem(this), VeryGoodViroGame.Timer.RemoveSteppable(this)</XPD:ATTR>
 <XPD:REF name="Model">MipDcodKgUCPZ5CzxrYMawAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="EdgeLabelView" guid="c7Ja3w40MU6rYqychbrfPwAA">
@@ -2250,14 +2250,14 @@
 <XPD:REF name="Transition">MipDcodKgUCPZ5CzxrYMawAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="Effects[1]" type="UMLUninterpretedAction" guid="+eWPF2d1fEi0SjjMGPyFSgAA">
-<XPD:ATTR name="Name" type="string">Timer.RemoveSteppable(this)</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.Timer.RemoveSteppable(this)</XPD:ATTR>
 <XPD:REF name="Transition">MipDcodKgUCPZ5CzxrYMawAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
 </XPD:OBJ>
 <XPD:ATTR name="#OwnedElements" type="integer">48</XPD:ATTR>
 <XPD:OBJ name="OwnedElements[0]" type="UMLInterface" guid="BctJskdVJEqMg8sItvye5wAA">
-<XPD:ATTR name="Name" type="string">iSteppable</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.iSteppable</XPD:ATTR>
 <XPD:REF name="Namespace">wGZUrP/caka5boI08dFSzwAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">3</XPD:ATTR>
 <XPD:REF name="Views[0]">CStvvTv0CkG6pIGSjjiP0gAA</XPD:REF>
@@ -2277,7 +2277,7 @@
 <XPD:REF name="Instances[0]">DKkRjSKWtk6ZKnwqwaECKQAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[1]" type="UMLClass" guid="yLRi+Uf3o0WDBaObodVavQAA">
-<XPD:ATTR name="Name" type="string">InvItem</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.InvItem</XPD:ATTR>
 <XPD:ATTR name="IsAbstract" type="boolean">True</XPD:ATTR>
 <XPD:REF name="Namespace">wGZUrP/caka5boI08dFSzwAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
@@ -2474,7 +2474,7 @@
 <XPD:REF name="Instances[0]">HfHYKfozSEGNDlgsg0uZvAAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[2]" type="UMLClass" guid="tdgPWE9mWk2TVkqT5lZv/QAA">
-<XPD:ATTR name="Name" type="string">Equipment</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.Equipment</XPD:ATTR>
 <XPD:ATTR name="IsAbstract" type="boolean">True</XPD:ATTR>
 <XPD:REF name="Namespace">wGZUrP/caka5boI08dFSzwAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
@@ -2496,7 +2496,7 @@
 <XPD:REF name="Associations[0]">5XI//JWfvEKC+TEaWB46YAAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[3]" type="UMLClass" guid="nUp9Byc7/Ea89qM7fdEKNAAA">
-<XPD:ATTR name="Name" type="string">Virologist</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.Virologist</XPD:ATTR>
 <XPD:REF name="Namespace">wGZUrP/caka5boI08dFSzwAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
 <XPD:REF name="Views[0]">4dfTrTZuy06BEaiFeOCY4gAA</XPD:REF>
@@ -2942,7 +2942,7 @@
 <XPD:REF name="Instances[12]">UFpoBb40IUmGZvW7D5ysoQAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[4]" type="UMLClass" guid="G5mx1HSZ8Eq2VQTRwNlqlwAA">
-<XPD:ATTR name="Name" type="string">Map</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.Map</XPD:ATTR>
 <XPD:REF name="Namespace">wGZUrP/caka5boI08dFSzwAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
 <XPD:REF name="Views[0]">RwU9gdUUGUqfDC5wk5lDhAAA</XPD:REF>
@@ -2971,7 +2971,7 @@
 <XPD:REF name="Instances[1]">b8JTUJnHZU+3FWAMHZ5bFgAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[5]" type="UMLClass" guid="7zc9ITAKbEqwNhWPp8aWeAAA">
-<XPD:ATTR name="Name" type="string">Field</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.Field</XPD:ATTR>
 <XPD:REF name="Namespace">wGZUrP/caka5boI08dFSzwAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
 <XPD:REF name="Views[0]">35GEvoF3pUWH6mzlhQYtvAAA</XPD:REF>
@@ -3080,7 +3080,7 @@
 <XPD:REF name="Instances[7]">z0pQpWc0oEavNngt91rnkAAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[6]" type="UMLClass" guid="OushrQg92UOA5qnnOdrVlAAA">
-<XPD:ATTR name="Name" type="string">FieldLab</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.FieldLab</XPD:ATTR>
 <XPD:REF name="Namespace">wGZUrP/caka5boI08dFSzwAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
 <XPD:REF name="Views[0]">q4gle6QLOUKfWbxlsps4MQAA</XPD:REF>
@@ -3152,7 +3152,7 @@
 <XPD:REF name="Instances[1]">2/osPGqWhUGS14LS2ySP+gAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[7]" type="UMLClass" guid="wFlHGdxBEEiypgm0eZZOhgAA">
-<XPD:ATTR name="Name" type="string">FieldBunker</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.FieldBunker</XPD:ATTR>
 <XPD:REF name="Namespace">wGZUrP/caka5boI08dFSzwAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
 <XPD:REF name="Views[0]">aiMhwb4t8Emo1WHehloNGAAA</XPD:REF>
@@ -3229,7 +3229,7 @@
 <XPD:REF name="Instances[3]">NmcusgtXyUGC9cq00C32WgAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[8]" type="UMLClass" guid="dG6GOs+PPkymDH9rUaDpQgAA">
-<XPD:ATTR name="Name" type="string">FieldWarehouse</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.FieldWarehouse</XPD:ATTR>
 <XPD:REF name="Namespace">wGZUrP/caka5boI08dFSzwAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
 <XPD:REF name="Views[0]">p6ExMAN2F0yw8WcDqRGcAwAA</XPD:REF>
@@ -3298,7 +3298,7 @@
 <XPD:REF name="Associations[0]">aOhqnRbLp06gRpNduQtFfgAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[9]" type="UMLClass" guid="rLp992oPwk6kFiMJjTy3iAAA">
-<XPD:ATTR name="Name" type="string">EquipmentSack</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.EquipmentSack</XPD:ATTR>
 <XPD:REF name="Namespace">wGZUrP/caka5boI08dFSzwAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
 <XPD:REF name="Views[0]">rSOoq3ymJU680K7SXOxj+AAA</XPD:REF>
@@ -3331,7 +3331,7 @@
 <XPD:REF name="Instances[0]">sH0bwYo5xEymBCTIaty/JQAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[10]" type="UMLClass" guid="fN9MMSu3zUyHD6bmi64TugAA">
-<XPD:ATTR name="Name" type="string">EquipmentGloves</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.EquipmentGloves</XPD:ATTR>
 <XPD:REF name="Namespace">wGZUrP/caka5boI08dFSzwAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
 <XPD:REF name="Views[0]">LDp+YIMzHUSVHChVlkEMOgAA</XPD:REF>
@@ -3381,7 +3381,7 @@
 <XPD:REF name="Instances[5]">2RKko/i33U+UoRfeHYGxkAAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[11]" type="UMLClass" guid="/gFeWb079Uqu/lk7bROVUAAA">
-<XPD:ATTR name="Name" type="string">EquipmentCoat</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.EquipmentCoat</XPD:ATTR>
 <XPD:REF name="Namespace">wGZUrP/caka5boI08dFSzwAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
 <XPD:REF name="Views[0]">e6/9w7uXs0S2W96Y4DKrRAAA</XPD:REF>
@@ -3422,7 +3422,7 @@
 </XPD:OBJ>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[12]" type="UMLClass" guid="uRoEdkfSi0ykIQGksWgkawAA">
-<XPD:ATTR name="Name" type="string">GeneticCode</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.GeneticCode</XPD:ATTR>
 <XPD:REF name="Namespace">wGZUrP/caka5boI08dFSzwAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
 <XPD:REF name="Views[0]">MrW4eBsJm0G32AMHl5PI/wAA</XPD:REF>
@@ -3548,7 +3548,7 @@
 <XPD:REF name="Instances[1]">g26TznbgHUekKUKpIYUE+gAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[13]" type="UMLClass" guid="4JTtBBByAkyEX+0WI+hYeQAA">
-<XPD:ATTR name="Name" type="string">Agent</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.Agent</XPD:ATTR>
 <XPD:ATTR name="IsAbstract" type="boolean">True</XPD:ATTR>
 <XPD:REF name="Namespace">wGZUrP/caka5boI08dFSzwAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
@@ -3639,7 +3639,7 @@
 </XPD:OBJ>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[14]" type="UMLClass" guid="/GU34CTYoEGb3l391XNERwAA">
-<XPD:ATTR name="Name" type="string">Timer</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.Timer</XPD:ATTR>
 <XPD:REF name="Namespace">wGZUrP/caka5boI08dFSzwAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
 <XPD:REF name="Views[0]">GqX+3IP62ESnXXaJWi0eyAAA</XPD:REF>
@@ -3666,7 +3666,7 @@
 <XPD:REF name="Instances[2]">uFwbAAYcFUKWowXzZtWXbgAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[15]" type="UMLClass" guid="b9HaNfZgU0CxCh8qyXKLNwAA">
-<XPD:ATTR name="Name" type="string">GameManager</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.GameManager</XPD:ATTR>
 <XPD:REF name="Namespace">wGZUrP/caka5boI08dFSzwAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
 <XPD:REF name="Views[0]">zsSBz8MJ2ESe1w0To4KDrQAA</XPD:REF>
@@ -3723,7 +3723,7 @@
 <XPD:REF name="Views[3]">MCxUYK7KyUqKoPTVWajeKgAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="Connections[1]" type="UMLAssociationEnd" guid="s+8+Yq8iYEiGDZhvTK48/AAA">
-<XPD:ATTR name="Name" type="string">Map</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.Map</XPD:ATTR>
 <XPD:ATTR name="Visibility" type="UMLVisibilityKind">vkPrivate</XPD:ATTR>
 <XPD:REF name="Association">7kP/RpQ930GAdgUrF6ZPMQAA</XPD:REF>
 <XPD:REF name="Participant">G5mx1HSZ8Eq2VQTRwNlqlwAA</XPD:REF>
@@ -3769,7 +3769,7 @@
 <XPD:REF name="Instances[0]">UrW/n2xwfUqdEIfO+FB17AAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[16]" type="UMLClass" guid="lLbB7M5mjECKl18Es3FL9wAA">
-<XPD:ATTR name="Name" type="string">Resource</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.Resource</XPD:ATTR>
 <XPD:REF name="Namespace">wGZUrP/caka5boI08dFSzwAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
 <XPD:REF name="Views[0]">2ZnhJGbx/EOqKLL64LfGqAAA</XPD:REF>
@@ -3847,7 +3847,7 @@
 <XPD:REF name="Instances[2]">TfzhHTELR0y6/XQgoofiCgAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[17]" type="UMLClass" guid="/oGOzCtvP0aOu6jNuvNodwAA">
-<XPD:ATTR name="Name" type="string">Dance</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.Dance</XPD:ATTR>
 <XPD:REF name="Namespace">wGZUrP/caka5boI08dFSzwAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
 <XPD:REF name="Views[0]">gZ2TYa9l70ywj0Ar+aR2qwAA</XPD:REF>
@@ -3886,7 +3886,7 @@
 <XPD:REF name="Instances[1]">zSchr+dqU0uIiEUmBbVR8gAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[18]" type="UMLClass" guid="+o29/h0JDk2QEItOl/p7pQAA">
-<XPD:ATTR name="Name" type="string">Forget</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.Forget</XPD:ATTR>
 <XPD:REF name="Namespace">wGZUrP/caka5boI08dFSzwAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
 <XPD:REF name="Views[0]">f1SKqSPnuU+hWuz3fS3F6AAA</XPD:REF>
@@ -3922,7 +3922,7 @@
 <XPD:REF name="Instances[3]">cwssMi2HSky+MaxUTpt1uAAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[19]" type="UMLClass" guid="s6L8EbAg80epfYMDa7CDSwAA">
-<XPD:ATTR name="Name" type="string">Paralyze</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.Paralyze</XPD:ATTR>
 <XPD:REF name="Namespace">wGZUrP/caka5boI08dFSzwAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
 <XPD:REF name="Views[0]">FK3VJdQxb0Cqf7v+/N0l+AAA</XPD:REF>
@@ -4015,7 +4015,7 @@
 </XPD:OBJ>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[20]" type="UMLClass" guid="PXA08rTZoEW9kWb3jegYkQAA">
-<XPD:ATTR name="Name" type="string">Protect</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.Protect</XPD:ATTR>
 <XPD:REF name="Namespace">wGZUrP/caka5boI08dFSzwAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
 <XPD:REF name="Views[0]">oCAhbpGXhUW3fvLsGhXiIAAA</XPD:REF>
@@ -4089,7 +4089,7 @@
 </XPD:OBJ>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[21]" type="UMLClass" guid="Ltkj82kQSkC88TskjYETnwAA">
-<XPD:ATTR name="Name" type="string">Vaccine</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.Vaccine</XPD:ATTR>
 <XPD:REF name="Namespace">wGZUrP/caka5boI08dFSzwAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
 <XPD:REF name="Views[0]">tqhp36zC7U2jTp/evFds1AAA</XPD:REF>
@@ -4333,7 +4333,7 @@
 <XPD:REF name="Instances[13]">9LhI5vsp8kWlLgjv5DStXwAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[38]" type="UMLClass" guid="ZqQ7INgm5U++XrlIdHNDJgAA">
-<XPD:ATTR name="Name" type="string">MoveStrategy</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.MoveStrategy</XPD:ATTR>
 <XPD:REF name="Namespace">wGZUrP/caka5boI08dFSzwAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
 <XPD:REF name="Views[0]">DjpaV1H+zkG3jDvwncp+bAAA</XPD:REF>
@@ -4376,7 +4376,7 @@
 <XPD:REF name="Instances[0]">j5qQjZV/kU2UdEeeWygU0QAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[39]" type="UMLClass" guid="ItKOWCSNpk2TkKN88hvUTwAA">
-<XPD:ATTR name="Name" type="string">SimpleMoveStrategy</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.SimpleMoveStrategy</XPD:ATTR>
 <XPD:REF name="Namespace">wGZUrP/caka5boI08dFSzwAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
 <XPD:REF name="Views[0]">I/Z55ZahHEes1TLBJ2LHtAAA</XPD:REF>
@@ -4389,7 +4389,7 @@
 <XPD:REF name="Instances[0]">wek3ZWj9pUqOjI+MOcYQEAAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[40]" type="UMLClass" guid="6DCIGLcS5UqKEsssBsNfoQAA">
-<XPD:ATTR name="Name" type="string">VitusDanceMoveStrategy</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.VitusDanceMoveStrategy</XPD:ATTR>
 <XPD:REF name="Namespace">wGZUrP/caka5boI08dFSzwAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
 <XPD:REF name="Views[0]">HB/Wa1kSTUOlV1BllEKg4gAA</XPD:REF>
@@ -4429,11 +4429,11 @@
 <XPD:REF name="Instances[0]">cQNkGN85CkK8qnJKDbDsyAAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[44]" type="UMLClass" guid="3gNVoRTppE2BIfA3rlhp2QAA">
-<XPD:ATTR name="Name" type="string">MSParalyzed</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.MSParalyzed</XPD:ATTR>
 <XPD:REF name="Namespace">wGZUrP/caka5boI08dFSzwAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[45]" type="UMLClass" guid="yXQK0472I06nt2aLi2Y8ywAA">
-<XPD:ATTR name="Name" type="string">ParalyzedMoveStrategy</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.ParalyzedMoveStrategy</XPD:ATTR>
 <XPD:REF name="Namespace">wGZUrP/caka5boI08dFSzwAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
 <XPD:REF name="Views[0]">U6xPyElSu0q10EiPGSkL0gAA</XPD:REF>
@@ -4504,7 +4504,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="y5KshlssxUOigAJufw253gAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="xxkh9KTxvE6dovjKesW0agAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">v : Virologist</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">v : VeryGoodViroGame.Virologist</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="2x114jWydE6j8fpVUlvijwAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -4552,7 +4552,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="qxjo1xZ/3kOwcLV3wQdqcwAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="JrMYxekciUOMVUAvmhy8MwAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">dm : VitusDanceMoveStrategy</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">dm : VeryGoodViroGame.VitusDanceMoveStrategy</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="QcjZE5zM7UGlV628L+eppwAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -4576,7 +4576,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="jHWRdrfZokyGnAbeVdqchAAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="c+Au+F5dNECCfRsX5QnAZQAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">from : Field</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">from : VeryGoodViroGame.Field</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="JOjxY9chiE2QUpLfNpgTcQAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -4600,7 +4600,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="aRukfm5p/UWXeHs94ta8MgAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="tnIrutTiiUas53sY0HytvgAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">to : Field</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">to : VeryGoodViroGame.Field</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="M1rp0YZkgUS/rq6CKBmmpgAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -5051,7 +5051,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="oj1Lbfo6bEaunaj4iO1T2QAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="YYx3+gu3YECo+4KzfKW6dQAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">v : Virologist</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">v : VeryGoodViroGame.Virologist</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="FW1PgDt4p0Wefc+9FwyZ7gAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -5099,7 +5099,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="XKQgZUE8/UKjFYs1RLevVwAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="6Td9M29akkmffpelGtHvqAAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">dm : VitusDanceMoveStrategy</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">dm : VeryGoodViroGame.VitusDanceMoveStrategy</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="RTZntxuB2kWU98abTff3ZgAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -5123,7 +5123,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="lj8GzpkiEUmlitXM6unO1wAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="zEzG1coK102QSvprU2u6RgAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">from : Field</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">from : VeryGoodViroGame.Field</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="hw4AHOZVLkWhTM4AXfUalAAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -5147,7 +5147,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="3j4XUJNOjU+WAUegohCeKgAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="gyuZyc5BPU+Mcf29lcz+/gAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">f2 : Field</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">f2 : VeryGoodViroGame.Field</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="nxu8bAN8bECYTVLgqy15wwAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -5718,7 +5718,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="hvMRNQYKhkan2VUHTlZDngAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="Gcqz124wHE28s56IpGEFewAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">v : Virologist</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">v : VeryGoodViroGame.Virologist</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="xAMbFXg3NUexisOX1JWcYAAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -5742,7 +5742,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="8iOTDUHOR0CJUKmPkCH0lgAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="/RdwhtdoqEePIIOzSdJfegAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">pm : ParalyzedMoveStrategy</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">pm : VeryGoodViroGame.ParalyzedMoveStrategy</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="EsEv99NR/Ee63Gxg5uUQsQAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -6026,7 +6026,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="Q43tATWIaUesolilVYpYWAAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="enhOKaBprE6Rf+hOeAJdagAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">v : Virologist</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">v : VeryGoodViroGame.Virologist</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="2zvuDup1b0SjFNfeWRWuGAAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -6050,7 +6050,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="gcR11b5ZpUe5+sSN420QwQAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="fBo3KNqIZUK2MA76Nx1F4AAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">l : FieldLab</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">l : VeryGoodViroGame.FieldLab</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="IhKDneSjd02NIegaZiQNugAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -6074,7 +6074,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="LPV2VXUrYkyBAOO4PajLzAAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="39Nrza1rS0+mBq6N/wmMyAAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string"> : GameManager</XPD:ATTR>
+<XPD:ATTR name="Text" type="string"> : VeryGoodViroGame.GameManager</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="LedUi6b6zk+zQCKjKhc9iQAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -6591,7 +6591,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="F3Fa3fa/eECbynUAjno8FwAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="VeElc8/JkkmyveC59VH6GwAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">v : Virologist</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">v : VeryGoodViroGame.Virologist</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="cRUwisz34E2egHfueDbVHQAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -6615,7 +6615,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="ifxrNd5CSkufNfM7mTVUCgAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="f6OKLmoA5U6cwXSYuYSnzgAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">b : FieldBunker</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">b : VeryGoodViroGame.FieldBunker</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="26SYgRDpzEyHeLc3gOtbGAAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -6639,7 +6639,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="wjfKrXoONU+nVrAT1Zk86QAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="PEu1BYQQM0KutssOTdcS8QAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">e : EquipmentGloves</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">e : VeryGoodViroGame.EquipmentGloves</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="UkE8t9sV+kyfbEJixhLRsQAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -7088,7 +7088,7 @@
 <XPD:REF name="Model">FIJDAUM+LU6icPN9vKu0cgAA</XPD:REF>
 <XPD:REF name="ContainerView">16wruk84DEOiPgbSf6v5KgAA</XPD:REF>
 <XPD:OBJ name="GuardLabel" type="LabelView" guid="mS+O/4FHUkeQ3ZQzG0ePWwAA">
-<XPD:ATTR name="Text" type="string">[for all item:InvItem in items]</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">[for all item:VeryGoodViroGame.InvItem in items]</XPD:ATTR>
 </XPD:OBJ>
 </XPD:OBJ>
 </XPD:OBJ>
@@ -7103,7 +7103,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="0LnjqMt6u02pLII/QJs2vAAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="OX7b6w2YHkO+lMNIwVvxWgAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">v : Virologist</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">v : VeryGoodViroGame.Virologist</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="3bJVQTLrTUKGCRBnCVukwQAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -7127,7 +7127,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="N7Bp0tVvbU+XolJxpEVtjgAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="udLfg38Xr0yfvNqrfc0EogAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">b : FieldBunker</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">b : VeryGoodViroGame.FieldBunker</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="xKHEXJcuDU2F9XlRDcq/NwAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -7151,7 +7151,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="4K83f6pv90SVZ7aFmDSQTwAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="TNSp7e+ZWkiOBtINSnQJoQAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">item : InvItem</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">item : VeryGoodViroGame.InvItem</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="KWzK2qnmhkqZzxuUHdoRNwAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -7175,7 +7175,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="UuAaxgRmKEaAoeFFSJZ6lQAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="5cYHYM1kH02vEqnhCcXLKwAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">resource : Resource</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">resource : VeryGoodViroGame.Resource</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="EP8/6SrCt0esGmkSvM5TgAAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -7697,7 +7697,7 @@
 <XPD:ATTR name="#Operands" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="Operands[0]" type="UMLInteractionOperand" guid="FIJDAUM+LU6icPN9vKu0cgAA">
 <XPD:ATTR name="Name" type="string">InteractionOperand1</XPD:ATTR>
-<XPD:ATTR name="Guard" type="string">for all item:InvItem in items</XPD:ATTR>
+<XPD:ATTR name="Guard" type="string">for all item:VeryGoodViroGame.InvItem in items</XPD:ATTR>
 <XPD:REF name="CombinedFragment">i1mBjEWFTEmIErgG9ZC3EQAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">1</XPD:ATTR>
 <XPD:REF name="Views[0]">1kd+HEwloE+pz+695cQddAAA</XPD:REF>
@@ -7772,7 +7772,7 @@
 <XPD:REF name="Model">bO6k93rNL0OBSU3X9KlrVgAA</XPD:REF>
 <XPD:REF name="ContainerView">KKBskzfp8k6gwXWz0VRYTAAA</XPD:REF>
 <XPD:OBJ name="GuardLabel" type="LabelView" guid="KJkCAxzIJEKXfzZGa6tJDAAA">
-<XPD:ATTR name="Text" type="string">[for all item:InvItem in items]</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">[for all item:VeryGoodViroGame.InvItem in items]</XPD:ATTR>
 </XPD:OBJ>
 </XPD:OBJ>
 </XPD:OBJ>
@@ -7817,7 +7817,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="ek8yY3gLjEa0+MyDILwfgQAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="9bQfE6SXjky3zQ3ieWnkpQAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">v : Virologist</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">v : VeryGoodViroGame.Virologist</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="wHOToHem1EqdH9SPUkFYegAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -7841,7 +7841,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="i8mxmMLjjEubwl8CV2MyVwAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="ZgGbE9G1PkKXVHHrg48uaQAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">a : Forget</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">a : VeryGoodViroGame.Forget</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="C0m7EUfQQU6pOLIHs7dEDgAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -7865,7 +7865,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="HiZrrPyj80WlF99WqJvaHgAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="DTcrhjwB+0q1klGvYPlInAAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">item : InvItem</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">item : VeryGoodViroGame.InvItem</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="ZFIcT6HF4ka2IOSKlGeOzAAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -8250,7 +8250,7 @@
 <XPD:ATTR name="#Operands" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="Operands[0]" type="UMLInteractionOperand" guid="bO6k93rNL0OBSU3X9KlrVgAA">
 <XPD:ATTR name="Name" type="string">InteractionOperand1</XPD:ATTR>
-<XPD:ATTR name="Guard" type="string">for all item:InvItem in items</XPD:ATTR>
+<XPD:ATTR name="Guard" type="string">for all item:VeryGoodViroGame.InvItem in items</XPD:ATTR>
 <XPD:REF name="CombinedFragment">cdLk9frp00WZe/SJsMzDoQAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">1</XPD:ATTR>
 <XPD:REF name="Views[0]">tw1B5nRYbkm4UCF9nMvyswAA</XPD:REF>
@@ -8338,7 +8338,7 @@
 <XPD:REF name="Model">y7X6SZjFTUG1tQ+9zfOR9AAA</XPD:REF>
 <XPD:REF name="ContainerView">2Iya3moy3UqhaGlK5uPfzQAA</XPD:REF>
 <XPD:OBJ name="GuardLabel" type="LabelView" guid="uU24QOnk/0Kmb2gDfqPjSgAA">
-<XPD:ATTR name="Text" type="string">[for all item:InvItem in items]</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">[for all item:VeryGoodViroGame.InvItem in items]</XPD:ATTR>
 </XPD:OBJ>
 <XPD:ATTR name="#ContainedViews" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="ContainedViews[0]" type="UMLCombinedFragmentView" guid="DJAHiHaeW0uNQEsIP8yRgQAA">
@@ -8415,7 +8415,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="Jw98BKU+1Ee8czR9dplP3QAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="ubbZDeIe2UWjah29pcTTFgAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">v : Virologist</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">v : VeryGoodViroGame.Virologist</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="06w045WY7kC3KS8HpNY6PAAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -8439,7 +8439,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="yeu/VuLP/kC/R61YTdNc+wAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="5ZPyKHqiR0GbYiyB/ro3SgAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">a : Forget</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">a : VeryGoodViroGame.Forget</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="SDMaBvQp0Ua/24gNyT5sKAAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -8463,7 +8463,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="xEGwnPEaAkaKPBBryUlbhgAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="fj59S/7sdEy9SqZV4UdAfQAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">v2 : Virologist</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">v2 : VeryGoodViroGame.Virologist</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="FfaqO/Gl+0aOK+qUjy403gAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -8487,7 +8487,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="idumJtD+bEWqt5YUUCzO/gAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="wi1kljRuu0+C7le+W8mPfAAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">item : InvItem</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">item : VeryGoodViroGame.InvItem</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="ce5kLDdnfkycKWQzI7o4IAAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -8989,7 +8989,7 @@
 <XPD:ATTR name="#Operands" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="Operands[0]" type="UMLInteractionOperand" guid="y7X6SZjFTUG1tQ+9zfOR9AAA">
 <XPD:ATTR name="Name" type="string">InteractionOperand1</XPD:ATTR>
-<XPD:ATTR name="Guard" type="string">for all item:InvItem in items</XPD:ATTR>
+<XPD:ATTR name="Guard" type="string">for all item:VeryGoodViroGame.InvItem in items</XPD:ATTR>
 <XPD:REF name="CombinedFragment">CIUtG0xZhEepfFydPJ7CtAAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">1</XPD:ATTR>
 <XPD:REF name="Views[0]">W9RiDRO1NkeL+lfLfDzPEgAA</XPD:REF>
@@ -9097,7 +9097,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="171Y83nZ4EuayglE/FP8hgAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="jj8/w6ai8kGvBC3uyd378AAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">v : Virologist</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">v : VeryGoodViroGame.Virologist</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="o/5T85Fr50WMVeXCynuEZgAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -9121,7 +9121,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="XzJJ2R5kYUi5YnFd8miPmgAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="PhBNAk3wv0ilblnUgeShsAAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">vaccine : Vaccine</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">vaccine : VeryGoodViroGame.Vaccine</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="z5PGQK1Yk0yU16GT95tgEwAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -9145,7 +9145,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="HDapUOtlDke/5BHcQRKJGQAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="gsEq+zG00E6o3l5x1yIPUQAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">target : Virologist</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">target : VeryGoodViroGame.Virologist</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="MJMRoERDC0qzmVPBZxbzSwAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -9660,7 +9660,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="sQyBXgeMl0uQR5plfUURgwAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="o6IamrRYHEu3veNKVhbctwAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">v : Virologist</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">v : VeryGoodViroGame.Virologist</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="ScGp48ghEEi/QcP9/tMdvgAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -9684,7 +9684,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="fVlphR3DTU6VpwOHhEKEEgAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="dJSUXtyerEWPGldBWakB3QAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">vaccine : Vaccine</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">vaccine : VeryGoodViroGame.Vaccine</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="p6n6Y3rrQEOXZew7GX81uwAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -9708,7 +9708,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="uS7eSss2HkK/XjUE//9sJQAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="8cBn+XzR8UCpRl+c1LHpDAAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">target : Virologist</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">target : VeryGoodViroGame.Virologist</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="0fzv/3dWYUao8onYyoZmUgAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -9732,7 +9732,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="zMjYiTBrTk+qbFESdyYxrgAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="cSugTsZufUuCU2mFWfwiwQAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string"> : Timer</XPD:ATTR>
+<XPD:ATTR name="Text" type="string"> : VeryGoodViroGame.Timer</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="6G8jJ6wwNk+Zz49EFizYLQAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -10317,7 +10317,7 @@
 <XPD:REF name="Model">QPPiUoWKHUuvjCDpEBYqbQAA</XPD:REF>
 <XPD:REF name="ContainerView">YGW38tgZvUuCSUtiEnF5VQAA</XPD:REF>
 <XPD:OBJ name="GuardLabel" type="LabelView" guid="sgMDU+Dr4kuShMuI06qEmQAA">
-<XPD:ATTR name="Text" type="string">[for all item:InvItem in items]</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">[for all item:VeryGoodViroGame.InvItem in items]</XPD:ATTR>
 </XPD:OBJ>
 <XPD:ATTR name="#ContainedViews" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="ContainedViews[0]" type="UMLCombinedFragmentView" guid="Ik3JAOXRlk+u62YT+MhnbAAA">
@@ -10388,7 +10388,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="MxT83rMGbUijBV8jqeCnOQAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="DQ33kPtYV0mIleTmumH4CAAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">v : Virologist</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">v : VeryGoodViroGame.Virologist</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="kCVjjzvyH0KI5eabwYc3wAAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -10412,7 +10412,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="EE9lq/hq8UqKqqNa5vfZjAAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="2HcvFNef5EOVew1ovMo8RwAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">code : GeneticCode</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">code : VeryGoodViroGame.GeneticCode</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="vC/lBohKWEaRuh8OeRjzTAAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -10436,7 +10436,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="rewyAYN4l0GpzDbRa+hbqQAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="w5HoPAWlc0O4dLRb6tdYcQAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">agent : Forget</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">agent : VeryGoodViroGame.Forget</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="04ExoceyWU2ydy+1PkueDQAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -10460,7 +10460,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="6ocR99k0zkWTPyUTG6og9QAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="+Vca5KiOb0q7PA810T6mxwAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string"> : Timer</XPD:ATTR>
+<XPD:ATTR name="Text" type="string"> : VeryGoodViroGame.Timer</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="apt7fb0kxkK5SwPze9u02QAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -10484,7 +10484,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="FyIKyQJlb0evC7J/w7pZQQAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="Mq25DKBfak2hawpK5acdMwAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">item : InvItem</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">item : VeryGoodViroGame.InvItem</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="iIrBOY7wnEShAhBVrS6qjgAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -10508,7 +10508,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="caTAlq8I5UKdmnm8kI1KCgAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="8aQlrPlXaEKalNvkmRJ15QAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">r : Resource</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">r : VeryGoodViroGame.Resource</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="JOfPRL+lX0GHZjM+L7YYlgAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -11313,7 +11313,7 @@
 <XPD:ATTR name="#Operands" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="Operands[0]" type="UMLInteractionOperand" guid="QPPiUoWKHUuvjCDpEBYqbQAA">
 <XPD:ATTR name="Name" type="string">InteractionOperand1</XPD:ATTR>
-<XPD:ATTR name="Guard" type="string">for all item:InvItem in items</XPD:ATTR>
+<XPD:ATTR name="Guard" type="string">for all item:VeryGoodViroGame.InvItem in items</XPD:ATTR>
 <XPD:REF name="CombinedFragment">RHIXhhxep0WVqkqU9G7E/wAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">1</XPD:ATTR>
 <XPD:REF name="Views[0]">/OdIPBVxFUKF6jFOfFiflAAA</XPD:REF>
@@ -11407,7 +11407,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="KJzkaqmPCUW8Ml2M36aMGgAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="Y+VIPFczRUqNh5ydTyOZLwAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">v : Virologist</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">v : VeryGoodViroGame.Virologist</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="US+H1W6dtUuUnexZFxWk0QAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -11431,7 +11431,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="h/MiEqSh80erbxaVIpcU+QAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="ZWqKsNISUkmCH/gMcnmvWwAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">code : GeneticCode</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">code : VeryGoodViroGame.GeneticCode</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="K7nR+nPfC06z/hCahdSBqQAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -11455,7 +11455,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="w2GBk46h+E2MCsKtGkCGagAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="MrgN1sccaUqMHtzr57l7NAAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">agent : Forget</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">agent : VeryGoodViroGame.Forget</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="doA14v+cVUa5MdcKYZWiYAAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -11479,7 +11479,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="YOc9oEJYmEGoV6EwN7dW7gAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="J7oIuDxsA0iWdHo1cwJB1wAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string"> : Timer</XPD:ATTR>
+<XPD:ATTR name="Text" type="string"> : VeryGoodViroGame.Timer</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="ssZ596sElUuOJMbdIse3xQAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -11503,7 +11503,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="4EeFUD1BYEyXwR8i3vpqFAAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="vSuFF05psUqqjY69/gBJfAAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">r : Resource</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">r : VeryGoodViroGame.Resource</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="3zA+wKZ2PkarpQij2OxZxQAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -12420,7 +12420,7 @@
 <XPD:ATTR name="Height" type="integer">273</XPD:ATTR>
 <XPD:REF name="Model">AYXwNqzlSUOzkSOxhBSZiQAA</XPD:REF>
 <XPD:OBJ name="NameLabel" type="LabelView" guid="NAJT8siOcUSSWdEac0uWkQAA">
-<XPD:ATTR name="Text" type="string">Virologist Move</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">VeryGoodViroGame.Virologist Move</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="FrameTypeLabel" type="LabelView" guid="dDk7k7BiJEq5X9CrxCZgMQAA">
 <XPD:ATTR name="FontStyle" type="integer">1</XPD:ATTR>
@@ -12438,7 +12438,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="kWTOPmpXDk+v+gIqzeoXoAAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="kPs+OjkLn0iuMru/JJhhAQAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">v : Virologist</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">v : VeryGoodViroGame.Virologist</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="1ORVjFB20Ei54y4hCB49pwAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -12462,7 +12462,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="9Waa5UPRwEmg14CE42GBUwAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="xnhzEF8pLEG2en3y4zPi6QAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">item : InvItem</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">item : VeryGoodViroGame.InvItem</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="nnSfAWI0x0qFKjxme+Y2mQAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -12510,7 +12510,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="sYJr07lsq0q1u4WUlmsD2gAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="dxrarBlYu0uoHQ4L6gJIsAAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">ms : MoveStrategy</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">ms : VeryGoodViroGame.MoveStrategy</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="gPBU0dM4GkKOVQVwK2aIfQAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -12727,7 +12727,7 @@
 </XPD:OBJ>
 <XPD:ATTR name="#OwnedFrames" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="OwnedFrames[0]" type="UMLFrame" guid="AYXwNqzlSUOzkSOxhBSZiQAA">
-<XPD:ATTR name="Name" type="string">Virologist Move</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.Virologist Move</XPD:ATTR>
 <XPD:ATTR name="FrameKind" type="string">sd</XPD:ATTR>
 <XPD:REF name="InteractionInstanceSet">LS7HpREfJEC449wvfwYKnwAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">1</XPD:ATTR>
@@ -12735,11 +12735,11 @@
 </XPD:OBJ>
 </XPD:OBJ>
 <XPD:OBJ name="InteractionInstanceSets[1]" type="UMLInteractionInstanceSet" guid="x/OpcQ+w1EqyxyH5HTLwuAAA">
-<XPD:ATTR name="Name" type="string">SimpleMoveStrategy</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.SimpleMoveStrategy</XPD:ATTR>
 <XPD:REF name="Context">+zyB/dhjXESGN6Rv8RvP6wAA</XPD:REF>
 <XPD:ATTR name="#OwnedDiagrams" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="OwnedDiagrams[0]" type="UMLSequenceDiagram" guid="fSSfZm8+U0uOK5gvSaVQGQAA">
-<XPD:ATTR name="Name" type="string">SimpleMoveStrategy</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.SimpleMoveStrategy</XPD:ATTR>
 <XPD:ATTR name="ShowSequenceNumber" type="boolean">False</XPD:ATTR>
 <XPD:ATTR name="MessageSignature" type="UMLMessageSignatureKind">mskNameOnly</XPD:ATTR>
 <XPD:REF name="DiagramOwner">x/OpcQ+w1EqyxyH5HTLwuAAA</XPD:REF>
@@ -12756,7 +12756,7 @@
 <XPD:ATTR name="Height" type="integer">281</XPD:ATTR>
 <XPD:REF name="Model">ZwI/Vn34CEGvORt60IcfTAAA</XPD:REF>
 <XPD:OBJ name="NameLabel" type="LabelView" guid="p2mmu05f7UeJ/qhzlgjNIQAA">
-<XPD:ATTR name="Text" type="string">SimpleMoveStrategy</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">VeryGoodViroGame.SimpleMoveStrategy</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="FrameTypeLabel" type="LabelView" guid="EFdqsjllZkO8uRDswpgfbwAA">
 <XPD:ATTR name="FontStyle" type="integer">1</XPD:ATTR>
@@ -12774,7 +12774,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="ICd7KeMAo0yopTdhe+WpowAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="3gYw9BjjJ0GSxL6H3S2bEgAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">v : Virologist</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">v : VeryGoodViroGame.Virologist</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="MW4r99hZwU6Nhrlcu8McDQAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -12798,7 +12798,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="Zeb0tZ2dKEWMR8JluUM34wAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="k6WGjskQJUK014xxvpNqXAAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">sms : SimpleMoveStrategy</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">sms : VeryGoodViroGame.SimpleMoveStrategy</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="Auqhb/gmp0m9zsugEk45QAAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -12822,7 +12822,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="eWyLWpRJREaOSU9S06cGdgAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="NQV2oJAPF02eANhkp0UDmwAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">f : Field</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">f : VeryGoodViroGame.Field</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="/WcKJFLEu0+2Dbp5od6N8wAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -12846,7 +12846,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="jta3v/BAZ0CASczP5IauUgAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="/thdCxFhLEKwGZli2hpBogAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">f2 : Field</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">f2 : VeryGoodViroGame.Field</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="478FIVcJSU2YQbSJ/fkQ5wAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -13148,7 +13148,7 @@
 </XPD:OBJ>
 <XPD:ATTR name="#OwnedFrames" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="OwnedFrames[0]" type="UMLFrame" guid="ZwI/Vn34CEGvORt60IcfTAAA">
-<XPD:ATTR name="Name" type="string">SimpleMoveStrategy</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.SimpleMoveStrategy</XPD:ATTR>
 <XPD:ATTR name="FrameKind" type="string">sd</XPD:ATTR>
 <XPD:REF name="InteractionInstanceSet">x/OpcQ+w1EqyxyH5HTLwuAAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">1</XPD:ATTR>
@@ -13156,11 +13156,11 @@
 </XPD:OBJ>
 </XPD:OBJ>
 <XPD:OBJ name="InteractionInstanceSets[2]" type="UMLInteractionInstanceSet" guid="fqd07oBXIEuisYk7NKmINgAA">
-<XPD:ATTR name="Name" type="string">VitusDanceMoveStrategy</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.VitusDanceMoveStrategy</XPD:ATTR>
 <XPD:REF name="Context">+zyB/dhjXESGN6Rv8RvP6wAA</XPD:REF>
 <XPD:ATTR name="#OwnedDiagrams" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="OwnedDiagrams[0]" type="UMLSequenceDiagram" guid="T6BaM1QjXUqFKP4bGQqPSwAA">
-<XPD:ATTR name="Name" type="string">VitusDanceMoveStrategy</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.VitusDanceMoveStrategy</XPD:ATTR>
 <XPD:ATTR name="ShowSequenceNumber" type="boolean">False</XPD:ATTR>
 <XPD:ATTR name="MessageSignature" type="UMLMessageSignatureKind">mskNameOnly</XPD:ATTR>
 <XPD:REF name="DiagramOwner">fqd07oBXIEuisYk7NKmINgAA</XPD:REF>
@@ -13177,7 +13177,7 @@
 <XPD:ATTR name="Height" type="integer">421</XPD:ATTR>
 <XPD:REF name="Model">gvnRckWGZ0y3003LoDjlfwAA</XPD:REF>
 <XPD:OBJ name="NameLabel" type="LabelView" guid="tCfRtBbQOkegxtdY7ASikgAA">
-<XPD:ATTR name="Text" type="string">VitusDanceMoveStrategy</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">VeryGoodViroGame.VitusDanceMoveStrategy</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="FrameTypeLabel" type="LabelView" guid="umTIbk0PBU24lRIQeJRS5wAA">
 <XPD:ATTR name="FontStyle" type="integer">1</XPD:ATTR>
@@ -13195,7 +13195,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="LNbe0VZim02EcDUCYlMEXgAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="YZpqb/YOR02OUfQSG1mYzAAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">v : Virologist</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">v : VeryGoodViroGame.Virologist</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="PfBTr4jtmkGeduI2BNCVHAAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -13219,7 +13219,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="Zrda8nONpECYQMWRk69dAAAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="muUbkepZt0yFjeH2u1Y8GgAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">strategy : VitusDanceMoveStrategy</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">strategy : VeryGoodViroGame.VitusDanceMoveStrategy</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="QtdqlyfGvEilIb251YS7qgAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -13243,7 +13243,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="pniZDt2ZUEGt8dSMldP1TQAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="YFnkTh8BOEaVKh/Ri+AvKwAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">f : Field</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">f : VeryGoodViroGame.Field</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="5x7P2/agL0aqn5HXEKAE1AAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -13267,7 +13267,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="KVGPdU55wEC0T3gLjw4zWgAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="71/ZOk7dV0uk1H7bD2XASgAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">f2 : Field</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">f2 : VeryGoodViroGame.Field</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="9TH6a3RbGkeEe5/TaufIZgAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -13664,7 +13664,7 @@
 </XPD:OBJ>
 <XPD:ATTR name="#OwnedFrames" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="OwnedFrames[0]" type="UMLFrame" guid="gvnRckWGZ0y3003LoDjlfwAA">
-<XPD:ATTR name="Name" type="string">VitusDanceMoveStrategy</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.VitusDanceMoveStrategy</XPD:ATTR>
 <XPD:ATTR name="FrameKind" type="string">sd</XPD:ATTR>
 <XPD:REF name="InteractionInstanceSet">fqd07oBXIEuisYk7NKmINgAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">1</XPD:ATTR>
@@ -13741,7 +13741,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="76xV2eNydEu8QmstRSthlwAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="wztlCYej602pv7volw2LgQAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">v : Virologist</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">v : VeryGoodViroGame.Virologist</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="c5LRTxHKmkaHXUBGxX4EpAAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -13765,7 +13765,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="Cbv4aRXVsUqtpNrgXemQkgAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="4yshvV2PuEu7ZfG2av0aWgAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">b : FieldBunker</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">b : VeryGoodViroGame.FieldBunker</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="XP5f1xTfPku+tin+z+FQZgAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -13789,7 +13789,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="kICJqnsmkEWZdeNuoitJTwAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="5lo1kWKRDk+7BCZfnRLc4gAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">e : EquipmentGloves</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">e : VeryGoodViroGame.EquipmentGloves</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="aK630bW4sk+3NJhrhxIh8AAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -14135,7 +14135,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="xlN9EZo370O8CdDm67/xqAAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="n94Ovpl3T0aUORfn86A59AAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">v : Virologist</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">v : VeryGoodViroGame.Virologist</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="hdSKsd8C3kWzAynnIoy1RAAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -14159,7 +14159,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="Tk7/J6FI0UGFokZ6gN8ZNAAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="aGPlaM2fXUCsqGX3xWrNlwAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">l : FieldLab</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">l : VeryGoodViroGame.FieldLab</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="DjfdWugiXEKhWbK7a7Au2wAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -14183,7 +14183,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="EGLJqoxB4UiC0UN5qLaNQQAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="wmRYvnH8OkWHwb1Nm36l8wAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string"> : GameManager</XPD:ATTR>
+<XPD:ATTR name="Text" type="string"> : VeryGoodViroGame.GameManager</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="m7Qg00SNsEqURuaF39pxwAAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -14567,7 +14567,7 @@
 <XPD:REF name="Model">2QcJUz6uGEeEJf9dODWb7gAA</XPD:REF>
 <XPD:REF name="ContainerView">PAjVBIyL8UKnjJFetbvRnQAA</XPD:REF>
 <XPD:OBJ name="GuardLabel" type="LabelView" guid="Zp4M/umz/0SsHwMzDAlwigAA">
-<XPD:ATTR name="Text" type="string">[for all item:InvItem in items]</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">[for all item:VeryGoodViroGame.InvItem in items]</XPD:ATTR>
 </XPD:OBJ>
 </XPD:OBJ>
 </XPD:OBJ>
@@ -14612,7 +14612,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="itpKM1d+0k+cmQYgVPKCjAAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="73MBj+wLV0ivFJEFBtLQEQAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">v : Virologist</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">v : VeryGoodViroGame.Virologist</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="wqXPRwoP0kePAQ2LIwwGxAAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -14636,7 +14636,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="xkYin65VG0S62OkLnW6I9AAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="rgdhsOZbmk+kBSS0EyEHyAAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">a : Forget</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">a : VeryGoodViroGame.Forget</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="LChVowONnkCs+CPXo0sM3QAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -14660,7 +14660,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="k7Snq24oDkq9ZKCzYFesPwAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="FT8IKuXY2UinU+Fi01m8hgAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">item : InvItem</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">item : VeryGoodViroGame.InvItem</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="EEgTGAT5i0KWRQk/RQjL+QAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -15045,7 +15045,7 @@
 <XPD:ATTR name="#Operands" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="Operands[0]" type="UMLInteractionOperand" guid="2QcJUz6uGEeEJf9dODWb7gAA">
 <XPD:ATTR name="Name" type="string">InteractionOperand1</XPD:ATTR>
-<XPD:ATTR name="Guard" type="string">for all item:InvItem in items</XPD:ATTR>
+<XPD:ATTR name="Guard" type="string">for all item:VeryGoodViroGame.InvItem in items</XPD:ATTR>
 <XPD:REF name="CombinedFragment">ooAnArblkUyTtkbyS2RiQQAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">1</XPD:ATTR>
 <XPD:REF name="Views[0]">4M3ahMKewkulQnRcYbYqWgAA</XPD:REF>
@@ -15133,7 +15133,7 @@
 <XPD:REF name="Model">KYwvE+gLvk28azMzXN0SvAAA</XPD:REF>
 <XPD:REF name="ContainerView">bjrkWXYU/U2DulDMA1Rq5QAA</XPD:REF>
 <XPD:OBJ name="GuardLabel" type="LabelView" guid="wFdH5VUwLEmXY+9UmYUuQgAA">
-<XPD:ATTR name="Text" type="string">[for all item:InvItem in items]</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">[for all item:VeryGoodViroGame.InvItem in items]</XPD:ATTR>
 </XPD:OBJ>
 <XPD:ATTR name="#ContainedViews" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="ContainedViews[0]" type="UMLCombinedFragmentView" guid="0ifk4h49XkSbSJv9vqZeEQAA">
@@ -15210,7 +15210,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="CYtd8gEBRkGUBdQ9MbHu6QAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="MKKl4YxHPE27KNccvQsKqQAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">v : Virologist</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">v : VeryGoodViroGame.Virologist</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="ORYjTnRaz0W9JnKcL3JPDAAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -15234,7 +15234,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="qS8bONdH/EKx998Lv3caZwAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="KRVN/8NwrEiU/OWj5lGi/QAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">a : Forget</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">a : VeryGoodViroGame.Forget</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="2y1pldB1CkSBjnkcrzs1jQAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -15258,7 +15258,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="XV5ZN/14vkS4IiMy1hI8JwAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="fTFR/x9C406Oqj+kfz3SnAAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">v2 : Virologist</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">v2 : VeryGoodViroGame.Virologist</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="iJ/WzuEmFUGbaT/m0sW4zQAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -15282,7 +15282,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="LqLQHBbOPEOkQQbb0kwa2wAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="Sii5W3GW00GZ1QIlK6l0ZgAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">item : InvItem</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">item : VeryGoodViroGame.InvItem</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="TBG+vu6FuUq4KNf3b3+0MwAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -15784,7 +15784,7 @@
 <XPD:ATTR name="#Operands" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="Operands[0]" type="UMLInteractionOperand" guid="KYwvE+gLvk28azMzXN0SvAAA">
 <XPD:ATTR name="Name" type="string">InteractionOperand1</XPD:ATTR>
-<XPD:ATTR name="Guard" type="string">for all item:InvItem in items</XPD:ATTR>
+<XPD:ATTR name="Guard" type="string">for all item:VeryGoodViroGame.InvItem in items</XPD:ATTR>
 <XPD:REF name="CombinedFragment">5waQfft2sEKi+s8bjor3YwAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">1</XPD:ATTR>
 <XPD:REF name="Views[0]">OXqoct2HBkKuaWIdiyoIKgAA</XPD:REF>
@@ -15883,7 +15883,7 @@
 <XPD:REF name="Model">grnctBYU0ESS3pf5vrUtbAAA</XPD:REF>
 <XPD:REF name="ContainerView">NgfCB3oRZEilY1nhEwthxgAA</XPD:REF>
 <XPD:OBJ name="GuardLabel" type="LabelView" guid="9BkWZOBUpUSFcVxAt4nt7wAA">
-<XPD:ATTR name="Text" type="string">[for all item:InvItem in items]</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">[for all item:VeryGoodViroGame.InvItem in items]</XPD:ATTR>
 </XPD:OBJ>
 <XPD:ATTR name="#ContainedViews" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="ContainedViews[0]" type="UMLCombinedFragmentView" guid="083eMwp3XEqhtIvanIor4wAA">
@@ -15960,7 +15960,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="LRmX62/y00e4UxF1M1OqnwAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="2Xx0XjlJa0KspCZmRW1RdQAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">v : Virologist</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">v : VeryGoodViroGame.Virologist</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="slS7Tm3esUegVuejqKTO1QAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -15984,7 +15984,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="7frvPWM+nEGtDbRGvRGBWQAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="jEYwITpowEmFeaJE4cK3cgAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">v2 : Virologist</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">v2 : VeryGoodViroGame.Virologist</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="pqRLL1MNC0iotTrzjEHE9wAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -16032,7 +16032,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="SCDaev5OpEGHZrC9trUQYQAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="dg/uSeZkdUSmyAx4D1uXDwAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">item : InvItem</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">item : VeryGoodViroGame.InvItem</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="8CjHaCdu30O2UJwOwzB6vwAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -16541,7 +16541,7 @@
 <XPD:ATTR name="#Operands" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="Operands[0]" type="UMLInteractionOperand" guid="grnctBYU0ESS3pf5vrUtbAAA">
 <XPD:ATTR name="Name" type="string">InteractionOperand1</XPD:ATTR>
-<XPD:ATTR name="Guard" type="string">for all item:InvItem in items</XPD:ATTR>
+<XPD:ATTR name="Guard" type="string">for all item:VeryGoodViroGame.InvItem in items</XPD:ATTR>
 <XPD:REF name="CombinedFragment">cs9X9BGwAE64RLERPmSuVwAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">1</XPD:ATTR>
 <XPD:REF name="Views[0]">ctmT8iFp7Ue2BXfiCC81oQAA</XPD:REF>
@@ -16640,7 +16640,7 @@
 <XPD:REF name="Model">wfbvMGlrVEWVYS+LQPbbdgAA</XPD:REF>
 <XPD:REF name="ContainerView">6kDdGaCpzEKwxta5I21A0wAA</XPD:REF>
 <XPD:OBJ name="GuardLabel" type="LabelView" guid="T0aVRRgKw0a1ixF+xga6bAAA">
-<XPD:ATTR name="Text" type="string">[for all item:InvItem in items]</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">[for all item:VeryGoodViroGame.InvItem in items]</XPD:ATTR>
 </XPD:OBJ>
 <XPD:ATTR name="#ContainedViews" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="ContainedViews[0]" type="UMLCombinedFragmentView" guid="JfMKA5NFNEmk5B6fnEsIpgAA">
@@ -16717,7 +16717,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="0VZ9ECDQr06+MehZ86jL8gAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="wnzI4MZEv0ODVsevfl/YBgAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">v : Virologist</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">v : VeryGoodViroGame.Virologist</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="V/gMoLXxGUO9QgTpAisMuQAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -16741,7 +16741,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="DPFyQ4HRJkKzFhw6pks9bgAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="ivsFLScwFE6/uCxreAo+sAAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">v2 : Virologist</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">v2 : VeryGoodViroGame.Virologist</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="tzg+hbufWkKIm6oRd3ZbYwAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -16789,7 +16789,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="of2UjaYK9k6oaDmrbEjmpAAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="8Ep++ySzskiFfVGVMFnGdAAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">item : InvItem</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">item : VeryGoodViroGame.InvItem</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="XEFhdQ7iCkqVNEmBoMJnOQAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -17251,7 +17251,7 @@
 <XPD:ATTR name="#Operands" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="Operands[0]" type="UMLInteractionOperand" guid="wfbvMGlrVEWVYS+LQPbbdgAA">
 <XPD:ATTR name="Name" type="string">InteractionOperand1</XPD:ATTR>
-<XPD:ATTR name="Guard" type="string">for all item:InvItem in items</XPD:ATTR>
+<XPD:ATTR name="Guard" type="string">for all item:VeryGoodViroGame.InvItem in items</XPD:ATTR>
 <XPD:REF name="CombinedFragment">yN8H7tPM20aYZxj6Zg65wwAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">1</XPD:ATTR>
 <XPD:REF name="Views[0]">sEMacJvTgk6STSNxeTKZHQAA</XPD:REF>
@@ -17350,7 +17350,7 @@
 <XPD:REF name="Model">hmEylImwDUqFAGC4NNumRwAA</XPD:REF>
 <XPD:REF name="ContainerView">SK6BPp6E0kCnj0S9xqc5dAAA</XPD:REF>
 <XPD:OBJ name="GuardLabel" type="LabelView" guid="+5ukmlIrhk+Am2XqjSHLWwAA">
-<XPD:ATTR name="Text" type="string">[for all item:InvItem in items]</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">[for all item:VeryGoodViroGame.InvItem in items]</XPD:ATTR>
 </XPD:OBJ>
 </XPD:OBJ>
 </XPD:OBJ>
@@ -17395,7 +17395,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="+6s47UNaq0+U0+TjBHa0ygAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="GHGuV2gt50iD51sL8qH2XAAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">v : Virologist</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">v : VeryGoodViroGame.Virologist</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="NzIoOOqxRkeLxZUxSOwTxQAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -17419,7 +17419,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="7QVfNtA8H068jCra70IjlwAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="j8H7QPol+U2zEa+mOBW3mgAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">item : InvItem</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">item : VeryGoodViroGame.InvItem</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="cw4Ypf1YGECyRZx3hhVa5gAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -17705,7 +17705,7 @@
 <XPD:ATTR name="#Operands" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="Operands[0]" type="UMLInteractionOperand" guid="hmEylImwDUqFAGC4NNumRwAA">
 <XPD:ATTR name="Name" type="string">InteractionOperand1</XPD:ATTR>
-<XPD:ATTR name="Guard" type="string">for all item:InvItem in items</XPD:ATTR>
+<XPD:ATTR name="Guard" type="string">for all item:VeryGoodViroGame.InvItem in items</XPD:ATTR>
 <XPD:REF name="CombinedFragment">3QCGaYAYp0KGX0XmILiE+QAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">1</XPD:ATTR>
 <XPD:REF name="Views[0]">j9YW8UmZ2U2eroN3M3XJrgAA</XPD:REF>
@@ -17793,7 +17793,7 @@
 <XPD:REF name="Model">8vfergb6gEa4LsTqwclheAAA</XPD:REF>
 <XPD:REF name="ContainerView">nHVMBRbLiEuimspy9ykI2wAA</XPD:REF>
 <XPD:OBJ name="GuardLabel" type="LabelView" guid="ymsmdJJrIUuoHNXp8rIHNQAA">
-<XPD:ATTR name="Text" type="string">[for all s:iSteppable]</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">[for all s:VeryGoodViroGame.iSteppable]</XPD:ATTR>
 </XPD:OBJ>
 </XPD:OBJ>
 </XPD:OBJ>
@@ -17808,7 +17808,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="lTFA4W1XN0q3zer1W+RV8wAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="N9+zFD8nTUe3T+ZbHMwkuwAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string"> : Timer</XPD:ATTR>
+<XPD:ATTR name="Text" type="string"> : VeryGoodViroGame.Timer</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="A9z8f0MHhESk/h1hdpDexgAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -17832,7 +17832,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="oqAeL3BgM0O8kze8vUrswgAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="ygpLJP70gEerzWyXbolKHgAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">s : iSteppable</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">s : VeryGoodViroGame.iSteppable</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="upGhB3qTiEagkBYMkuffxgAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -18069,7 +18069,7 @@
 <XPD:ATTR name="#Operands" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="Operands[0]" type="UMLInteractionOperand" guid="8vfergb6gEa4LsTqwclheAAA">
 <XPD:ATTR name="Name" type="string">InteractionOperand1</XPD:ATTR>
-<XPD:ATTR name="Guard" type="string">for all s:iSteppable</XPD:ATTR>
+<XPD:ATTR name="Guard" type="string">for all s:VeryGoodViroGame.iSteppable</XPD:ATTR>
 <XPD:REF name="CombinedFragment">KxDjxhSlik6a1qRz6HuMtwAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">1</XPD:ATTR>
 <XPD:REF name="Views[0]">4JP+8B2ookK9hoCJ7YinZwAA</XPD:REF>
@@ -18124,7 +18124,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="/gIaGOyvYE2jd/usFi8VrwAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="nyx9BeDBg0a95jaT6/8sNQAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string"> : GameManager</XPD:ATTR>
+<XPD:ATTR name="Text" type="string"> : VeryGoodViroGame.GameManager</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="VDzYE0yMikSoPJ3kjlYsTwAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -18148,7 +18148,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="uOXR4giriUyXzChnFDcJpgAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="I4oGKKNYf0WcuB0MX0SepwAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">f : Map</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">f : VeryGoodViroGame.Map</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="iAvK6Qp0D02m6vQsf7yLVgAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -18227,7 +18227,7 @@
 <XPD:REF name="Tail">JZORRrFMVkCOnPiWQa+XUAAA</XPD:REF>
 <XPD:OBJ name="NameLabel" type="EdgeLabelView" guid="UqjXwXecKUWjGsFtfIDKPgAA">
 <XPD:ATTR name="Distance" type="real">10</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">Map()</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">VeryGoodViroGame.Map()</XPD:ATTR>
 <XPD:REF name="Model">HNkgkCOOCU6KRTIG4vg1zwAA</XPD:REF>
 <XPD:REF name="HostEdge">m83T/gZ/b0Or8bHd9YeSXAAA</XPD:REF>
 </XPD:OBJ>
@@ -18403,7 +18403,7 @@
 <XPD:REF name="Views[3]">TkNPrZA3SEW10gSvyOSgDgAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="ParticipatingStimuli[1]" type="UMLStimulus" guid="HNkgkCOOCU6KRTIG4vg1zwAA">
-<XPD:ATTR name="Name" type="string">Map</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.Map</XPD:ATTR>
 <XPD:REF name="Sender">UrW/n2xwfUqdEIfO+FB17AAA</XPD:REF>
 <XPD:REF name="Receiver">b4O9KfWhG0+cikTTct+vUQAA</XPD:REF>
 <XPD:OBJ name="Action" type="UMLCreateAction" guid="SwoJzujvlUGlo7Zi5x8bjAAA">
@@ -18542,7 +18542,7 @@
 <XPD:REF name="Model">I/wWFFFQ4Eanb0dke2sEOgAA</XPD:REF>
 <XPD:REF name="ContainerView">KVStvZ+EBUKQIwwwvGTD9wAA</XPD:REF>
 <XPD:OBJ name="GuardLabel" type="LabelView" guid="pQQD+jh8yEKRCAfyV763CwAA">
-<XPD:ATTR name="Text" type="string">[for all item:InvItem in items]</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">[for all item:VeryGoodViroGame.InvItem in items]</XPD:ATTR>
 </XPD:OBJ>
 </XPD:OBJ>
 </XPD:OBJ>
@@ -18557,7 +18557,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="AZksSt5asEOJ9RVstgrRJwAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="xH1yNewcDUS2BEIjYd1XbgAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">v : Virologist</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">v : VeryGoodViroGame.Virologist</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="UM/5cQvH3kmH86t0c9ISKgAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -18581,7 +18581,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="RtGwfzvTQUm1niXny21gCAAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="EYlLulEjHkKuNt3gqw8+iQAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">b : FieldBunker</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">b : VeryGoodViroGame.FieldBunker</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="z69K0NZklUOcWRGUR/Y9awAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -18605,7 +18605,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="hq3ltoyG2kCJ6pyFiL0ZuQAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="5WA4vw/lK0iiKx8ugU2bWwAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">item : InvItem</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">item : VeryGoodViroGame.InvItem</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="beUqIQyQ7UewGH+HDfnYmQAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -18629,7 +18629,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="SA5yfO+yG02eh0K7YO9jEwAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="iuleM2s3o020bRgy/wf8dwAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">resource : Resource</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">resource : VeryGoodViroGame.Resource</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="zSrPOBb2XEi9LxHKlh9lsAAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -19033,7 +19033,7 @@
 <XPD:ATTR name="#Operands" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="Operands[0]" type="UMLInteractionOperand" guid="I/wWFFFQ4Eanb0dke2sEOgAA">
 <XPD:ATTR name="Name" type="string">InteractionOperand1</XPD:ATTR>
-<XPD:ATTR name="Guard" type="string">for all item:InvItem in items</XPD:ATTR>
+<XPD:ATTR name="Guard" type="string">for all item:VeryGoodViroGame.InvItem in items</XPD:ATTR>
 <XPD:REF name="CombinedFragment">yuVMut6bF0uWLA1BrQW/jwAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">1</XPD:ATTR>
 <XPD:REF name="Views[0]">5VS+ehgnOUi7dXGHC4rMPwAA</XPD:REF>
@@ -19070,7 +19070,7 @@
 <XPD:ATTR name="Height" type="integer">481</XPD:ATTR>
 <XPD:REF name="Model">lDluM8BH5UKsEMFhNmOg0gAA</XPD:REF>
 <XPD:OBJ name="NameLabel" type="LabelView" guid="/rlt+0SUE0SL6rRqnL8raAAA">
-<XPD:ATTR name="Text" type="string">Virologist Interact With Map</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">VeryGoodViroGame.Virologist Interact With VeryGoodViroGame.Map</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="FrameTypeLabel" type="LabelView" guid="Z5jn/AWSkEa6xRmD19pIgAAA">
 <XPD:ATTR name="FontStyle" type="integer">1</XPD:ATTR>
@@ -19103,7 +19103,7 @@
 <XPD:REF name="Model">RVFGhEmuKEedciXTF4AXMAAA</XPD:REF>
 <XPD:REF name="ContainerView">flW0Hs2otUGTnyxC42CeowAA</XPD:REF>
 <XPD:OBJ name="GuardLabel" type="LabelView" guid="atzdcp6Hd0q1yNTDHlEuIwAA">
-<XPD:ATTR name="Text" type="string">[for all item:InvItem in items]</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">[for all item:VeryGoodViroGame.InvItem in items]</XPD:ATTR>
 </XPD:OBJ>
 <XPD:ATTR name="#ContainedViews" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="ContainedViews[0]" type="UMLCombinedFragmentView" guid="ouyRIJl8YUuJdfwS9SL+1wAA">
@@ -19150,7 +19150,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="b6Z9cLWQGkGHVy6H0jxLmgAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="ibCasNnJY0KyxYO08frEwwAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">v : Virologist</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">v : VeryGoodViroGame.Virologist</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="0cgcQwhH3U2Xf2o+S/JcOwAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -19174,7 +19174,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="qSrsPEMiYUyYMhaoVUxNOwAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="do197x+xkkqJkgNrBbJNdQAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">f : Field</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">f : VeryGoodViroGame.Field</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="GpEX3c+CUkWvOmwhe+nU/gAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -19222,7 +19222,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="J+ZhDE3vsUqrn6xnPX0V1gAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="00kErSc1t0uh+c0VbyZvTwAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">item : InvItem</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">item : VeryGoodViroGame.InvItem</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="A+gPCAv8JU6n2KFj8WXJTwAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -19590,7 +19590,7 @@
 <XPD:ATTR name="#Operands" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="Operands[0]" type="UMLInteractionOperand" guid="RVFGhEmuKEedciXTF4AXMAAA">
 <XPD:ATTR name="Name" type="string">InteractionOperand1</XPD:ATTR>
-<XPD:ATTR name="Guard" type="string">for all item:InvItem in items</XPD:ATTR>
+<XPD:ATTR name="Guard" type="string">for all item:VeryGoodViroGame.InvItem in items</XPD:ATTR>
 <XPD:REF name="CombinedFragment">U5qu5lsNbkySFxeO+v3d4AAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">1</XPD:ATTR>
 <XPD:REF name="Views[0]">8C83KQ9uyECibs0YpTUcCAAA</XPD:REF>
@@ -19613,7 +19613,7 @@
 </XPD:OBJ>
 <XPD:ATTR name="#OwnedFrames" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="OwnedFrames[0]" type="UMLFrame" guid="lDluM8BH5UKsEMFhNmOg0gAA">
-<XPD:ATTR name="Name" type="string">Virologist Interact With Map</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.Virologist Interact With VeryGoodViroGame.Map</XPD:ATTR>
 <XPD:ATTR name="FrameKind" type="string">sd</XPD:ATTR>
 <XPD:REF name="InteractionInstanceSet">Co51gEhaBE+cVB+kiMECewAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">1</XPD:ATTR>
@@ -19705,7 +19705,7 @@
 <XPD:REF name="Model">sLWt3Ac3FkiqHPd6BtaJ5wAA</XPD:REF>
 <XPD:REF name="ContainerView">0tTXfJzeUU6pcQOKrbVUAwAA</XPD:REF>
 <XPD:OBJ name="GuardLabel" type="LabelView" guid="7qbKFAtGeUm30DA0yOx4HwAA">
-<XPD:ATTR name="Text" type="string">[for all item:InvItem in items]</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">[for all item:VeryGoodViroGame.InvItem in items]</XPD:ATTR>
 </XPD:OBJ>
 <XPD:ATTR name="#ContainedViews" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="ContainedViews[0]" type="UMLCombinedFragmentView" guid="Wl/5lymi50qiX3vB4Eh0NQAA">
@@ -19776,7 +19776,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="+oQf5jnELUS/KKI6Jrbn+gAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="roa6zweRQEqEAZ66BYhNtQAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">v : Virologist</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">v : VeryGoodViroGame.Virologist</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="4qm+aKpq+USv4WitSZhbpAAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -19800,7 +19800,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="CRXQkSFYp0i1vVYkAraujwAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="72Xjq5rUXECEA5JgH8h9rwAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">code : GeneticCode</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">code : VeryGoodViroGame.GeneticCode</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="Wk4QzuaqtkqeI9ynWHDBVgAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -19824,7 +19824,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="5sxY2DAX2UORbRl8bnCeLwAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="rnIpL6htskCAUF2cjint1wAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">agent : Forget</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">agent : VeryGoodViroGame.Forget</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="9wYg1Wh/dEizE4NT5Yf1qQAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -19848,7 +19848,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="iHRxCvBLDUaTBg3dEo8VywAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="2+djPYhJpUmdGdA9VShzzgAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string"> : Timer</XPD:ATTR>
+<XPD:ATTR name="Text" type="string"> : VeryGoodViroGame.Timer</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="F82ae79V5UacdwtBY+bl3AAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -19872,7 +19872,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="XiCnLk4bVkK9WN+9xtB02AAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="qtNsc31o7UyHPaRiv1W/+gAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">item : InvItem</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">item : VeryGoodViroGame.InvItem</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="gMtN4GGMVkKO+foJqhusZQAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -19896,7 +19896,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="N0ow8Svt1U6bnwKUEjCg6QAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="YTs/6iDUJ0eSEOdi6M7hqgAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">r : Resource</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">r : VeryGoodViroGame.Resource</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="/FnM91Hs8k+vyeXcgOtffwAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -20701,7 +20701,7 @@
 <XPD:ATTR name="#Operands" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="Operands[0]" type="UMLInteractionOperand" guid="sLWt3Ac3FkiqHPd6BtaJ5wAA">
 <XPD:ATTR name="Name" type="string">InteractionOperand1</XPD:ATTR>
-<XPD:ATTR name="Guard" type="string">for all item:InvItem in items</XPD:ATTR>
+<XPD:ATTR name="Guard" type="string">for all item:VeryGoodViroGame.InvItem in items</XPD:ATTR>
 <XPD:REF name="CombinedFragment">XwtSyfYyukihjpW4o8EXPQAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">1</XPD:ATTR>
 <XPD:REF name="Views[0]">w2/zm5QeA0KsvcKYdEnX9wAA</XPD:REF>
@@ -20816,7 +20816,7 @@
 <XPD:REF name="Model">637xvrttIEqtdag1QlHrugAA</XPD:REF>
 <XPD:REF name="ContainerView">4Wm4Df81NUazQJeo5/53UgAA</XPD:REF>
 <XPD:OBJ name="GuardLabel" type="LabelView" guid="4/ZfF+hyVkmw9qAPsgvqmwAA">
-<XPD:ATTR name="Text" type="string">[for all item:InvItem in items]</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">[for all item:VeryGoodViroGame.InvItem in items]</XPD:ATTR>
 </XPD:OBJ>
 <XPD:ATTR name="#ContainedViews" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="ContainedViews[0]" type="UMLCombinedFragmentView" guid="EJH05+6gZEWH3YE/3C43sQAA">
@@ -20887,7 +20887,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="CbkBEBvq8U6KyBrV00hm/gAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="ACHOLkNKQUuX3cYFwcM/ngAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">v : Virologist</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">v : VeryGoodViroGame.Virologist</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="BEtVSiU05ke7DIMV8RiNzwAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -20911,7 +20911,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="Sfn2EpPHjkWE/NG23+0wAwAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="6+Enp8wis0yeuL0q9/bEzwAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">code : GeneticCode</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">code : VeryGoodViroGame.GeneticCode</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="9S6R+NxXjEq27XMiw0sO+QAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -20935,7 +20935,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="XxptmFPfxkK5bWXxtFHoLAAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="/qh1gFvEPUKJe0NcF3lD9AAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">agent : Forget</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">agent : VeryGoodViroGame.Forget</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="ti9CSiuTPUagJ2lcsX3hXwAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -20959,7 +20959,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="wgt1tp8TX0u91R2O44IPAgAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="JSSyLSMG/EWpkrTTAslb7AAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string"> : Timer</XPD:ATTR>
+<XPD:ATTR name="Text" type="string"> : VeryGoodViroGame.Timer</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="QR7OgEUPrEWT9X5miqw5PAAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -20983,7 +20983,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="8Yph5dAizEG63B49Ov5FvgAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="lyV+sKD3b0KZhKgf+9efPAAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">item : InvItem</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">item : VeryGoodViroGame.InvItem</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="pvsfPFukpEG/yhHNxA0FiwAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -21007,7 +21007,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="YMPGdh92zkeRPvI7OnpS+wAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="1PdWlptipkqC2L9Hale2QQAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">r : Resource</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">r : VeryGoodViroGame.Resource</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="hq/u2DSojUOKlhXJjotKZQAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -21031,7 +21031,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="+3RiJOJPh0S+fmPPAUi4FwAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="nn/nGYSpeESCPSKYakma8wAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">vaccine : Vaccine</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">vaccine : VeryGoodViroGame.Vaccine</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="CaCL7UdyHEaIjwvU+I1A7QAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -21456,7 +21456,7 @@
 <XPD:REF name="Tail">xISO0vglPk60qywi0WmmKgAA</XPD:REF>
 <XPD:OBJ name="NameLabel" type="EdgeLabelView" guid="pU1JQmEO0U6Du1Qm93bangAA">
 <XPD:ATTR name="Distance" type="real">10</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">Vaccine(clone)</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">VeryGoodViroGame.Vaccine(clone)</XPD:ATTR>
 <XPD:REF name="Model">7o+rXHG6tki44dq09nTvRgAA</XPD:REF>
 <XPD:REF name="HostEdge">/yo2s72V10+79q+Jh8KSaQAA</XPD:REF>
 </XPD:OBJ>
@@ -21853,7 +21853,7 @@
 <XPD:REF name="Views[3]">r4aerZckEkmp4K5fAxafLwAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="ParticipatingStimuli[12]" type="UMLStimulus" guid="7o+rXHG6tki44dq09nTvRgAA">
-<XPD:ATTR name="Name" type="string">Vaccine</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.Vaccine</XPD:ATTR>
 <XPD:ATTR name="Arguments" type="string">clone</XPD:ATTR>
 <XPD:REF name="Sender">uNKk07ZtiE+mKnTX+xQmqQAA</XPD:REF>
 <XPD:REF name="Receiver">Jtc7MTZAbkuqKwrxKTgjAwAA</XPD:REF>
@@ -21978,7 +21978,7 @@
 <XPD:ATTR name="#Operands" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="Operands[0]" type="UMLInteractionOperand" guid="637xvrttIEqtdag1QlHrugAA">
 <XPD:ATTR name="Name" type="string">InteractionOperand1</XPD:ATTR>
-<XPD:ATTR name="Guard" type="string">for all item:InvItem in items</XPD:ATTR>
+<XPD:ATTR name="Guard" type="string">for all item:VeryGoodViroGame.InvItem in items</XPD:ATTR>
 <XPD:REF name="CombinedFragment">eZm20f1E5E6QkPGVEGjD7gAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">1</XPD:ATTR>
 <XPD:REF name="Views[0]">Mqs0KjXL+kCdrsE4rpodJgAA</XPD:REF>
@@ -22048,7 +22048,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="TDCcsHwpu0GeowNiA1V9bgAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="vA//8stjO0WfXbr3h5Z6hgAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">v : Virologist</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">v : VeryGoodViroGame.Virologist</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="HIrmjyyxrEmy6/tiXBWXigAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -22072,7 +22072,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="qWHzVon/6kChaTtIglA/ggAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="QYfjk5E34k+Y+kpeaRalhwAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">vaccine : Vaccine</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">vaccine : VeryGoodViroGame.Vaccine</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="iPBA4TeMU0Ke24XBOdFgggAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -22096,7 +22096,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="7yETUQ9Fy0iq3rglOsEQlQAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="cLGX4rjGDE2pwWNVifRTqAAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">target : Virologist</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">target : VeryGoodViroGame.Virologist</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="vB8khBGad0CjZPBerlwFuAAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -22120,7 +22120,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="D2m5e/nC0UmyZLM4UPeeKAAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="JgbE2oYpk0yrqOeIJYMmQAAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string"> : Timer</XPD:ATTR>
+<XPD:ATTR name="Text" type="string"> : VeryGoodViroGame.Timer</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="FCMXMMm0Lke0dSnSsRv6mwAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -22565,7 +22565,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="UaJU0BFM1020TzV42q3SNgAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="1/OEXiGLJka2UoK7Z1f1BgAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">v : Virologist</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">v : VeryGoodViroGame.Virologist</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="huL1PeHA3UmlIC1mGm466wAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -22589,7 +22589,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="Ex87VD18n0GoRWerGxOLawAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="3zSs8/594EWwnb/7yp09gwAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">gloves : EquipmentGloves</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">gloves : VeryGoodViroGame.EquipmentGloves</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="scgtFpMrxEmby+AA5dIzpQAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -22613,7 +22613,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="Q7N/A1zrg0aqxAcCdAOpRgAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="ex3lENmmGUi9qWLQvrt7ogAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">source : Virologist</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">source : VeryGoodViroGame.Virologist</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="I5e4nQ3tXUy0SVfRY4NbRAAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -22913,7 +22913,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="PeSWpVw9TUqCnn9uJ0aqGQAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="VteN9EEcNE63t1yHuz3rmgAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string"> : Timer</XPD:ATTR>
+<XPD:ATTR name="Text" type="string"> : VeryGoodViroGame.Timer</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="og/Xu8JEFk2gpCYnKH2TNQAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -22937,7 +22937,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="fmI4vLTACESc+NENd1Q9GAAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="wATkcxrtfE+epxstGJQJ1gAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">a : Forget</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">a : VeryGoodViroGame.Forget</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="+KTt69FWlkyp7nIcnwSw2AAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -22961,7 +22961,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="nNuYZcZUE0Gymsvne8f3+QAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="4iVmtkaiTk+JKPCZ19oP2gAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">v : Virologist</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">v : VeryGoodViroGame.Virologist</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="TJmZM1lO6EaaDVVJLm0/AgAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -24392,11 +24392,11 @@
 <XPD:REF name="RepresentedClassifier">wGZUrP/caka5boI08dFSzwAA</XPD:REF>
 <XPD:ATTR name="#InteractionInstanceSets" type="integer">3</XPD:ATTR>
 <XPD:OBJ name="InteractionInstanceSets[0]" type="UMLInteractionInstanceSet" guid="8GLPIXZ9t0uKSRRnbxDiIAAA">
-<XPD:ATTR name="Name" type="string">542 SimpleMoveStrategy</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">542 VeryGoodViroGame.SimpleMoveStrategy</XPD:ATTR>
 <XPD:REF name="Context">Cf8AJnhA3UGofvs5Se3PVQAA</XPD:REF>
 <XPD:ATTR name="#OwnedDiagrams" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="OwnedDiagrams[0]" type="UMLCollaborationDiagram" guid="GVy0B6DA3kKgDWOaZqZ2AAAA">
-<XPD:ATTR name="Name" type="string">542 SimpleMoveStrategy</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">542 VeryGoodViroGame.SimpleMoveStrategy</XPD:ATTR>
 <XPD:ATTR name="MessageSignature" type="UMLMessageSignatureKind">mskNameAndType</XPD:ATTR>
 <XPD:REF name="DiagramOwner">8GLPIXZ9t0uKSRRnbxDiIAAA</XPD:REF>
 <XPD:OBJ name="DiagramView" type="UMLCollaborationDiagramView" guid="gCGyvndIs0uROyTfz/1yQwAA">
@@ -24412,7 +24412,7 @@
 <XPD:ATTR name="Height" type="integer">381</XPD:ATTR>
 <XPD:REF name="Model">BX2MitxRp0OSoqh0dbEx1gAA</XPD:REF>
 <XPD:OBJ name="NameLabel" type="LabelView" guid="GL1yZkNAgUGsqOAPMY3eWgAA">
-<XPD:ATTR name="Text" type="string">SimpleMoveStrategy moves virologist</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">VeryGoodViroGame.SimpleMoveStrategy moves virologist</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="FrameTypeLabel" type="LabelView" guid="tsR5vSq8kEi2gcI7WAbelgAA">
 <XPD:ATTR name="FontStyle" type="integer">1</XPD:ATTR>
@@ -24455,7 +24455,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="ZEvSVS5ZRUGC2WVcYMw7/gAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="21Ts5YuAnkeX1fotp0ObDQAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">e : EquipmentGloves</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">e : VeryGoodViroGame.EquipmentGloves</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="VWmeE31OGEqBatqPHM+T3gAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -24480,7 +24480,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="sU/L3lgXSkKR8rrFBaDexAAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="CLqA5Ivmx0OywRjjMWVwyQAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">from : Field</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">from : VeryGoodViroGame.Field</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="NNxEK4X6kE+AANeA+PX5wQAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -24505,7 +24505,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="gHKBTU7+E0WselmWOddIZAAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="JjKM2QILEE648kQZWzhsCwAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">b : FieldBunker</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">b : VeryGoodViroGame.FieldBunker</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="hRcoS8RCJ0KVEz0JDwlK5AAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -24755,7 +24755,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="FyEcs61VCUiwn5+2s7VNEAAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="uFKC9YvMhEq7jrnZn34nxgAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">v : Virologist</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">v : VeryGoodViroGame.Virologist</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="8SaPcmZxP0+RgQrCMfBSnwAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -25233,7 +25233,7 @@
 </XPD:OBJ>
 <XPD:ATTR name="#OwnedFrames" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="OwnedFrames[0]" type="UMLFrame" guid="BX2MitxRp0OSoqh0dbEx1gAA">
-<XPD:ATTR name="Name" type="string">SimpleMoveStrategy moves virologist</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.SimpleMoveStrategy moves virologist</XPD:ATTR>
 <XPD:ATTR name="FrameKind" type="string">sd</XPD:ATTR>
 <XPD:REF name="InteractionInstanceSet">8GLPIXZ9t0uKSRRnbxDiIAAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">1</XPD:ATTR>
@@ -25261,7 +25261,7 @@
 <XPD:ATTR name="Height" type="integer">373</XPD:ATTR>
 <XPD:REF name="Model">Ia+8E08F1U+4I14z/WTKhwAA</XPD:REF>
 <XPD:OBJ name="NameLabel" type="LabelView" guid="E0q/uX2qP0WJkkrCqNK+DgAA">
-<XPD:ATTR name="Text" type="string">SimpleMoveStrategy moves virologist</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">VeryGoodViroGame.SimpleMoveStrategy moves virologist</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="FrameTypeLabel" type="LabelView" guid="zGaC2LwLmEaqqiNMRebTxgAA">
 <XPD:ATTR name="FontStyle" type="integer">1</XPD:ATTR>
@@ -25304,7 +25304,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="TBNt1DIqmE6vpU2gtRm/lgAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="5TbsocknvU6357m7jKwxswAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">e : EquipmentGloves</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">e : VeryGoodViroGame.EquipmentGloves</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="TA4yGG7ToUaCv1WfKCMn5QAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -25329,7 +25329,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="k6LSAggKkUWvk26Offz+EgAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="hR0Fnk5ye0iBRB059sNVWAAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">from : Field</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">from : VeryGoodViroGame.Field</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="wdEaWKP13UmeRCe9tfg3dAAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -25354,7 +25354,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="IbdJ0h+GWEaXTJQQVbCpMgAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="kEp5fy5bjUe+i7Eh2QVsUQAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">b : FieldBunker</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">b : VeryGoodViroGame.FieldBunker</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="X8+CQ9D65kGwSNNeE56siAAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -25607,7 +25607,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="P9C9UzekGUK7fvT+ObMEKAAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="vsSgeZOFiEa5t5aRxmwRAwAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">v : Virologist</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">v : VeryGoodViroGame.Virologist</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="oMXvMOHPhUKDr+F9KPpYVQAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -25758,7 +25758,7 @@
 </XPD:OBJ>
 <XPD:ATTR name="#OwnedFrames" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="OwnedFrames[0]" type="UMLFrame" guid="Ia+8E08F1U+4I14z/WTKhwAA">
-<XPD:ATTR name="Name" type="string">SimpleMoveStrategy moves virologist</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.SimpleMoveStrategy moves virologist</XPD:ATTR>
 <XPD:ATTR name="FrameKind" type="string">sd</XPD:ATTR>
 <XPD:REF name="InteractionInstanceSet">nqrRg/bGNECbYDEzCpNEUgAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">1</XPD:ATTR>
@@ -25766,11 +25766,11 @@
 </XPD:OBJ>
 </XPD:OBJ>
 <XPD:OBJ name="InteractionInstanceSets[2]" type="UMLInteractionInstanceSet" guid="g5NwEYUz4U2ejyd2tFf20AAA">
-<XPD:ATTR name="Name" type="string">545 Virologist interacts with FieldBunker</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">545 VeryGoodViroGame.Virologist interacts with VeryGoodViroGame.FieldBunker</XPD:ATTR>
 <XPD:REF name="Context">Cf8AJnhA3UGofvs5Se3PVQAA</XPD:REF>
 <XPD:ATTR name="#OwnedDiagrams" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="OwnedDiagrams[0]" type="UMLCollaborationDiagram" guid="I4LnwMkZrEed9fTGKH9frgAA">
-<XPD:ATTR name="Name" type="string">545 Virologist interacts with FieldBunker</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">545 VeryGoodViroGame.Virologist interacts with VeryGoodViroGame.FieldBunker</XPD:ATTR>
 <XPD:ATTR name="MessageSignature" type="UMLMessageSignatureKind">mskNameAndType</XPD:ATTR>
 <XPD:REF name="DiagramOwner">g5NwEYUz4U2ejyd2tFf20AAA</XPD:REF>
 <XPD:OBJ name="DiagramView" type="UMLCollaborationDiagramView" guid="Z1aGWw9IHUyGCYnX3UOKEwAA">
@@ -25786,7 +25786,7 @@
 <XPD:ATTR name="Height" type="integer">373</XPD:ATTR>
 <XPD:REF name="Model">p6SuYeIKFkOqxOhEq+PnCQAA</XPD:REF>
 <XPD:OBJ name="NameLabel" type="LabelView" guid="8oi90gEPY0+C9m4hmhawjQAA">
-<XPD:ATTR name="Text" type="string">Virologist interacts with FieldBunker</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">VeryGoodViroGame.Virologist interacts with VeryGoodViroGame.FieldBunker</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="FrameTypeLabel" type="LabelView" guid="5LHnnfhpa0uOD/uF3w9KowAA">
 <XPD:ATTR name="FontStyle" type="integer">1</XPD:ATTR>
@@ -25829,7 +25829,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="YRoyA8pcwUCdMFlBXq1ASAAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="04D+IDmb0kWUnp8/Un1T7AAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">e : EquipmentGloves</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">e : VeryGoodViroGame.EquipmentGloves</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="/Q7inGsCbkq4ZLsh79kh8gAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -25854,7 +25854,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="/ffPJO1EW06O17qPM3gqRgAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="aBwXQ7IWqkS4dSFG5GVYagAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">b : FieldBunker</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">b : VeryGoodViroGame.FieldBunker</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="n+rAHnDsr0qHJ7k4aKU0UwAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -26031,7 +26031,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="qM23nfjX/0SGoZLg+unXwAAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="rWXp2Ge2JUaYakxH1/1WsgAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">v : Virologist</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">v : VeryGoodViroGame.Virologist</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="s4rdF2dAdUGzLGXwcwo9tQAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -26258,7 +26258,7 @@
 </XPD:OBJ>
 <XPD:ATTR name="#OwnedFrames" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="OwnedFrames[0]" type="UMLFrame" guid="p6SuYeIKFkOqxOhEq+PnCQAA">
-<XPD:ATTR name="Name" type="string">Virologist interacts with FieldBunker</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.Virologist interacts with VeryGoodViroGame.FieldBunker</XPD:ATTR>
 <XPD:ATTR name="FrameKind" type="string">sd</XPD:ATTR>
 <XPD:REF name="InteractionInstanceSet">g5NwEYUz4U2ejyd2tFf20AAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">1</XPD:ATTR>
@@ -26648,7 +26648,7 @@
 <XPD:REF name="Context">IQ+rMjOy6UiUmawlSHbTJgAA</XPD:REF>
 <XPD:ATTR name="#OwnedDiagrams" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="OwnedDiagrams[0]" type="UMLCollaborationDiagram" guid="OlHeKh9CPUWN4VBDNsduXAAA">
-<XPD:ATTR name="Name" type="string">Virologist interacts with FieldBunker</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.Virologist interacts with VeryGoodViroGame.FieldBunker</XPD:ATTR>
 <XPD:ATTR name="MessageSignature" type="UMLMessageSignatureKind">mskNameAndType</XPD:ATTR>
 <XPD:REF name="DiagramOwner">TOmioGyb7EqZqPYWl0nXFQAA</XPD:REF>
 <XPD:OBJ name="DiagramView" type="UMLCollaborationDiagramView" guid="3VWb5QpghketlWic34DVygAA">
@@ -26664,7 +26664,7 @@
 <XPD:ATTR name="Height" type="integer">477</XPD:ATTR>
 <XPD:REF name="Model">nFNUq6VKA0KuXxvXkfZmRAAA</XPD:REF>
 <XPD:OBJ name="NameLabel" type="LabelView" guid="1/yt5q+ITUWvA5rFOaUQEgAA">
-<XPD:ATTR name="Text" type="string">Virologist interacts with FieldBunker</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">VeryGoodViroGame.Virologist interacts with VeryGoodViroGame.FieldBunker</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="FrameTypeLabel" type="LabelView" guid="UdrVK7WHokqB7FIBC9Sx5QAA">
 <XPD:ATTR name="FontStyle" type="integer">1</XPD:ATTR>
@@ -26707,7 +26707,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="qx1hWSgNekipx/7DhQa1/wAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="PlXzwf8MT0GhvU8Y05kpiwAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">v : Virologist</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">v : VeryGoodViroGame.Virologist</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="0MVQVXJaK0ag1m326leJvAAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -26732,7 +26732,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="eBk1GoN7fUuaZqzaGYXhegAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="5cjzENlEJkelbYIYo/2nZQAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">b : FieldBunker</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">b : VeryGoodViroGame.FieldBunker</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="0RGNaWVWtUKDJXpg4EdflwAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -26757,7 +26757,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="AYtoy7NnSkSzB1QDBOndxQAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="3u3JCrDNfkKYds+VdnHBQQAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">e : EquipmentGloves</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">e : VeryGoodViroGame.EquipmentGloves</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="XRdvddGW9UWSNtujfwBInAAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -27229,7 +27229,7 @@
 </XPD:OBJ>
 <XPD:ATTR name="#OwnedFrames" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="OwnedFrames[0]" type="UMLFrame" guid="nFNUq6VKA0KuXxvXkfZmRAAA">
-<XPD:ATTR name="Name" type="string">Virologist interacts with FieldBunker</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.Virologist interacts with VeryGoodViroGame.FieldBunker</XPD:ATTR>
 <XPD:ATTR name="FrameKind" type="string">sd</XPD:ATTR>
 <XPD:REF name="InteractionInstanceSet">TOmioGyb7EqZqPYWl0nXFQAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">1</XPD:ATTR>
@@ -27416,7 +27416,7 @@
 <XPD:REF name="Context">xlMHoeJb/UOKsT7xkoASrAAA</XPD:REF>
 <XPD:ATTR name="#OwnedDiagrams" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="OwnedDiagrams[0]" type="UMLCollaborationDiagram" guid="EGEsCCUI5EeWBI7WdoSm5QAA">
-<XPD:ATTR name="Name" type="string">Virologist interacts with FieldLab</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.Virologist interacts with VeryGoodViroGame.FieldLab</XPD:ATTR>
 <XPD:ATTR name="MessageSignature" type="UMLMessageSignatureKind">mskNameAndType</XPD:ATTR>
 <XPD:REF name="DiagramOwner">tXQ3kWMcF0SBXYmIcWOC6QAA</XPD:REF>
 <XPD:OBJ name="DiagramView" type="UMLCollaborationDiagramView" guid="9cjYIBcmjUS/jpOq95tXywAA">
@@ -27432,7 +27432,7 @@
 <XPD:ATTR name="Height" type="integer">472</XPD:ATTR>
 <XPD:REF name="Model">he0OWInWY0Ootf9KH5sMmQAA</XPD:REF>
 <XPD:OBJ name="NameLabel" type="LabelView" guid="wUzjCFR7JEWWj8BsPqNQNQAA">
-<XPD:ATTR name="Text" type="string">Virologist interacts with FieldLab</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">VeryGoodViroGame.Virologist interacts with VeryGoodViroGame.FieldLab</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="FrameTypeLabel" type="LabelView" guid="IPwyS1ajr0itseXN2J30WQAA">
 <XPD:ATTR name="FontStyle" type="integer">1</XPD:ATTR>
@@ -27475,7 +27475,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="i1gwTV1TTEqSHOo7dOP99QAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="HVDNeJqOSkCTpughJoc7cAAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">v : Virologist</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">v : VeryGoodViroGame.Virologist</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="Ig0CdEcMUk+zmeqB27vhzQAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -27500,7 +27500,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="ryPvQ0/q3kmsSws0EMu1ugAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="mjtgIvc/oEix1LPX4oAHpwAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">l : FieldLab</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">l : VeryGoodViroGame.FieldLab</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="JesL125dP0ydOMEC1mJMUwAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -27525,7 +27525,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="N6paVRz/QUm4nyj7O2UlbwAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="TY5uTRPrqEuCTS6IXDl8nAAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">GameManager</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">VeryGoodViroGame.GameManager</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="6yfB7ve5qECaCa275i+PjwAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -27550,7 +27550,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="GGtlFsKEFUi8Ki6bWb/FPwAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="udEqENsMnU2twtiUr49VdQAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">c : GeneticCode</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">c : VeryGoodViroGame.GeneticCode</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="NW+VhLTu10uyy+fky2QU1QAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -28022,7 +28022,7 @@
 </XPD:OBJ>
 <XPD:ATTR name="#OwnedFrames" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="OwnedFrames[0]" type="UMLFrame" guid="he0OWInWY0Ootf9KH5sMmQAA">
-<XPD:ATTR name="Name" type="string">Virologist interacts with FieldLab</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.Virologist interacts with VeryGoodViroGame.FieldLab</XPD:ATTR>
 <XPD:ATTR name="FrameKind" type="string">sd</XPD:ATTR>
 <XPD:REF name="InteractionInstanceSet">tXQ3kWMcF0SBXYmIcWOC6QAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">1</XPD:ATTR>
@@ -28088,7 +28088,7 @@
 <XPD:REF name="ReceivingStimuli[2]">HzoA5VlTwEqU+Czkkd3AQwAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="ParticipatingInstances[5]" type="UMLObject" guid="c56+nRcDZkW0yP/vQx/wsgAA">
-<XPD:ATTR name="Name" type="string">GameManager</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.GameManager</XPD:ATTR>
 <XPD:REF name="CollaborationInstanceSet">xlMHoeJb/UOKsT7xkoASrAAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">2</XPD:ATTR>
 <XPD:REF name="Views[0]">i/GdXBxzO0CCVQCf38CndAAA</XPD:REF>
@@ -28225,7 +28225,7 @@
 <XPD:REF name="Context">qa/av6JnUEeXEkU7DquvYQAA</XPD:REF>
 <XPD:ATTR name="#OwnedDiagrams" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="OwnedDiagrams[0]" type="UMLCollaborationDiagram" guid="zCykd7Kvh0eVSz08zL+c/gAA">
-<XPD:ATTR name="Name" type="string">Timer steps tick-based elements</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.Timer steps tick-based elements</XPD:ATTR>
 <XPD:ATTR name="MessageSignature" type="UMLMessageSignatureKind">mskNameAndType</XPD:ATTR>
 <XPD:REF name="DiagramOwner">Ci2wUpfaC0SSHD6zZP23RgAA</XPD:REF>
 <XPD:OBJ name="DiagramView" type="UMLCollaborationDiagramView" guid="g3+O56cBQUeinKk9BAJQDwAA">
@@ -28241,7 +28241,7 @@
 <XPD:ATTR name="Height" type="integer">380</XPD:ATTR>
 <XPD:REF name="Model">X6Kyw6pMkEuk7KYYwh167AAA</XPD:REF>
 <XPD:OBJ name="NameLabel" type="LabelView" guid="Fcly2oI4ukavfvudQpydVgAA">
-<XPD:ATTR name="Text" type="string">Timer steps tick-based elements</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">VeryGoodViroGame.Timer steps tick-based elements</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="FrameTypeLabel" type="LabelView" guid="XbyOmcF270ex860Tw6m/XwAA">
 <XPD:ATTR name="FontStyle" type="integer">1</XPD:ATTR>
@@ -28284,7 +28284,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="1E3m6/9toky3Sd9xNez69AAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="FTTfXnsAE0G17Q6rjPxyywAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">Timer</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">VeryGoodViroGame.Timer</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="0w8xcMwx1kSdRmZY3oOOOQAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -28309,7 +28309,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="iMdNXyqXVEGQ8VufDPAwfgAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="6rcY3W6zQ0aibDlWucBiGwAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">a : Forget</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">a : VeryGoodViroGame.Forget</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="nGhgfLcmlEyNiWpMDCSjlAAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -28334,7 +28334,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="wVCo9Rttrk2x0cnn4S9yxAAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="8iW/7M8nBEqjiV0XVLp/AQAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">v : Virologist</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">v : VeryGoodViroGame.Virologist</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="CM+5ug16gkWWWoiPQXEQqgAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -28669,7 +28669,7 @@
 </XPD:OBJ>
 <XPD:ATTR name="#OwnedFrames" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="OwnedFrames[0]" type="UMLFrame" guid="X6Kyw6pMkEuk7KYYwh167AAA">
-<XPD:ATTR name="Name" type="string">Timer steps tick-based elements</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.Timer steps tick-based elements</XPD:ATTR>
 <XPD:ATTR name="FrameKind" type="string">sd</XPD:ATTR>
 <XPD:REF name="InteractionInstanceSet">Ci2wUpfaC0SSHD6zZP23RgAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">1</XPD:ATTR>
@@ -28692,7 +28692,7 @@
 <XPD:REF name="SendingStimuli[2]">f4ancGMKgUqzZ9itRarUggAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="ParticipatingInstances[1]" type="UMLObject" guid="RIdlnOKtGEeLCZKv0pIVxAAA">
-<XPD:ATTR name="Name" type="string">Timer</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.Timer</XPD:ATTR>
 <XPD:REF name="CollaborationInstanceSet">qa/av6JnUEeXEkU7DquvYQAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">2</XPD:ATTR>
 <XPD:REF name="Views[0]">5hyfZPpULUGsoX7WVRFlbwAA</XPD:REF>
@@ -28825,7 +28825,7 @@
 <XPD:REF name="Context">eJVM2XU88UePbfLWs3+rbwAA</XPD:REF>
 <XPD:ATTR name="#OwnedDiagrams" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="OwnedDiagrams[0]" type="UMLCollaborationDiagram" guid="gA7yg6b/f02o9z+gxWQvEQAA">
-<XPD:ATTR name="Name" type="string">Virologist checks if they are paralyzed</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.Virologist checks if they are paralyzed</XPD:ATTR>
 <XPD:ATTR name="MessageSignature" type="UMLMessageSignatureKind">mskNameAndType</XPD:ATTR>
 <XPD:REF name="DiagramOwner">e5tyc48iYUWKkoyVOeoFyAAA</XPD:REF>
 <XPD:OBJ name="DiagramView" type="UMLCollaborationDiagramView" guid="/ERWhxByNU24nNxrWV1gjgAA">
@@ -28841,7 +28841,7 @@
 <XPD:ATTR name="Height" type="integer">397</XPD:ATTR>
 <XPD:REF name="Model">rRpingqTN060XNxn1A+E9QAA</XPD:REF>
 <XPD:OBJ name="NameLabel" type="LabelView" guid="bgpyr08bT0a0wC//h78xrAAA">
-<XPD:ATTR name="Text" type="string">Virologist checks if they are paralyzed</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">VeryGoodViroGame.Virologist checks if they are paralyzed</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="FrameTypeLabel" type="LabelView" guid="m3GoFNUtTEa+B5KeVgjuOgAA">
 <XPD:ATTR name="FontStyle" type="integer">1</XPD:ATTR>
@@ -28884,7 +28884,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="cv6FtrwIakiFN3+JHwurEgAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="BxgcHqiLfEGUPM2MzgQNnwAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">v : Virologist</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">v : VeryGoodViroGame.Virologist</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="J02Vjk2cokCiJIo60ugwwAAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -28909,7 +28909,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="LgXtZwGDdEW+1bGht4rI1AAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="vBXjv869O0ieCU/9dYEELwAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">e : EquipmentSack</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">e : VeryGoodViroGame.EquipmentSack</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="XAO86uPDnkCQMZ+rMY6ZmgAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -28934,7 +28934,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="mr7boQ3YyUe3PQ/d5LQAGQAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="dm2fC9BmK0itWoqKEMj69gAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">a : Forget</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">a : VeryGoodViroGame.Forget</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="v68ismCvnU+Q5JvmS/cDXAAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -28959,7 +28959,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="uUz/fjeAGkijh6wJLXv6rAAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="PVgaUa+cJUGezeZ7ycnTOQAA">
 <XPD:ATTR name="FontStyle" type="integer">4</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">e2 : EquipmentGloves</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">e2 : VeryGoodViroGame.EquipmentGloves</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="77fC8lnfM0+O/czoUnFQEgAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -29478,7 +29478,7 @@
 </XPD:OBJ>
 <XPD:ATTR name="#OwnedFrames" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="OwnedFrames[0]" type="UMLFrame" guid="rRpingqTN060XNxn1A+E9QAA">
-<XPD:ATTR name="Name" type="string">Virologist checks if they are paralyzed</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">VeryGoodViroGame.Virologist checks if they are paralyzed</XPD:ATTR>
 <XPD:ATTR name="FrameKind" type="string">sd</XPD:ATTR>
 <XPD:REF name="InteractionInstanceSet">e5tyc48iYUWKkoyVOeoFyAAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">1</XPD:ATTR>
