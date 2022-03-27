@@ -88,9 +88,14 @@ public class Virologist
         }
         Resource cost = code.GetCost();
         //has enough resource:
-        resource.Remove(cost);
-        Agent created = code.CreateVaccine();
-        AddAgentToStash(created);
+        //if (resource >= cost)
+
+        if (Logger.AskQuestion("Sufficient resources available to thy liking, sire"))
+        {
+            resource.Remove(cost);
+            Agent created = code.CreateVaccine();
+            AddAgentToStash(created);
+        }
     }
     
     //Mindegyiknél feltételezzük, hogy meg tudja érinteni, előtte ellenőrizzük

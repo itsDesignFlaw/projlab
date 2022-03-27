@@ -14,6 +14,7 @@ public class EquipmentCoat extends Equipment
 {
     public boolean CanAgentBeApplied(Agent agent, Virologist source)
     {
+        if(Logger.AskQuestion(""))
         return false;
     }
 }

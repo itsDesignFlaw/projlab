@@ -17,6 +17,7 @@ public class FieldBunker extends Field
     
     public void Interact(Virologist v)
     {
+        hasEquipment = Logger.AskQuestion("Does the bunker have equipment in it?");
         if(hasEquipment)
         {
             v.AddEquipment(equipment);
