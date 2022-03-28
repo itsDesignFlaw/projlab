@@ -57,7 +57,13 @@ public class Logger
     
     static void Start()
     {
-        Timer.steppable_reg = new ArrayList<iSteppable>();
+        Start(true);
+    }
+    
+    static void Start(boolean erase)
+    {
+        if(erase)
+            Timer.steppable_reg = new ArrayList<iSteppable>();
         GameManager.map = null;
         SetEnabled(true);
         nameList = new HashMap<Object, String>();

@@ -2,13 +2,14 @@ package VeryGoodViroGame;
 
 import java.util.ArrayList;
 
-public class Tester {
+public class Tester
+{
     static ArrayList<TestCase> testcases = new ArrayList<>();
-
-    static {
+    
+    static
+    {
         testcases.add(new TestCase("SimpleMoveStrategy moves virologist", "Modellezzük a folyamatot, amikor a " +
-                "virológus bármiféle ágens hatása nélkül " +
-                "mozog", () ->
+                                                                          "virológus bármiféle ágens hatása nélkül " + "mozog", () ->
         {
             Field from = new Field();
             Field to = new Field();
@@ -17,18 +18,17 @@ public class Tester {
             virologist.ChangeMoveStrategy(ms);
             virologist.SetField(from);
             //ENTER
-
+            
             Logger.Start();
             Object[] obdzss = {from, to, virologist, ms};
             String[] neveqh = {"f1", "f2", "v1", "ms"};
             Logger.AddObjectNames(obdzss, neveqh);
-
+            
             virologist.MoveTo(to);
         }));
-
-        testcases.add(new TestCase("VitusDanceMoveStrategy randomly moves virologist", "Modellezzük a folyamatot, " +
-                "amikor a virológus vitustánc " +
-                "járása közben mozog.", () ->
+        
+        testcases.add(new TestCase("VitusDanceMoveStrategy randomly moves virologist",
+                "Modellezzük a folyamatot, " + "amikor a virológus vitustánc " + "járása közben mozog.", () ->
         {
             Field from = new Field();
             Field to = new Field();
@@ -42,13 +42,13 @@ public class Tester {
             Object[] obdzss = {from, to, virologist, dm};
             String[] neveqh = {"f1", "f2", "v1", "dm"};
             Logger.AddObjectNames(obdzss, neveqh);
-
+            
             virologist.MoveTo(to);
         }));
-
-        testcases.add(new TestCase("ParalyzedMoveStrategy not moves virologist", "Modellezzük a folyamatot, amikor a " +
-                "virológus bénult állapotba kerül, " +
-                "nem tud megmozdulni.", () ->
+        
+        testcases.add(new TestCase("ParalyzedMoveStrategy not moves virologist", "Modellezzük a folyamatot, amikor a "
+                                                                                 + "virológus bénult állapotba kerül," +
+                                                                                 " " + "nem tud megmozdulni.", () ->
         {
             Field from = new Field();
             Field to = new Field();
@@ -62,12 +62,11 @@ public class Tester {
             String[] neveqh = {"f1", "f2", "v1", "pm"};
             Logger.AddObjectNames(obdzss, neveqh);
             virologist.MoveTo(to);
-
+            
         }));
-
-        testcases.add(new TestCase("Virologist interacts with FieldBunker", "A virológus megpróbálja felvenni egy " +
-                "FiledBunker mezőn található felszerelést" +
-                ".", () ->
+        
+        testcases.add(new TestCase("Virologist interacts with FieldBunker",
+                "A virológus megpróbálja felvenni egy " + "FiledBunker mezőn található felszerelést" + ".", () ->
         {
             Virologist v = new Virologist();
             FieldBunker b = new FieldBunker();
@@ -80,37 +79,37 @@ public class Tester {
             Object[] obdzss = {v, b, e};
             String[] neveqh = {"v", "b", "e"};
             Logger.AddObjectNames(obdzss, neveqh);
-
+            
             v.InteractWithField();
         }));
-
+        
         testcases.add(new TestCase("Virologist interacts with FieldLab", "A virológus megpróbálja leolvasni egy " +
-                "FieldLab mezőn található genetikai kódot.",
+                                                                         "FieldLab mezőn található genetikai kódot.",
                 () ->
-                {
-                    Virologist virologist = new Virologist();
-                    FieldLab lab = new FieldLab();
-                    GeneticCode geneticCode = new GeneticCode();
-                    lab.setCode(geneticCode);
-                    lab.AcceptViro(virologist);
-                    //ENTER
-                    Logger.Start();
-                    Object[] obdzss = {virologist, lab, geneticCode};
-                    String[] neveqh = {"v", "l", "code"};
-                    Logger.AddObjectNames(obdzss, neveqh);
-                    virologist.InteractWithField();
-                }));
-
-        testcases.add(new TestCase("Virologist interacts with FieldWarehouse", "A virológus megpróbálja felvenni egy " +
-                "FieldWarehouse mezőn található " +
-                "anyagot.", () ->
+        {
+            Virologist virologist = new Virologist();
+            FieldLab lab = new FieldLab();
+            GeneticCode geneticCode = new GeneticCode();
+            lab.setCode(geneticCode);
+            lab.AcceptViro(virologist);
+            //ENTER
+            Logger.Start();
+            Object[] obdzss = {virologist, lab, geneticCode};
+            String[] neveqh = {"v", "l", "code"};
+            Logger.AddObjectNames(obdzss, neveqh);
+            virologist.InteractWithField();
+        }));
+        
+        testcases.add(new TestCase("Virologist interacts with FieldWarehouse", "A virológus megpróbálja felvenni egy "
+                                                                               + "FieldWarehouse mezőn található " +
+                                                                               "anyagot.", () ->
         {
             Virologist v = new Virologist();
             FieldWarehouse w = new FieldWarehouse();
             v.SetField(w);
             Resource r = new Resource();
             Resource r2 = new Resource(); //todo: diagrammok rosszak: ez a virologus resource-ja
-
+            
             v.SetResource(r2);
             w.setResource(r);
             w.AcceptViro(v);
@@ -121,11 +120,11 @@ public class Tester {
             Logger.AddObjectNames(obdzss, neveqh);
             v.InteractWithField();
         }));
-
-        testcases.add(new TestCase("Virologist tries to put virus on a Virologist", "Annak a folyamatnak a modellje, " +
-                "amikor egy virológus egy másik " +
-                "virológusra próbál kenni egy " +
-                "vírust.", () ->
+        
+        testcases.add(new TestCase("Virologist tries to put virus on a Virologist", "Annak a folyamatnak a modellje, "
+                                                                                    + "amikor egy virológus egy másik" +
+                                                                                    " " + "virológusra próbál kenni " +
+                                                                                    "egy " + "vírust.", () ->
         {
             //TODO: nincs CanApplyAgent, CanAgentBeApplied, képcsere
             Virologist v1 = new Virologist();
@@ -138,14 +137,14 @@ public class Tester {
             //ENTER
             Logger.Start();
             Object[] obdzss = {v1, v2, agent, e, e2};
-            String[] neveqh = {"v1", "v2", "a", "e","e2"};
+            String[] neveqh = {"v1", "v2", "a", "e", "e2"};
             Logger.AddObjectNames(obdzss, neveqh);
             v1.UseAgent(agent, v2);
         }));
-
+        
         testcases.add(new TestCase("Virologist puts virus on a Virologist", "Annak a folyamatnak a modellje, " +
-                "amikor egy virológus egy másik " +
-                "virológusra ken egy vírust.", () ->
+                                                                            "amikor egy virológus egy másik " +
+                                                                            "virológusra ken egy vírust.", () ->
         {
             Virologist v1 = new Virologist();
             Virologist v2 = new Virologist();
@@ -157,10 +156,10 @@ public class Tester {
             Logger.AddObjectNames(obdzss, neveqh);
             v1.UseAgent(agent, v2);
         }));
-
+        
         testcases.add(new TestCase("Virologist vaccinates a Virologist", "Lemodellezzük a folyamatot, ahogy egy " +
-                "virológus vakcinát ad be egy másik " +
-                "virológusnak.", () ->
+                                                                         "virológus vakcinát ad be egy másik " +
+                                                                         "virológusnak.", () ->
         {
             Virologist v1 = new Virologist();
             Virologist v2 = new Virologist();
@@ -169,12 +168,12 @@ public class Tester {
             //ENTER
             Logger.Start();
             Object[] obdzss = {v1, v2, forget, vc};
-            String[] neveqh = {"v1", "v2", "f","vc"};
+            String[] neveqh = {"v1", "v2", "f", "vc"};
             Logger.AddObjectNames(obdzss, neveqh);
             v1.UseAgent(vc, v2);
         }));
-        testcases.add(new TestCase("Virologist tries to craft virus", "Annak a  folyamatnak a modellezése, melyben a " +
-                "virológus megpróbál vírust kraftolni.", () ->
+        testcases.add(new TestCase("Virologist tries to craft virus", "Annak a  folyamatnak a modellezése, melyben a "
+                                                                      + "virológus megpróbál vírust kraftolni.", () ->
         {
             //TODO: nagyon nem hasonlít a 5.3.11-re
             Virologist v = new Virologist();
@@ -190,14 +189,14 @@ public class Tester {
             //TODO: ez nemtom h jo e remelem nem......
             //ENTER
             Logger.Start();
-            Object[] obdzss = {v, code, e, a , r};
+            Object[] obdzss = {v, code, e, a, r};
             String[] neveqh = {"v", "code", "e", "a", "r"};
             Logger.AddObjectNames(obdzss, neveqh);
-
+            
             v.CraftVirus(code);
         }));
-        testcases.add(new TestCase("Virologist crafts virus", "Annak a folyamatnak a modellezése, melyben a virológus" +
-                " sikeresen vírust kraftol.", () ->
+        testcases.add(new TestCase("Virologist crafts virus", "Annak a folyamatnak a modellezése, melyben a " +
+                                                              "virológus" + " sikeresen vírust kraftol.", () ->
         {
             Virologist v = new Virologist();
             GeneticCode code = new GeneticCode();
@@ -207,20 +206,20 @@ public class Tester {
             v.LearnGeneticCode(code);
             code.setCost(r);
             code.setAgent(a);
-
+            
             //ENTER
             Logger.Start();
             Object[] obdzss = {v, code, a, r};
             String[] neveqh = {"v", "code", "a", "r"};
             Logger.AddObjectNames(obdzss, neveqh);
-
+            
             v.CraftVirus(code);
-
+            
             //es aztan maga a teszt szia Zoli szia Dani  szijjaaaaa szijjjjjjjasztooooook
         }));
-        testcases.add(new TestCase("Virologist tries to steal equipment", "Lemodellezzük a folyamatot, amelyben a " +
-                "virológus felszerelést kísérel meg lopni " +
-                "egy másik virológustól.", () ->
+        testcases.add(new TestCase("Virologist tries to steal equipment",
+                "Lemodellezzük a folyamatot, amelyben a " + "virológus felszerelést kísérel meg lopni " + "egy másik " +
+                "virológustól.", () ->
         {
             Virologist v = new Virologist();
             Virologist v2 = new Virologist();
@@ -231,13 +230,13 @@ public class Tester {
             //ENTER
             Logger.Start();
             Object[] obdzss = {v, v2, a, e};
-            String[] neveqh = {"v", "v2","a", "e"};
+            String[] neveqh = {"v", "v2", "a", "e"};
             Logger.AddObjectNames(obdzss, neveqh);
             v.StealEquipmentFromViro(v2, e);
-
+            
         }));
-        testcases.add(new TestCase("Virologist steals equipment", "Lemodellezzük a folyamatot, amelyben a virológus " +
-                "felszerelést lop egy másik virológustól.", () ->
+        testcases.add(new TestCase("Virologist steals equipment",
+                "Lemodellezzük a folyamatot, amelyben a virológus " + "felszerelést lop egy másik virológustól.", () ->
         {
             //TODO:kép nem jó (Márk: Hát igazából jó, csak itt lefut végig a próbálkozás, egészen a sikerig)
             Virologist v = new Virologist();
@@ -249,12 +248,11 @@ public class Tester {
             Object[] obdzss = {v, v2, e};
             String[] neveqh = {"v", "v2", "e"};
             Logger.AddObjectNames(obdzss, neveqh);
-
+            
             v.StealEquipmentFromViro(v2, e);
         }));
         testcases.add(new TestCase("Virologist tries to steal resource", "Lemodellezzük a folyamatot, amelyben a " +
-                "virológus anyagot  kísérel meg lopni egy " +
-                "másik virológustól.", () ->
+                                                                         "virológus anyagot  kísérel meg lopni egy " + "másik virológustól.", () ->
         {
             Virologist v = new Virologist();
             Resource r = new Resource();
@@ -269,16 +267,16 @@ public class Tester {
             Object[] obdzss = {v, r, v2, r2, e};
             String[] neveqh = {"v", "r", "v2", "r2", "e"};
             Logger.AddObjectNames(obdzss, neveqh);
-
+            
             v.StealResourceFromViro(v2, new Resource());
             //es aztan maga a teszt szia Zoli szia Dani  szijjaaaaa szijjjjjjjasztooooook
         }));
-        testcases.add(new TestCase(
-                "Virologist steals resource",
-                "Lemodellezzük a folyamatot, amelyben a virológus " + "anyagot lop egy másik virológustól.",
-        () -> {
+        testcases.add(new TestCase("Virologist steals resource",
+                "Lemodellezzük a folyamatot, amelyben a virológus " + "anyagot lop egy másik virológustól.", () ->
+        {
             //todo: szekvencia diagram szar: nincs rajta a resource
-            //todo: itt hozzaadjuk a resourcet, pedig csak meg kéne próbálnia (Zoli: itt már ténylegesen csináljuk, nem próbáljuk)
+            //todo: itt hozzaadjuk a resourcet, pedig csak meg kéne próbálnia (Zoli: itt már ténylegesen csináljuk,
+            // nem próbáljuk)
             Virologist v = new Virologist();
             Resource r = new Resource();
             Virologist v2 = new Virologist();
@@ -293,10 +291,9 @@ public class Tester {
             v.StealResourceFromViro(v2, new Resource());
             //es aztan maga a teszt szia Zoli szia Dani  szijjaaaaa szijjjjjjjasztooooook
         }));
-        testcases.add(new TestCase("Virologist checks if they are paralyzed", "Modell arra a folyamara, melyben egy " +
-                "virológus a rajta található inventory " +
-                "entitások alapján eldönti, hogy le " +
-                "van-e bénulva.", () ->
+        testcases.add(new TestCase("Virologist checks if they are paralyzed",
+                "Modell arra a folyamara, melyben egy " + "virológus a rajta található inventory " + "entitások " +
+                "alapján eldönti, hogy le " + "van-e bénulva.", () ->
         {
             Virologist v = new Virologist();
             EquipmentSack e = new EquipmentSack();
@@ -311,62 +308,72 @@ public class Tester {
             String[] neveqh = {"v", "e", "a", "e2"};
             Logger.AddObjectNames(obdzss, neveqh);
             v.IsParalyzed();
-
+            
             //es aztan maga a teszt szia Zoli szia Dani  szijjaaaaa szijjjjjjjasztooooook
         }));
         testcases.add(new TestCase("Timer steps tick-based elements", "Modellezük, ahogy időzítő minden hozzá " +
-                "regisztrált steppable példányt léptet, " +
-                "szimulálva ezzel a játék időbeli haladását",
+                                                                      "regisztrált steppable példányt léptet, " +
+                                                                      "szimulálva ezzel a játék időbeli haladását",
                 () ->
-                {
-                    Virologist v = new Virologist();
-                    Forget a = new Forget();
-                    a.Apply(v, v);
-                    Timer.AddSteppable(a);
-                    //ENTER
-                    Logger.Start();
-                    Object[] obdzss = {v, a};
-                    String[] neveqh = {"v", "a"};
-                    Logger.AddObjectNames(obdzss, neveqh);
-
-                    Timer.Step(); //todo: nem mukodik :( (Zoli: már talán működik)
-
-                    //es aztan maga a tesz
-                }));
+        {
+            Timer.steppable_reg.clear();
+            Virologist v = new Virologist();
+            Forget a = new Forget();
+            a.Apply(v, v);
+            Timer.AddSteppable(a);
+            //ENTER
+            Logger.Start(false);
+            Object[] obdzss = {v, a};
+            String[] neveqh = {"v", "a"};
+            Logger.AddObjectNames(obdzss, neveqh);
+            
+            Timer.Step(); //todo: nem mukodik :( (Zoli: már talán működik)
+            
+            //es aztan maga a tesz
+        }));
         testcases.add(new TestCase("All tests", "Minden feljebbi teszt egymás után sorrendben", () ->
         {
-            for (int i = 0; i < testcases.size(); i++) {
-                if (testcases.get(i).name.equals("All tests"))
+            for(int i = 0; i < testcases.size(); i++)
+            {
+                if(testcases.get(i).name.equals("All tests"))
                     continue;
                 RunTest(i);
             }
-
+            
             //es aztan maga a tesz
         }));
     }
-
-    static void print(String str) {
+    
+    static void print(String str)
+    {
         System.out.println(str);
     }
-
-    static void ListTests() {
+    
+    static void ListTests()
+    {
         int width = 60;
         print("=".repeat(width));
         int middlelen = (width - 10) / 2;
         print("|ID| " + " ".repeat(middlelen) + "name" + " ".repeat(middlelen));
         print("=".repeat(width));
-        for (int i = 0; i < testcases.size(); i++) {
-            if (i < 9) {
+        for(int i = 0; i < testcases.size(); i++)
+        {
+            if(i < 9)
+            {
                 print("| " + (i + 1) + "| " + testcases.get(i).name);
-            } else {
+            }
+            else
+            {
                 print("|" + (i + 1) + "| " + testcases.get(i).name);
             }
         }
         print("=".repeat(width));
     }
-
-    static void RunTest(int id) {
-        if (id >= testcases.size()) {
+    
+    static void RunTest(int id)
+    {
+        if(id >= testcases.size())
+        {
             print("Ez nem jo ID!");
             return;
         }
@@ -375,9 +382,9 @@ public class Tester {
         Logger.SetEnabled(false);
         curtest.mRun.run();
         Logger.SetEnabled(false);
-
+        
         print("\n________________test over________________");
-        if (Logger.getEltolas()>0)
+        if(Logger.getEltolas() > 0)
             print("\n\n\n\nBajvan bajvan! Valahol hianyzik egy visszateres!"); // EZ MAGA A TÉBOLY
     }
     //TODO: setEnable(false) teszt után!!

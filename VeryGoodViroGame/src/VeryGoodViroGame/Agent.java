@@ -10,7 +10,7 @@ package VeryGoodViroGame;//
 //
 
 /**
- *Az összes ágens ősosztálya, az osztály felelőssége, hogy előírja,
+ * Az összes ágens ősosztálya, az osztály felelőssége, hogy előírja,
  * hogyan lehet felkenni az ágenseket, és felel azért is, hogy csak adott ideig fejtsék ki a hatásukat.
  */
 public abstract class Agent extends InvItem implements iSteppable
@@ -19,12 +19,12 @@ public abstract class Agent extends InvItem implements iSteppable
     //Akin van
     Virologist host;
     iMoveStrategy strategy;
-
+    
     /**
      * A source paraméterként kapott virológus megkísérli felkenni az ágenst a targetként megkapott virológusra.
      *
-     * @param  source az ágenst felkenő virológus
-     * @param  target az a virológus akire felkenik az ágenst
+     * @param source az ágenst felkenő virológus
+     * @param target az a virológus akire felkenik az ágenst
      */
     public void Apply(Virologist source, Virologist target)
     {
@@ -33,8 +33,10 @@ public abstract class Agent extends InvItem implements iSteppable
         {
             target.ChangeMoveStrategy(strategy);
         }
+        host = target;
         Logger.ReturnFunction();
     }
+    
     /**
      * Minden időpillanatban meghívódik ez a függvény, és csökkenti az időt ameddig még aktív az ágens.
      */
@@ -53,10 +55,9 @@ public abstract class Agent extends InvItem implements iSteppable
         }
         Logger.ReturnFunction();
     }
-
+    
     /**
      * Lemásolja az adott ágenst.
-     *
      */
     public Agent Clone()
     {
