@@ -15,7 +15,7 @@ package VeryGoodViroGame;//
  */
 public abstract class Agent extends InvItem implements iSteppable
 {
-    int activeTime;
+    int activeTime = 6969;
     //Akin van
     Virologist host;
     iMoveStrategy strategy;

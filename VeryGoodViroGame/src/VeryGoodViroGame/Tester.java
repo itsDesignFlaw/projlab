@@ -322,14 +322,16 @@ public class Tester {
                     Virologist v = new Virologist();
                     Forget a = new Forget();
                     a.Apply(v, v);
-                    Timer.AddSteppable(a);
                     //ENTER
                     Logger.Start();
                     Object[] obdzss = {v, a};
                     String[] neveqh = {"v", "a"};
                     Logger.AddObjectNames(obdzss, neveqh);
 
-                    Timer.Step(); //todo: nem mukodik :( (Zoli: már talán működik)
+                    Logger.SetEnabled(false);
+                    Timer.AddSteppable(a);
+                    Logger.SetEnabled(true);
+                    Timer.Step(); //todo: rossz a teszteset, az iMoveStrategy-s dolog miatt itt ez rossz
 
                     //es aztan maga a tesz
                 }));
