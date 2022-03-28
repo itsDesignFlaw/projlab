@@ -169,7 +169,7 @@ public class Tester {
             //ENTER
             Logger.Start();
             Object[] obdzss = {v1, v2, forget, vc};
-            String[] neveqh = {"v1", "2", "f","vc"};
+            String[] neveqh = {"v1", "v2", "f","vc"};
             Logger.AddObjectNames(obdzss, neveqh);
             v1.UseAgent(vc, v2);
         }));
