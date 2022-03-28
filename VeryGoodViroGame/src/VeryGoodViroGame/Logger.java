@@ -161,8 +161,6 @@ public class Logger
     {
         if(isEnabled)
         {
-            String msg = separator.repeat(getEltolas()) + "[]>" + question + "?(Y/N): ";
-            System.out.print(msg);
             //System.out.print(separator.repeat(getEltolas()));
             String answer = "";
             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
@@ -171,6 +169,8 @@ public class Logger
             {
                 try
                 {
+                    String msg = separator.repeat(getEltolas()) + "[]>" + question + "?(Y/N): ";
+                    System.out.print(msg);
                     answer = reader.readLine().toLowerCase();
                 }
                 catch(IOException e)
