@@ -98,7 +98,14 @@ public class Logger
         {
             int elt = lastEltolas() - 3;
             popEltolas();
-            Print("[]<" + "-".repeat(elt) + "[]");
+            if (getEltolas()<=1)
+            {
+                Print("<" + "-".repeat(elt+2) + "[]");
+            }
+            else
+            {
+                Print("[]<" + "-".repeat(elt) + "[]");
+            }
         }
     }
     
