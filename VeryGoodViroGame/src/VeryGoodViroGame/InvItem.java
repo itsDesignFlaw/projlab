@@ -9,41 +9,115 @@ package VeryGoodViroGame;//
 //
 //
 
-
+/**
+ * Ez az osztály felel a játékban kifejtett hatások definiálásáért.
+ * Minden olyan itemnek (vagy azokhoz köthető osztálynak, pl Ágensek),
+ * ami hatást fejt ki egy virológusra, ebből az osztályból kell öröklődnie.
+ * Tisztázat működéshez: Az ehhez az osztályhoz tartozó függvények minden,
+ * egy virológushoz tartozó InvItem (vagy gyermekosztály) példányokon meghívásra kerülnek,
+ * alapértelmezetten ‘true’ boolean értéket adnak ebben az osztályban vissza (IsParalyzed metóduson kívül).
+ * Ha a virológus InvItem-jei függvényenként mind végig lesznek iterálva mindaddig,
+ * míg egy alapértelmezettel szembemenő (un. ‘blokkoló’) visszatérési értéket kap).
+ */
 public abstract class InvItem
 {
+    /**
+     *A metódus visszatér egy egész számmal, ami megmutatja,
+     * hogy az adott item hatására mennyivel növekszik meg a
+     * virológus hordozási kapacitása. Alapértelmezett értéke igaz.
+     *
+     * @return a fentebb definiált egész szám
+     */
     public int GetMaxResource()
     {
+        Logger.NewFunctionCall(this, "GetMaxResource");
+        Logger.ReturnFunction();
         return 0;
     }
-    
+
+    /**
+     * A metódus visszatér egy boolean értékkel,
+     * az alapján, hogy az adott ágenst fel lehet e kenni a paraméterként kapott virológusra.
+     * Alapértelmezett értéke igaz.
+     *
+     * @param agent az ágens amire vizsgáljuk, hogy felkenhető-e
+     * @param source a kenést végző virológus
+     * @return a fentebb leírt boolean visszatérési érték
+     */
     public boolean CanAgentBeApplied(Agent agent, Virologist source)
     {
+        Logger.NewFunctionCall(this, "CanAgentBeApplied");
+        Logger.ReturnFunction();
         return true;
     }
-    
+
+    /**
+     *A metódus visszatért egy boolean értékkel az alapján,
+     * hogy az adott ágens engedi e, hogy a virológus raboljon másik virológustól.
+     * Alapértelmezett értéke igaz.
+     *
+     * @return a fentebb leírt boolean visszatérési érték
+     */
     public boolean CanSteal()
     {
+        Logger.NewFunctionCall(this, "CanSteal");
+        Logger.ReturnFunction();
         return true;
     }
-    
+
+    /**
+     *A metódus visszatér egy boolean értékkel az alapján,
+     * hogy az adott item hatására megbénul-e a virológus.
+     * Alapértelmezett értéke hamis.
+     *
+     * @return a fentebb leírt boolean visszatérési érték
+     */
     public boolean IsParalyzed()
     {
+        Logger.NewFunctionCall(this, "IsParalyzed");
+        Logger.ReturnFunction();
         return false;
     }
-    
+
+    /**
+     *A metódus visszatért egy boolean értékkel az alapján,
+     * hogy az adott ágens engedi e, hogy a virológus craftolhat e vakcinákat és vírusokat.
+     * Alapértelmezett értéke igaz.
+     *
+     * @return a fentebb leírt boolean visszatérési érték
+     */
     public boolean CanCraft()
     {
+        Logger.NewFunctionCall(this, "CanCraft");
+        Logger.ReturnFunction();
         return true;
     }
-    
+
+    /**
+     *A metódus visszatért egy boolean értékkel az alapján,
+     * hogy az adott ágens engedi e, hogy a virológus kapcsolatba léphet a mezővel.
+     * Alapértelmezett értéke igaz.
+     *
+     * @return a fentebb leírt boolean visszatérési érték
+     */
     public boolean CanInteract()
     {
+        Logger.NewFunctionCall(this, "CanInteract");
+        Logger.ReturnFunction();
         return true;
     }
-    
+
+    /**
+     *A metódus visszatért egy boolean értékkel az alapján,
+     * hogy az adott ágens engedi e, hogy a virológus kenjen másra ágenst.
+     * Alapértelmezett értéke igaz.
+     *
+     * @return a fentebb leírt boolean visszatérési érték
+     */
     public boolean CanApplyAgent()
     {
+        Logger.NewFunctionCall(this, "CanApplyAgent");
+        Logger.ReturnFunction();
         return true;
     }
 }

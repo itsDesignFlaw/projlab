@@ -9,12 +9,25 @@ package VeryGoodViroGame;//
 //
 //
 
-
+/**
+ * A kesztyű védőfelszerelést reprezentálja, az ezt viselő virológusra
+ * kent ágens visszadobódik arra a virológusra aki felkente.
+ */
 public class EquipmentGloves extends Equipment
 {
+    /**
+     * (InvItem metódus) hamis érték visszaadásával blokkolja
+     * az ágens felkenődését, illetve véletlenszerűen, előre
+     * megadott eséllyel visszakeni az ágenst az eredeti kenőre.
+     *
+     * @param  agent maga az ágens amivel kenni próbálnak
+     * @param  source az ágenst felkenő virológus
+     */
     public boolean CanAgentBeApplied(Agent agent, Virologist source)
     {
+        Logger.NewFunctionCall(this,"CanAgentBeApplied");
         source.ApplyAgent(agent, host);
+        Logger.ReturnFunction();
         return false;
     }
 }

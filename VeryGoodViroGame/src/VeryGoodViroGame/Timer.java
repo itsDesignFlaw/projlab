@@ -13,23 +13,25 @@ package VeryGoodViroGame;//
 import java.util.ArrayList;
 import java.util.List;
 
-public class Timer
-{
+public class Timer {
     static List<iSteppable> steppable_reg = new ArrayList<>();
-    
-    public static void Step()
-    {
-        for(iSteppable s : steppable_reg)
-        {
+
+    public static void Step() {
+        Logger.NewFunctionCallLegacy("Timer", "Step");
+        for (iSteppable s : steppable_reg) {
             s.Step();
         }
+        Logger.ReturnFunction();
     }
-    
-    public static void AddSteppable(iSteppable item)
-    {
+
+    public static void AddSteppable(iSteppable item) {
+        Logger.NewFunctionCallLegacy("Timer", "AddSteppable");
+        steppable_reg.add(item);
+        Logger.ReturnFunction();
     }
-    
-    public static void RemoveSteppable(iSteppable step)
-    {
+
+    public static void RemoveSteppable(iSteppable step) {
+        Logger.NewFunctionCallLegacy("Timer", "RemoveSteppable");
+        Logger.ReturnFunction();
     }
 }

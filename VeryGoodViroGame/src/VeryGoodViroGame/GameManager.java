@@ -9,19 +9,32 @@ package VeryGoodViroGame;//
 //
 //
 
-
+/**
+ *Ez a statikus osztály felelős az új játék elindításáért, és a játék befejezéséért.
+ */
 public class GameManager
 {
     
     static Map map;
-    
+
+    /**
+     *Ez a metódus felelős a játék elindításáért.
+     */
     public static void StartGame()
     {
+        Logger.NewFunctionCallLegacy("GameManager", "StartGame");
         map = new Map();
         map.GenerateMap();
+        Logger.ReturnFunction();
     }
-    
+    /**
+     *Ez a metódus felelős a játék befejezéséért és a nyertes kihirdetéséért.
+     *
+     * @param winner a játék győztese
+     */
     public static void EndGame(Virologist winner)
     {
+        Logger.NewFunctionCallLegacy("GameManager", "EndGame");
+        Logger.ReturnFunction();
     }
 }

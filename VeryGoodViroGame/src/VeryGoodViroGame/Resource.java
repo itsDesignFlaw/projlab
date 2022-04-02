@@ -9,18 +9,38 @@ package VeryGoodViroGame;//
 //
 //
 
-
+/**
+ * Ez az osztály fogja össze a játékban összegyűjthető erőforrásokat, amiket craftolásra lehet használni.
+ */
 public class Resource
 {
+    /**
+     * ami - aminosav
+     * nuki - nukleotid
+     */
     private int ami;
     private int nuki;
-    
+
+    /**
+     *Hozzáadja a paraméterként kapott erőforrásokat a meglévőkhöz.
+     *
+     * @param resource paraméterként kapott erőforrás
+     */
     public void Add(Resource resource)
     {
+        Logger.NewFunctionCall(this, "Add");
+        Logger.ReturnFunction();
     }
-    
+
+    /**
+     *A paraméterként kapott erőforrásokat elveszi a meglévőektől.
+     *
+     * @param resource paraméterként kapott erőforrás
+     */
     public void Remove(Resource resource)
     {
+        Logger.NewFunctionCall(this, "Remove");
+        Logger.ReturnFunction();
     }
         /*public void AddAmi(int ami)
         {

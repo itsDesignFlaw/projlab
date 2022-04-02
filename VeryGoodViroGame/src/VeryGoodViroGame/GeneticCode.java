@@ -9,29 +9,59 @@ package VeryGoodViroGame;//
 //
 //
 
-
-public class GeneticCode
-{
+/**
+ *Ez az osztály felelős a hozzájuk tartozó vakcinák és vírusok létrehozásáért,
+ * ezek reprezentálják a virológusok craftolási képességét is.
+ */
+public class GeneticCode {
     private Resource cost;
     private Agent a;
-    
-    public Agent CreateVirus()
-    {
+
+    /**
+     *Beállitja a cost értékét.
+     * @param r az átadni kivánt resource érték
+     */
+    public void setCost(Resource r) {
+        cost = r;
+    }
+    /**
+     *Beállitja az a (ágens amit a genetikai kód tartalmaz) értékét.
+     * @param agent az átadni kivánt ágens
+     */
+    public void setAgent(Agent agent) {
+        a = agent;
+    }
+    /**
+     * létrehozza az adott genetikai kódhoz tartozó vírust.
+     * @return a leklónozott ágens
+     */
+    public Agent CreateVirus() {
+        Logger.NewFunctionCall(this, "CreateVirus");
         Agent clone = a.Clone();
         Timer.AddSteppable(clone);
+        Logger.ReturnFunction();
         return clone;
     }
-    
-    public Agent CreateVaccine()
-    {
+    /**
+     * létrehozza az adott genetikai kódhoz tartozó vakcinát.
+     * @return a leklónozott ágenshez tartozó vakcina
+     */
+    public Agent CreateVaccine() {
+        Logger.NewFunctionCall(this, "CreateVaccine");
         Agent clone = a.Clone();
         Vaccine vaccine = new Vaccine(clone);
         Timer.AddSteppable(vaccine);
+        Logger.ReturnFunction();
         return vaccine;
     }
-    
-    public Resource GetCost()
-    {
+
+    /**
+     * visszatér az adott ágens létrehozásához szükséges erőforrásbeli költséggel.
+     * @return a megadott kőltség
+     */
+    public Resource GetCost() {
+        Logger.NewFunctionCall(this, "GetCost");
+        Logger.ReturnFunction();
         return cost;
     }
 }

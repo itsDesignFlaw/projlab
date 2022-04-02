@@ -5,15 +5,28 @@ package VeryGoodViroGame;//
 //  @ Project : Untitled
 //  @ File Name : VeryGoodViroGame.EquipmentCoat.java
 //  @ Date : 2022. 03. 27.
-//  @ Author : 
+//  @ Author :
 //
 //
 
-
+/**
+ * A védőköpeny védőfelszerelést reprezentálja,
+ * az ezt viselő virológusra kent ágenseket tartja távol 82,3%-os hatásfokkal.
+ */
 public class EquipmentCoat extends Equipment
 {
+    /**
+     *(InvItem metódus) véletlenszerűen, előre megadott eséllyel blokkolja
+     * (hamis érték visszaadásával) az ágens felkenődését
+     *
+     * @param  agent az ágens amit fel akar kenni a felkeno virologus
+     * @param  source az a virológus aki fel akarja kenni az agenst
+     */
     public boolean CanAgentBeApplied(Agent agent, Virologist source)
     {
-        return false;
+        Logger.NewFunctionCall(this, "Clone");
+        boolean answer = Logger.AskQuestion("Can the agent be applied to the virologist");
+        Logger.ReturnFunction();
+        return answer;
     }
 }

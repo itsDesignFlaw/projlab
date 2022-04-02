@@ -10,18 +10,69 @@ package VeryGoodViroGame;//
 //
 
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class Field
-{
-	List<Virologist> virologists;
-	private List<Field> neighbours;
-	public void AcceptViro(Virologist v) { }
-	public void Interact(Virologist v) { }
-	public void RemoveViro(Virologist v) { }
-	
-	public Field GetRandomNeighbour()
-	{
-		return null;
-	}
+
+/**
+ * Az egyszerű mezőt reprezentálja, melyen a virológusok mozoghatnak. Ismernie kell, adott mezőn, mely virológusok állnak.
+ */
+public class Field {
+    List<Virologist> virologists;
+    private List<Field> neighbours;
+
+    public Field(){
+        neighbours = new ArrayList<Field>();
+    }
+    /**
+     * A virológus mezőre lépésekor ezt a függvényt kell meghívni a virolgóust paraméterként átadva, ezáltal tudja a mező befogadni.
+     *
+     * @param v A virológus aki a mezőre lép.
+     */
+    public void AcceptViro(Virologist v) {
+        Logger.NewFunctionCall(this, "AcceptViro");
+        v.SetField(this);
+        Logger.ReturnFunction();
+    }
+
+    /**
+     * Ha egy virológus rajta van egy mezőn, akkor lehetősége van a mezővel interaktálni.
+     *
+     * @param v A virológus aki a mezőn van.
+     */
+    public void Interact(Virologist v) {
+        Logger.NewFunctionCall(this, "Interact");
+        Logger.ReturnFunction();
+    }
+
+    /**
+     * Ez a metódus felelős azért, hogy a virológust le tudjuk venni a mezőről, amikor az el akarja hagyni azt.
+     *
+     * @param v A virológus aki a mezőt el akarja hagyni.
+     */
+    public void RemoveViro(Virologist v) {
+        Logger.NewFunctionCall(this, "RemoveViro");
+        Logger.ReturnFunction();
+    }
+
+    /**
+     * Ez a metódus felelős azért, hogy a mezőnek felvegyünk egy szomszédot.
+     *
+     * @param f A leendő szomszédos mező.
+     */
+    public void AddNeighbour(Field f) {
+        Logger.NewFunctionCall(this, "AddNeighbour");
+        neighbours.add(f);
+        Logger.ReturnFunction();
+    }
+
+    /**
+     * Visszaad egyet a környező mezők közül, random.
+     */
+    public Field GetRandomNeighbour() {
+        Logger.NewFunctionCall(this, "GetRandomNeighbour");
+        Logger.ReturnFunction();
+        //majd itt randomot kell visszaadnia
+        return neighbours.get(0);
+    }
 }

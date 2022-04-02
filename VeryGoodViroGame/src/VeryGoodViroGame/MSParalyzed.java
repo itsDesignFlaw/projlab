@@ -9,12 +9,22 @@ package VeryGoodViroGame;//
 //
 //
 
-
+/**
+ * Ez az osztály a virológus bénult állapotában való mozgásáért felelős.
+ */
 public class MSParalyzed implements iMoveStrategy
 {
+    /**
+     * Ez a metódus akkor hívódik meg, amikor a virológus bénult állapotban mozogni próbál,
+     * ilyenkor nem tud mozogni.
+     * @param v A virológus, akin a mozgást végrehajtjuk.
+     * @param from a Mező amiről mozgatjuk a virológust
+     * @param to a Mező amire mozgatjuk a virológust
+     */
     @Override
     public void ExecuteMove(Virologist v, Field from, Field to)
     {
-    
+        Logger.NewFunctionCall(this,"ExecuteMove");
+        Logger.ReturnFunction();
     }
 }

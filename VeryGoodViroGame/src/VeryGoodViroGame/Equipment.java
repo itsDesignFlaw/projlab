@@ -9,8 +9,12 @@ package VeryGoodViroGame;//
 //
 //
 
-
+/**
+ * A virológusok által felvehető felszerelések/ruhadarabok.
+ * Alapvető célja, hogy ezeket az interaktív osztályok közös kezelését elősegítse.
+ */
 public abstract class Equipment extends InvItem
 {
+    
     Virologist host;
 }
