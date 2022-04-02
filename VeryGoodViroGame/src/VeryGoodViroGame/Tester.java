@@ -8,23 +8,33 @@ public class Tester
     
     static
     {
-        testcases.add(new TestCase("SimpleMoveStrategy moves virologist", "Modellezzük a folyamatot, amikor a " +
-                                                                          "virológus bármiféle ágens hatása nélkül " + "mozog", () ->
-        {
+        //how to: teszteset: név, description, lambda a tesztre
+        testcases.add(new TestCase(
+                "SimpleMoveStrategy moves virologist",
+                "Modellezzük a folyamatot, amikor a virológus bármiféle ágens hatása nélkül " + "mozog",
+        () -> {
+            //itt a kommunikációs diagram alapján inicializáljuk a példányokat, a 'környezetet'
             Field from = new Field();
             Field to = new Field();
             Virologist virologist = new Virologist();
             MSSimple ms = new MSSimple();
             virologist.ChangeMoveStrategy(ms);
             virologist.SetField(from);
-            //ENTER
-            
+
+
+            //Ha megvagyunk, elindítjuk a loggert (innentől loggolja a hívásokat)
+            //ez visszaállítja a statikus osztályok állapotát (pl timer steppablejei, gamemanager-hez kötött map)
             Logger.Start();
             Object[] obdzss = {from, to, virologist, ms};
             String[] neveqh = {"f1", "f2", "v1", "ms"};
+            //itt két tömbben a példányokat és a nevesítésüket rögzítjük
+            //statikus osztály (gamemanager/timer) esetében nem tudunk, és nem is kell írni bele semmit
             Logger.AddObjectNames(obdzss, neveqh);
-            
+            //átadjuk a loggernek a listáinkat, így tudja milyen nevet írjon ki
+
+            //a kommunikációs diagram utolsó metódushívása, ezzel indul meg a tesztelés
             virologist.MoveTo(to);
+            //ezzel vége a tesztesetnek
         }));
         
         testcases.add(new TestCase("VitusDanceMoveStrategy randomly moves virologist",
@@ -315,22 +325,23 @@ public class Tester
                                                                       "regisztrált steppable példányt léptet, " +
                                                                       "szimulálva ezzel a játék időbeli haladását",
                 () ->
-        {
-            Timer.steppable_reg.clear();
-            Virologist v = new Virologist();
-            Forget a = new Forget();
-            a.Apply(v, v);
-            Timer.AddSteppable(a);
-            //ENTER
-            Logger.Start(false);
-            Object[] obdzss = {v, a};
-            String[] neveqh = {"v", "a"};
-            Logger.AddObjectNames(obdzss, neveqh);
-            
-            Timer.Step(); //todo: nem mukodik :( (Zoli: már talán működik)
-            
-            //es aztan maga a tesz
-        }));
+                {
+                    Virologist v = new Virologist();
+                    Forget a = new Forget();
+                    a.Apply(v, v);
+                    //ENTER
+                    Logger.Start();
+                    Object[] obdzss = {v, a};
+                    String[] neveqh = {"v", "a"};
+                    Logger.AddObjectNames(obdzss, neveqh);
+
+                    Logger.SetEnabled(false);
+                    Timer.AddSteppable(a);
+                    Logger.SetEnabled(true);
+                    Timer.Step(); //todo: rossz a teszteset, az iMoveStrategy-s dolog miatt itt ez rossz
+
+                    //es aztan maga a tesz
+                }));
         testcases.add(new TestCase("All tests", "Minden feljebbi teszt egymás után sorrendben", () ->
         {
             for(int i = 0; i < testcases.size(); i++)
