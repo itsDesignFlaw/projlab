@@ -195,6 +195,7 @@ public class Virologist
             }
         }
         AddItem(agent);
+        
         Logger.ReturnFunction();
         return true;
     }
@@ -430,5 +431,6 @@ public class Virologist
     {
         e.Use(target);
     }
+    
 }
 

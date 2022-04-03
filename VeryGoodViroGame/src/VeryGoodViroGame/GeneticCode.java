@@ -10,43 +10,55 @@ package VeryGoodViroGame;//
 //
 
 /**
- *Ez az osztály felelős a hozzájuk tartozó vakcinák és vírusok létrehozásáért,
+ * Ez az osztály felelős a hozzájuk tartozó vakcinák és vírusok létrehozásáért,
  * ezek reprezentálják a virológusok craftolási képességét is.
  */
-public class GeneticCode {
-    private Resource cost;
-    private Agent a;
-
+public class GeneticCode
+{
+    protected Resource cost;
+    protected Agent a;
+    
     /**
-     *Beállitja a cost értékét.
+     * Beállitja a cost értékét.
+     *
      * @param r az átadni kivánt resource érték
      */
-    public void setCost(Resource r) {
+    public void setCost(Resource r)
+    {
         cost = r;
     }
+    
     /**
-     *Beállitja az a (ágens amit a genetikai kód tartalmaz) értékét.
+     * Beállitja az a (ágens amit a genetikai kód tartalmaz) értékét.
+     *
      * @param agent az átadni kivánt ágens
      */
-    public void setAgent(Agent agent) {
+    public void setAgent(Agent agent)
+    {
         a = agent;
     }
+    
     /**
      * létrehozza az adott genetikai kódhoz tartozó vírust.
+     *
      * @return a leklónozott ágens
      */
-    public Agent CreateVirus() {
+    public Agent CreateVirus()
+    {
         Logger.NewFunctionCall(this, "CreateVirus");
         Agent clone = a.Clone();
         Timer.AddSteppable(clone);
         Logger.ReturnFunction();
         return clone;
     }
+    
     /**
      * létrehozza az adott genetikai kódhoz tartozó vakcinát.
+     *
      * @return a leklónozott ágenshez tartozó vakcina
      */
-    public Agent CreateVaccine() {
+    public Agent CreateVaccine()
+    {
         Logger.NewFunctionCall(this, "CreateVaccine");
         Agent clone = a.Clone();
         Vaccine vaccine = new Vaccine(clone);
@@ -54,12 +66,14 @@ public class GeneticCode {
         Logger.ReturnFunction();
         return vaccine;
     }
-
+    
     /**
      * visszatér az adott ágens létrehozásához szükséges erőforrásbeli költséggel.
+     *
      * @return a megadott kőltség
      */
-    public Resource GetCost() {
+    public Resource GetCost()
+    {
         Logger.NewFunctionCall(this, "GetCost");
         Logger.ReturnFunction();
         return cost;

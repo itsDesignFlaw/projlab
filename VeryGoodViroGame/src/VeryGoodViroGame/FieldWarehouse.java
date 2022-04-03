@@ -10,31 +10,40 @@ package VeryGoodViroGame;//
 //
 
 /**
- *Egy speciális mező, a raktárat valósítja meg.
+ * Egy speciális mező, a raktárat valósítja meg.
  * Felelőssége, adott raktárban anyagok létezésének
  * valamint felvételének biztosítása.
  */
-public class FieldWarehouse extends Field {
+public class FieldWarehouse extends Field
+{
     private Resource resources;
-
+    
     /**
      * Ez a metódus valósítja meg a feladat szövege szerinti felszerelés felvételét.
      *
      * @param v A virológus aki a mezőn van.
      */
-    public void Interact(Virologist v) {
+    public void Interact(Virologist v)
+    {
         Logger.NewFunctionCall(this, "Interact");
         v.AddResource(resources);
         Logger.ReturnFunction();
     }
-
+    
     /**
      * Ez a metódus valósítja meg, hogy az adott mezőn milyen felszerelés jelenjen meg.
      *
      * @param r felszerelés
      */
-    public void setResource(Resource r) {
+    public void setResource(Resource r)
+    {
         resources = r;
+    }
+    
+    @Override
+    public void Destroy()
+    {
+        resources = null;
     }
 }
 
