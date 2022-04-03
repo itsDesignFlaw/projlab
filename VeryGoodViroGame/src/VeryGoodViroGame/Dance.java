@@ -16,15 +16,10 @@ package VeryGoodViroGame;//
  */
 public class Dance extends Agent
 {
-    /**
-     * Vitustánc vírus felkenéséért felelős metódus.
-     *
-     * @param  source az ágenst felkenő virológus
-     * @param  target az a virológus akire felkenik az ágenst
-     */
-    public void Apply(Virologist source, Virologist target)
+    public Dance()
     {
-        Logger.NewFunctionCall(this, "Apply");
-        Logger.ReturnFunction();
+        super();
+        strategy = new MSVitusDance();
     }
+    
 }

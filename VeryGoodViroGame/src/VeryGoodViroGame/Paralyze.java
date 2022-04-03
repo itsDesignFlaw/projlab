@@ -17,8 +17,14 @@ package VeryGoodViroGame;//
  */
 public class Paralyze extends Agent
 {
+    public Paralyze()
+    {
+        super();
+        strategy = new MSParalyzed();
+    }
+    
     /**
-     *(InvItem metódus) Mindig igazat ad vissza, tehát ilyenkor kifosztható.
+     * (InvItem metódus) Mindig igazat ad vissza, tehát ilyenkor kifosztható.
      *
      * @return boolean visszatérési érték, mindig igaz
      */
@@ -28,10 +34,10 @@ public class Paralyze extends Agent
         Logger.ReturnFunction();
         return true;
     }
-
-
+    
+    
     /**
-     *(InvItem metódus) Hamisat ad vissza, a virológus nem tud ágenst felkenni.
+     * (InvItem metódus) Hamisat ad vissza, a virológus nem tud ágenst felkenni.
      *
      * @return boolean visszatérési érték, mindig hamis
      */
@@ -41,9 +47,9 @@ public class Paralyze extends Agent
         Logger.ReturnFunction();
         return false;
     }
-
+    
     /**
-     *(InvItem metódus) Hamisat ad vissza, a virológus nem tud lopni.
+     * (InvItem metódus) Hamisat ad vissza, a virológus nem tud lopni.
      *
      * @return boolean visszatérési érték, mindig hamis
      */
@@ -53,9 +59,9 @@ public class Paralyze extends Agent
         Logger.ReturnFunction();
         return false;
     }
-
+    
     /**
-     *(InvItem metódus) Hamisat ad vissza, a virológus nem tud ágenst létrehozni.
+     * (InvItem metódus) Hamisat ad vissza, a virológus nem tud ágenst létrehozni.
      *
      * @return boolean visszatérési érték, mindig hamis
      */
@@ -65,9 +71,9 @@ public class Paralyze extends Agent
         Logger.ReturnFunction();
         return false;
     }
-
+    
     /**
-     *(InvItem metódus) Hamisat ad vissza, a virológus nem tud adott mezőkkel a megfelelő módon interaktálni.
+     * (InvItem metódus) Hamisat ad vissza, a virológus nem tud adott mezőkkel a megfelelő módon interaktálni.
      *
      * @return boolean visszatérési érték, mindig hamis
      */
@@ -76,17 +82,5 @@ public class Paralyze extends Agent
         Logger.NewFunctionCall(this, "CanInteract");
         Logger.ReturnFunction();
         return false;
-    }
-
-    /**
-     *A forrás virológus felkeni a paralyze vírust a targetre, és átállítja a movestrategyt.
-     *
-     * @param  source az ágenst felkenő virológus
-     * @param  target az a virológus akire felkenik az ágenst
-     */
-    public void Apply(Virologist source, Virologist target)
-    {
-        Logger.NewFunctionCall(this, "Apply");
-        Logger.ReturnFunction();
     }
 }
