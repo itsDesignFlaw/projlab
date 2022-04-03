@@ -17,4 +17,10 @@ public abstract class Equipment extends InvItem
 {
     
     Virologist host;
+    
+    public void Use(Virologist target)
+    {
+        Logger.NewFunctionCall(this, "Use");
+        Logger.ReturnFunction();
+    }
 }

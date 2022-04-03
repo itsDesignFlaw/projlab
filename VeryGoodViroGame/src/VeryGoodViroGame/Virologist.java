@@ -414,5 +414,21 @@ public class Virologist
         moveStrategy.ExecuteMove(this, mezo, to);
         Logger.ReturnFunction();
     }
+    
+    /**
+     * Nem írja a szöveg, hogy csak a medvével fertőzött Virológust lehet megölni,
+     * szóval mindenkit meg lehet
+     */
+    public void KillVirologist()
+    {
+        Logger.NewFunctionCall(this, "KillVirologist");
+        //dead
+        Logger.ReturnFunction();
+    }
+    
+    public void UseEquipment(Equipment e, Virologist target)
+    {
+        e.Use(target);
+    }
 }
 
