@@ -33,7 +33,7 @@ public class EquipmentGloves extends Equipment
         remainingHealth--;
         if(remainingHealth == 0)
         {
-            host.RemoveEquipment(this);
+            host.DestroyEquipment(this);
         }
         Logger.ReturnFunction();
         return false;

@@ -17,6 +17,7 @@ public abstract class Equipment extends InvItem
 {
     
     Virologist host;
+    String name = "";
     
     public void Use(Virologist target)
     {
