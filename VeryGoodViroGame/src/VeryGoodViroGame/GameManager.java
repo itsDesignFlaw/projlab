@@ -9,6 +9,8 @@ package VeryGoodViroGame;//
 //
 //
 
+import VeryGoodViroGame.Field.Map;
+
 /**
  *Ez a statikus osztály felelős az új játék elindításáért, és a játék befejezéséért.
  */

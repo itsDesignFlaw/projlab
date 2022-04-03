@@ -9,6 +9,8 @@ package VeryGoodViroGame;//
 //
 //
 
+import VeryGoodViroGame.Agent.Agent;
+
 /**
  * Ez az osztály felel a játékban kifejtett hatások definiálásáért.
  * Minden olyan itemnek (vagy azokhoz köthető osztálynak, pl Ágensek),

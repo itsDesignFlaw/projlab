@@ -1,5 +1,16 @@
 package VeryGoodViroGame;
 
+import VeryGoodViroGame.Agent.*;
+import VeryGoodViroGame.Equipment.EquipmentGloves;
+import VeryGoodViroGame.Equipment.EquipmentSack;
+import VeryGoodViroGame.Field.Field;
+import VeryGoodViroGame.Field.FieldBunker;
+import VeryGoodViroGame.Field.FieldLab;
+import VeryGoodViroGame.Field.FieldWarehouse;
+import VeryGoodViroGame.MoveStrategy.MSParalyzed;
+import VeryGoodViroGame.MoveStrategy.MSSimple;
+import VeryGoodViroGame.MoveStrategy.MSVitusDance;
+
 import java.util.ArrayList;
 
 public class Tester

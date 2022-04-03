@@ -1,4 +1,7 @@
-package VeryGoodViroGame;
+package VeryGoodViroGame.MoveStrategy;
+
+import VeryGoodViroGame.Field.Field;
+import VeryGoodViroGame.Virologist;
 
 /**
  * Ez egy interface, ami előírja, hogy milyen metódusokkal kell rendelkeznie azoknak az osztályoknak,

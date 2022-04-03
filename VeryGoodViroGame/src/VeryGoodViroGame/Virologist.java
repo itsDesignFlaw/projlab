@@ -10,6 +10,13 @@ package VeryGoodViroGame;//
 //
 
 
+import VeryGoodViroGame.Agent.Agent;
+import VeryGoodViroGame.Agent.GeneticCode;
+import VeryGoodViroGame.Equipment.Equipment;
+import VeryGoodViroGame.Field.Field;
+import VeryGoodViroGame.MoveStrategy.MSSimple;
+import VeryGoodViroGame.MoveStrategy.iMoveStrategy;
+
 import java.util.ArrayList;
 import java.util.List;
 

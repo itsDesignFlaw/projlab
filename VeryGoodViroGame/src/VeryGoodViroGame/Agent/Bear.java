@@ -1,4 +1,6 @@
-package VeryGoodViroGame;
+package VeryGoodViroGame.Agent;
+
+import VeryGoodViroGame.MoveStrategy.MSBear;
 
 public class Bear extends Agent
 {

@@ -1,4 +1,7 @@
-package VeryGoodViroGame;
+package VeryGoodViroGame.Equipment;
+
+import VeryGoodViroGame.Logger;
+import VeryGoodViroGame.Virologist;
 
 public class EquipmentAxe extends Equipment
 {

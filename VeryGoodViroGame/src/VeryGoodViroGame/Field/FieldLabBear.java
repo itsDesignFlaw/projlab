@@ -1,4 +1,8 @@
-package VeryGoodViroGame;
+package VeryGoodViroGame.Field;
+
+import VeryGoodViroGame.Agent.Bear;
+import VeryGoodViroGame.Logger;
+import VeryGoodViroGame.Virologist;
 
 public class FieldLabBear extends FieldLab
 {

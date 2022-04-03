@@ -1,4 +1,9 @@
-package VeryGoodViroGame;
+package VeryGoodViroGame.MoveStrategy;
+
+import VeryGoodViroGame.Agent.Bear;
+import VeryGoodViroGame.Field.Field;
+import VeryGoodViroGame.Logger;
+import VeryGoodViroGame.Virologist;
 
 import java.util.List;
 

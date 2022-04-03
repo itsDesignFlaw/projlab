@@ -84,7 +84,7 @@ public class Logger
         return nameList.get(o);
     }
     
-    static void NewFunctionCall(Object o, String mes)
+    public static void NewFunctionCall(Object o, String mes)
     {
         if(!isEnabled)
             return;
@@ -92,7 +92,7 @@ public class Logger
         NewFunctionCallLegacy(GetObjectName(o), mes);
     }
     
-    static void ReturnFunction()
+    public static void ReturnFunction()
     {
         if(isEnabled)
         {
@@ -164,7 +164,7 @@ public class Logger
         isFirst = false;
     }
     
-    static boolean AskQuestion(String question)
+    public static boolean AskQuestion(String question)
     {
         if(isEnabled)
         {
