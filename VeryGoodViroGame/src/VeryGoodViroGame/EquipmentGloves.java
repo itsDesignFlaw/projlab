@@ -15,18 +15,26 @@ package VeryGoodViroGame;//
  */
 public class EquipmentGloves extends Equipment
 {
+    private int remainingHealth = 3;
+    
+    
     /**
      * (InvItem metódus) hamis érték visszaadásával blokkolja
      * az ágens felkenődését, illetve véletlenszerűen, előre
      * megadott eséllyel visszakeni az ágenst az eredeti kenőre.
      *
-     * @param  agent maga az ágens amivel kenni próbálnak
-     * @param  source az ágenst felkenő virológus
+     * @param agent  maga az ágens amivel kenni próbálnak
+     * @param source az ágenst felkenő virológus
      */
     public boolean CanAgentBeApplied(Agent agent, Virologist source)
     {
-        Logger.NewFunctionCall(this,"CanAgentBeApplied");
+        Logger.NewFunctionCall(this, "CanAgentBeApplied");
         source.ApplyAgent(agent, host);
+        remainingHealth--;
+        if(remainingHealth == 0)
+        {
+            host.RemoveEquipment(this);
+        }
         Logger.ReturnFunction();
         return false;
     }
