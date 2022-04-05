@@ -20,6 +20,10 @@ namespace VeryGoodViroGame
     public class GameManager
     {
         static Map map;
+
+        static List<Virologist> playableVirologists = new List<Virologist>();
+        static EntityManager entityManager;
+
         /// <summary>
         /// Ez a metódus felelős a játék elindításáért.
         /// </summary>
@@ -39,6 +43,14 @@ namespace VeryGoodViroGame
         {
             Logger.NewFunctionCallLegacy("GameManager", "EndGame");
             Logger.ReturnFunction();
+        }
+
+        public static void RemoveFromPlayable(Virologist viro)
+        {
+            if (playableVirologists.Count == 0)
+                EndGame(null);
+            else
+                playableVirologists.Remove(viro);
         }
     }
 } //

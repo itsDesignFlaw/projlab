@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\Projlab\\tervezes\\uml_gen\\uml_generator\\uml_generator.csproj": {}
+    "D:\\egyetem\\projlabthc\\xd\\geci\\projlab\\tervezes\\uml_gen\\uml_generator\\uml_generator.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\Projlab\\tervezes\\uml_gen\\uml_generator\\uml_generator.csproj": {
+    "D:\\egyetem\\projlabthc\\xd\\geci\\projlab\\tervezes\\uml_gen\\uml_generator\\uml_generator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\Projlab\\tervezes\\uml_gen\\uml_generator\\uml_generator.csproj",
+        "projectUniqueName": "D:\\egyetem\\projlabthc\\xd\\geci\\projlab\\tervezes\\uml_gen\\uml_generator\\uml_generator.csproj",
         "projectName": "uml_generator",
-        "projectPath": "C:\\Projects\\Projlab\\tervezes\\uml_gen\\uml_generator\\uml_generator.csproj",
-        "packagesPath": "C:\\Users\\Zoli\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\Projlab\\tervezes\\uml_gen\\uml_generator\\obj\\",
+        "projectPath": "D:\\egyetem\\projlabthc\\xd\\geci\\projlab\\tervezes\\uml_gen\\uml_generator\\uml_generator.csproj",
+        "packagesPath": "C:\\Users\\Armand\\.nuget\\packages\\",
+        "outputPath": "D:\\egyetem\\projlabthc\\xd\\geci\\projlab\\tervezes\\uml_gen\\uml_generator\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Zoli\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Armand\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -58,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

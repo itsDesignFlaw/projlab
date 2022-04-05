@@ -9,9 +9,15 @@ namespace VeryGoodViroGame
     {
         public Bear(): base()
         {
-            strategy = new MSBear();
+            //strategy = new MSBear();
         }
 
+        public override void Apply(Virologist source, Virologist target)
+        {
+            base.Apply(source, target);
+        }
+
+        
         public override void Step()
         {
         }
