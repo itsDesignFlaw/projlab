@@ -1,8 +1,6 @@
 package VeryGoodViroGame;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 
 public class Main {
 
@@ -42,14 +40,23 @@ public class Main {
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         System.out.println("--== Biden Teszteloprogramja©®™ ==--");
 
-        while (true) {
-            Tester.ListTests();
-            if (AskRunTest())
-                break;
+        if (args.length>0)
+        {
+            ConsoleIO.RunCMD("load", args);
         }
+        else
+        {
+            while (true) {
+                Tester.ListTests();
+                if (AskRunTest())
+                    break;
+            }
+        }
+
     }
+
 
 }
