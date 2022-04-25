@@ -12,6 +12,7 @@ package VeryGoodViroGame.Field;//
 
 import VeryGoodViroGame.Logger;
 import VeryGoodViroGame.Virologist;
+import VeryGoodViroGame.XRandom;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -81,7 +82,7 @@ public class Field
         Logger.ReturnFunction();
     }
     
-    Random r = new Random();
+    XRandom r = new XRandom();
     
     /**
      * Visszaad egyet a környező mezők közül, random.

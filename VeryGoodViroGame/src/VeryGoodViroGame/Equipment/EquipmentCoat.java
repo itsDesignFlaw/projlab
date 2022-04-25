@@ -12,6 +12,7 @@ package VeryGoodViroGame.Equipment;//
 import VeryGoodViroGame.Agent.Agent;
 import VeryGoodViroGame.Logger;
 import VeryGoodViroGame.Virologist;
+import VeryGoodViroGame.XRandom;
 
 import java.util.Random;
 
@@ -22,7 +23,7 @@ import java.util.Random;
 public class EquipmentCoat extends Equipment
 {
     static final float Chance = 0.17f;//Nem emlékszem pontosan mennyi, és hogy így csináljuk e vagy fordítva
-    Random r = new Random();
+    XRandom r = new XRandom();
     
     /**
      * (InvItem metódus) véletlenszerűen, előre megadott eséllyel blokkolja

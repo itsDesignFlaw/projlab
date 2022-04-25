@@ -200,35 +200,67 @@ public class ConsoleIO
         cmds.put("use", (args) ->
         {
             Object v = EntityManager.GetObjectByName(args[0]);
-            if(v instanceof Virologist viro)
+            Object v2 = EntityManager.GetObjectByName(args[1]);
+            if(v instanceof Virologist viro && v2 instanceof Virologist viro2)
             {
-                if(args[1].equals("agent"))
+                if(args[2].equals("agent"))
                 {
-                
+                    viro.UseAgent(viro.stash.get(Integer.parseInt(args[3])), viro2);
                 }
                 else
                 {
-                
+                    viro.UseEquipment(viro2.equipments.get(Integer.parseInt(args[3])), viro2);
                 }
             }
             return "";
         });
         cmds.put("step", (args) ->
         {
+            Timer.Step();
             return "";
         });
         cmds.put("random", (args) ->
         {
+            XRandom.randoms.add(Float.parseFloat(args[0]));
             return "";
         });
         
         cmds.put("add", (args) ->
         {
+            Object v = EntityManager.GetObjectByName(args[2]);
+            if(v instanceof Virologist viro)
+            {
+                if(args[0].equals("agent"))
+                {
+                    Object agent = EntityManager.GetObjectByName(args[1]);
+                    if(agent instanceof Agent a)
+                    {
+                        if(args.length == 4 && args[3].equals("1"))
+                            viro.stash.add(a);
+                        else
+                            viro.AddItem(a);
+                    }
+                }
+                else
+                {
+                    Object equipment = EntityManager.GetObjectByName(args[1]);
+                    if(equipment instanceof Equipment eq)
+                    {
+                        viro.AddEquipment(eq);
+                    }
+                }
+            }
             return "";
         });
         
         cmds.put("putviro", (args) ->
         {
+            Object v = EntityManager.GetObjectByName(args[0]);
+            Object f = EntityManager.GetObjectByName(args[1]);
+            if(v instanceof Virologist viro && f instanceof Field field)
+            {
+                field.AcceptViro(viro);
+            }
             return "";
         });
         
