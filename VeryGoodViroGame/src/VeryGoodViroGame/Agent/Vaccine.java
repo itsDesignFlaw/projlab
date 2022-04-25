@@ -55,6 +55,6 @@ public class Vaccine extends Agent
     @Override
     public String toString()
     {
-        return super.toString() + "\n\tagentToCure: " + agentToCure.getClass().getName();
+        return super.toString() + "\n\tagentToCure: " + agentToCure.getClass().getSimpleName();
     }
 }

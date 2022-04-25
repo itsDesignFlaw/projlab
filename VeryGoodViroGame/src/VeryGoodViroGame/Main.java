@@ -69,12 +69,21 @@ public class Main
                     break;
             }
         }*/
-        Scanner sc = new Scanner(System.in);
-        //TODO: WIP
-        while(true)
+        if(args.length == 0)
         {
-            String[] s = sc.nextLine().split(" ");
-            ConsoleIO.RunCMD(s[0], Arrays.stream(s).skip(1).toArray(String[]::new));
+            Scanner sc = new Scanner(System.in);
+            //TODO: WIP
+            while(true)
+            {
+                String[] s = sc.nextLine().split(" ");
+                if(s[0].equalsIgnoreCase("exit"))
+                    break;
+                ConsoleIO.RunCMD(s[0], Arrays.stream(s).skip(1).toArray(String[]::new));
+            }
+        }
+        else
+        {
+            ConsoleIO.RunCMD("load", args);
         }
     }
 }

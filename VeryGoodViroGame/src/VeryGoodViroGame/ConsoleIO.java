@@ -32,7 +32,7 @@ public class ConsoleIO
         cmds.put("load", (args) ->
         {
             //print(false, "dev:" + args[0] + " l:" + args.length + " a: " + args[0].split(".")[0]);
-            String[] fileext = args[0].split(".");
+            String[] fileext = args[0].split("\\.");
             if(fileext.length == 0)
                 fileext = new String[]{args[0]};
             String flname = fileext[0];
@@ -81,7 +81,7 @@ public class ConsoleIO
             for(String name : EntityManager.namedObjects.keySet())
             {
                 String value = EntityManager.namedObjects.get(name).toString();
-                print(false, "name: " + name + "\n" + value.toString());
+                print(false, "name: " + name + "\n" + value);
             }
             return "";
         });
@@ -121,8 +121,7 @@ public class ConsoleIO
             Object b = EntityManager.GetObjectByName(args[0]);
             if(b instanceof FieldBunker)
             {
-                //TODO: Mi legyen a neve?
-                ((FieldBunker) b).setEquipment((Equipment) EntityManager.CreateEntity(args[1], "palceholder"));
+                ((FieldBunker) b).setEquipment((Equipment) EntityManager.CreateEntity(args[1]));
             }
             return "";
         });
@@ -131,8 +130,7 @@ public class ConsoleIO
             Object l = EntityManager.GetObjectByName(args[0]);
             if(l instanceof FieldLab)
             {
-                //TODO: Mi legyen a neve?
-                ((FieldLab) l).setCode(new GeneticCode((Agent) EntityManager.CreateEntity(args[1], "placeholder")));
+                ((FieldLab) l).setCode(new GeneticCode((Agent) EntityManager.CreateEntity(args[1])));
             }
             return "";
         });
@@ -238,7 +236,7 @@ public class ConsoleIO
                         if(args.length == 4 && args[3].equals("1"))
                             viro.stash.add(a);
                         else
-                            viro.AddItem(a);
+                            a.Apply(null, viro);
                     }
                 }
                 else

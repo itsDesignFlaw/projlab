@@ -62,6 +62,15 @@ public class EntityManager
         namedObjects.put(name, object);
     }
     
+    public static Object CreateEntity(String classname)
+    {
+        int db = 0;
+        while(namedObjects.containsKey(classname + db))
+            db++;
+        
+        return CreateEntity(classname, classname + db);
+    }
+    
     public static Object CreateEntity(String classname, String name)
     {
         if(!EntityGen.containsKey(classname))

@@ -141,13 +141,9 @@ public class Main
                 if(nodemap[x][y].equals("field"))
                 {
                     inspectedFieldCount++;
-                    double chance = (double) inspectedFieldCount / remainingSpots;
-                    if(chance < rand.nextDouble(1))
-                    {
-                        placeSomething(x, y, nodemap);
-                        if(GetPlaceableLeft() <= 0)
-                            return nodemap;
-                    }
+                    placeSomething(x, y, nodemap);
+                    if(GetPlaceableLeft() <= 0)
+                        return nodemap;
                 }
             }
         }
@@ -196,7 +192,7 @@ public class Main
     {
         int sd = maxfields;
         
-        String ret = "";
+        StringBuilder ret = new StringBuilder();
         
         //connect each row
         for(int x = 0; x < sd; x++)
@@ -217,49 +213,127 @@ public class Main
                 }
             }
         }
+        placed_fields.replaceAll((k, v) -> v = 1);
         
-        return ret;
+        for(int i = 0; i < maxfields; i++)
+        {
+            for(int j = 0; j < maxfields; j++)
+            {
+                if(!nodemap[i][j].equals(""))
+                {
+                    String name = getFieldName(nodemap, i, j);
+                    placed_fields.put(nodemap[i][j], placed_fields.get(nodemap[i][j]) + 1);
+                    nodemap[i][j] = name;
+                }
+            }
+        }
+        
+        for(int i = 0; i < maxfields; i++)
+        {
+            for(int j = 0; j < maxfields; j++)
+            {
+                if(!nodemap[i][j].equals(""))
+                {
+                    String name = nodemap[i][j];
+                    
+                    for(int x = i + 1; x < maxfields; x++)
+                    {
+                        if(!nodemap[x][j].equals(""))
+                        {
+                            ret.append("neighbour ").append(nodemap[x][j]).append(" ").append(name).append("\n");
+                        }
+                    }
+                    for(int y = j + 1; y < maxfields; y++)
+                    {
+                        if(!nodemap[i][y].equals(""))
+                        {
+                            ret.append("neighbour ").append(nodemap[i][y]).append(" ").append(name).append("\n");
+                        }
+                    }
+                    
+                }
+            }
+        }
+        return ret.toString();
     }
+    
+    private static String getFieldName(String[][] nodemap, int i, int j)
+    {
+        String name = "";
+        switch(nodemap[i][j])
+        {
+            case "lab" -> name = "l" + placed_fields.get("lab");
+            case "field" -> name = "f" + placed_fields.get("field");
+            case "bunker" -> name = "b" + placed_fields.get("bunker");
+            case "ware" -> name = "w" + placed_fields.get("ware");
+            case "bear" -> name = "lb" + placed_fields.get("bear");
+        }
+        return name;
+    }
+    
+    static Random r = new Random(useSeed);
+    static String[] labCodes = "forget,dance,paralyze,protect".split(",");
+    static String[] bunkerEq = "gloves,sack,coat,axe".split(",");
     
     static String CreateLab()
     {
         placed_fields.put("lab", placed_fields.get("lab") + 1);
-        return "create lab" + placed_fields.get("lab");
+        return "create l" + placed_fields.get("lab") + " lab\nlab l" + placed_fields.get("lab") + " " + labCodes[r.nextInt(labCodes.length)];
     }
     
     static String CreateField()
     {
         placed_fields.put("field", placed_fields.get("field") + 1);
-        return "create f" + placed_fields.get("field");
+        return "create f" + placed_fields.get("field") + " field";
     }
+    
+    static String CreateWare()
+    {
+        placed_fields.put("ware", placed_fields.get("ware") + 1);
+        return "create w" + placed_fields.get("ware") + " ware\nware w" + placed_fields.get("ware") + " " + r.nextInt(30) + " " + r.nextInt(30);
+    }
+    
+    static String CreateBear()
+    {
+        placed_fields.put("bear", placed_fields.get("bear") + 1);
+        return "create lb" + placed_fields.get("bear") + " bear";
+    }
+    
+    static String CreateBunker()
+    {
+        placed_fields.put("bunker", placed_fields.get("bunker") + 1);
+        return "create b" + placed_fields.get("bunker") + " bunker\nbunker b" + placed_fields.get("bunker") + " " + bunkerEq[r.nextInt(bunkerEq.length)];
+    }
+    
     
     static String CreateFields(String[][] nodemap)
     {
         int sd = maxfields;
-        String ret = "";
-        
+        StringBuilder ret = new StringBuilder();
         
         for(int x = 0; x < sd; x++)
         {
             for(int y = 0; y < sd; y++)
             {
-                if(nodemap[x][y].equals("lab"))
+                switch(nodemap[x][y])
                 {
-                    ret = ret + CreateLab() + "\n";
-                }
-                if(nodemap[x][y].equals("field"))
-                {
-                    ret = ret + CreateField() + "\n";
+                    case "lab" -> ret.append(CreateLab()).append("\n");
+                    case "field" -> ret.append(CreateField()).append("\n");
+                    case "bunker" -> ret.append(CreateBunker()).append("\n");
+                    case "ware" -> ret.append(CreateWare()).append("\n");
+                    case "bear" -> ret.append(CreateBear()).append("\n");
                 }
             }
         }
         
-        return ret;
+        return ret.toString();
     }
     
     static String GenerateMap()
     {
-        String str = CreateFields(NameFields(SelectNodes(NoiseMap())));
+        String[][] arr = NameFields(SelectNodes(NoiseMap()));
+        String str = CreateFields(arr);
+        str += "\n" + ConnectFields(arr);
         
         Path path = Paths.get(name + ".map");
         try

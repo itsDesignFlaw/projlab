@@ -110,6 +110,6 @@ public class GeneticCode
     @Override
     public String toString()
     {
-        return a.getClass().getName() + " code";
+        return a.getClass().getSimpleName() + " code";
     }
 }

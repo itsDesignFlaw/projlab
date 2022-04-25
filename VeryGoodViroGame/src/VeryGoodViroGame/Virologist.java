@@ -14,11 +14,10 @@ import VeryGoodViroGame.Agent.Agent;
 import VeryGoodViroGame.Agent.GeneticCode;
 import VeryGoodViroGame.Equipment.Equipment;
 import VeryGoodViroGame.Field.Field;
-import VeryGoodViroGame.MoveStrategy.MSSimple;
-import VeryGoodViroGame.MoveStrategy.iMoveStrategy;
+import VeryGoodViroGame.MoveStrategy.*;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.lang.reflect.InvocationTargetException;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -400,6 +399,18 @@ public class Virologist
         return mezo;
     }
     
+    static HashMap<Class, Integer> strategyPriority = new HashMap<>();
+    
+    static
+    {
+        strategyPriority.put(MSSimple.class, 0);
+        strategyPriority.put(MSVitusDance.class, 1);
+        strategyPriority.put(MSParalyzed.class, 2);
+        strategyPriority.put(MSBear.class, 3);
+    }
+    
+    HashMap<Class, Integer> strategyFifo = new HashMap<>();
+    
     /**
      * Megváltoztatja a virológus aktuális mozgási stratégiáját.
      *
@@ -407,9 +418,12 @@ public class Virologist
      */
     public void ChangeMoveStrategy(iMoveStrategy strategy)
     {
-        Logger.NewFunctionCall(this, "ChangeMoveStrategy");
-        moveStrategy = strategy;
-        Logger.ReturnFunction();
+        if(strategyPriority.get(moveStrategy.getClass()) < strategyPriority.get(strategy.getClass()))
+            moveStrategy = strategy;
+        if(strategyFifo.containsKey(strategy.getClass()))
+            strategyFifo.put(strategy.getClass(), strategyFifo.get(strategy.getClass()) + 1);
+        else
+            strategyFifo.put(strategy.getClass(), 1);
     }
     
     /**
@@ -420,9 +434,21 @@ public class Virologist
     //Hiper szuper magic függvény, mindent is tud
     public void RemoveMoveStrategy(iMoveStrategy strategy)
     {
-        Logger.NewFunctionCall(this, "RemoveMoveStrategy");
-        //42
-        Logger.ReturnFunction();
+        if(!strategyFifo.containsKey(strategy.getClass()))
+            return;
+        strategyFifo.put(strategy.getClass(), strategyFifo.get(strategy.getClass()) - 1);
+        if(strategyFifo.get(strategy.getClass()) <= 0)
+        {
+            try
+            {
+                moveStrategy =
+                        (iMoveStrategy) strategyFifo.entrySet().stream().filter(x -> x.getValue() > 0).sorted((x, y) -> strategyPriority.get(x.getKey()).compareTo(strategyPriority.get(y.getKey()))).map(Map.Entry::getKey).findFirst().orElse(MSSimple.class).getConstructor().newInstance();
+            }
+            catch(Exception e)
+            {
+                e.printStackTrace();
+            }
+        }
     }
     
     /**
@@ -456,7 +482,7 @@ public class Virologist
     @Override
     public String toString()
     {
-        return "\tmoveStrategy: " + moveStrategy.getClass().getName() + "\n\titems: " + items.stream().map(EntityManager::GetObjectName).collect(Collectors.joining(", ")) + "\n\tlearntCodes: " + learntCodes.stream().map(EntityManager::GetObjectName).collect(Collectors.joining(", ")) + "\n\tstash: " + stash.stream().map(EntityManager::GetObjectName).collect(Collectors.joining(", ")) + "\n\tmezo: " + EntityManager.GetObjectName(mezo) + "\n\tresource: " + resource.toString() + "\n\tequipments: " + equipments.stream().map(EntityManager::GetObjectName).collect(Collectors.joining(", "));
+        return "\tmoveStrategy: " + moveStrategy.getClass().getSimpleName() + "\n\titems: " + items.stream().map(EntityManager::GetObjectName).collect(Collectors.joining(", ")) + "\n\tlearntCodes: " + learntCodes.stream().map(EntityManager::GetObjectName).collect(Collectors.joining(", ")) + "\n\tstash: " + stash.stream().map(EntityManager::GetObjectName).collect(Collectors.joining(", ")) + "\n\tmezo: " + EntityManager.GetObjectName(mezo) + "\n\tresource: " + resource.toString() + "\n\tequipments: " + equipments.stream().map(EntityManager::GetObjectName).collect(Collectors.joining(", "));
     }
 }
 
