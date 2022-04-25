@@ -72,7 +72,6 @@ public class Main
         if(args.length == 0)
         {
             Scanner sc = new Scanner(System.in);
-            //TODO: WIP
             while(true)
             {
                 String[] s = sc.nextLine().split(" ");
