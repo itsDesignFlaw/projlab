@@ -20,7 +20,7 @@ import VeryGoodViroGame.Virologist;
  */
 public class FieldWarehouse extends Field
 {
-    private Resource resources;
+    private Resource resources = new Resource();
     
     /**
      * Ez a metódus valósítja meg a feladat szövege szerinti felszerelés felvételét.
@@ -30,7 +30,7 @@ public class FieldWarehouse extends Field
     public void Interact(Virologist v)
     {
         Logger.NewFunctionCall(this, "Interact");
-        v.AddResource(resources);
+        resources = v.AddResource(resources);
         Logger.ReturnFunction();
     }
     
@@ -47,7 +47,7 @@ public class FieldWarehouse extends Field
     @Override
     public void Destroy()
     {
-        resources = null;
+        resources = new Resource();
     }
 }
 

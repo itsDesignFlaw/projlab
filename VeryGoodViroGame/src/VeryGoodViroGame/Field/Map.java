@@ -26,6 +26,7 @@ public class Map
     /**
      * Ez a metódus generálja a játékteret
      */
+    //TODO!!!
     public void GenerateMap()
     {
         Logger.NewFunctionCall(this, "GenerateMap");

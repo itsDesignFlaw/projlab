@@ -16,12 +16,14 @@ import VeryGoodViroGame.MoveStrategy.iMoveStrategy;
  * Az összes ágens ősosztálya, az osztály felelőssége, hogy előírja,
  * hogyan lehet felkenni az ágenseket, és felel azért is, hogy csak adott ideig fejtsék ki a hatásukat.
  */
-public abstract class Agent extends InvItem implements iSteppable
+public abstract class Agent extends InvItem implements iSteppable, Cloneable
 {
-    int activeTime = 6969;
+    final int activeTimeDefault = 690;//jobb nevet neki
+    int activeTime = activeTimeDefault;
     //Akin van
     Virologist host;
     iMoveStrategy strategy;
+    boolean active = false;
     
     /**
      * A source paraméterként kapott virológus megkísérli felkenni az ágenst a targetként megkapott virológusra.
@@ -32,11 +34,14 @@ public abstract class Agent extends InvItem implements iSteppable
     public void Apply(Virologist source, Virologist target)
     {
         Logger.NewFunctionCall(this, "Apply");
+        host = null;
         if(target.ApplyAgent(this, source))
         {
             target.ChangeMoveStrategy(strategy);
+            host = target;
+            activeTime = activeTimeDefault;
+            active = true;
         }
-        host = target;
         Logger.ReturnFunction();
     }
     
@@ -49,8 +54,15 @@ public abstract class Agent extends InvItem implements iSteppable
         activeTime--;
         if(activeTime <= 0)
         {
-            host.RemoveMoveStrategy(strategy);
-            host.RemoveItem(this);
+            if(active)
+            {
+                host.RemoveMoveStrategy(strategy);
+                host.RemoveItem(this);
+            }
+            else
+            {
+                host.RemoveAgentFromStash(this);
+            }
             //Ezzel gáz lesz, mert nem szereti a java
             //ha foreach közben kiszedünk a listából
             //Megoldás: klónozás, vagy dead flag
@@ -66,7 +78,14 @@ public abstract class Agent extends InvItem implements iSteppable
     {
         Logger.NewFunctionCall(this, "Clone");
         Logger.ReturnFunction();
-        return this;
+        try
+        {
+            return (Agent) super.clone();
+        }
+        catch(Exception e)
+        {
+            return null;
+        }
     }
     
 }

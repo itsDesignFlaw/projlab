@@ -84,4 +84,12 @@ public class GeneticCode
         Logger.ReturnFunction();
         return cost;
     }
+    
+    public boolean CompareCodes(GeneticCode code)
+    {
+        //TODO:valami ilyesmi kéne
+        /*Class c = a.getClass();
+        return code.a instanceof c;*/
+        return false;
+    }
 }

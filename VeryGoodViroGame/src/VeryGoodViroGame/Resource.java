@@ -14,33 +14,67 @@ package VeryGoodViroGame;//
  */
 public class Resource
 {
+    
     /**
      * ami - aminosav
      * nuki - nukleotid
      */
     private int ami;
     private int nuki;
-
+    
+    
+    public Resource()
+    {
+        this(0, 0);
+    }
+    
+    public Resource(int ami, int nuki)
+    {
+        this.ami = ami;
+        this.nuki = nuki;
+    }
+    
+    
     /**
-     *Hozzáadja a paraméterként kapott erőforrásokat a meglévőkhöz.
+     * Hozzáadja a paraméterként kapott erőforrásokat a meglévőkhöz.
      *
      * @param resource paraméterként kapott erőforrás
      */
     public void Add(Resource resource)
     {
-        Logger.NewFunctionCall(this, "Add");
-        Logger.ReturnFunction();
+        ami += resource.ami;
+        nuki += resource.nuki;
+        //TODO: maxResource ötlet?
+        //plusz egy paraméter?
     }
-
+    
     /**
-     *A paraméterként kapott erőforrásokat elveszi a meglévőektől.
+     * A paraméterként kapott erőforrásokat elveszi a meglévőektől.
      *
      * @param resource paraméterként kapott erőforrás
      */
-    public void Remove(Resource resource)
+    public Resource Remove(Resource resource)
     {
-        Logger.NewFunctionCall(this, "Remove");
-        Logger.ReturnFunction();
+        if(ami >= resource.ami && nuki >= resource.nuki)
+        {
+            ami -= resource.ami;
+            nuki -= resource.nuki;
+            return resource;
+        }
+        else
+        {
+            int retami = 0, retnuki = 0;
+            retami = Math.min(ami, resource.ami);
+            retnuki = Math.min(nuki, resource.nuki);
+            ami = Math.max(ami - resource.ami, 0);
+            nuki = Math.max(nuki - resource.nuki, 0);
+            return new Resource(retami, retnuki);
+        }
+    }
+    
+    public boolean hasEnough(Resource r)
+    {
+        return ami >= r.ami && nuki >= r.nuki;
     }
         /*public void AddAmi(int ami)
         {

@@ -30,9 +30,13 @@ public class FieldBunker extends Field
     public void Interact(Virologist v)
     {
         Logger.NewFunctionCall(this, "Interact");
-        if(Logger.AskQuestion("Does the bunker have equipment in it?"))
+        if(hasEquipment)
         {
-            v.AddEquipment(equipment);
+            if(v.AddEquipment(equipment))
+            {
+                //vagy equipment = null, és ennek a vizsgálata?
+                hasEquipment = false;
+            }
         }
         Logger.ReturnFunction();
     }

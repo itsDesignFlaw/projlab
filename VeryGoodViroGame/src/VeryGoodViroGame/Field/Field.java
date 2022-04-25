@@ -15,6 +15,7 @@ import VeryGoodViroGame.Virologist;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 
 /**
@@ -80,6 +81,8 @@ public class Field
         Logger.ReturnFunction();
     }
     
+    Random r = new Random();
+    
     /**
      * Visszaad egyet a környező mezők közül, random.
      */
@@ -87,8 +90,7 @@ public class Field
     {
         Logger.NewFunctionCall(this, "GetRandomNeighbour");
         Logger.ReturnFunction();
-        //majd itt randomot kell visszaadnia
-        return neighbours.get(0);
+        return neighbours.get(r.nextInt(neighbours.size()));
     }
     
     public void Destroy()

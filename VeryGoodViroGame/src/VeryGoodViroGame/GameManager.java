@@ -12,15 +12,16 @@ package VeryGoodViroGame;//
 import VeryGoodViroGame.Field.Map;
 
 /**
- *Ez a statikus osztály felelős az új játék elindításáért, és a játék befejezéséért.
+ * Ez a statikus osztály felelős az új játék elindításáért, és a játék befejezéséért.
  */
 public class GameManager
 {
     
     static Map map;
-
+    static int CodeCount = 4;
+    
     /**
-     *Ez a metódus felelős a játék elindításáért.
+     * Ez a metódus felelős a játék elindításáért.
      */
     public static void StartGame()
     {
@@ -29,14 +30,16 @@ public class GameManager
         map.GenerateMap();
         Logger.ReturnFunction();
     }
+    
     /**
-     *Ez a metódus felelős a játék befejezéséért és a nyertes kihirdetéséért.
+     * Ez a metódus felelős a játék befejezéséért és a nyertes kihirdetéséért.
      *
      * @param winner a játék győztese
      */
     public static void EndGame(Virologist winner)
     {
         Logger.NewFunctionCallLegacy("GameManager", "EndGame");
+        System.out.println("A nyertes: " + winner.toString());
         Logger.ReturnFunction();
     }
 }

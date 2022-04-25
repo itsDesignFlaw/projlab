@@ -85,9 +85,8 @@ public class Virologist
      *
      * @param amount Az anyagmennyiség amit a virológusnak adunk.
      */
-    public void AddResource(Resource amount)
+    public Resource AddResource(Resource amount)
     {
-        Logger.NewFunctionCall(this, "AddResource");
         //Összeadja az items listán a GetMaxResource értékét, majd hozzáaadja az alap értéket
         int maxResource = 20;
         for(InvItem item : items)
@@ -95,7 +94,8 @@ public class Virologist
             maxResource += item.GetMaxResource();
         }
         resource.Add(amount);
-        Logger.ReturnFunction();
+        Resource maradek = new Resource();//TODO
+        return maradek;
     }
     
     /**
@@ -106,11 +106,10 @@ public class Virologist
      */
     public Resource RemoveResource(Resource amount)
     {
-        Logger.NewFunctionCall(this, "RemoveResource");
+        Resource removed = new Resource();
         if(IsParalyzed())
-            resource.Remove(amount);
-        Logger.ReturnFunction();
-        return new Resource();
+            removed = resource.Remove(amount);
+        return removed;
     }
     
     /**
@@ -130,8 +129,7 @@ public class Virologist
             }
         }
         Resource cost = code.GetCost();
-        //has enough resource:
-        if(Logger.AskQuestion("Sufficient resources available to thy liking, sire"))
+        if(resource.hasEnough(cost))
         {
             resource.Remove(cost);
             Agent created = code.CreateVirus();
@@ -153,6 +151,11 @@ public class Virologist
         
     }
     
+    public void RemoveAgentFromStash(Agent agent)
+    {
+        stash.remove(agent);
+    }
+    
     /**
      * Ezzel a függvénnyel  a virológus lecraftolja az adott genetikai kódhoz tartozó vakcinát.
      *
@@ -170,8 +173,7 @@ public class Virologist
             }
         }
         Resource cost = code.GetCost();
-        //has enough resource:
-        if(Logger.AskQuestion("Sufficient resources available to thy liking, sire"))
+        if(resource.hasEnough(cost))
         {
             resource.Remove(cost);
             Agent created = code.CreateVaccine();
@@ -327,12 +329,15 @@ public class Virologist
      *
      * @param equipment a felszerelés amit a virológushoz adunk
      */
-    public void AddEquipment(Equipment equipment)
+    public boolean AddEquipment(Equipment equipment)
     {
         Logger.NewFunctionCall(this, "AddEquipment");
+        if(equipments.size() >= 3)
+            return false;
         this.equipments.add(equipment);
         AddItem(equipment);
         Logger.ReturnFunction();
+        return true;
     }
     
     /**
@@ -343,6 +348,7 @@ public class Virologist
     public void RemoveItem(InvItem item)
     {
         Logger.NewFunctionCall(this, "RemoveItem");
+        items.remove(item);
         Logger.ReturnFunction();
     }
     
@@ -366,10 +372,12 @@ public class Virologist
     public void LearnGeneticCode(GeneticCode code)
     {
         Logger.NewFunctionCall(this, "LearnGeneticCode");
-        learntCodes.add(code);
-        //if(learnt all codes)
-        if(Logger.AskQuestion("Did she/he learned all the genetikus codes?"))
-            GameManager.EndGame(this);
+        if(learntCodes.stream().anyMatch(x -> x.CompareCodes(code)))
+        {
+            learntCodes.add(code);
+            if(learntCodes.size() == GameManager.CodeCount)
+                GameManager.EndGame(this);
+        }
         
         Logger.ReturnFunction();
     }
