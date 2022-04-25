@@ -30,7 +30,6 @@ public class FieldBunker extends Field
      */
     public void Interact(Virologist v)
     {
-        Logger.NewFunctionCall(this, "Interact");
         if(hasEquipment)
         {
             if(v.AddEquipment(equipment))
@@ -39,7 +38,6 @@ public class FieldBunker extends Field
                 hasEquipment = false;
             }
         }
-        Logger.ReturnFunction();
     }
     
     /**

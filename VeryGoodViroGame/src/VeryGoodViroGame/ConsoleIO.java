@@ -207,7 +207,7 @@ public class ConsoleIO
                 }
                 else
                 {
-                    viro.UseEquipment(viro2.equipments.get(Integer.parseInt(args[3])), viro2);
+                    viro.UseEquipment(viro.equipments.get(Integer.parseInt(args[3])), viro2);
                 }
             }
             return "";
@@ -219,7 +219,7 @@ public class ConsoleIO
         });
         cmds.put("random", (args) ->
         {
-            XRandom.randoms.add(Float.parseFloat(args[0]));
+            XRandom.randoms.add(Float.parseFloat(args[0]) / 100);
             return "";
         });
         

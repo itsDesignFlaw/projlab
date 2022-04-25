@@ -25,10 +25,8 @@ public class GameManager
      */
     public static void StartGame()
     {
-        Logger.NewFunctionCallLegacy("GameManager", "StartGame");
         map = new Map();
         map.GenerateMap();
-        Logger.ReturnFunction();
     }
     
     /**
@@ -38,8 +36,6 @@ public class GameManager
      */
     public static void EndGame(Virologist winner)
     {
-        Logger.NewFunctionCallLegacy("GameManager", "EndGame");
         System.out.println("A nyertes: " + winner.toString());
-        Logger.ReturnFunction();
     }
 }

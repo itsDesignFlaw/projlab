@@ -65,10 +65,8 @@ public class GeneticCode
      */
     public Agent CreateVirus()
     {
-        Logger.NewFunctionCall(this, "CreateVirus");
         Agent clone = a.Clone();
         Timer.AddSteppable(clone);
-        Logger.ReturnFunction();
         return clone;
     }
     
@@ -79,11 +77,9 @@ public class GeneticCode
      */
     public Agent CreateVaccine()
     {
-        Logger.NewFunctionCall(this, "CreateVaccine");
         Agent clone = a.Clone();
         Vaccine vaccine = new Vaccine(clone);
         Timer.AddSteppable(vaccine);
-        Logger.ReturnFunction();
         return vaccine;
     }
     
@@ -94,8 +90,6 @@ public class GeneticCode
      */
     public Resource GetCost()
     {
-        Logger.NewFunctionCall(this, "GetCost");
-        Logger.ReturnFunction();
         return cost;
     }
     

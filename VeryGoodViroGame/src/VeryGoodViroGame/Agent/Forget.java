@@ -21,8 +21,6 @@ public class Forget extends Agent
      */
     public boolean CanCraft()
     {
-        Logger.NewFunctionCall(this, "CanCraft");
-        Logger.ReturnFunction();
         return false;
     }
     

@@ -50,7 +50,6 @@ public abstract class Agent extends InvItem implements iSteppable, Cloneable
      */
     public void Step()
     {
-        Logger.NewFunctionCall(this, "Step");
         activeTime--;
         if(activeTime <= 0)
         {
@@ -68,7 +67,6 @@ public abstract class Agent extends InvItem implements iSteppable, Cloneable
             //Megoldás: klónozás, vagy dead flag
             Timer.RemoveSteppable(this);
         }
-        Logger.ReturnFunction();
     }
     
     /**

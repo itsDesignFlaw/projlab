@@ -29,7 +29,5 @@ public class Map
     //TODO!!!
     public void GenerateMap()
     {
-        Logger.NewFunctionCall(this, "GenerateMap");
-        Logger.ReturnFunction();
     }
 }

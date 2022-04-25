@@ -66,7 +66,6 @@ public class Virologist
      */
     public boolean IsParalyzed()
     {
-        Logger.NewFunctionCall(this, "IsParalyzed");
         
         for(InvItem item : items)
         {
@@ -75,7 +74,6 @@ public class Virologist
                 return true;
             }
         }
-        Logger.ReturnFunction();
         return false;
     }
     
@@ -117,7 +115,6 @@ public class Virologist
      */
     public void CraftVirus(GeneticCode code)
     {
-        Logger.NewFunctionCall(this, "CraftVirus");
         for(InvItem item : items)
         {
             if(!item.CanCraft())
@@ -133,7 +130,6 @@ public class Virologist
             Agent created = code.CreateVirus();
             AddAgentToStash(created);
         }
-        Logger.ReturnFunction();
     }
     
     /**
@@ -143,9 +139,7 @@ public class Virologist
      */
     public void AddAgentToStash(Agent agent)
     {
-        Logger.NewFunctionCall(this, "AddAgentToStash");
         stash.add(agent);
-        Logger.ReturnFunction();
         
     }
     
@@ -161,7 +155,6 @@ public class Virologist
      */
     public void CraftVaccine(GeneticCode code)
     {
-        Logger.NewFunctionCall(this, "CraftVaccine");
         for(InvItem item : items)
         {
             if(!item.CanCraft())
@@ -177,7 +170,6 @@ public class Virologist
             Agent created = code.CreateVaccine();
             AddAgentToStash(created);
         }
-        Logger.ReturnFunction();
     }
     
     //Mindegyiknél feltételezzük, hogy meg tudja érinteni, előtte ellenőrizzük
@@ -192,7 +184,6 @@ public class Virologist
      */
     public boolean ApplyAgent(Agent agent, Virologist source)
     {
-        Logger.NewFunctionCall(this, "ApplyAgent");
         for(InvItem item : items)
         {
             if(!item.CanAgentBeApplied(agent, source))
@@ -203,7 +194,6 @@ public class Virologist
         }
         AddItem(agent);
         
-        Logger.ReturnFunction();
         return true;
     }
     
@@ -217,7 +207,6 @@ public class Virologist
      */
     public void UseAgent(Agent agent, Virologist target)
     {
-        Logger.NewFunctionCall(this, "UseAgent");
         for(InvItem item : items)
         {
             if(!item.CanApplyAgent())
@@ -227,7 +216,6 @@ public class Virologist
             }
         }
         agent.Apply(this, target);
-        Logger.ReturnFunction();
     }
     
     //Felszedi a mezőn lévő cuccokat, azaz meghívja az Interact fv-ét
@@ -237,7 +225,6 @@ public class Virologist
      */
     public void InteractWithField()
     {
-        Logger.NewFunctionCall(this, "InteractWithField");
         for(InvItem item : items)
         {
             if(!item.CanInteract())
@@ -247,7 +234,6 @@ public class Virologist
             }
         }
         mezo.Interact(this);
-        Logger.ReturnFunction();
     }
     
     
@@ -260,7 +246,6 @@ public class Virologist
      */
     public void StealEquipmentFromViro(Virologist target, Equipment equipment)
     {
-        Logger.NewFunctionCall(this, "StealEquipmentFromViro");
         for(InvItem item : items)
         {
             if(!item.CanSteal())
@@ -273,7 +258,6 @@ public class Virologist
         {
             AddEquipment(equipment);
         }
-        Logger.ReturnFunction();
     }
     
     public void StealResourceFromViro(Virologist target)
@@ -290,7 +274,6 @@ public class Virologist
      */
     public void StealResourceFromViro(Virologist target, Resource amount)
     {
-        Logger.NewFunctionCall(this, "StealResourceFromViro");
         for(InvItem item : items)
         {
             if(!item.CanSteal())
@@ -301,7 +284,6 @@ public class Virologist
         }
         Resource removed = target.RemoveResource(amount);
         AddResource(removed);
-        Logger.ReturnFunction();
     }
     
     /**
@@ -312,19 +294,15 @@ public class Virologist
      */
     public boolean RemoveEquipment(Equipment equipment)
     {
-        Logger.NewFunctionCall(this, "RemoveEquipment");
         IsParalyzed();
         DestroyEquipment(equipment);
-        Logger.ReturnFunction();
         return true;
     }
     
     public void DestroyEquipment(Equipment equipment)
     {
-        Logger.NewFunctionCall(this, "DestroyEquipment");
         equipments.remove(equipment);
         items.remove(equipment);
-        Logger.ReturnFunction();
     }
     
     /**
@@ -334,12 +312,10 @@ public class Virologist
      */
     public boolean AddEquipment(Equipment equipment)
     {
-        Logger.NewFunctionCall(this, "AddEquipment");
         if(equipments.size() >= 3)
             return false;
         this.equipments.add(equipment);
         AddItem(equipment);
-        Logger.ReturnFunction();
         return true;
     }
     
@@ -350,9 +326,7 @@ public class Virologist
      */
     public void RemoveItem(InvItem item)
     {
-        Logger.NewFunctionCall(this, "RemoveItem");
         items.remove(item);
-        Logger.ReturnFunction();
     }
     
     /**
@@ -362,9 +336,7 @@ public class Virologist
      */
     public void AddItem(InvItem item)
     {
-        Logger.NewFunctionCall(this, "AddItem");
         items.add(item);
-        Logger.ReturnFunction();
     }
     
     /**
@@ -374,7 +346,6 @@ public class Virologist
      */
     public void LearnGeneticCode(GeneticCode code)
     {
-        Logger.NewFunctionCall(this, "LearnGeneticCode");
         if(learntCodes.stream().anyMatch(x -> x.CompareCodes(code)))
         {
             learntCodes.add(code);
@@ -382,7 +353,6 @@ public class Virologist
                 GameManager.EndGame(this);
         }
         
-        Logger.ReturnFunction();
     }
     
     /**
@@ -392,8 +362,6 @@ public class Virologist
      */
     public Field GetField()
     {
-        Logger.NewFunctionCall(this, "GetField");
-        Logger.ReturnFunction();
         return mezo;
     }
     
@@ -456,9 +424,7 @@ public class Virologist
      */
     public void MoveTo(Field to)
     {
-        Logger.NewFunctionCall(this, "MoveTo");
         moveStrategy.ExecuteMove(this, mezo, to);
-        Logger.ReturnFunction();
     }
     
     /**
@@ -467,9 +433,7 @@ public class Virologist
      */
     public void KillVirologist()
     {
-        Logger.NewFunctionCall(this, "KillVirologist");
         //dead
-        Logger.ReturnFunction();
     }
     
     public void UseEquipment(Equipment e, Virologist target)
@@ -480,7 +444,7 @@ public class Virologist
     @Override
     public String toString()
     {
-        return "\tmoveStrategy: " + moveStrategy.getClass().getSimpleName() + "\n\titems: " + items.stream().map(EntityManager::GetObjectName).collect(Collectors.joining(", ")) + "\n\tlearntCodes: " + learntCodes.stream().map(EntityManager::GetObjectName).collect(Collectors.joining(", ")) + "\n\tstash: " + stash.stream().map(EntityManager::GetObjectName).collect(Collectors.joining(", ")) + "\n\tmezo: " + EntityManager.GetObjectName(mezo) + "\n\tresource: " + resource.toString() + "\n\tequipments: " + equipments.stream().map(EntityManager::GetObjectName).collect(Collectors.joining(", "));
+        return "\tequipments: " + equipments.stream().map(EntityManager::GetObjectName).collect(Collectors.joining(", ")) + "\n\titems: " + items.stream().map(EntityManager::GetObjectName).collect(Collectors.joining(", ")) + "\n\tlearntCodes: " + learntCodes.stream().map(EntityManager::GetObjectName).collect(Collectors.joining(", ")) + "\n\tmezo: " + EntityManager.GetObjectName(mezo) + "\n\tmoveStrategy: " + moveStrategy.getClass().getSimpleName() + "\n\tresource: " + resource.toString() + "\n\tstash: " + stash.stream().map(EntityManager::GetObjectName).collect(Collectors.joining(", "));
     }
 }
 

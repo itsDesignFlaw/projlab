@@ -19,21 +19,16 @@ public class Timer
     
     public static void Step()
     {
-        Logger.NewFunctionCallLegacy("Timer", "Step");
         steppable_reg.forEach(iSteppable::Step);
-        Logger.ReturnFunction();
     }
     
     public static void AddSteppable(iSteppable item)
     {
-        Logger.NewFunctionCallLegacy("Timer", "AddSteppable");
         steppable_reg.add(item);
-        Logger.ReturnFunction();
     }
     
     public static void RemoveSteppable(iSteppable step)
     {
-        Logger.NewFunctionCallLegacy("Timer", "RemoveSteppable");
-        Logger.ReturnFunction();
+        steppable_reg.remove(step);
     }
 }
