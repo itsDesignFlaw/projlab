@@ -9,8 +9,6 @@ package VeryGoodViroGame.Agent;//
 //
 //
 
-import VeryGoodViroGame.Agent.Agent;
-import VeryGoodViroGame.Agent.Vaccine;
 import VeryGoodViroGame.Logger;
 import VeryGoodViroGame.Resource;
 import VeryGoodViroGame.Timer;
@@ -23,6 +21,22 @@ public class GeneticCode
 {
     protected Resource cost;
     protected Agent a;
+    
+    public GeneticCode()
+    {
+        this(null);
+    }
+    
+    public GeneticCode(Agent a)
+    {
+        this(a, new Resource());
+    }
+    
+    public GeneticCode(Agent a, Resource cost)
+    {
+        this.cost = cost;
+        this.a = a;
+    }
     
     /**
      * Beállitja a cost értékét.

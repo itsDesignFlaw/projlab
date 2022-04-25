@@ -35,7 +35,7 @@ public class Virologist
     //Amin áll
     Field mezo = new Field();
     private Resource resource = new Resource();
-    private List<Equipment> equipments = new ArrayList<>();
+    List<Equipment> equipments = new ArrayList<>();
     
     /**
      * Beállítja a virológus erőforrás tagváltozóját.
@@ -276,6 +276,11 @@ public class Virologist
             AddEquipment(equipment);
         }
         Logger.ReturnFunction();
+    }
+    
+    public void StealResourceFromViro(Virologist target)
+    {
+        StealResourceFromViro(target, target.resource);
     }
     
     /**

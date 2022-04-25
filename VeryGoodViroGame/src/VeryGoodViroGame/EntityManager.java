@@ -12,9 +12,7 @@ public class EntityManager {
     static HashMap<String, IEntityGenerator> EntityGen = new HashMap<String, IEntityGenerator>();
 
     static {
-        EntityGen.put("viro", ()->{
-            return new Virologist();
-        });
+        EntityGen.put("viro", Virologist::new);
     }
 
     public static Object GetObjectByName(String name)
