@@ -75,6 +75,8 @@ public class EntityManager
     public static String ToStringByName(String name)
     {
         Object o = GetObjectByName(name);
+        if(o == null)
+            return "Object not found";
         return "name: \"" + name + "\"\n" + o.toString();
     }
 }
