@@ -46,7 +46,7 @@ public class Main
     static void AskForInput()
     {
         name = ask("Name of map");
-        maxfields = Integer.parseInt(ask("Number of fields"));
+        place_these.put("field", Integer.parseInt(ask("Number of fields")));
         placed_fields.put("field", 0);
         String sseed = ask("Seed to generate map (leave blank for random)");
         if(sseed.equals(""))
@@ -60,6 +60,17 @@ public class Main
         }
         place_these.put("lab", Integer.parseInt(ask("Number of labs")));
         placed_fields.put("lab", 0);
+        
+        place_these.put("bunker", Integer.parseInt(ask("Number of bunkers")));
+        placed_fields.put("bunker", 0);
+        
+        place_these.put("ware", Integer.parseInt(ask("Number of warehouses")));
+        placed_fields.put("ware", 0);
+        
+        place_these.put("bearlab", Integer.parseInt(ask("Number of bearlabs")));
+        placed_fields.put("bearlab", 0);
+        
+        maxfields = place_these.values().stream().reduce(0, Integer::sum);
     }
     
     static int[][] NoiseMap()
