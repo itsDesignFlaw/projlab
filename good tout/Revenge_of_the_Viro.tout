@@ -1,0 +1,16 @@
+name: “v1”
+	equipments: 
+	items: v1_paralyze_vi
+	learntCodes: paralyze
+	mezo: wrhs0
+moveStrategy: MSParalyze
+resource: (ami:0, nuki:0)
+stash:
+name: “v2”
+	equipments: gloves
+	items: gloves
+	learntCodes:
+	mezo: wrhs0
+moveStrategy: MSSimple
+resource: (ami:10, nuki:10)
+stash:

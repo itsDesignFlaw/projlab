@@ -1,0 +1,16 @@
+name: "v2"
+	equipments: 
+	items: craft0
+	learntCodes: 
+	mezo: f3
+	moveStrategy: MSParalyzed
+	resource: (ami:0, nuki:0)
+	stash: 
+name: "v2"
+	equipments: 
+	items: craft0, vaccine
+	learntCodes: 
+	mezo: f3
+	moveStrategy: MSParalyzed
+	resource: (ami:0, nuki:0)
+	stash: 

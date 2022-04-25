@@ -1,0 +1,75 @@
+name: l0
+	neighbours: f2
+	virologists: 
+	code: Forget code
+name: l2
+	neighbours: b2, w1
+	virologists: 
+	code: Paralyze code
+name: l3
+	neighbours: f2
+	virologists: 
+	code: Protect code
+name: protect0
+	activeTime: 690
+	host: DHaN, maybe bear?
+	startegy: MSSimple
+name: f0
+	neighbours: f1, w0
+	virologists: 
+name: f1
+	neighbours: f0, b0, f2
+	virologists: 
+name: f2
+	neighbours: f1, l3, lb0, l0
+	virologists: 
+name: b0
+	neighbours: f1, b1
+	virologists: 
+	equipment: gloves0
+name: b1
+	neighbours: b0, b2
+	virologists: 
+	equipment: sack0
+name: axe0
+	host: DHaN, maybe bear?
+	sharp: true
+name: b2
+	neighbours: b1, b3, l2
+	virologists: 
+	equipment: coat0
+name: b3
+	neighbours: w1, b2
+	virologists: 
+	equipment: axe0
+name: coat0
+	host: DHaN, maybe bear?
+name: w0
+	neighbours: f0, w1
+	virologists: 
+	resources: (ami:50, nuki:50)
+name: w1
+	neighbours: w0, b3, l2
+	virologists: 
+	resources: (ami:20, nuki:20)
+name: paralyze0
+	activeTime: 690
+	host: DHaN, maybe bear?
+	startegy: MSParalyzed
+name: gloves0
+	host: DHaN, maybe bear?
+	remainingHealth: 3
+name: lab1
+	neighbours: 
+	virologists: 
+	code: 
+name: sack0
+	host: DHaN, maybe bear?
+name: lb0
+	neighbours: f2
+	virologists: 
+	code: 
+name: forget0
+	activeTime: 690
+	host: DHaN, maybe bear?
+	startegy: MSSimple

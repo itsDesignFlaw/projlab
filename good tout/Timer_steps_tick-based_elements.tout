@@ -1,0 +1,16 @@
+name: “forget”
+	activeTime: 666
+host: v1
+startegy: MSSimple
+	name: “dance”
+	activeTime: 666
+host: v1
+startegy: MSVitusDance
+	name: “forget”
+	activeTime: 665
+host: v1
+startegy: MSSimple
+	name: “dance”
+	activeTime: 665
+host: v1
+startegy: MSVitusDance

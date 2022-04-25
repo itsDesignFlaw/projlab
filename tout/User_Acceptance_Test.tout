@@ -1,0 +1,17 @@
+name: "v1"
+	equipments: coat, axe
+	items: coat, axe
+	learntCodes: 
+	mezo: lb0
+	moveStrategy: MSSimple
+	resource: (ami:0, nuki:0)
+	stash: 
+name: "v2"
+	dead: true
+name: "lb0"
+	neighbours: f2
+	virologists: v2, v1
+	code: 
+name: "axe"
+	host: DHaN, maybe bear?
+	sharp: false

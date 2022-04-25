@@ -1,0 +1,13 @@
+name: “v1”
+	dead: true
+name: “v2”
+	equipments:axe, coat
+	items: axe, coat
+	learntCodes: 
+	mezo: bunk
+moveStrategy: MSSimple
+resource: (ami:0, nuki:0)
+stash:
+name: “axe”:
+	host: v2
+sharp: false

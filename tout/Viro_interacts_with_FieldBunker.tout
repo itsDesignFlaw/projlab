@@ -1,0 +1,12 @@
+name: "v1"
+	equipments: coat0
+	items: coat0
+	learntCodes: 
+	mezo: b2
+	moveStrategy: MSSimple
+	resource: (ami:0, nuki:0)
+	stash: 
+name: "b2"
+	neighbours: b1, b3, l2
+	virologists: v1
+	equipment: coat0

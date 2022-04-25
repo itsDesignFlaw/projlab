@@ -1,0 +1,13 @@
+name: "v1"
+	equipments: axe
+	items: axe
+	learntCodes: 
+	mezo: s
+	moveStrategy: MSSimple
+	resource: (ami:0, nuki:0)
+	stash: 
+name: "v2"
+	dead: true
+name: "axe"
+	host: DHaN, maybe bear?
+	sharp: false

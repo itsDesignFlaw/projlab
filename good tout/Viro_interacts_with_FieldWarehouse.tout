@@ -1,0 +1,12 @@
+name: “v1”
+	equipments: 
+items:
+	learntCodes:
+	mezo: wrhs0
+moveStrategy: MSSimple
+resource: (ami:50, nuki:50)
+stash:
+name: “wrhs0”:
+	neighbours: f0; wrhs1
+	resources: (ami:0, nuki:0)
+	virologists: v1

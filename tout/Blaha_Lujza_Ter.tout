@@ -1,0 +1,16 @@
+name: "v1"
+	equipments: sack
+	items: sack
+	learntCodes: Paralyze code
+	mezo: w0
+	moveStrategy: MSSimple
+	resource: (ami:10, nuki:10)
+	stash: 
+name: "v2"
+	equipments: 
+	items: craft0
+	learntCodes: 
+	mezo: w0
+	moveStrategy: MSParalyzed
+	resource: (ami:0, nuki:0)
+	stash: 

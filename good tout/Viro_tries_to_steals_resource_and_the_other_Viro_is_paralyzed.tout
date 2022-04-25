@@ -1,0 +1,16 @@
+name: “v1”
+	equipments: 
+	items:
+	learntCodes:
+	mezo: wrhs0
+moveStrategy: MSSimple
+resource: (ami:50, nuki:50)
+stash:
+name: “v2”
+	equipments: 
+	items: p
+	learntCodes:
+	mezo: wrhs0
+moveStrategy: MSSimple
+resource: (ami:0, nuki:0)
+stash:

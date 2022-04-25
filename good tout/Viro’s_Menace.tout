@@ -1,0 +1,24 @@
+name: “v2”
+	equipments:
+	items: dance
+	learntCodes:
+	mezo: wrhs1
+moveStrategy: MSVitusDance
+resource: (ami:0, nuki:0)
+stash:
+name: “v1”
+	equipments: 
+	items: 
+	learntCodes: dance
+	mezo: wrhs1
+moveStrategy: MSSimple
+resource: (ami:10, nuki:10)
+stash:
+name: “v2”
+	equipments:
+	items: dance
+	learntCodes:
+	mezo: wrhs0
+moveStrategy: MSVitusDance
+resource: (ami:0, nuki:0)
+stash:
