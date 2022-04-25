@@ -9,6 +9,7 @@ package VeryGoodViroGame.Field;//
 //
 //
 
+import VeryGoodViroGame.EntityManager;
 import VeryGoodViroGame.Equipment.Equipment;
 import VeryGoodViroGame.Logger;
 import VeryGoodViroGame.Virologist;
@@ -52,5 +53,9 @@ public class FieldBunker extends Field
         hasEquipment = true;
     }
     
-    
+    @Override
+    public String toString()
+    {
+        return super.toString() + "\n\tequipment: " + EntityManager.GetObjectName(equipment);
+    }
 }

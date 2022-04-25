@@ -10,6 +10,7 @@ package VeryGoodViroGame.Field;//
 //
 
 
+import VeryGoodViroGame.EntityManager;
 import VeryGoodViroGame.Logger;
 import VeryGoodViroGame.Virologist;
 import VeryGoodViroGame.XRandom;
@@ -17,6 +18,7 @@ import VeryGoodViroGame.XRandom;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.stream.Collectors;
 
 
 /**
@@ -101,5 +103,11 @@ public class Field
     public List<Virologist> GetVirologists()
     {
         return virologists;
+    }
+    
+    @Override
+    public String toString()
+    {
+        return "\tneighbours: " + neighbours.stream().map(EntityManager::GetObjectName).collect(Collectors.joining(", ")) + "\n\tvirologists: " + virologists.stream().map(EntityManager::GetObjectName).collect(Collectors.joining(", "));
     }
 }

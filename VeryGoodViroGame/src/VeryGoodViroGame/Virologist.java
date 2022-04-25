@@ -19,6 +19,7 @@ import VeryGoodViroGame.MoveStrategy.iMoveStrategy;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Egy játékos által irányított virológust reprezentál a játékban.
@@ -452,5 +453,10 @@ public class Virologist
         e.Use(target);
     }
     
+    @Override
+    public String toString()
+    {
+        return "\tmoveStrategy: " + moveStrategy.getClass().getName() + "\n\titems: " + items.stream().map(EntityManager::GetObjectName).collect(Collectors.joining(", ")) + "\n\tlearntCodes: " + learntCodes.stream().map(EntityManager::GetObjectName).collect(Collectors.joining(", ")) + "\n\tstash: " + stash.stream().map(EntityManager::GetObjectName).collect(Collectors.joining(", ")) + "\n\tmezo: " + EntityManager.GetObjectName(mezo) + "\n\tresource: " + resource.toString() + "\n\tequipments: " + equipments.stream().map(EntityManager::GetObjectName).collect(Collectors.joining(", "));
+    }
 }
 

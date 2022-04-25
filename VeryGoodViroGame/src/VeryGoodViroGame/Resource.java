@@ -94,4 +94,10 @@ public class Resource
         {
             throw new System.NotImplementedException();
         }*/
+    
+    @Override
+    public String toString()
+    {
+        return "(" + "ami:" + ami + ", nuki:" + nuki + ')';
+    }
 }

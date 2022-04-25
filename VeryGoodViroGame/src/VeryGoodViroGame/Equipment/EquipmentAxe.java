@@ -1,5 +1,6 @@
 package VeryGoodViroGame.Equipment;
 
+import VeryGoodViroGame.EntityManager;
 import VeryGoodViroGame.Logger;
 import VeryGoodViroGame.Virologist;
 
@@ -22,5 +23,11 @@ public class EquipmentAxe extends Equipment
             sharp = false;
         }
         Logger.ReturnFunction();
+    }
+    
+    @Override
+    public String toString()
+    {
+        return super.toString() + "\n\tsharp: " + sharp;
     }
 }

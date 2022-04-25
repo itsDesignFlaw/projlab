@@ -96,7 +96,7 @@ public class ConsoleIO
                 return "Couldn't create entity '" + classname + "', no prefab";
             return "";
         });
-        cmds.put("neigbour", (args) ->
+        cmds.put("neighbour", (args) ->
         {
             Object f1 = EntityManager.GetObjectByName(args[0]);
             Object f2 = EntityManager.GetObjectByName(args[1]);
@@ -138,7 +138,7 @@ public class ConsoleIO
         });
         cmds.put("list", (args) ->
         {
-            
+            System.out.println(EntityManager.ToStringByName(args[0]));
             return "";
         });
         cmds.put("craft", (args) ->

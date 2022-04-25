@@ -88,4 +88,9 @@ public abstract class Agent extends InvItem implements iSteppable, Cloneable
         }
     }
     
+    @Override
+    public String toString()
+    {
+        return "\tactiveTime: " + activeTime + "\n\thost: " + EntityManager.GetObjectName(host) + "\n\tstartegy: " + strategy.getClass().getName();
+    }
 }

@@ -75,10 +75,6 @@ public class Main
         {
             String[] s = sc.nextLine().split(" ");
             ConsoleIO.RunCMD(s[0], Arrays.stream(s).skip(1).toArray(String[]::new));
-            
         }
-        
     }
-    
-    
 }

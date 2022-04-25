@@ -9,6 +9,7 @@ package VeryGoodViroGame.Equipment;//
 //
 //
 
+import VeryGoodViroGame.EntityManager;
 import VeryGoodViroGame.InvItem;
 import VeryGoodViroGame.Logger;
 import VeryGoodViroGame.Virologist;
@@ -27,5 +28,11 @@ public abstract class Equipment extends InvItem
     {
         Logger.NewFunctionCall(this, "Use");
         Logger.ReturnFunction();
+    }
+    
+    @Override
+    public String toString()
+    {
+        return "\thost: " + EntityManager.GetObjectName(host);
     }
 }

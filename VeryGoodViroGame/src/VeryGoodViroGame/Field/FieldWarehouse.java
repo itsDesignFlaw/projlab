@@ -9,6 +9,7 @@ package VeryGoodViroGame.Field;//
 //
 //
 
+import VeryGoodViroGame.EntityManager;
 import VeryGoodViroGame.Logger;
 import VeryGoodViroGame.Resource;
 import VeryGoodViroGame.Virologist;
@@ -48,6 +49,12 @@ public class FieldWarehouse extends Field
     public void Destroy()
     {
         resources = new Resource();
+    }
+    
+    @Override
+    public String toString()
+    {
+        return super.toString() + "\n\tresources: " + resources.toString();
     }
 }
 

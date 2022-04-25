@@ -106,4 +106,10 @@ public class GeneticCode
         return code.a instanceof c;*/
         return false;
     }
+    
+    @Override
+    public String toString()
+    {
+        return a.getClass().getName() + " code";
+    }
 }

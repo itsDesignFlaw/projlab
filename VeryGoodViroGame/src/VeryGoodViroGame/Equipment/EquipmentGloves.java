@@ -10,6 +10,7 @@ package VeryGoodViroGame.Equipment;//
 //
 
 import VeryGoodViroGame.Agent.Agent;
+import VeryGoodViroGame.EntityManager;
 import VeryGoodViroGame.Logger;
 import VeryGoodViroGame.Virologist;
 
@@ -41,5 +42,11 @@ public class EquipmentGloves extends Equipment
         }
         Logger.ReturnFunction();
         return false;
+    }
+    
+    @Override
+    public String toString()
+    {
+        return super.toString() + "\n\tremainingHealth: " + remainingHealth;
     }
 }

@@ -54,7 +54,7 @@ public class EntityManager
                 return objname;
         }
         ;
-        return null;
+        return "null";
     }
     
     public static void PutNamedObject(String name, Object object)
@@ -70,5 +70,11 @@ public class EntityManager
         Object ent = EntityGen.get(classname).generate();
         PutNamedObject(name, ent);
         return ent;
+    }
+    
+    public static String ToStringByName(String name)
+    {
+        Object o = GetObjectByName(name);
+        return "name: \"" + name + "\"\n" + o.toString();
     }
 }
