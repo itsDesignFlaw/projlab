@@ -1,21 +1,28 @@
 package VeryGoodViroGame;
 
 import java.io.*;
+import java.util.Arrays;
+import java.util.Scanner;
 
-public class Main {
-
-
-    static void print(String str) {
+public class Main
+{
+    
+    
+    static void print(String str)
+    {
         System.out.println(str);
     }
-
-    static boolean AskRunTest() {
+    
+    static boolean AskRunTest()
+    {
         int ID;
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String str = "";
-
-        while (true) {
-            try {
+        
+        while(true)
+        {
+            try
+            {
                 System.out.print("Select test: ");
                 str = reader.readLine();
                 ID = Integer.parseInt(str.toLowerCase());
@@ -27,23 +34,30 @@ public class Main {
                 System.out.print(".");
                 Thread.sleep(1000);
                 System.out.print(".\n");
-            } catch (IOException ex) {
+            }
+            catch(IOException ex)
+            {
                 ex.printStackTrace();
                 return true;
-            } catch (NumberFormatException ex) {
-                if (str.trim().toLowerCase().equals("exit"))
+            }
+            catch(NumberFormatException ex)
+            {
+                if(str.trim().toLowerCase().equals("exit"))
                     return true;
                 print("Invalid input: " + str);
-            } catch (InterruptedException e) {
+            }
+            catch(InterruptedException e)
+            {
                 e.printStackTrace();
             }
         }
     }
-
-    public static void main(String[] args) throws IOException {
+    
+    public static void main(String[] args) throws IOException
+    {
         System.out.println("--== Biden Teszteloprogramja©®™ ==--");
 
-        if (args.length>0)
+        /*if (args.length>0)
         {
             ConsoleIO.RunCMD("load", args);
         }
@@ -54,9 +68,17 @@ public class Main {
                 if (AskRunTest())
                     break;
             }
+        }*/
+        Scanner sc = new Scanner(System.in);
+        //TODO: WIP
+        while(true)
+        {
+            String[] s = sc.nextLine().split(" ");
+            ConsoleIO.RunCMD(s[0], Arrays.stream(s).skip(1).toArray(String[]::new));
+            
         }
-
+        
     }
-
-
+    
+    
 }

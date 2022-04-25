@@ -25,8 +25,8 @@ import java.util.Random;
  */
 public class Field
 {
-    List<Virologist> virologists;
-    private List<Field> neighbours;
+    List<Virologist> virologists = new ArrayList<>();
+    private List<Field> neighbours = new ArrayList<>();
     
     public Field()
     {
