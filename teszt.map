@@ -1,0 +1,33 @@
+create l0 lab
+lab l0 paralyze
+create l1 lab
+lab l1 protect
+create b0 bunker
+bunker b0 gloves
+create f0 field
+create f1 field
+create w0 ware
+ware w0 17 5
+create w1 ware
+ware w1 23 11
+create w2 ware
+ware w2 21 9
+create b1 bunker
+bunker b1 axe
+create l2 lab
+lab l2 dance
+create b2 bunker
+bunker b2 sack
+create f2 field
+
+neighbour l2 l1
+neighbour f1 b0
+neighbour f0 b0
+neighbour b2 f0
+neighbour w2 w0
+neighbour w1 w0
+neighbour b1 w2
+neighbour f2 b1
+neighbour b2 l2
+neighbour f2 l2
+neighbour f2 b2

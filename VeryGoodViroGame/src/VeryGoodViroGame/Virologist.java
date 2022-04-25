@@ -93,9 +93,7 @@ public class Virologist
         {
             maxResource += item.GetMaxResource();
         }
-        resource.Add(amount);
-        Resource maradek = new Resource();//TODO
-        return maradek;
+        return resource.Add(amount, maxResource);
     }
     
     /**

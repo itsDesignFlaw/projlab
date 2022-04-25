@@ -44,7 +44,21 @@ public class Resource
     {
         ami += resource.ami;
         nuki += resource.nuki;
-        //TODO: maxResource ötlet?
+        //plusz egy paraméter?
+    }
+    
+    public Resource Add(Resource resource, int max)
+    {
+        ami += resource.ami;
+        nuki += resource.nuki;
+        
+        int remami = 0, remnuki = 0;
+        if(ami > max)
+            remami = ami - max;
+        if(nuki > max)
+            remnuki = nuki - max;
+        return new Resource(remami, remnuki);
+        
         //plusz egy paraméter?
     }
     

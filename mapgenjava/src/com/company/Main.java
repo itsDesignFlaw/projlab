@@ -47,7 +47,7 @@ public class Main
     {
         name = ask("Name of map");
         place_these.put("field", Integer.parseInt(ask("Number of fields")));
-        placed_fields.put("field", 0);
+        placed_fields.put("field", -1);
         String sseed = ask("Seed to generate map (leave blank for random)");
         if(sseed.equals(""))
         {
@@ -59,16 +59,16 @@ public class Main
             useSeed = Long.parseLong(sseed);
         }
         place_these.put("lab", Integer.parseInt(ask("Number of labs")));
-        placed_fields.put("lab", 0);
+        placed_fields.put("lab", -1);
         
         place_these.put("bunker", Integer.parseInt(ask("Number of bunkers")));
-        placed_fields.put("bunker", 0);
+        placed_fields.put("bunker", -1);
         
         place_these.put("ware", Integer.parseInt(ask("Number of warehouses")));
-        placed_fields.put("ware", 0);
+        placed_fields.put("ware", -1);
         
         place_these.put("bearlab", Integer.parseInt(ask("Number of bearlabs")));
-        placed_fields.put("bearlab", 0);
+        placed_fields.put("bearlab", -1);
         
         maxfields = place_these.values().stream().reduce(0, Integer::sum);
     }
@@ -213,7 +213,7 @@ public class Main
                 }
             }
         }
-        placed_fields.replaceAll((k, v) -> v = 1);
+        placed_fields.replaceAll((k, v) -> v = 0);
         
         for(int i = 0; i < maxfields; i++)
         {
