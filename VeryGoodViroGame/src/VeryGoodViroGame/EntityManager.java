@@ -54,7 +54,7 @@ public class EntityManager
                 return objname;
         }
         ;
-        return "null";
+        return "DHaN, maybe bear?";
     }
     
     public static void PutNamedObject(String name, Object object)
@@ -95,5 +95,13 @@ public class EntityManager
         if(o == null)
             return "Object not found";
         return "name: \"" + name + "\"\n" + o.toString();
+    }
+    
+    /**
+     * Don't touch this
+     */
+    public static void BigRedButton()
+    {
+        namedObjects.clear();
     }
 }

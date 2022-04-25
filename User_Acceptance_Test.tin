@@ -1,0 +1,19 @@
+load devmap.map
+create v1 viro
+create v2 viro
+create coat coat
+create axe axe
+add eq coat v1
+add eq axe v1
+move v1 l3
+move v2 f2
+move v1 f2
+move v2 lb0
+interact v2
+random 1
+move v1 lb0
+use v1 v2 eq 1
+list v1
+list v2
+list lb0
+list axe

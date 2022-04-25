@@ -1,0 +1,11 @@
+load devmap.map
+create v1 viro
+create v2 viro
+move v1 f1
+move v2 f1
+create vitus dance
+create vaccine dance_vaccine
+add ag vitus v2
+add ag vaccine v1 1
+use v1 v2 agent 0
+list v2

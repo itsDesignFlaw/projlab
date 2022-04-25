@@ -91,6 +91,7 @@ public class Main
                     {
                         System.out.println(files[i]);
                         ConsoleIO.RunCMD("load", new String[]{files[i]});
+                        ConsoleIO.RunCMD("clear", "".split(""));
                         System.out.println("\n");
                     }
                     continue;

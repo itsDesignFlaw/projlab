@@ -1,0 +1,9 @@
+load devmap.map
+create v1 viro
+move v1 l2
+interact v1
+move v1 w1
+interact v1
+craft v1 0 vi
+list v1
+list v1_paralyze_vi

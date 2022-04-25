@@ -1,0 +1,52 @@
+create v1 viro
+create v2 viro
+create v3 viro
+create l1 lab
+create l2 lab
+create l3 lab
+create w1 ware
+create w2 ware
+create w3 ware
+create f1 field
+create f2 field
+create f3 field
+create b1 bunker
+create b2 bunker
+create b3 bunker
+neighbour l1 l2
+neighbour l1 b2
+neighbour l2 l3
+neighbour l3 w1
+neighbour w1 w2
+neighbour w2 b3
+neighbour w2 w3
+neighbour w3 l1
+neighbour w3 f1
+neighbour f1 f2
+neighbour f2 f3
+neighbour f2 l1
+neighbour f3 b1
+neighbour b1 b2
+neighbour b2 b3
+neighbour b3 w3
+move v1 f2
+move v2 w3
+move v3 b3
+ware w3 50 50
+lab l1 paralyze
+bunker b3 axe
+move v1 f1
+interact v2
+interact v3
+move v1 w3
+move v3 w3
+move v2 l1
+interact v1
+interact v2
+craft v2 0 vi
+move v2 w3
+use v2 v1 ag 0
+use v3 v2 eq 0
+list v1
+list v2
+list v3

@@ -36,6 +36,7 @@ public class Virologist
     Field mezo = new Field();
     private Resource resource = new Resource();
     List<Equipment> equipments = new ArrayList<>();
+    boolean dead = false;
     
     /**
      * Beállítja a virológus erőforrás tagváltozóját.
@@ -430,7 +431,7 @@ public class Virologist
      */
     public void KillVirologist()
     {
-        //dead
+        dead = true;
     }
     
     public void UseEquipment(Equipment e, Virologist target)
@@ -441,7 +442,10 @@ public class Virologist
     @Override
     public String toString()
     {
-        return "\tequipments: " + equipments.stream().map(EntityManager::GetObjectName).collect(Collectors.joining(", ")) + "\n\titems: " + items.stream().map(EntityManager::GetObjectName).collect(Collectors.joining(", ")) + "\n\tlearntCodes: " + learntCodes.stream().map(GeneticCode::toString).collect(Collectors.joining(", ")) + "\n\tmezo: " + EntityManager.GetObjectName(mezo) + "\n\tmoveStrategy: " + moveStrategy.getClass().getSimpleName() + "\n\tresource: " + resource.toString() + "\n\tstash: " + stash.stream().map(EntityManager::GetObjectName).collect(Collectors.joining(", "));
+        
+        return dead ? "\tdead: true" :
+                "\tequipments: " + equipments.stream().map(EntityManager::GetObjectName).collect(Collectors.joining(
+                        ", ")) + "\n\titems: " + items.stream().map(EntityManager::GetObjectName).collect(Collectors.joining(", ")) + "\n\tlearntCodes: " + learntCodes.stream().map(GeneticCode::toString).collect(Collectors.joining(", ")) + "\n\tmezo: " + EntityManager.GetObjectName(mezo) + "\n\tmoveStrategy: " + moveStrategy.getClass().getSimpleName() + "\n\tresource: " + resource.toString() + "\n\tstash: " + stash.stream().map(EntityManager::GetObjectName).collect(Collectors.joining(", "));
     }
 }
 

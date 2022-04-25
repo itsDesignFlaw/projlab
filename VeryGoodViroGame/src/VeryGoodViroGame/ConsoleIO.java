@@ -264,8 +264,9 @@ public class ConsoleIO
             return "";
         });
         
-        cmds.put("logents2", (args) ->
+        cmds.put("clear", (args) ->
         {
+            EntityManager.BigRedButton();
             return "";
         });
     }
