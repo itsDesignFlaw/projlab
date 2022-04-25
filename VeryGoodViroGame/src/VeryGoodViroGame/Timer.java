@@ -19,7 +19,8 @@ public class Timer
     
     public static void Step()
     {
-        steppable_reg.forEach(iSteppable::Step);
+        List<iSteppable> temp = new ArrayList<>(steppable_reg);
+        temp.forEach(iSteppable::Step);
     }
     
     public static void AddSteppable(iSteppable item)

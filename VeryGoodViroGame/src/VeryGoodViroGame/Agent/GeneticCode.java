@@ -29,7 +29,7 @@ public class GeneticCode
     
     public GeneticCode(Agent a)
     {
-        this(a, new Resource());
+        this(a, new Resource(10, 10));
     }
     
     public GeneticCode(Agent a, Resource cost)
@@ -98,12 +98,12 @@ public class GeneticCode
         //TODO:valami ilyesmi kéne
         /*Class c = a.getClass();
         return code.a instanceof c;*/
-        return false;
+        return code.a.getClass() == a.getClass();
     }
     
     @Override
     public String toString()
     {
-        return a.getClass().getSimpleName() + " code";
+        return a == null ? "" : a.getClass().getSimpleName() + " code";
     }
 }

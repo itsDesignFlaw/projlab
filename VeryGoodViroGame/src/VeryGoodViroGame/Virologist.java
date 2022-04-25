@@ -129,6 +129,7 @@ public class Virologist
             resource.Remove(cost);
             Agent created = code.CreateVirus();
             AddAgentToStash(created);
+            EntityManager.PutCraftedObject("craft", created);
         }
     }
     
@@ -188,7 +189,6 @@ public class Virologist
         {
             if(!item.CanAgentBeApplied(agent, source))
             {
-                Logger.ReturnFunction();
                 return false;
             }
         }
@@ -211,11 +211,11 @@ public class Virologist
         {
             if(!item.CanApplyAgent())
             {
-                Logger.ReturnFunction();
                 return;
             }
         }
         agent.Apply(this, target);
+        stash.remove(agent);
     }
     
     //Felszedi a mezőn lévő cuccokat, azaz meghívja az Interact fv-ét
@@ -229,7 +229,6 @@ public class Virologist
         {
             if(!item.CanInteract())
             {
-                Logger.ReturnFunction();
                 return;
             }
         }
@@ -250,7 +249,6 @@ public class Virologist
         {
             if(!item.CanSteal())
             {
-                Logger.ReturnFunction();
                 return;
             }
         }
@@ -278,7 +276,6 @@ public class Virologist
         {
             if(!item.CanSteal())
             {
-                Logger.ReturnFunction();
                 return;
             }
         }
@@ -346,7 +343,7 @@ public class Virologist
      */
     public void LearnGeneticCode(GeneticCode code)
     {
-        if(learntCodes.stream().anyMatch(x -> x.CompareCodes(code)))
+        if(learntCodes.stream().noneMatch(x -> x.CompareCodes(code)))
         {
             learntCodes.add(code);
             if(learntCodes.size() == GameManager.CodeCount)
@@ -444,7 +441,7 @@ public class Virologist
     @Override
     public String toString()
     {
-        return "\tequipments: " + equipments.stream().map(EntityManager::GetObjectName).collect(Collectors.joining(", ")) + "\n\titems: " + items.stream().map(EntityManager::GetObjectName).collect(Collectors.joining(", ")) + "\n\tlearntCodes: " + learntCodes.stream().map(EntityManager::GetObjectName).collect(Collectors.joining(", ")) + "\n\tmezo: " + EntityManager.GetObjectName(mezo) + "\n\tmoveStrategy: " + moveStrategy.getClass().getSimpleName() + "\n\tresource: " + resource.toString() + "\n\tstash: " + stash.stream().map(EntityManager::GetObjectName).collect(Collectors.joining(", "));
+        return "\tequipments: " + equipments.stream().map(EntityManager::GetObjectName).collect(Collectors.joining(", ")) + "\n\titems: " + items.stream().map(EntityManager::GetObjectName).collect(Collectors.joining(", ")) + "\n\tlearntCodes: " + learntCodes.stream().map(GeneticCode::toString).collect(Collectors.joining(", ")) + "\n\tmezo: " + EntityManager.GetObjectName(mezo) + "\n\tmoveStrategy: " + moveStrategy.getClass().getSimpleName() + "\n\tresource: " + resource.toString() + "\n\tstash: " + stash.stream().map(EntityManager::GetObjectName).collect(Collectors.joining(", "));
     }
 }
 

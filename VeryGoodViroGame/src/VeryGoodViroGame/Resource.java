@@ -57,6 +57,8 @@ public class Resource
             remami = ami - max;
         if(nuki > max)
             remnuki = nuki - max;
+        ami = Math.min(ami, max);
+        nuki = Math.min(nuki, max);
         return new Resource(remami, remnuki);
         
         //plusz egy paraméter?

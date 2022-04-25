@@ -52,6 +52,8 @@ public class ConsoleIO
                 {
                     //System.out.println(" [LOADSCRIPT] running cmd | " + line);
                     String[] linedat = line.split(" ", 2);
+                    if(linedat.length == 0 || linedat[0].equals(""))
+                        continue;
                     
                     if(linedat.length == 1)
                     {
@@ -186,7 +188,7 @@ public class ConsoleIO
             {
                 if(args[2].equals("eq"))
                 {
-                    viro.StealEquipmentFromViro(viro2, viro2.equipments.get(Integer.parseInt(args[2])));
+                    viro.StealEquipmentFromViro(viro2, viro2.equipments.get(Integer.parseInt(args[3])));
                 }
                 else
                 {
@@ -201,7 +203,7 @@ public class ConsoleIO
             Object v2 = EntityManager.GetObjectByName(args[1]);
             if(v instanceof Virologist viro && v2 instanceof Virologist viro2)
             {
-                if(args[2].equals("agent"))
+                if(args[2].equals("ag") || args[2].equals("agent"))
                 {
                     viro.UseAgent(viro.stash.get(Integer.parseInt(args[3])), viro2);
                 }
@@ -228,12 +230,12 @@ public class ConsoleIO
             Object v = EntityManager.GetObjectByName(args[2]);
             if(v instanceof Virologist viro)
             {
-                if(args[0].equals("agent"))
+                if(args[0].equals("agent") || args[0].equals("ag"))
                 {
                     Object agent = EntityManager.GetObjectByName(args[1]);
                     if(agent instanceof Agent a)
                     {
-                        if(args.length == 4 && args[3].equals("1"))
+                        if(args.length >= 4 && args[3].equals("1"))
                             viro.stash.add(a);
                         else
                             a.Apply(null, viro);
