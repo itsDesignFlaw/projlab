@@ -1,0 +1,16 @@
+load devmap.map
+create v1 viro
+move v1 f0
+create p paralyze
+create forget forget
+create sack sack
+create coat coat
+create axe axe
+add agent p v1
+add agent forget v1
+add eq sack v1
+add eq coat v1
+add eq axe v1
+move v1 f1
+step
+list v1

@@ -1,0 +1,7 @@
+load devmap.map
+create v1 viro
+move v1 f1
+create p paralyze
+add agent p v1
+move v1 f2
+list v1

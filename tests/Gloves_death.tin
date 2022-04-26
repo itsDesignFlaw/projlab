@@ -1,0 +1,19 @@
+load devmap.map
+create v1 viro
+create v2 viro
+move v1 f1
+move v2 f1
+create gloves gloves
+add eq gloves v2
+create forget forget
+add agent forget v1 1
+create forget2 forget
+add agent forget2 v1 1
+create forget3 forget
+add agent forget3 v1 1
+use agent v1 0
+use agent v1 0
+use agent v1 0
+list v1
+list v2
+list gloves

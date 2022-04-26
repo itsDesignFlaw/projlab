@@ -239,6 +239,7 @@ public class ConsoleIO
                             viro.stash.add(a);
                         else
                             a.Apply(null, viro);
+                        //Timer.AddSteppable(a);
                     }
                 }
                 else

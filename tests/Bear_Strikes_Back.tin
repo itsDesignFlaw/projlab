@@ -1,0 +1,28 @@
+load devmap.map
+create v1 viro
+create v2 viro
+create b bear
+create f field
+create l lab
+create w ware
+neighbour b f
+neighbour f l
+neighbour l w
+lab l protect
+ware w 50 50
+move v1 b
+move v2 f
+interact v1
+move v2 l
+interact v2
+random 0
+move v1 f
+move v2 w
+interact v2
+random 51
+move v1 l
+craft v2 0 vi
+use v2 v2 ag 0
+random 51
+move v1 w
+list v2
