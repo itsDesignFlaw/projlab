@@ -55,7 +55,8 @@ public class Main
     
     public static void main(String[] args) throws IOException
     {
-        System.out.println("--== Biden Teszteloprogramja©®™ ==--");
+        if(args.length == 0)
+            System.out.println("--== Biden Teszteloprogramja©®™ ==--");
 
         /*if (args.length>0)
         {
@@ -98,7 +99,7 @@ public class Main
                         ConsoleIO.RunCMD("clear", "".split(""));
                         System.out.println("\n");
                     }
-                    continue;
+                    break;
                 }
                 ConsoleIO.RunCMD(s[0], Arrays.stream(s).skip(1).toArray(String[]::new));
             }
