@@ -52,7 +52,7 @@ public class Main
         if(sseed.equals(""))
         {
             Random rand = new Random();
-            useSeed = rand.nextLong(1000000);
+            useSeed = rand.nextInt(1000000);
         }
         else
         {
