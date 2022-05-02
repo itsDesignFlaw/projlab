@@ -262,11 +262,21 @@ public class Main
         String name = "";
         switch(nodemap[i][j])
         {
-            case "lab" -> name = "l" + placed_fields.get("lab");
-            case "field" -> name = "f" + placed_fields.get("field");
-            case "bunker" -> name = "b" + placed_fields.get("bunker");
-            case "ware" -> name = "w" + placed_fields.get("ware");
-            case "bear" -> name = "lb" + placed_fields.get("bear");
+            case "lab":
+                name = "l" + placed_fields.get("lab");
+                break;
+            case "field":
+                name = "f" + placed_fields.get("field");
+                break;
+            case "bunker":
+                name = "b" + placed_fields.get("bunker");
+                break;
+            case "ware":
+                name = "w" + placed_fields.get("ware");
+                break;
+            case "bear":
+                name = "lb" + placed_fields.get("bear");
+                break;
         }
         return name;
     }
@@ -317,11 +327,21 @@ public class Main
             {
                 switch(nodemap[x][y])
                 {
-                    case "lab" -> ret.append(CreateLab()).append("\n");
-                    case "field" -> ret.append(CreateField()).append("\n");
-                    case "bunker" -> ret.append(CreateBunker()).append("\n");
-                    case "ware" -> ret.append(CreateWare()).append("\n");
-                    case "bear" -> ret.append(CreateBear()).append("\n");
+                    case "lab":
+                        ret.append(CreateLab()).append("\n");
+                        break;
+                    case "field":
+                        ret.append(CreateField()).append("\n");
+                        break;
+                    case "bunker":
+                        ret.append(CreateBunker()).append("\n");
+                        break;
+                    case "ware":
+                        ret.append(CreateWare()).append("\n");
+                        break;
+                    case "bear":
+                        ret.append(CreateBear()).append("\n");
+                        break;
                 }
             }
         }
