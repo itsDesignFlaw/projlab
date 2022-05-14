@@ -53,7 +53,20 @@ public class Main
         }
     }
     
+    static final boolean ConsoleMode = false;
+    
     public static void main(String[] args) throws IOException
+    {
+        if(ConsoleMode)
+        {
+            ConsoleMode(args);
+            return;
+        }
+        View v = new View();
+        v.Init();
+    }
+    
+    private static void ConsoleMode(String[] args) throws FileNotFoundException
     {
         if(args.length == 0)
             System.out.println("--== Biden Teszteloprogramja©®™ ==--");
