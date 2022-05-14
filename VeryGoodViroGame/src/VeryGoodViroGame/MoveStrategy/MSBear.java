@@ -12,7 +12,6 @@ public class MSBear implements iMoveStrategy
     @Override
     public void ExecuteMove(Virologist v, Field from, Field to)
     {
-        Logger.NewFunctionCall(this, "ExecuteMove");
         Field random = from.GetRandomNeighbour();
         from.RemoveViro(v);
         
@@ -25,6 +24,5 @@ public class MSBear implements iMoveStrategy
         random.AcceptViro(v);
         
         random.Destroy();
-        Logger.ReturnFunction();
     }
 }

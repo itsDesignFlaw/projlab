@@ -1,0 +1,8 @@
+name: “v1”
+	equipments: sack
+	items: sack
+	learntCodes: paralyze
+	mezo: wrhs0
+moveStrategy: MSSimple
+resource: (ami:10, nuki:10)
+stash:

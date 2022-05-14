@@ -32,8 +32,6 @@ public abstract class InvItem
      */
     public int GetMaxResource()
     {
-        Logger.NewFunctionCall(this, "GetMaxResource");
-        Logger.ReturnFunction();
         return 0;
     }
 
@@ -48,8 +46,6 @@ public abstract class InvItem
      */
     public boolean CanAgentBeApplied(Agent agent, Virologist source)
     {
-        Logger.NewFunctionCall(this, "CanAgentBeApplied");
-        Logger.ReturnFunction();
         return true;
     }
 
@@ -62,8 +58,6 @@ public abstract class InvItem
      */
     public boolean CanSteal()
     {
-        Logger.NewFunctionCall(this, "CanSteal");
-        Logger.ReturnFunction();
         return true;
     }
 
@@ -76,8 +70,6 @@ public abstract class InvItem
      */
     public boolean IsParalyzed()
     {
-        Logger.NewFunctionCall(this, "IsParalyzed");
-        Logger.ReturnFunction();
         return false;
     }
 
@@ -90,8 +82,6 @@ public abstract class InvItem
      */
     public boolean CanCraft()
     {
-        Logger.NewFunctionCall(this, "CanCraft");
-        Logger.ReturnFunction();
         return true;
     }
 
@@ -104,8 +94,6 @@ public abstract class InvItem
      */
     public boolean CanInteract()
     {
-        Logger.NewFunctionCall(this, "CanInteract");
-        Logger.ReturnFunction();
         return true;
     }
 
@@ -118,8 +106,6 @@ public abstract class InvItem
      */
     public boolean CanApplyAgent()
     {
-        Logger.NewFunctionCall(this, "CanApplyAgent");
-        Logger.ReturnFunction();
         return true;
     }
 }

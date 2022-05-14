@@ -28,7 +28,5 @@ public class MSParalyzed implements iMoveStrategy
     @Override
     public void ExecuteMove(Virologist v, Field from, Field to)
     {
-        Logger.NewFunctionCall(this,"ExecuteMove");
-        Logger.ReturnFunction();
     }
 }

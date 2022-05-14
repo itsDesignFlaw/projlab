@@ -1,0 +1,16 @@
+load devmap.map
+create v1 viro
+create v2 viro
+create sack sack
+add eq sack v2
+move v1 l2
+move v2 w0
+interact v1
+move v1 w1
+interact v1
+craft v1 0 vi
+move v1 w0
+use v1 v2 ag 0
+steal v1 v2 eq 0
+list v1
+list v2

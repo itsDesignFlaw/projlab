@@ -1,0 +1,62 @@
+name: “f0”:
+	neighbours: f1; wrhs1
+	virologists: 
+name: “f1”:
+	neighbours: f0; bnkr0
+	virologists: 
+name: “f2”:
+	neighbours: f1, lab3 labbear0 lab0
+	virologists: 
+name: “wrhs0”:
+	neighbours: f0, wrhs1
+	resources: (ami:50, nuki:50)
+	virologists: 
+name: “wrhs1”:
+	neighbours: wrhs0, bnkr3, lab2
+	resources: (ami:20, nuki:20)
+	virologists: 
+name: “bnkr0”:
+	neighbours: f1, bnkr1
+	equipment: bnkr0_gloves
+	virologists: 
+name: “bnkr0_gloves”:
+	remainingHealth: 3
+name: “bnkr1”:
+	neighbours: bnkr0, bnkr2
+	equipment: bnkr1_sack
+	virologists: 
+name: “bnkr1_sack”
+name: “bnkr2”:
+	neighbours: bnkr1, bnkr3, lab2
+	equipment: bnkr2_coat
+	virologists: 
+name: “bnkr2_coat”
+name: “bnkr3”:
+	neighbours:wrhs1, bnkr2
+	equipment: bnkr3_axe
+	virologists: 
+name: “bnkr3_axe”
+	sharp: true
+name: “lab0”
+	neighbours: f2, lab1
+	code: “lab0_forget”
+	virologists:
+name: “lab0_forget”
+name: “lab1”
+	neighbours: lab0, lab2
+	code: “lab1_dance”
+	virologists:
+name: “lab1_dance”
+name: “lab2”
+	neighbours: lab1, bnkr2, wrhs1
+	code: “lab2_paralyze”
+	virologists:
+name: “lab2_paralyze”
+name: “lab3”
+	neighbours: f2
+	code: “lab3_protect”
+	virologists:
+name: “lab3_protect”
+name: “labbear0”
+	neighbours: f2
+	virologists:

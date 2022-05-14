@@ -32,7 +32,7 @@ public class ConsoleIO
         cmds.put("load", (args) ->
         {
             //print(false, "dev:" + args[0] + " l:" + args.length + " a: " + args[0].split(".")[0]);
-            String[] fileext = args[0].split(".");
+            String[] fileext = args[0].split("\\.");
             if(fileext.length == 0)
                 fileext = new String[]{args[0]};
             String flname = fileext[0];
@@ -52,6 +52,8 @@ public class ConsoleIO
                 {
                     //System.out.println(" [LOADSCRIPT] running cmd | " + line);
                     String[] linedat = line.split(" ", 2);
+                    if(linedat.length == 0 || linedat[0].equals(""))
+                        continue;
                     
                     if(linedat.length == 1)
                     {
@@ -81,7 +83,7 @@ public class ConsoleIO
             for(String name : EntityManager.namedObjects.keySet())
             {
                 String value = EntityManager.namedObjects.get(name).toString();
-                print(false, "name: " + name + "\n" + value.toString());
+                print(false, "name: " + name + "\n" + value);
             }
             return "";
         });
@@ -121,8 +123,7 @@ public class ConsoleIO
             Object b = EntityManager.GetObjectByName(args[0]);
             if(b instanceof FieldBunker)
             {
-                //TODO: Mi legyen a neve?
-                ((FieldBunker) b).setEquipment((Equipment) EntityManager.CreateEntity(args[1], "palceholder"));
+                ((FieldBunker) b).setEquipment((Equipment) EntityManager.CreateEntity(args[1]));
             }
             return "";
         });
@@ -131,8 +132,7 @@ public class ConsoleIO
             Object l = EntityManager.GetObjectByName(args[0]);
             if(l instanceof FieldLab)
             {
-                //TODO: Mi legyen a neve?
-                ((FieldLab) l).setCode(new GeneticCode((Agent) EntityManager.CreateEntity(args[1], "placeholder")));
+                ((FieldLab) l).setCode(new GeneticCode((Agent) EntityManager.CreateEntity(args[1])));
             }
             return "";
         });
@@ -144,8 +144,9 @@ public class ConsoleIO
         cmds.put("craft", (args) ->
         {
             Object v = EntityManager.GetObjectByName(args[0]);
-            if(v instanceof Virologist viro)
+            if(v instanceof Virologist)
             {
+                Virologist viro = (Virologist) v;
                 if(args[2].equals("vi"))
                     viro.CraftVirus(viro.learntCodes.get(Integer.parseInt(args[1])));
                 else
@@ -156,8 +157,9 @@ public class ConsoleIO
         cmds.put("drop", (args) ->
         {
             Object v = EntityManager.GetObjectByName(args[0]);
-            if(v instanceof Virologist viro)
+            if(v instanceof Virologist)
             {
+                Virologist viro = (Virologist) v;
                 viro.DestroyEquipment(viro.equipments.get(Integer.parseInt(args[1])));
             }
             return "";
@@ -165,8 +167,9 @@ public class ConsoleIO
         cmds.put("interact", (args) ->
         {
             Object v = EntityManager.GetObjectByName(args[0]);
-            if(v instanceof Virologist viro)
+            if(v instanceof Virologist)
             {
+                Virologist viro = (Virologist) v;
                 viro.InteractWithField();
             }
             return "";
@@ -174,8 +177,9 @@ public class ConsoleIO
         cmds.put("move", (args) ->
         {
             Object v = EntityManager.GetObjectByName(args[0]);
-            if(v instanceof Virologist viro)
+            if(v instanceof Virologist)
             {
+                Virologist viro = (Virologist) v;
                 viro.MoveTo((Field) EntityManager.GetObjectByName(args[1]));
             }
             return "";
@@ -184,11 +188,13 @@ public class ConsoleIO
         {
             Object v = EntityManager.GetObjectByName(args[0]);
             Object v2 = EntityManager.GetObjectByName(args[1]);
-            if(v instanceof Virologist viro && v2 instanceof Virologist viro2)
+            if(v instanceof Virologist && v2 instanceof Virologist)
             {
+                Virologist viro = (Virologist) v;
+                Virologist viro2 = (Virologist) v2;
                 if(args[2].equals("eq"))
                 {
-                    viro.StealEquipmentFromViro(viro2, viro2.equipments.get(Integer.parseInt(args[2])));
+                    viro.StealEquipmentFromViro(viro2, viro2.equipments.get(Integer.parseInt(args[3])));
                 }
                 else
                 {
@@ -201,15 +207,17 @@ public class ConsoleIO
         {
             Object v = EntityManager.GetObjectByName(args[0]);
             Object v2 = EntityManager.GetObjectByName(args[1]);
-            if(v instanceof Virologist viro && v2 instanceof Virologist viro2)
+            if(v instanceof Virologist && v2 instanceof Virologist)
             {
-                if(args[2].equals("agent"))
+                Virologist viro = (Virologist) v;
+                Virologist viro2 = (Virologist) v2;
+                if(args[2].equals("ag") || args[2].equals("agent"))
                 {
                     viro.UseAgent(viro.stash.get(Integer.parseInt(args[3])), viro2);
                 }
                 else
                 {
-                    viro.UseEquipment(viro2.equipments.get(Integer.parseInt(args[3])), viro2);
+                    viro.UseEquipment(viro.equipments.get(Integer.parseInt(args[3])), viro2);
                 }
             }
             return "";
@@ -221,31 +229,35 @@ public class ConsoleIO
         });
         cmds.put("random", (args) ->
         {
-            XRandom.randoms.add(Float.parseFloat(args[0]));
+            XRandom.randoms.add(Float.parseFloat(args[0]) / 100);
             return "";
         });
         
         cmds.put("add", (args) ->
         {
             Object v = EntityManager.GetObjectByName(args[2]);
-            if(v instanceof Virologist viro)
+            if(v instanceof Virologist)
             {
-                if(args[0].equals("agent"))
+                Virologist viro = (Virologist) v;
+                if(args[0].equals("agent") || args[0].equals("ag"))
                 {
                     Object agent = EntityManager.GetObjectByName(args[1]);
-                    if(agent instanceof Agent a)
+                    if(agent instanceof Agent)
                     {
-                        if(args.length == 4 && args[3].equals("1"))
+                        Agent a = (Agent) agent;
+                        if(args.length >= 4 && args[3].equals("1"))
                             viro.stash.add(a);
                         else
-                            viro.AddItem(a);
+                            a.Apply(null, viro);
+                        //Timer.AddSteppable(a);
                     }
                 }
                 else
                 {
                     Object equipment = EntityManager.GetObjectByName(args[1]);
-                    if(equipment instanceof Equipment eq)
+                    if(equipment instanceof Equipment)
                     {
+                        Equipment eq = (Equipment) equipment;
                         viro.AddEquipment(eq);
                     }
                 }
@@ -257,15 +269,18 @@ public class ConsoleIO
         {
             Object v = EntityManager.GetObjectByName(args[0]);
             Object f = EntityManager.GetObjectByName(args[1]);
-            if(v instanceof Virologist viro && f instanceof Field field)
+            if(v instanceof Virologist && f instanceof Field)
             {
+                Virologist viro = (Virologist) v;
+                Field field = (Field) f;
                 field.AcceptViro(viro);
             }
             return "";
         });
         
-        cmds.put("logents2", (args) ->
+        cmds.put("clear", (args) ->
         {
+            EntityManager.BigRedButton();
             return "";
         });
     }

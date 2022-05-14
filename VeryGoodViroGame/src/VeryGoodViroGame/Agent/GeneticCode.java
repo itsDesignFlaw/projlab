@@ -29,7 +29,7 @@ public class GeneticCode
     
     public GeneticCode(Agent a)
     {
-        this(a, new Resource());
+        this(a, new Resource(10, 10));
     }
     
     public GeneticCode(Agent a, Resource cost)
@@ -65,10 +65,8 @@ public class GeneticCode
      */
     public Agent CreateVirus()
     {
-        Logger.NewFunctionCall(this, "CreateVirus");
         Agent clone = a.Clone();
         Timer.AddSteppable(clone);
-        Logger.ReturnFunction();
         return clone;
     }
     
@@ -79,11 +77,9 @@ public class GeneticCode
      */
     public Agent CreateVaccine()
     {
-        Logger.NewFunctionCall(this, "CreateVaccine");
         Agent clone = a.Clone();
         Vaccine vaccine = new Vaccine(clone);
         Timer.AddSteppable(vaccine);
-        Logger.ReturnFunction();
         return vaccine;
     }
     
@@ -94,8 +90,6 @@ public class GeneticCode
      */
     public Resource GetCost()
     {
-        Logger.NewFunctionCall(this, "GetCost");
-        Logger.ReturnFunction();
         return cost;
     }
     
@@ -104,12 +98,12 @@ public class GeneticCode
         //TODO:valami ilyesmi kéne
         /*Class c = a.getClass();
         return code.a instanceof c;*/
-        return false;
+        return code.a.getClass() == a.getClass();
     }
     
     @Override
     public String toString()
     {
-        return a.getClass().getName() + " code";
+        return a == null ? "" : a.getClass().getSimpleName() + " code";
     }
 }

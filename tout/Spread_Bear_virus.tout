@@ -1,0 +1,24 @@
+name: "v1"
+	equipments: 
+	items: DHaN, maybe bear?
+	learntCodes: 
+	mezo: f2
+	moveStrategy: MSBear
+	resource: (ami:0, nuki:0)
+	stash: 
+name: "v2"
+	equipments: 
+	items: DHaN, maybe bear?
+	learntCodes: 
+	mezo: f2
+	moveStrategy: MSSimple
+	resource: (ami:0, nuki:0)
+	stash: 
+name: "v3"
+	equipments: 
+	items: DHaN, maybe bear?
+	learntCodes: 
+	mezo: f2
+	moveStrategy: MSSimple
+	resource: (ami:0, nuki:0)
+	stash: 

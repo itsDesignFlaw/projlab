@@ -1,0 +1,18 @@
+name: "v1"
+	equipments: 
+	items: craft0
+	learntCodes: 
+	mezo: w3
+	moveStrategy: MSParalyzed
+	resource: (ami:20, nuki:20)
+	stash: 
+name: "v2"
+	dead: true
+name: "v3"
+	equipments: axe0
+	items: axe0
+	learntCodes: 
+	mezo: w3
+	moveStrategy: MSSimple
+	resource: (ami:0, nuki:0)
+	stash: 

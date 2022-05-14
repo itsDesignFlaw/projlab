@@ -1,0 +1,11 @@
+name: “v1”
+	equipments: bnkr2_coat
+items: bnkr2_coat
+	learntCodes:
+	mezo: bnkr2
+moveStrategy: MSSimple
+resource: (ami:0, nuki:0)
+stash:name: “bnkr2”:
+	neighbours: bnkr1, bnkr3, lab2
+	equipment: null
+	virologists: v1

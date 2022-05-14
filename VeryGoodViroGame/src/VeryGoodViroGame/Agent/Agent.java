@@ -10,6 +10,7 @@ package VeryGoodViroGame.Agent;//
 //
 
 import VeryGoodViroGame.*;
+import VeryGoodViroGame.MoveStrategy.MSSimple;
 import VeryGoodViroGame.MoveStrategy.iMoveStrategy;
 
 /**
@@ -18,11 +19,11 @@ import VeryGoodViroGame.MoveStrategy.iMoveStrategy;
  */
 public abstract class Agent extends InvItem implements iSteppable, Cloneable
 {
-    final int activeTimeDefault = 690;//jobb nevet neki
+    int activeTimeDefault = 690;//jobb nevet neki
     int activeTime = activeTimeDefault;
     //Akin van
     Virologist host;
-    iMoveStrategy strategy;
+    iMoveStrategy strategy = new MSSimple();
     boolean active = false;
     
     /**
@@ -33,7 +34,6 @@ public abstract class Agent extends InvItem implements iSteppable, Cloneable
      */
     public void Apply(Virologist source, Virologist target)
     {
-        Logger.NewFunctionCall(this, "Apply");
         host = null;
         if(target.ApplyAgent(this, source))
         {
@@ -41,8 +41,8 @@ public abstract class Agent extends InvItem implements iSteppable, Cloneable
             host = target;
             activeTime = activeTimeDefault;
             active = true;
+            Timer.AddSteppable(this);
         }
-        Logger.ReturnFunction();
     }
     
     /**
@@ -50,7 +50,6 @@ public abstract class Agent extends InvItem implements iSteppable, Cloneable
      */
     public void Step()
     {
-        Logger.NewFunctionCall(this, "Step");
         activeTime--;
         if(activeTime <= 0)
         {
@@ -68,7 +67,6 @@ public abstract class Agent extends InvItem implements iSteppable, Cloneable
             //Megoldás: klónozás, vagy dead flag
             Timer.RemoveSteppable(this);
         }
-        Logger.ReturnFunction();
     }
     
     /**
@@ -76,8 +74,6 @@ public abstract class Agent extends InvItem implements iSteppable, Cloneable
      */
     public Agent Clone()
     {
-        Logger.NewFunctionCall(this, "Clone");
-        Logger.ReturnFunction();
         try
         {
             return (Agent) super.clone();
@@ -91,6 +87,6 @@ public abstract class Agent extends InvItem implements iSteppable, Cloneable
     @Override
     public String toString()
     {
-        return "\tactiveTime: " + activeTime + "\n\thost: " + EntityManager.GetObjectName(host) + "\n\tstartegy: " + strategy.getClass().getName();
+        return "\tactiveTime: " + activeTime + "\n\thost: " + EntityManager.GetObjectName(host) + "\n\tstartegy: " + strategy.getClass().getSimpleName();
     }
 }

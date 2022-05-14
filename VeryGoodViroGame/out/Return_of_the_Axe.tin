@@ -1,0 +1,21 @@
+create v1 viro
+create v2 viro
+create b bear
+create f field
+create bunk bunker
+neighbour b f
+neighbour f bunk
+bunker bunk coat
+move v1 b
+move v2 f
+interact v1
+move v2 bunk
+interact v2
+random 0
+move v1 f
+random 51
+move v1 l
+use v2 v1 eq 0
+list v1
+list v2
+list axe

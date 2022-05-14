@@ -1,0 +1,19 @@
+name: "v1"
+	equipments: 
+	items: forget
+	learntCodes: 
+	mezo: f1
+	moveStrategy: MSSimple
+	resource: (ami:0, nuki:0)
+	stash: 
+name: "v2"
+	equipments: gloves
+	items: gloves
+	learntCodes: 
+	mezo: f1
+	moveStrategy: MSSimple
+	resource: (ami:0, nuki:0)
+	stash: 
+name: "gloves"
+	host: DHaN, maybe bear?
+	remainingHealth: 2

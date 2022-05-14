@@ -1,0 +1,10 @@
+create v1 viro
+create forget forget
+create dance dance
+add agent forget v1
+add agent dance v1
+list forget
+list dance
+step
+list forget
+list dance

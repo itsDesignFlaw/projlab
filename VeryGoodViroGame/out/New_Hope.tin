@@ -1,0 +1,24 @@
+create v1 viro
+create v2 viro
+create v3 viro
+create f1 lab
+create f2 ware
+create f3 field
+create vaccine paralyze 1
+neighbour f1 f2
+neighbour f2 f3
+add ag vaccine v3 1
+move v1 f1
+move v2 f3
+move v3 f3
+lab f1 paralyze
+ware f2 50 50
+interact v1
+move v1 f2
+interact v1
+craft v1 0 vi
+move v1 f3
+use v1 v2 ag 0
+list v2
+use v3 v2 ag 0
+list v2

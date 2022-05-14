@@ -27,8 +27,6 @@ public class Protect extends Agent
      */
     public boolean CanAgentBeApplied(Agent agent, Virologist source)
     {
-        Logger.NewFunctionCall(this, "CanAgentBeApplied");
-        Logger.ReturnFunction();
         return false;
     }
 }

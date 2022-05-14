@@ -1,0 +1,24 @@
+name: "v1"
+	equipments: 
+	items: 
+	learntCodes: 
+	mezo: w3
+	moveStrategy: MSSimple
+	resource: (ami:0, nuki:0)
+	stash: 
+name: "v2"
+	equipments: 
+	items: 
+	learntCodes: 
+	mezo: f3
+	moveStrategy: MSSimple
+	resource: (ami:20, nuki:20)
+	stash: 
+name: "v3"
+	equipments: 
+	items: 
+	learntCodes: Protect code
+	mezo: f2
+	moveStrategy: MSSimple
+	resource: (ami:0, nuki:0)
+	stash: 

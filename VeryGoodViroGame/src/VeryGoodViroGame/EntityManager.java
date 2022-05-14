@@ -54,12 +54,29 @@ public class EntityManager
                 return objname;
         }
         ;
-        return "null";
+        return "DHaN, maybe bear?";
     }
     
     public static void PutNamedObject(String name, Object object)
     {
         namedObjects.put(name, object);
+    }
+    
+    public static void PutCraftedObject(String name, Object object)
+    {
+        int db = 0;
+        while(namedObjects.containsKey(name + db))
+            db++;
+        PutNamedObject(name + db, object);
+    }
+    
+    public static Object CreateEntity(String classname)
+    {
+        int db = 0;
+        while(namedObjects.containsKey(classname + db))
+            db++;
+        
+        return CreateEntity(classname, classname + db);
     }
     
     public static Object CreateEntity(String classname, String name)
@@ -78,5 +95,13 @@ public class EntityManager
         if(o == null)
             return "Object not found";
         return "name: \"" + name + "\"\n" + o.toString();
+    }
+    
+    /**
+     * Don't touch this
+     */
+    public static void BigRedButton()
+    {
+        namedObjects.clear();
     }
 }

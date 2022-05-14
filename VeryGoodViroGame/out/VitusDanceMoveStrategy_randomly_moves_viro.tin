@@ -1,0 +1,8 @@
+load devmap.map
+create v1 viro
+move v1 f0
+create dance0 dance
+add ag dance0 v1
+random 1
+step
+list v1

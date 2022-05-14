@@ -1,0 +1,48 @@
+create v1 viro
+create v2 viro
+create v3 viro
+create f1 field
+create f2 field
+create f3 field
+create l1 lab
+create l2 lab
+create l3 lab
+create w1 ware
+create w2 ware
+create w3 ware
+
+neighbour f1 f2
+neighbour f1 f3
+neighbour f1 l2
+neighbour f1 w2
+neighbour f1 w1
+neighbour f2 l1
+neighbour f2 l3
+neighbour w2 l3
+neighbour l1 l2
+neighbour f3 w3
+
+lab l1 paralyze
+lab l2 protect
+lab l3 protect
+
+ware w1 20 20
+ware w2 5 5
+ware w3 40 40
+
+move v1 f1
+move v2 w3
+move v3 l2
+
+interact v2
+interact v3
+
+move v1 f3
+move v1 w3
+move v2 f3
+move v3 l1
+move v3 f2
+
+list v1
+list v2
+list v3

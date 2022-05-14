@@ -1,0 +1,8 @@
+name: "v1"
+	equipments: 
+	items: 
+	learntCodes: Forget code
+	mezo: l0
+	moveStrategy: MSSimple
+	resource: (ami:0, nuki:0)
+	stash: 

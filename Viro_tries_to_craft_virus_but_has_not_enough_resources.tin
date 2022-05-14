@@ -1,0 +1,6 @@
+load devmap.map
+create v1 viro
+move v1 l0
+interact v1
+craft v1 0 vi
+list v1

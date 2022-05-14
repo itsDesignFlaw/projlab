@@ -1,0 +1,17 @@
+name: “v1”
+	equipments: axe, coat
+	items: axe, coat
+	learntCodes:
+	mezo: labbear0
+moveStrategy: MSSimple
+resource: (ami:0, nuki:0)
+stash:
+name “v2”
+	dead: true
+name: “labbear0”
+code: null	
+neighbours: f2
+virologists: v1	
+name: “axe”:
+	host: v1
+	sharp: false

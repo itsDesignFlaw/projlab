@@ -1,0 +1,12 @@
+load devmap.map
+create v1 viro
+create v2 viro
+create coat0 coat
+add eq coat0 v2
+move v1 f1
+move v2 f1
+create forget0 forget
+add agent forget0 v1 1
+random 0
+use v1 v2 agent 0
+list v2

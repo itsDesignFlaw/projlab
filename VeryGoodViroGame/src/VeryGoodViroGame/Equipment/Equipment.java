@@ -26,8 +26,6 @@ public abstract class Equipment extends InvItem
     
     public void Use(Virologist target)
     {
-        Logger.NewFunctionCall(this, "Use");
-        Logger.ReturnFunction();
     }
     
     @Override

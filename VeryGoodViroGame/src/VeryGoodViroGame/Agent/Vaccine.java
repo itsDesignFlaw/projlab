@@ -45,16 +45,14 @@ public class Vaccine extends Agent
      */
     public void Apply(Virologist source, Virologist target)
     {
-        Logger.NewFunctionCall(this, "Apply");
         target.RemoveItem(agentToCure);//TODO: instance of?
         Timer.RemoveSteppable(agentToCure);
         Timer.RemoveSteppable(this);
-        Logger.ReturnFunction();
     }
     
     @Override
     public String toString()
     {
-        return super.toString() + "\n\tagentToCure: " + agentToCure.getClass().getName();
+        return super.toString() + "\n\tagentToCure: " + agentToCure.getClass().getSimpleName();
     }
 }

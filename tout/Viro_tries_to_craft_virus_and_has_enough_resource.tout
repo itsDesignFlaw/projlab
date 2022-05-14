@@ -1,0 +1,9 @@
+name: "v1"
+	equipments: 
+	items: 
+	learntCodes: Paralyze code
+	mezo: w1
+	moveStrategy: MSSimple
+	resource: (ami:10, nuki:10)
+	stash: craft0
+Object not found

@@ -19,7 +19,7 @@ public class XRandom
     {
         if(randoms.size() == 0)
             return r.nextInt(size);
-        return Integer.parseInt(randoms.poll().toString());
+        return Math.round(randoms.poll()) % size;
     }
     
     public float nextFloat()

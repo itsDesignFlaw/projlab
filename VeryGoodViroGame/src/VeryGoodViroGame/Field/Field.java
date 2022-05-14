@@ -43,10 +43,8 @@ public class Field
      */
     public void AcceptViro(Virologist v)
     {
-        Logger.NewFunctionCall(this, "AcceptViro");
         virologists.add(v);
         v.SetField(this);
-        Logger.ReturnFunction();
     }
     
     /**
@@ -56,8 +54,6 @@ public class Field
      */
     public void Interact(Virologist v)
     {
-        Logger.NewFunctionCall(this, "Interact");
-        Logger.ReturnFunction();
     }
     
     /**
@@ -67,9 +63,7 @@ public class Field
      */
     public void RemoveViro(Virologist v)
     {
-        Logger.NewFunctionCall(this, "RemoveViro");
         virologists.remove(v);
-        Logger.ReturnFunction();
     }
     
     /**
@@ -79,9 +73,7 @@ public class Field
      */
     public void AddNeighbour(Field f)
     {
-        Logger.NewFunctionCall(this, "AddNeighbour");
         neighbours.add(f);
-        Logger.ReturnFunction();
     }
     
     XRandom r = new XRandom();
@@ -91,8 +83,6 @@ public class Field
      */
     public Field GetRandomNeighbour()
     {
-        Logger.NewFunctionCall(this, "GetRandomNeighbour");
-        Logger.ReturnFunction();
         return neighbours.get(r.nextInt(neighbours.size()));
     }
     

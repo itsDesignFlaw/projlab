@@ -33,14 +33,12 @@ public class EquipmentGloves extends Equipment
      */
     public boolean CanAgentBeApplied(Agent agent, Virologist source)
     {
-        Logger.NewFunctionCall(this, "CanAgentBeApplied");
-        source.ApplyAgent(agent, host);
+        agent.Apply(host, source);
         remainingHealth--;
         if(remainingHealth == 0)
         {
             host.DestroyEquipment(this);
         }
-        Logger.ReturnFunction();
         return false;
     }
     

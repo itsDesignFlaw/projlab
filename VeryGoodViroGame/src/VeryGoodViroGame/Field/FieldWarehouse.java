@@ -30,9 +30,7 @@ public class FieldWarehouse extends Field
      */
     public void Interact(Virologist v)
     {
-        Logger.NewFunctionCall(this, "Interact");
         resources = v.AddResource(resources);
-        Logger.ReturnFunction();
     }
     
     /**

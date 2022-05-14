@@ -1,0 +1,41 @@
+create f0 field
+create f1 field
+create f2 field
+create w0 ware
+ware w0 50 50
+create w1 ware
+ware w1 20 20
+create b0 bunker
+bunker b0 gloves
+create b1 bunker
+bunker b1 sack
+create b2 bunker
+bunker b2 coat
+create b3 bunker
+bunker b3 axe
+create l0 lab
+lab l0 forget
+create l1 lab
+lab l1 dance
+create l2 lab
+lab l2 paralyze
+create l3 lab
+lab l3 protect
+create lb0 bear
+
+neighbour f0 f1
+neighbour f0 w0
+neighbour w0 w1
+neighbour w1 b3
+neighbour f1 b0
+neighbour b0 b1
+neighbour b1 b2
+neighbour b2 b3
+neighbour f1 f2
+neighbour f2 l3
+neighbour f2 lb0
+neighbour f2 l0
+neighbour l0 l1
+neighbour l1 l2
+neighbour l2 b2
+neighbour l2 w1

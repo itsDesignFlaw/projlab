@@ -1,0 +1,25 @@
+create v1 viro
+create v2 viro
+create v3 viro
+create q lab
+create t lab
+create s bear
+create axe axe
+create gloves gloves
+neighbour q t
+neighbour t s
+lab q forget
+lab s forget
+add eq axe v1
+add eq gloves v3
+move v1 q
+move v2 t
+move v3 t
+move v1 t
+move v2 s
+interact v2
+move v2 t
+list v1
+list v2
+list v3
+list gloves

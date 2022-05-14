@@ -1,0 +1,21 @@
+create v1 viro
+create v2 viro
+create q lab
+create t lab
+create s bear
+neighbour q t
+neighbour t s
+create axe axe
+lab q forget
+lab s forget
+add eq axe v1
+move v1 q
+move v2 t
+move v1 t
+move v2 s
+interact v2
+move v1 s
+use v1 v2 eq 0
+list v1
+list v2
+list axe

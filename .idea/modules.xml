@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Projlab.iml" filepath="$PROJECT_DIR$/.idea/Projlab.iml" />
       <module fileurl="file://$PROJECT_DIR$/VeryGoodViroGame/VeryGoodViroGame.iml" filepath="$PROJECT_DIR$/VeryGoodViroGame/VeryGoodViroGame.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mapgenjava/mapgenjava.iml" filepath="$PROJECT_DIR$/mapgenjava/mapgenjava.iml" />
     </modules>
   </component>
 </project>

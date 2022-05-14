@@ -1,0 +1,24 @@
+name: "v1"
+    equipments: 
+    items: craft1
+    learntCodes: Protect code
+    mezo: l1
+    moveStrategy: MSVitusDance
+    resource: (ami:10, nuki:10)
+    stash: craft0
+name: "v2"
+    equipments: 
+    items: 
+    learntCodes: Dance code
+    mezo: l2
+    moveStrategy: MSSimple
+    resource: (ami:10, nuki:10)
+    stash: 
+name: "v3"
+    equipments: 
+    items: DHaN, maybe bear?
+    learntCodes: 
+    mezo: bl
+    moveStrategy: MSBear
+    resource: (ami:0, nuki:0)
+    stash:

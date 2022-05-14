@@ -16,13 +16,11 @@ public class EquipmentAxe extends Equipment
     @Override
     public void Use(Virologist target)
     {
-        Logger.NewFunctionCall(this, "Use");
         if(sharp)
         {
             target.KillVirologist();
             sharp = false;
         }
-        Logger.ReturnFunction();
     }
     
     @Override

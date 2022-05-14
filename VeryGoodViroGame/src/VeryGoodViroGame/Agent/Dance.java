@@ -22,6 +22,7 @@ public class Dance extends Agent
     {
         super();
         strategy = new MSVitusDance();
+        activeTimeDefault = 2;
     }
     
 }

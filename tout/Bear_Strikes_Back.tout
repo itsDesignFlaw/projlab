@@ -1,0 +1,8 @@
+name: "v2"
+	equipments: 
+	items: craft0
+	learntCodes: Protect code
+	mezo: w
+	moveStrategy: MSSimple
+	resource: (ami:10, nuki:10)
+	stash: 

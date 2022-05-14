@@ -1,0 +1,8 @@
+name: “v2”
+	equipments:
+	items: protect1
+	learntCodes: protect
+	mezo: w
+moveStrategy: MSSimple
+resource: (ami:40, nuki:40)
+stash:

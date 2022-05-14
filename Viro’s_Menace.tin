@@ -1,0 +1,17 @@
+load devmap.map
+create v1 viro
+create v2 viro
+move v1 l3
+move v2 w1
+lab l2 dance
+interact v1
+move v1 w1
+interact v1
+craft v1 0 vi
+use v1 v2 ag 0
+random 0 1
+step
+list v2
+step
+list v1
+list v2

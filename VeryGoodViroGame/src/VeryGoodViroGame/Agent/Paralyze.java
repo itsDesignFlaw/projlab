@@ -24,6 +24,7 @@ public class Paralyze extends Agent
     {
         super();
         strategy = new MSParalyzed();
+        activeTimeDefault = 1;
     }
     
     /**
@@ -33,8 +34,6 @@ public class Paralyze extends Agent
      */
     public boolean IsParalyzed()
     {
-        Logger.NewFunctionCall(this, "IsParalyzed");
-        Logger.ReturnFunction();
         return true;
     }
     
@@ -46,8 +45,6 @@ public class Paralyze extends Agent
      */
     public boolean CanApplyAgent()
     {
-        Logger.NewFunctionCall(this, "CanApplyAgent");
-        Logger.ReturnFunction();
         return false;
     }
     
@@ -58,8 +55,6 @@ public class Paralyze extends Agent
      */
     public boolean CanSteal()
     {
-        Logger.NewFunctionCall(this, "CanSteal");
-        Logger.ReturnFunction();
         return false;
     }
     
@@ -70,8 +65,6 @@ public class Paralyze extends Agent
      */
     public boolean CanCraft()
     {
-        Logger.NewFunctionCall(this, "CanCraft");
-        Logger.ReturnFunction();
         return false;
     }
     
@@ -82,8 +75,6 @@ public class Paralyze extends Agent
      */
     public boolean CanInteract()
     {
-        Logger.NewFunctionCall(this, "CanInteract");
-        Logger.ReturnFunction();
         return false;
     }
 }

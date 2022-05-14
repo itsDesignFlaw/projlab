@@ -34,10 +34,6 @@ public class EquipmentCoat extends Equipment
      */
     public boolean CanAgentBeApplied(Agent agent, Virologist source)
     {
-        Logger.NewFunctionCall(this, "Clone");
-        //boolean answer = Logger.AskQuestion("Can the agent be applied to the virologist");
-        Logger.ReturnFunction();
-        //return answer;
         return r.nextFloat() < Chance;
     }
 }

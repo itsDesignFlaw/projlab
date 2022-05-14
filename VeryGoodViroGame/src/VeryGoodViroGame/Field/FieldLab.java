@@ -20,7 +20,7 @@ import VeryGoodViroGame.Virologist;
  */
 public class FieldLab extends Field
 {
-    private GeneticCode code;
+    private GeneticCode code = new GeneticCode();
     
     /**
      * Ez a metódus valósítja meg a genetikai kód letapogatást.
@@ -29,9 +29,7 @@ public class FieldLab extends Field
      */
     public void Interact(Virologist v)
     {
-        Logger.NewFunctionCall(this, "Interact");
         v.LearnGeneticCode(code);
-        Logger.ReturnFunction();
     }
     
     /**
@@ -41,9 +39,7 @@ public class FieldLab extends Field
      */
     public void setCode(GeneticCode geneticCode)
     {
-        Logger.NewFunctionCall(this, "setCode");
         code = geneticCode;
-        Logger.ReturnFunction();
     }
     
     @Override
