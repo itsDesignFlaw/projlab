@@ -7,6 +7,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class View
@@ -17,20 +18,47 @@ public class View
         BACKGROUND, MAP, HUD
     }
     
+    //Lefordítás fájlokra
     private static HashMap<String, String> images = new HashMap<>();
     private final static String ResourcePath = "/resources/";
+    public ViewController controller;
     
     static
     {
+        
+        images.put("ami", "aminoacid.png");
+        images.put("axe", "axe.png");
+        images.put("bear", "bear.png");
+        images.put("vaccine", "bg_vaccine.png");
+        images.put("virus", "bg_virus.png");
+        images.put("bunker", "bunker.png");
+        images.put("coat", "coat.png");
+        images.put("dance", "dance.png");
+        images.put("effect_agent", "effect_agent.png");
+        images.put("effect_equipment", "effect_equipment.png");
+        images.put("effect_equipment_broken", "effect_equipment_broken.png");
+        images.put("field", "field_simple.png");
+        images.put("forget", "forget.png");
+        images.put("gloves", "gloves.png");
+        images.put("lab", "lab.png");
+        images.put("nuki", "nucleotid.png");
+        images.put("paralyze", "paralyze.png");
+        images.put("protect", "protect.png");
+        images.put("sack", "sack.png");
         images.put("viro", "viro.png");
+        images.put("ware", "warehouse.png");
     }
+    
+    //Esetleg HashMap, és a value egy Levels, hogy melyik szinten van?
+    //Vagy egy új osztály, pozíció, kép, szint
+    private ArrayList<DrawableComponent> drawables = new ArrayList<>();
     
     
     JFrame frame;
-    //Talán nem kell, mert beágyazott osztály eléri a mgefelelő értékeket
-    //Bár mondjuk konkrét hívásokra jó lehet
-    MapPanel panel;
+    
+    
     //Sajat Componens
+    MapPanel panel;
     
     
     public void Init()
@@ -47,6 +75,7 @@ public class View
         JMenu menu = new JMenu("titkos üzenet");
         JMenuItem menuitem = new JMenuItem("kopasz kugli Goldi");
         
+        
         menu.add(menuitem);
         menubar.add(menu);
         
@@ -55,8 +84,7 @@ public class View
         frame.setJMenuBar(menubar);
         
         //Jobb klikk menü, az osztélyban lehet módosítani a kinézetén
-        panel.setComponentPopupMenu(new ContextMenu());
-        //frame.addMouseListener(new PopClickListener());
+        //panel.setComponentPopupMenu(new ContextMenu());
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setResizable(false); //ne kelljen ezzel foglalkozni
         frame.setVisible(true);
@@ -102,13 +130,31 @@ public class View
     
     class MapPanel extends JPanel
     {
-        //Igazából lehet felesleges, de legalább egyértlemű, hátteret nem kell újrarajzolni
         //TODO: Akár a virológusok szétszedése, hogy mindig a pálya felett legyen?
+        //TODO: A JLabelös megoldás jobb, ezek már nem kellenek, legfeljebb a háttér
         BufferedImage background, map, hud;
         
         public MapPanel()
         {
             //Reset();
+            JLabel label = new JLabel(new ImageIcon(Main.class.getResource("/resources/az.png")));
+            
+            //Esetleg egy új osztály, ami eltárolja, hogy ha kattintunk, mit hívjon meg?
+            //Pl ViewController.ClickOnViro
+            label.addMouseListener(new MouseAdapter()
+            {
+                @Override
+                public void mouseClicked(MouseEvent e)
+                {
+                    System.out.println("Hello There");
+                }
+            });
+            setLayout(null);
+            add(label);
+            label.setLocation(100, 100);
+            label.setSize(50, 50);
+            
+            
         }
         
         public void ShowTestCaseMap()
@@ -138,26 +184,47 @@ public class View
             }
         }
         
+        void BgPaint()
+        {
+            try
+            {
+                BufferedImage bg = ImageIO.read(Main.class.getResource("/resources/bg.png"));
+                
+                //createGraphics egy Graphics2d objektumot ad vissza, a getGraphics csak sima Graphicsot
+                //Mindkettő ugyanúgy működik (konkrétan a getGraphics a createGraphicsot hívja meg BufferedImage esetén)
+                background.createGraphics().drawImage(bg.getScaledInstance(getWidth(), getHeight(),
+                        Image.SCALE_DEFAULT), 0, 0, null);
+            }
+            catch(IOException e)
+            {
+                e.printStackTrace();
+            }
+            
+        }
+        
         public void Reset()
         {
             background = new BufferedImage(getWidth(), getHeight(), BufferedImage.TYPE_INT_ARGB);
             map = new BufferedImage(getWidth(), getHeight(), BufferedImage.TYPE_INT_ARGB);
             hud = new BufferedImage(getWidth(), getHeight(), BufferedImage.TYPE_INT_ARGB);
-            ShowTestCaseMap();
+            
+            
+            //ShowTestCaseMap();
+            BgPaint();
             //Repaint invalidate helyett, az valamiért nem működött
             repaint();
         }
-    
+        
         /**
-         *
          * @param level Melyik képre akarunk rajzolni
-         * @param im Amit kirajzolunk
-         * @param x Pozíció X koordinátája
-         * @param y Pozíció Y koordinátája
+         * @param im    Amit kirajzolunk
+         * @param x     Pozíció X koordinátája
+         * @param y     Pozíció Y koordinátája
          */
         public void DrawImage(Levels level, Image im, int x, int y)
         {
-            switch(level)
+            //A szintek kellenek még a JLabellel is, csak máshogy kéne szervezni, esetleg Listákban tárolni?
+            /*switch(level)
             {
                 case BACKGROUND:
                     background.getGraphics().drawImage(im, x, y, null);
@@ -168,21 +235,35 @@ public class View
                 case HUD:
                     hud.getGraphics().drawImage(im, x, y, null);
                     break;
-            }
+            }*/
+            JLabel label = new JLabel(new ImageIcon(im));
+            label.addMouseListener(new MouseAdapter()
+            {
+                @Override
+                public void mouseClicked(MouseEvent e)
+                {
+                    System.out.println("Viro");
+                }
+            });
+            setLayout(null);
+            add(label);
+            label.setLocation(x, y);
+            label.setSize(im.getWidth(null), im.getHeight(null));
+            label.setComponentPopupMenu(new ContextMenu());
         }
         
         
         @Override
-        public void paint(Graphics g2)
+        public void paint(Graphics g)
         {
-            super.paint(g2);
-            Graphics2D g = (Graphics2D) g2;
             
             
             //Egymás felé kirajzoljuk a 3 kép tartalmát
             g.drawImage(background, 0, 0, null);
             g.drawImage(map, 0, 0, null);
             g.drawImage(hud, 0, 0, null);
+            
+            paintChildren(g);
             
             //g.setColor(Color.gray);
             //g.fillRect(0, 0, getWidth(), getHeight());
@@ -205,6 +286,7 @@ public class View
     
     
     //Már nem kell, de mintának jó, egér kattintás kezelése
+    //Ha vizsgálni akarjuk hova kattintottuk, vagy ilyesmi, akkor lehet kell
     class PopClickListener extends MouseAdapter
     {
         public void mousePressed(MouseEvent e)
