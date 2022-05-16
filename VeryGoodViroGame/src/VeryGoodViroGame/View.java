@@ -77,7 +77,7 @@ public class View
         //Ez a felső menübár
         JMenuBar menubar = new JMenuBar();
         JMenu menu = new JMenu("titkos üzenet");
-        JMenuItem menuitem = new JMenuItem("kopasz kugli Goldi");
+        JMenuItem menuitem = new JMenuItem("száll a széllel");
         
         
         menu.add(menuitem);
