@@ -439,6 +439,13 @@ public class View
         }
     }
     
+    class EqContext extends JPopupMenu
+    {
+        public EqContext(Equipment e)
+        {
+        
+        }
+    }
     
     //Már nem kell, de mintának jó, egér kattintás kezelése
     //Ha vizsgálni akarjuk hova kattintottuk, vagy ilyesmi, akkor lehet kell
