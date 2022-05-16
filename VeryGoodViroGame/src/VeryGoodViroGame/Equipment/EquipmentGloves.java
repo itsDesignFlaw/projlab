@@ -22,6 +22,11 @@ public class EquipmentGloves extends Equipment
 {
     private int remainingHealth = 3;
     
+    @Override
+    public String GetDrawString()
+    {
+        return "gloves";
+    }
     
     /**
      * (InvItem metódus) hamis érték visszaadásával blokkolja

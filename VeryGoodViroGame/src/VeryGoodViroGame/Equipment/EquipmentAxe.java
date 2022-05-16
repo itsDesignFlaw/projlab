@@ -24,6 +24,12 @@ public class EquipmentAxe extends Equipment
     }
     
     @Override
+    public String GetDrawString()
+    {
+        return "axe";
+    }
+    
+    @Override
     public String toString()
     {
         return super.toString() + "\n\tsharp: " + sharp;

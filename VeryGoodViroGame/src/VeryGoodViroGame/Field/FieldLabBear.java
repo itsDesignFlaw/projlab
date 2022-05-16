@@ -12,4 +12,9 @@ public class FieldLabBear extends FieldLab
         Bear b = new Bear();
         b.Apply(null, v);
     }
+    @Override
+    public String GetDrawString()
+    {
+        return "bearlab";
+    }
 }

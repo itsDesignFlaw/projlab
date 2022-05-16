@@ -50,6 +50,11 @@ public class FieldBunker extends Field
         this.equipment = equipment;
         hasEquipment = true;
     }
+    @Override
+    public String GetDrawString()
+    {
+        return "bunker";
+    }
     
     @Override
     public String toString()

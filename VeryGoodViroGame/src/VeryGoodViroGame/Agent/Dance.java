@@ -10,6 +10,7 @@ package VeryGoodViroGame.Agent;//
 //
 
 
+import VeryGoodViroGame.DrawableComponent;
 import VeryGoodViroGame.MoveStrategy.MSVitusDance;
 
 /**
@@ -25,4 +26,9 @@ public class Dance extends Agent
         activeTimeDefault = 2;
     }
     
+    @Override
+    public String GetDrawString()
+    {
+        return "dance";
+    }
 }

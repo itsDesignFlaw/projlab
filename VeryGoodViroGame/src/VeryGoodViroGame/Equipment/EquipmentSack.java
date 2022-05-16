@@ -30,4 +30,9 @@ public class EquipmentSack extends Equipment
     {
         return 20;
     }
+    @Override
+    public String GetDrawString()
+    {
+        return "sack";
+    }
 }

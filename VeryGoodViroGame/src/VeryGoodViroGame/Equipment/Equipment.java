@@ -9,16 +9,13 @@ package VeryGoodViroGame.Equipment;//
 //
 //
 
-import VeryGoodViroGame.EntityManager;
-import VeryGoodViroGame.InvItem;
-import VeryGoodViroGame.Logger;
-import VeryGoodViroGame.Virologist;
+import VeryGoodViroGame.*;
 
 /**
  * A virológusok által felvehető felszerelések/ruhadarabok.
  * Alapvető célja, hogy ezeket az interaktív osztályok közös kezelését elősegítse.
  */
-public abstract class Equipment extends InvItem
+public abstract class Equipment extends InvItem implements DrawableComponent
 {
     
     Virologist host;
