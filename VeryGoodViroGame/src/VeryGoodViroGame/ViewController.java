@@ -39,6 +39,9 @@ public class ViewController
         f.AddNeighbour(b);
         f.AddNeighbour(bear);
         f.AddNeighbour(ware);
+        f.AddNeighbour(new FieldLabBear());
+        f.AddNeighbour(new Field());
+        f.AddNeighbour(new FieldBunker());
         Update(v);
     }
     
