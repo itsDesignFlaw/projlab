@@ -168,6 +168,11 @@ public class View
     
     }
     
+    public void DrawEffects(java.util.List<String> effects)
+    {
+    
+    }
+    
     //Ez nem kell, mert beépített popup van
     public void DrawContextMenu(int x, int y)
     {

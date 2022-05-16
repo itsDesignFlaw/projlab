@@ -67,7 +67,7 @@ public class ViewController
         view.DrawItems(eq.stream().map(Equipment::GetDrawString).collect(Collectors.toList()));
         
         view.DrawGeneticCodes(codes.stream().map(GeneticCode::GetDrawString).collect(Collectors.toList()));
-        
+        view.DrawEffects(effect.stream().map(InvItem::GetDrawString).collect(Collectors.toList()));
         //Hogyan legyenek az effectek?
         //Mármint hol? Virológuson?
         

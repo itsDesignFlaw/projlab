@@ -21,7 +21,7 @@ import VeryGoodViroGame.Agent.Agent;
  * Ha a virológus InvItem-jei függvényenként mind végig lesznek iterálva mindaddig,
  * míg egy alapértelmezettel szembemenő (un. ‘blokkoló’) visszatérési értéket kap).
  */
-public abstract class InvItem
+public abstract class InvItem implements DrawableComponent
 {
     /**
      *A metódus visszatér egy egész számmal, ami megmutatja,
