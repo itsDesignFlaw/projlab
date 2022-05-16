@@ -18,6 +18,8 @@ public class ViewController
     
     public ViewController()
     {
+        
+        GameManager.StartGame();
         view = new View();
         view.Init();
         Test();
