@@ -1,12 +1,18 @@
 package VeryGoodViroGame;
 
+import VeryGoodViroGame.Agent.Agent;
+import VeryGoodViroGame.Agent.GeneticCode;
+import VeryGoodViroGame.Equipment.Equipment;
 import VeryGoodViroGame.Field.Field;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.geom.GeneralPath;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -14,6 +20,17 @@ import java.util.HashMap;
 
 public class View
 {
+    class ViewObject
+    {
+        String png;
+        Object ref;
+        
+        ViewObject(String s, Object r)
+        {
+            png = s;
+            ref = r;
+        }
+    }
     
     enum Levels
     {
@@ -22,6 +39,7 @@ public class View
     
     //Lefordítás fájlokra
     private static HashMap<String, String> images = new HashMap<>();
+    private HashMap<Object, ViewObject> objects = new HashMap<>();
     private final static String ResourcePath = "/resources/";
     public ViewController controller;
     
@@ -64,6 +82,20 @@ public class View
     //Sajat Componens
     MapPanel panel;
     
+    public void AddObject(Object o, String s)
+    {
+        objects.put(o, new ViewObject(images.get(s), o));
+    }
+    
+    public View(ViewController c)
+    {
+        controller = c;
+    }
+    
+    public void RemoveObject(Object o)
+    {
+        objects.remove(o);
+    }
     
     public void Init()
     {
@@ -99,13 +131,18 @@ public class View
         
     }
     
-    private BufferedImage GetImage(String name)
+    public void Clear()
+    {
+        panel.removeAll();
+    }
+    
+    private BufferedImage GetImage(Object name)
     {
         try
         {
             //Ezzel a getResource móddal lehet elvileg jar fileból is beolvasni, azaz akkor is jó útvonalat ad meg
             //Minden fájl ami az src mappán belül van tuti megtalálja
-            BufferedImage im = ImageIO.read(Main.class.getResource(ResourcePath + images.get(name)));
+            BufferedImage im = ImageIO.read(Main.class.getResource(ResourcePath + objects.get(name).png));
             return im;
         }
         catch(Exception e)
@@ -131,11 +168,11 @@ public class View
         }
     }
     
-    public void DrawMap(String current, java.util.List<String> neighbours)
+    public void DrawMap(Field current, java.util.List<Field> neighbours)
     {
         BufferedImage cur = GetImage(current);
         panel.DrawImage(Levels.MAP, cur, panel.getWidth() / 2 - cur.getWidth() / 2,
-                panel.getHeight() / 2 - cur.getHeight() / 2);
+                panel.getHeight() / 2 - cur.getHeight() / 2).addMouseListener(new FieldClick(current));
         int size = neighbours.size();
         for(int i = 0; i < size; i++)
         {
@@ -144,21 +181,21 @@ public class View
             int x = (int) (Math.cos(a) * (panel.getWidth() / 2 - 60) + panel.getWidth() / 2);
             int y = (int) (Math.sin(a) * (panel.getHeight() / 2 - 60) + panel.getHeight() / 2);
             //Work in Progress, ha valami jobb ötlet, nyugodtan lehet cserélni
-            panel.DrawImage(Levels.MAP, img, x - img.getWidth() / 2, y - img.getHeight() / 2);
+            panel.DrawImage(Levels.MAP, img, x - img.getWidth() / 2, y - img.getHeight() / 2).addMouseListener(new FieldClick(current));
         }
     }
     
-    public void DrawGeneticCodes(java.util.List<String> codes)
+    public void DrawGeneticCodes(java.util.List<GeneticCode> codes)
     {
     
     }
     
-    public void DrawViros(java.util.List<String> viros)
+    public void DrawViros(java.util.List<Virologist> viros)
     {
     
     }
     
-    public void DrawItems(java.util.List<String> hud)
+    public void DrawItems(java.util.List<InvItem> hud)
     {
     
     }
@@ -168,7 +205,7 @@ public class View
     
     }
     
-    public void DrawEffects(java.util.List<String> effects)
+    public void DrawEffects(java.util.List<Agent> effects)
     {
     
     }
@@ -182,6 +219,27 @@ public class View
     public void Repaint()
     {
         panel.repaint();
+    }
+    
+    private class FieldClick extends MouseAdapter
+    {
+        Field f;
+        
+        FieldClick(Field f)
+        {
+            this.f = f;
+        }
+        
+        @Override
+        public void mouseClicked(MouseEvent e)
+        {
+            controller.MoveViro(f);
+        }
+    }
+    
+    private void FieldClick(Field f)
+    {
+        controller.MoveViro(f);
     }
     
     class MapPanel extends JPanel
@@ -279,7 +337,7 @@ public class View
          * @param x     Pozíció X koordinátája
          * @param y     Pozíció Y koordinátája
          */
-        public void DrawImage(Levels level, Image im, int x, int y)
+        public JLabel DrawImage(Levels level, Image im, int x, int y)
         {
             //A szintek kellenek még a JLabellel is, csak máshogy kéne szervezni, esetleg Listákban tárolni?
             /*switch(level)
@@ -295,19 +353,12 @@ public class View
                     break;
             }*/
             JLabel label = new JLabel(new ImageIcon(im));
-            label.addMouseListener(new MouseAdapter()
-            {
-                @Override
-                public void mouseClicked(MouseEvent e)
-                {
-                    System.out.println("Viro");
-                }
-            });
             setLayout(null);
             add(label);
             label.setLocation(x, y);
             label.setSize(im.getWidth(null), im.getHeight(null));
             label.setComponentPopupMenu(new ContextMenu());
+            return label;
         }
         
         
@@ -338,7 +389,53 @@ public class View
         public ContextMenu()
         {
             //Itt lehet több cuccot hozzáadni meg ilyenek
-            add(new JMenuItem("Hello there"));
+            JMenu menu = new JMenu("Hello there");
+            menu.add(new JMenuItem("General Kenobi"));
+            add(menu);
+        }
+    }
+    
+    class ViroContext extends JPopupMenu
+    {
+        public ViroContext(Virologist v)
+        {
+            JMenuItem stealres = new JMenuItem("Steal Resource");
+            JMenu stealeq = new JMenu("Steal Equipment");
+            JMenuItem useagent = new JMenuItem("Use Agent");
+            
+            for(Equipment equipment : v.equipments)
+            {
+                JMenuItem equipIter = new JMenuItem(equipment.getName());
+                equipIter.addActionListener(e ->
+                {
+                    controller.StealEquipment(v, equipment);
+                });
+                stealeq.add(equipIter);
+            }
+            
+            stealres.addActionListener(e ->
+            {
+                controller.StealResource(v);
+            });
+            
+            useagent.addActionListener(e ->
+            {
+                //v.UseAgent();
+            });
+            add(stealres);
+            add(stealeq);
+            add(useagent);
+        }
+    }
+    
+    class GeneticContext extends JPopupMenu
+    {
+        public GeneticContext(GeneticCode code)
+        {
+            JMenuItem craftVaccine = new JMenuItem("Craft vaccine");
+            JMenuItem craftVirus = new JMenuItem("Craft virus");
+            add(craftVaccine);
+            add(craftVirus);
         }
     }
     

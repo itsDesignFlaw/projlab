@@ -20,7 +20,7 @@ public class ViewController
     public ViewController()
     {
         GameManager.StartGame();
-        view = new View();
+        view = new View(this);
         view.Init();
         Test();
     }
@@ -33,49 +33,64 @@ public class ViewController
         Field b = new FieldBunker();
         Field bear = new FieldLabBear();
         Field ware = new FieldWarehouse();
+        AddObject(v, "viro");
+        AddObject(l, "lab");
+        AddObject(f, "field");
+        AddObject(b, "bunker");
+        AddObject(bear, "bearlab");
+        AddObject(ware, "ware");
+        
         v.SetField(f);
         f.AddNeighbour(l);
         f.AddNeighbour(b);
         f.AddNeighbour(bear);
         f.AddNeighbour(ware);
-        f.AddNeighbour(new FieldLabBear());
-        f.AddNeighbour(new Field());
-        f.AddNeighbour(new FieldBunker());
         Update(v);
     }
     
     public void Update(Virologist v)
     {
         activeViro = v;
+        use = null;
+        view.Clear();
         
         Field f = v.GetField();
         List<Field> fields = f.GetNeighbours();
         List<GeneticCode> codes = v.learntCodes;
         List<Virologist> viros = new ArrayList<>(f.GetVirologists());
-        //TODO: Kiszűrni az Equipmenteket
         List<InvItem> effect = v.items;
         List<Agent> stash = new ArrayList<>(v.stash);
         List<Equipment> eq = v.equipments;
         
         
-        view.DrawMap(f.GetDrawString(), fields.stream().map(Field::GetDrawString).collect(Collectors.toList()));
-        view.DrawViros(viros.stream().map(Virologist::GetDrawString).collect(Collectors.toList()));
+        view.DrawMap(f, fields);
+        view.DrawViros(viros);
         
-        view.DrawItems(stash.stream().map(Agent::GetDrawString).collect(Collectors.toList()));
-        view.DrawItems(eq.stream().map(Equipment::GetDrawString).collect(Collectors.toList()));
+        ArrayList<InvItem> it = new ArrayList<>(stash);
+        it.addAll(stash);
+        view.DrawItems(it);
         
-        view.DrawGeneticCodes(codes.stream().map(GeneticCode::GetDrawString).collect(Collectors.toList()));
-        view.DrawEffects(effect.stream().map(InvItem::GetDrawString).collect(Collectors.toList()));
-        //Hogyan legyenek az effectek?
-        //Mármint hol? Virológuson?
+        view.DrawGeneticCodes(codes);
+        view.DrawEffects(effect.stream().filter(x -> x instanceof Agent).map(x -> (Agent) x).collect(Collectors.toList()));
+        
         
         view.Repaint();
     }
     
+    public void AddObject(Object o, String s)
+    {
+        view.AddObject(o, s);
+    }
+    
+    public void RemoveObject(Object o)
+    {
+        view.RemoveObject(o);
+    }
     
     public void MoveViro(Field f)
     {
         activeViro.MoveTo(f);
+        Update(activeViro);
     }
     
     public void CraftVirus(GeneticCode gc)
@@ -116,5 +131,12 @@ public class ViewController
     public void DropEquipment(Equipment e)
     {
         activeViro.RemoveEquipment(e);
+    }
+    
+    private Agent use = null;
+    
+    public void SetAgent(Agent a)
+    {
+    
     }
 }
