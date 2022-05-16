@@ -26,7 +26,8 @@ public class GameManager
     public static void StartGame()
     {
         map = new Map();
-        map.GenerateMap();
+        //map.GenerateMap();
+        map.GenerateMapDefault(); //a GenerateMap-be kellenek parameterek a palyahoz, ez meg default ertekekkel csinalja ugyanazt
     }
     
     /**
