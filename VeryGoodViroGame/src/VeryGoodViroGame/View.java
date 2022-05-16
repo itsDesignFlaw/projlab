@@ -95,7 +95,7 @@ public class View
         panel.Reset();
         
         
-        DrawFromString("viro");
+        //DrawFromString("viro");
         
     }
     
@@ -136,6 +136,16 @@ public class View
         BufferedImage cur = GetImage(current);
         panel.DrawImage(Levels.MAP, cur, panel.getWidth() / 2 - cur.getWidth() / 2,
                 panel.getHeight() / 2 - cur.getHeight() / 2);
+        int size = neighbours.size();
+        for(int i = 0; i < size; i++)
+        {
+            BufferedImage img = GetImage(neighbours.get(i));
+            double a = i * 2 * Math.PI / size - Math.PI / 4;
+            int x = (int) (Math.cos(a) * (panel.getWidth() / 2 - 60) + panel.getWidth() / 2);
+            int y = (int) (Math.sin(a) * (panel.getHeight() / 2 - 60) + panel.getHeight() / 2);
+            //Work in Progress, ha valami jobb ötlet, nyugodtan lehet cserélni
+            panel.DrawImage(Levels.MAP, img, x - img.getWidth() / 2, y - img.getHeight() / 2);
+        }
     }
     
     public void DrawGeneticCodes(java.util.List<String> codes)
@@ -164,6 +174,11 @@ public class View
     
     }
     
+    public void Repaint()
+    {
+        panel.repaint();
+    }
+    
     class MapPanel extends JPanel
     {
         //TODO: Akár a virológusok szétszedése, hogy mindig a pálya felett legyen?
@@ -189,6 +204,8 @@ public class View
             add(label);
             label.setLocation(100, 100);
             label.setSize(50, 50);
+            //Ez csak mint akód, lehet majd törölni, jelenleg csak nem látszik
+            label.setVisible(false);
             
             
         }

@@ -3,9 +3,10 @@ package VeryGoodViroGame;
 import VeryGoodViroGame.Agent.Agent;
 import VeryGoodViroGame.Agent.GeneticCode;
 import VeryGoodViroGame.Equipment.Equipment;
-import VeryGoodViroGame.Field.Field;
+import VeryGoodViroGame.Field.*;
 
 import javax.swing.*;
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -29,7 +30,15 @@ public class ViewController
     {
         Virologist v = new Virologist();
         Field f = new Field();
+        Field l = new FieldLab();
+        Field b = new FieldBunker();
+        Field bear = new FieldLabBear();
+        Field ware = new FieldWarehouse();
         v.SetField(f);
+        f.AddNeighbour(l);
+        f.AddNeighbour(b);
+        f.AddNeighbour(bear);
+        f.AddNeighbour(ware);
         Update(v);
     }
     
@@ -43,17 +52,23 @@ public class ViewController
         List<Virologist> viros = new ArrayList<>();
         viros.add(v);
         viros.addAll(f.GetVirologists());
-        List<InvItem> items = v.items;
-        List<Agent> agents = v.stash;
+        List<InvItem> effect = v.items;
+        List<Agent> stash = new ArrayList<>(v.stash);
         List<Equipment> eq = v.equipments;
         
         
         view.DrawMap(f.GetDrawString(), fields.stream().map(Field::GetDrawString).collect(Collectors.toList()));
-        
         view.DrawViros(viros.stream().map(Virologist::GetDrawString).collect(Collectors.toList()));
         
+        view.DrawItems(stash.stream().map(Agent::GetDrawString).collect(Collectors.toList()));
+        view.DrawItems(eq.stream().map(Equipment::GetDrawString).collect(Collectors.toList()));
         
         view.DrawGeneticCodes(codes.stream().map(GeneticCode::GetDrawString).collect(Collectors.toList()));
+        
+        //Hogyan legyenek az effectek?
+        //Mármint hol? Virológuson?
+        
+        view.Repaint();
     }
     
     
