@@ -19,7 +19,6 @@ public class ViewController
     
     public ViewController()
     {
-        
         GameManager.StartGame();
         view = new View();
         view.Init();
@@ -52,9 +51,8 @@ public class ViewController
         Field f = v.GetField();
         List<Field> fields = f.GetNeighbours();
         List<GeneticCode> codes = v.learntCodes;
-        List<Virologist> viros = new ArrayList<>();
-        viros.add(v);
-        viros.addAll(f.GetVirologists());
+        List<Virologist> viros = new ArrayList<>(f.GetVirologists());
+        //TODO: Kiszűrni az Equipmenteket
         List<InvItem> effect = v.items;
         List<Agent> stash = new ArrayList<>(v.stash);
         List<Equipment> eq = v.equipments;
@@ -115,4 +113,8 @@ public class ViewController
         activeViro.UseEquipment(e, target);
     }
     
+    public void DropEquipment(Equipment e)
+    {
+        activeViro.RemoveEquipment(e);
+    }
 }
