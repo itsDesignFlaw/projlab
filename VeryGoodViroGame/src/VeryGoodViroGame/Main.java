@@ -62,8 +62,7 @@ public class Main
             ConsoleMode(args);
             return;
         }
-        View v = new View();
-        v.Init();
+        ViewController controller = new ViewController();
     }
     
     private static void ConsoleMode(String[] args) throws FileNotFoundException

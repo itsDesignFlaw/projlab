@@ -25,7 +25,7 @@ import java.util.stream.Collectors;
  * Ez az osztály felelős a virológus által véghezvihető tevékenységek megvalósításáért,
  * ilyenek például a mozgás, az erőforrások gyűjtése, és az ágensek létrehozása.
  */
-public class Virologist
+public class Virologist implements DrawableComponent
 {
     iMoveStrategy moveStrategy = new MSSimple();
     List<InvItem> items = new ArrayList<>();
@@ -446,6 +446,12 @@ public class Virologist
         return dead ? "\tdead: true" :
                 "\tequipments: " + equipments.stream().map(EntityManager::GetObjectName).collect(Collectors.joining(
                         ", ")) + "\n\titems: " + items.stream().map(EntityManager::GetObjectName).collect(Collectors.joining(", ")) + "\n\tlearntCodes: " + learntCodes.stream().map(GeneticCode::toString).collect(Collectors.joining(", ")) + "\n\tmezo: " + EntityManager.GetObjectName(mezo) + "\n\tmoveStrategy: " + moveStrategy.getClass().getSimpleName() + "\n\tresource: " + resource.toString() + "\n\tstash: " + stash.stream().map(EntityManager::GetObjectName).collect(Collectors.joining(", "));
+    }
+    
+    @Override
+    public String GetDrawString()
+    {
+        return moveStrategy instanceof MSBear ? "bearviro" : "viro";
     }
 }
 

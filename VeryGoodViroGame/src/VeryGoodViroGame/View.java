@@ -1,5 +1,7 @@
 package VeryGoodViroGame;
 
+import VeryGoodViroGame.Field.Field;
+
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
@@ -41,11 +43,13 @@ public class View
         images.put("forget", "forget.png");
         images.put("gloves", "gloves.png");
         images.put("lab", "lab.png");
+        images.put("bearlab", "lab.png");
         images.put("nuki", "nucleotid.png");
         images.put("paralyze", "paralyze.png");
         images.put("protect", "protect.png");
         images.put("sack", "sack.png");
         images.put("viro", "viro.png");
+        images.put("bearviro", "viro.png");
         images.put("ware", "warehouse.png");
     }
     
@@ -95,6 +99,21 @@ public class View
         
     }
     
+    private BufferedImage GetImage(String name)
+    {
+        try
+        {
+            //Ezzel a getResource móddal lehet elvileg jar fileból is beolvasni, azaz akkor is jó útvonalat ad meg
+            //Minden fájl ami az src mappán belül van tuti megtalálja
+            BufferedImage im = ImageIO.read(Main.class.getResource(ResourcePath + images.get(name)));
+            return im;
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+        return null;
+    }
     
     public void DrawFromString(String name)
     {
@@ -112,7 +131,24 @@ public class View
         }
     }
     
-    public void DrawGeneticCodes(String[] codes)
+    public void DrawMap(String current, java.util.List<String> neighbours)
+    {
+        BufferedImage cur = GetImage(current);
+        panel.DrawImage(Levels.MAP, cur, panel.getWidth() / 2 - cur.getWidth() / 2,
+                panel.getHeight() / 2 - cur.getHeight() / 2);
+    }
+    
+    public void DrawGeneticCodes(java.util.List<String> codes)
+    {
+    
+    }
+    
+    public void DrawViros(java.util.List<String> viros)
+    {
+    
+    }
+    
+    public void DrawItems(java.util.List<String> hud)
     {
     
     }

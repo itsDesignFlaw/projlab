@@ -43,6 +43,11 @@ public class FieldLab extends Field
     }
     
     @Override
+    public String GetDrawString()
+    {
+        return "lab";
+    }
+    @Override
     public String toString()
     {
         return super.toString() + "\n\tcode: " + code.toString();

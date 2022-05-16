@@ -49,6 +49,12 @@ public class Vaccine extends Agent
         Timer.RemoveSteppable(agentToCure);
         Timer.RemoveSteppable(this);
     }
+    @Override
+    public String GetDrawString()
+    {
+        //TODO:mi legyen itt??
+        return "vaccine";
+    }
     
     @Override
     public String toString()

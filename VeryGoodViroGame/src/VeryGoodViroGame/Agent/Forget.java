@@ -24,4 +24,11 @@ public class Forget extends Agent
         return false;
     }
     
+    
+    @Override
+    public String GetDrawString()
+    {
+        return "forget";
+    }
+    
 }

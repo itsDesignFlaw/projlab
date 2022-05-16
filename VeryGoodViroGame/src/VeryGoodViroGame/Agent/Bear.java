@@ -1,5 +1,6 @@
 package VeryGoodViroGame.Agent;
 
+import VeryGoodViroGame.DrawableComponent;
 import VeryGoodViroGame.MoveStrategy.MSBear;
 
 public class Bear extends Agent
@@ -14,5 +15,10 @@ public class Bear extends Agent
     public void Step()
     {
         //Do not lower counter
+    }
+    @Override
+    public String GetDrawString()
+    {
+        return "bear";
     }
 }

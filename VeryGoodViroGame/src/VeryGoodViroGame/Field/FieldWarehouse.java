@@ -33,6 +33,11 @@ public class FieldWarehouse extends Field
         resources = v.AddResource(resources);
     }
     
+    @Override
+    public String GetDrawString()
+    {
+        return "ware";
+    }
     /**
      * Ez a metódus valósítja meg, hogy az adott mezőn milyen felszerelés jelenjen meg.
      *

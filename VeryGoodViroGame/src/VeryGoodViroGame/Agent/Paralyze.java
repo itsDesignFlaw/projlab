@@ -77,4 +77,9 @@ public class Paralyze extends Agent
     {
         return false;
     }
+    @Override
+    public String GetDrawString()
+    {
+        return "paralyze";
+    }
 }

@@ -10,10 +10,7 @@ package VeryGoodViroGame.Field;//
 //
 
 
-import VeryGoodViroGame.EntityManager;
-import VeryGoodViroGame.Logger;
-import VeryGoodViroGame.Virologist;
-import VeryGoodViroGame.XRandom;
+import VeryGoodViroGame.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +22,7 @@ import java.util.stream.Collectors;
  * Az egyszerű mezőt reprezentálja, melyen a virológusok mozoghatnak. Ismernie kell, adott mezőn, mely virológusok
  * állnak.
  */
-public class Field
+public class Field implements DrawableComponent
 {
     List<Virologist> virologists = new ArrayList<>();
     private List<Field> neighbours = new ArrayList<>();
@@ -90,6 +87,11 @@ public class Field
     {
     }
     
+    public List<Field> GetNeighbours()
+    {
+        return new ArrayList<>(neighbours);
+    }
+    
     public List<Virologist> GetVirologists()
     {
         return virologists;
@@ -99,5 +101,10 @@ public class Field
     public String toString()
     {
         return "\tneighbours: " + neighbours.stream().map(EntityManager::GetObjectName).collect(Collectors.joining(", ")) + "\n\tvirologists: " + virologists.stream().map(EntityManager::GetObjectName).collect(Collectors.joining(", "));
+    }
+    @Override
+    public String GetDrawString()
+    {
+        return "field";
     }
 }

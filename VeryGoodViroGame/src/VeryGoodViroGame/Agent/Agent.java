@@ -17,7 +17,7 @@ import VeryGoodViroGame.MoveStrategy.iMoveStrategy;
  * Az összes ágens ősosztálya, az osztály felelőssége, hogy előírja,
  * hogyan lehet felkenni az ágenseket, és felel azért is, hogy csak adott ideig fejtsék ki a hatásukat.
  */
-public abstract class Agent extends InvItem implements iSteppable, Cloneable
+public abstract class Agent extends InvItem implements iSteppable, Cloneable, DrawableComponent
 {
     int activeTimeDefault = 690;//jobb nevet neki
     int activeTime = activeTimeDefault;

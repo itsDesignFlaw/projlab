@@ -29,4 +29,10 @@ public class Protect extends Agent
     {
         return false;
     }
+    
+    @Override
+    public String GetDrawString()
+    {
+        return "protect";
+    }
 }
