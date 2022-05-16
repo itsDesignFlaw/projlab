@@ -67,7 +67,7 @@ public class View
     
     public void Init()
     {
-        frame = new JFrame("Very Good Viro Game --pre alpha test v0.0.0.-3");
+        frame = new JFrame("Very Good Viro Game --pre alpha test v0.0.0.-2");
         frame.setSize(800, 600);
         ImageIcon icon = new ImageIcon(Main.class.getResource("/resources/az.png"));
         frame.setIconImage(icon.getImage());
