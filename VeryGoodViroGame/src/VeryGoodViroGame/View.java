@@ -147,7 +147,7 @@ public class View
         panel.removeAll();
     }
     
-    private BufferedImage GetImage(Object name)
+    private BufferedImage GetImage(Object name)//todo mi a faszert name?
     {
         try
         {
@@ -155,6 +155,8 @@ public class View
             if(obj == null)
             {
                 System.out.println("View/BufferedImage.GetImage obj==null! information:\n " + name.toString());
+
+                System.out.println("Does entity exist? " + EntityManager.NameFromObject(name) + "\n\t if not it probably indicates that viro has invalid field set, should check for that!");
                 return null;
             }
 

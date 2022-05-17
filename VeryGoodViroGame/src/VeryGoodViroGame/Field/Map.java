@@ -262,7 +262,6 @@ public class Map
 
         //use traces to create neighbourhoods
         Node last = primaryWeb[0];
-        printas("trying two: " + primaryWeb[1].toString() + " || " + last.toString());
         for (int i = 1; i < primaryWeb.length; i++) {
             if (last == null)
                 printas("last node is null, wtf? info: " +i + " and " +primaryWeb.length);
@@ -584,7 +583,7 @@ public class Map
     
     public void GenerateMapDefault(int vc)
     {
-        GenerateMap("defaultmap", "", 1*vc, 0*vc, 0*vc, 0*vc, 0*vc);
+        GenerateMap("defaultmap", "", 6*vc, 2*vc, 1*vc, 1*vc, 0*vc);
         printas("Generated default map, multiplying size by virocount");
     }
     
