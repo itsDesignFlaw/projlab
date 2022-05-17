@@ -24,7 +24,7 @@ public class Paralyze extends Agent
     {
         super();
         strategy = new MSParalyzed();
-        activeTimeDefault = 1;
+        //activeTimeDefault = 1;
     }
     
     /**

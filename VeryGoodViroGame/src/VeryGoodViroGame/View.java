@@ -15,6 +15,7 @@ import java.awt.event.MouseEvent;
 import java.awt.geom.GeneralPath;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -146,7 +147,13 @@ public class View
         {
             //Ezzel a getResource móddal lehet elvileg jar fileból is beolvasni, azaz akkor is jó útvonalat ad meg
             //Minden fájl ami az src mappán belül van tuti megtalálja
-            BufferedImage im = ImageIO.read(Main.class.getResource(ResourcePath + objects.get(name).png));
+            URL u = Main.class.getResource(ResourcePath + objects.get(name).png);
+            if(u == null)
+            {
+                System.out.println(name.toString());
+                return null;
+            }
+            BufferedImage im = ImageIO.read(u);
             return im;
         }
         catch(Exception e)
@@ -266,7 +273,6 @@ public class View
                 x = leftMostPointOfItems + i * 64;
                 y = panel.getHeight() / 2;
             }
-            //G2D.drawRect(x - 3, y, 64, 64);
             BufferedImage img = GetImage(viros.get(i));
             JLabel label;
             if(viros.get(i).dead)
@@ -293,18 +299,25 @@ public class View
         {
             int x = leftMostPointOfItems + i * 64;
             int y = panel.getHeight() - 100;
-            //G2D.drawRect(x - 3, y, 64, 64);
             BufferedImage img = GetImage(items.get(i));
             JLabel l = panel.DrawImage(img, x, y);
             l.setBorder(BorderFactory.createLineBorder(Color.black, 3));
             if(items.get(i) instanceof Agent)
             {
                 l.addMouseListener(new AgentClick((Agent) items.get(i)));
+                if(items.get(i) == controller.GetSelectedAgent())
+                {
+                    l.setBorder(BorderFactory.createLineBorder(Color.red, 5));
+                }
             }
             else
             {
                 l.addMouseListener(new EquipmentClick((Equipment) items.get(i)));
                 l.setComponentPopupMenu(new EqContext((Equipment) items.get(i)));
+                if(items.get(i) == controller.GetSelectedEq())
+                {
+                    l.setBorder(BorderFactory.createLineBorder(Color.red, 5));
+                }
             }
             
         }

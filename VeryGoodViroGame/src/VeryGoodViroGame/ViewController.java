@@ -73,10 +73,20 @@ public class ViewController
         Update(v);
     }
     
+    public void Update()
+    {
+        if(activeViro != null)
+            Update(activeViro);
+    }
+    
     public void Update(Virologist v)
     {
-        activeViro = v;
-        usea = null;
+        if(v != activeViro)
+        {
+            activeViro = v;
+            usea = null;
+            usee = null;
+        }
         view.Clear();
         
         Field f = v.GetField();
@@ -119,19 +129,19 @@ public class ViewController
     {
         activeViro.MoveTo(f);
         moved = true;
-        Update(activeViro);
+        Update();
     }
     
     public void CraftVirus(GeneticCode gc)
     {
         activeViro.CraftVirus(gc);
-        Update(activeViro);
+        Update();
     }
     
     public void CraftVaccine(GeneticCode gc)
     {
         activeViro.CraftVaccine(gc);
-        Update(activeViro);
+        Update();
     }
     
     public void UseAgentOnViro(Virologist v)
@@ -139,25 +149,25 @@ public class ViewController
         if(usea == null)
             return;
         activeViro.UseAgent(usea, v);
-        Update(activeViro);
+        Update();
     }
     
     public void Interact()
     {
         activeViro.InteractWithField();
-        Update(activeViro);
+        Update();
     }
     
     public void StealEquipment(Virologist target, Equipment eq)
     {
         activeViro.StealEquipmentFromViro(target, eq);
-        Update(activeViro);
+        Update();
     }
     
     public void StealResource(Virologist target)
     {
         activeViro.StealResourceFromViro(target);
-        Update(activeViro);
+        Update();
     }
     
     public void UseEquipment(Virologist target)
@@ -165,13 +175,23 @@ public class ViewController
         if(usee == null)
             return;
         activeViro.UseEquipment(usee, target);
-        Update(activeViro);
+        Update();
     }
     
     public void DropEquipment(Equipment e)
     {
         activeViro.RemoveEquipment(e);
-        Update(activeViro);
+        Update();
+    }
+    
+    public Agent GetSelectedAgent()
+    {
+        return usea;
+    }
+    
+    public Equipment GetSelectedEq()
+    {
+        return usee;
     }
     
     private Agent usea = null;
@@ -179,12 +199,20 @@ public class ViewController
     
     public void SetAgent(Agent a)
     {
-        usea = a;
+        if(usea != a)
+            usea = a;
+        else
+            usea = null;
+        Update();
     }
     
     public void SetEquipment(Equipment e)
     {
-        usee = e;
+        if(usee != e)
+            usee = e;
+        else
+            usee = null;
+        Update();
     }
     
     public void EndTurn()
@@ -200,11 +228,7 @@ public class ViewController
         {
             audioInputStream = AudioSystem.getAudioInputStream(audioFile);
         }
-        catch(UnsupportedAudioFileException e)
-        {
-            e.printStackTrace();
-        }
-        catch(IOException e)
+        catch(UnsupportedAudioFileException | IOException e)
         {
             e.printStackTrace();
         }
@@ -221,11 +245,7 @@ public class ViewController
         {
             clip.open(audioInputStream);
         }
-        catch(LineUnavailableException e)
-        {
-            e.printStackTrace();
-        }
-        catch(IOException e)
+        catch(LineUnavailableException | IOException e)
         {
             e.printStackTrace();
         }

@@ -19,10 +19,10 @@ import VeryGoodViroGame.MoveStrategy.iMoveStrategy;
  */
 public abstract class Agent extends InvItem implements iSteppable, Cloneable, DrawableComponent
 {
-    int activeTimeDefault = 690;//jobb nevet neki
+    int activeTimeDefault = 3;//jobb nevet neki
     int activeTime = activeTimeDefault;
     //Akin van
-    Virologist host;
+    public Virologist host;
     iMoveStrategy strategy = new MSSimple();
     boolean active = false;
     

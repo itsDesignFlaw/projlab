@@ -79,6 +79,8 @@ public class GameManager
     
     public static void EndTurn()
     {
+        //TODO:Minden viro end turnnél menjen az idő, vagy 1 tick, ha minden Viro volt?
+        Timer.Step();
         currentViro = ++currentViro % virologists.size();
         controller.Update(virologists.get(currentViro));
     }

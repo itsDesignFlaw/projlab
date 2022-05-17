@@ -25,7 +25,8 @@ public class Timer
     
     public static void AddSteppable(iSteppable item)
     {
-        steppable_reg.add(item);
+        if(!steppable_reg.contains(item))
+            steppable_reg.add(item);
     }
     
     public static void RemoveSteppable(iSteppable step)
