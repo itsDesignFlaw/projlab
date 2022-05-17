@@ -150,6 +150,12 @@ public class View
         {
             //Ezzel a getResource móddal lehet elvileg jar fileból is beolvasni, azaz akkor is jó útvonalat ad meg
             //Minden fájl ami az src mappán belül van tuti megtalálja
+            ViewObject obj = objects.get(name);
+            if(obj == null)
+            {
+                System.out.println(name.toString());
+                return null;
+            }
             URL u = Main.class.getResource(ResourcePath + objects.get(name).png);
             if(u == null)
             {
@@ -194,9 +200,9 @@ public class View
         for(int i = 0; i < size; i++)
         {
             BufferedImage img = GetImage(neighbours.get(i));
-            double a = i * 2 * Math.PI / size - Math.PI / 4;
-            int x = (int) (Math.cos(a) * (panel.getWidth() / 2 - 60) + panel.getWidth() / 2);
-            int y = (int) (Math.sin(a) * (panel.getHeight() / 2 - 60) + panel.getHeight() / 2);
+            double a = i * 2 * Math.PI / size;
+            int x = (int) (Math.cos(a) * (panel.getWidth() / 2 - 100) + panel.getWidth() / 2);
+            int y = (int) (Math.sin(a) * (panel.getHeight() / 2 - 100) + panel.getHeight() / 2);
             //Work in Progress, ha valami jobb ötlet, nyugodtan lehet cserélni
             panel.DrawImage(img, x - img.getWidth() / 2, y - img.getHeight() / 2).addMouseListener(new FieldClick(neighbours.get(i)));
             name = new JLabel(EntityManager.GetObjectName(neighbours.get(i)));
