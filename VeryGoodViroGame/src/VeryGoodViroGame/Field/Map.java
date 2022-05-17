@@ -39,15 +39,20 @@ public class Map
     
     static HashMap<String, Integer> placed_fields = new HashMap<String, Integer>();
     static HashMap<String, Integer> place_these = new HashMap<String, Integer>();
-    
+
+    static boolean VerboseLog = false;
+
     static void printnn(String msg)
     {
-        System.out.print(msg);
+        if (VerboseLog)
+            System.out.print(msg);
     }
     
     static void printas(String msg)
     {
-        System.out.println("[MAPGEN] " + msg);
+
+        if (VerboseLog)
+            System.out.println("[MAPGEN] " + msg);
     }
     
     

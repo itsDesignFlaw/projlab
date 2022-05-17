@@ -558,7 +558,6 @@ public class View
 
         public void NiceMoveLabel(JLabel label, int tox, int toy)
         {
-            System.out.println("startpos:: " + label.getX() + "-..-" + label.getY());
 
 
             Timer Timo = new Timer("nicetimer");
@@ -571,13 +570,10 @@ public class View
                     int cy = label.getLocation().y;
                     label.setLocation( lerp(0.045f, cx, tox), lerp(0.045f, cy, toy) );
 
-                    System.out.println("Moved to: " + cx + "-"+cy);
-                    System.out.println("Target: " + tox + "-"+toy);
                     i++;
                     if (i>=40)
                     {
                         Timo.cancel();
-                        System.out.println("iter:" + i);
                     }
                 }
             };
