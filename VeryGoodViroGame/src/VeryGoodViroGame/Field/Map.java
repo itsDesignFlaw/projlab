@@ -39,15 +39,20 @@ public class Map
     
     static HashMap<String, Integer> placed_fields = new HashMap<String, Integer>();
     static HashMap<String, Integer> place_these = new HashMap<String, Integer>();
-    
+
+    static boolean VerboseLog = false;
+
     static void printnn(String msg)
     {
-        System.out.print(msg);
+        if (VerboseLog)
+            System.out.print(msg);
     }
     
     static void printas(String msg)
     {
-        System.out.println("[MAPGEN] " + msg);
+
+        if (VerboseLog)
+            System.out.println("[MAPGEN] " + msg);
     }
     
     
@@ -193,120 +198,101 @@ public class Map
         public Point location;
         //public Node[] neighbours = new Node[0];
         public ArrayList<Node> neighbours = new ArrayList<Node>();
-        
-        public Node(String s, Point p)
-        {
-            this.name = s;
-            this.location = p;
-        }
-        
+        public Node(String s, Point p){this.name = s; this.location = p;}
         public void AddEdge(Node n)
         {
             neighbours.add(n);
         }
-        
+
         @Override
         public String toString()
         {
-            String ret = "NODE:: " + name + "  neigh: " + neighbours.size();
+            String ret = "NODE:: " + name + "  neigh: "+neighbours.size();
             return ret;
         }
     }
-    
+
     static boolean[][] AdjacencyMatrix(String[] header, String[][] nodemap)
     {
         int LEN = header.length;
         //start, create return
         boolean[][] matrix = new boolean[LEN][LEN];
-        
+
         //create two distinct traces, emerging a web
         int c = 0;
         Node[] primaryWeb = new Node[LEN];
         Node[] secondaryWeb = new Node[LEN];
-        
+
         //and a bridge for translations
         int[][] bridge = new int[LEN][LEN];
-        
+
         printas("trace start: info: " + LEN + "  " + nodemap.length);
-        
-        for(int i = 0; i < LEN; i++)
-        {
+
+        for (int i = 0; i < LEN; i++) {
             printas(" at i header " + i + " is: " + header[i]);
         }
-        
-        for(int x = 0; x < nodemap.length; x++)
-        {
-            for(int y = 0; y < nodemap.length; y++)
-            {
+
+        for (int x = 0; x < nodemap.length; x++) {
+            for (int y = 0; y < nodemap.length; y++) {
                 printnn(nodemap[x][y] + " ");
             }
             printnn("\n");
         }
-        
-        for(int x = 0; x < nodemap.length; x++)
-        {
-            for(int y = 0; y < nodemap.length; y++)
-            {
-                if(!nodemap[x][y].equals(""))
+
+        for (int x = 0; x < nodemap.length; x++) {
+            for (int y = 0; y < nodemap.length; y++) {
+                if (!nodemap[x][y].equals(""))
                 {
                     bridge[x][y] = c;
-                    primaryWeb[c++] = new Node(nodemap[x][y], new Point(x, y));
-                    printas("[PR] added new node: " + primaryWeb[c - 1].toString() + " at c: " + (c - 1) + "  bridge" + ":" + " " + x + "|" + y + "|" + (c - 1));
-                    
+                    primaryWeb[c++] = new Node( nodemap[x][y], new Point(x, y));
+                    printas("[PR] added new node: " + primaryWeb[c-1].toString() + " at c: " + (c-1) + "  bridge: " + x + "|"+ y + "|"+(c-1));
+
                 }
             }
         }
         c = 0;
-        for(int y = 0; y < nodemap.length; y++)
-        {
-            for(int x = nodemap.length - 1; x >= 0; x--)
-            {
-                if(!nodemap[x][y].equals(""))
+        for (int y = 0; y < nodemap.length; y++) {
+            for (int x = nodemap.length-1; x >= 0; x--) {
+                if (!nodemap[x][y].equals(""))
                 {
                     secondaryWeb[c++] = primaryWeb[bridge[x][y]];
-                    printas("[SQ] added new node: " + secondaryWeb[c - 1].toString() + " at c: " + (c - 1));
+                    printas("[SQ] added new node: " + secondaryWeb[c-1].toString() + " at c: " + (c-1));
                     printas("accessing bridge yielded:" + bridge[x][y]);
                 }
             }
         }
-        
-        
+
+
         //use traces to create neighbourhoods
         Node last = primaryWeb[0];
-        printas("trying two: " + primaryWeb[1].toString() + " || " + last.toString());
-        for(int i = 1; i < primaryWeb.length; i++)
-        {
-            if(last == null)
-                printas("last node is null, wtf? info: " + i + " and " + primaryWeb.length);
+        for (int i = 1; i < primaryWeb.length; i++) {
+            if (last == null)
+                printas("last node is null, wtf? info: " +i + " and " +primaryWeb.length);
             Node next = primaryWeb[i];
             last.AddEdge(next);
             last = next;
         }
-        
+
         last = secondaryWeb[0];
-        for(int i = 1; i < secondaryWeb.length; i++)
-        {
+        for (int i = 1; i < secondaryWeb.length; i++) {
             Node next = secondaryWeb[i];
             last.AddEdge(next);
             last = next;
         }
-        
+
         //create matrix LUT
         HashMap<String, Integer> lut = new HashMap<>();
-        for(int i = 0; i < primaryWeb.length; i++)
-        {
+        for (int i = 0; i < primaryWeb.length; i++) {
             lut.put(primaryWeb[i].name, lut.size());
             printas("put into LUT:" + i + " this: " + lut.get(primaryWeb[i].name) + "  called: " + primaryWeb[i].name);
         }
-        
+
         // lets follow one of our traces once again to mark neighbouring nodes
-        for(int i = 1; i < primaryWeb.length; i++)
-        {
+        for (int i = 1; i < primaryWeb.length; i++) {
             Node cur = primaryWeb[i];
             int cc = lut.get(cur.name);
-            
-            for(int nc = 0; nc < cur.neighbours.size(); nc++)
-            {
+
+            for (int nc = 0; nc < cur.neighbours.size(); nc++) {
                 printas("trying NB: " + cur);
                 printas("\t nc, " + nc + ": " + cur.neighbours.get(nc));
                 int ccn = lut.get(cur.neighbours.get(nc).name);
@@ -314,22 +300,21 @@ public class Map
                 matrix[ccn][cc] = true; //it should be true both ways
             }
         }
-        
-        
+
+
         // finishing touches, make sure determinant is null
-        for(int i = 0; i < LEN; i++)
-        {
+        for (int i = 0; i < LEN; i++) {
             matrix[i][i] = false;
         }
-        
+
         return matrix;
     }
-    
+
     static String[][] UniquifyNodemap(String[][] nodemap)
     {
-        int sd = maxfields - 1;
+        int sd = maxfields -1;
         placed_fields.replaceAll((k, v) -> v = 0);
-        
+
         for(int i = 0; i < sd; i++)
         {
             for(int j = 0; j < sd; j++)
@@ -342,23 +327,21 @@ public class Map
                 }
             }
         }
-        
+
         return nodemap;
     }
     
     static String ConnectFields(String[] GraphMatrixHeader, boolean[][] GraphMatrix)
     {
         String ret = "";
-        
-        
-        for(int x = 0; x < GraphMatrixHeader.length; x++)
-        {
-            for(int y = x + 1; y < GraphMatrixHeader.length; y++)
-            {
-                
-                if(GraphMatrix[x][y])
+
+
+        for (int x = 0; x < GraphMatrixHeader.length; x++) {
+            for (int y = x+1; y < GraphMatrixHeader.length; y++) {
+
+                if (GraphMatrix[x][y])
                 {
-                    ret += "neighbour " + GraphMatrixHeader[x] + " " + GraphMatrixHeader[y] + "\n";
+                    ret+="neighbour " + GraphMatrixHeader[x] + " " + GraphMatrixHeader[y] + "\n";
                 }
             }
         }
@@ -604,7 +587,7 @@ public class Map
     
     public void GenerateMapDefault(int vc)
     {
-        GenerateMap("defaultmap", "", 6 * vc, 2 * vc, 3 * vc, 2 * vc, 0 * vc);
+        GenerateMap("defaultmap", "", 6*vc, 2*vc, 1*vc, 1*vc, 0*vc);
         printas("Generated default map, multiplying size by virocount");
     }
     

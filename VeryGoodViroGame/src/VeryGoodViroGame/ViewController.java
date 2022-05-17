@@ -39,39 +39,7 @@ public class ViewController
         //Test();
     }
     
-    
-    public void Test()
-    {
-        Virologist v = new Virologist();
-        Field f = new Field();
-        Field l = new FieldLab();
-        Field b = new FieldBunker();
-        Field bear = new FieldLabBear();
-        Field ware = new FieldWarehouse();
-        AddObject(v, "viro");
-        AddObject(l, "lab");
-        AddObject(f, "field");
-        AddObject(b, "bunker");
-        AddObject(bear, "bearlab");
-        AddObject(ware, "ware");
-        
-        v.SetField(f);
-        Agent vitus = new Dance(), para = new Paralyze();
-        AddObject(vitus, "dance");
-        AddObject(para, "paralyze");
-        Equipment e = new EquipmentAxe();
-        AddObject(e, "axe");
-        
-        v.AddEquipment(e);
-        v.AddAgentToStash(vitus);
-        v.AddAgentToStash(para);
-        
-        f.AddNeighbour(l);
-        f.AddNeighbour(b);
-        f.AddNeighbour(bear);
-        f.AddNeighbour(ware);
-        Update(v);
-    }
+
     
     public void Update()
     {

@@ -151,7 +151,7 @@ public class View
         panel.removeAll();
     }
     
-    private BufferedImage GetImage(Object name)
+    private BufferedImage GetImage(Object name)//todo mi a faszert name?
     {
         return GetImage(name, "");
     }
@@ -165,14 +165,16 @@ public class View
             ViewObject obj = objects.get(name);
             if(obj == null)
             {
-                System.out.println(name.toString());
+                System.out.println("View/BufferedImage.GetImage obj==null! information:\n " + name.toString());
+
+                System.out.println("Does entity exist? " + EntityManager.NameFromObject(name) + "\n\t if not it probably indicates that viro has invalid field set, should check for that!");
                 return null;
             }
             String file = obj.png.replace(offset, "");
             URL u = Main.class.getResource(ResourcePath + file);
             if(u == null)
             {
-                System.out.println(name.toString());
+                System.out.println("View/BufferedImage.GetImage u==null! information:\n " + name.toString());
                 return null;
             }
             BufferedImage im = ImageIO.read(u);
@@ -584,9 +586,8 @@ public class View
         
         public void NiceMoveLabel(JLabel label, int tox, int toy)
         {
-            //System.out.println("startpos:: " + label.getX() + "-..-" + label.getY());
-            
-            
+
+
             Timer Timo = new Timer("nicetimer");
             TimerTask Task = new TimerTask()
             {
@@ -597,15 +598,12 @@ public class View
                 {
                     int cx = label.getLocation().x;
                     int cy = label.getLocation().y;
-                    label.setLocation(lerp(0.045f, cx, tox), lerp(0.045f, cy, toy));
-                    
-                    //System.out.println("Moved to: " + cx + "-" + cy);
-                    //System.out.println("Target: " + tox + "-" + toy);
+                    label.setLocation( lerp(0.045f, cx, tox), lerp(0.045f, cy, toy) );
+
                     i++;
                     if(i >= 40)
                     {
                         Timo.cancel();
-                        //System.out.println("iter:" + i);
                     }
                 }
             };
