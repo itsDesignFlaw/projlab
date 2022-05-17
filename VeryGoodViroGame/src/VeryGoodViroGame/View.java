@@ -177,7 +177,7 @@ public class View
         BufferedImage cur = GetImage(current);
         panel.DrawImage(cur, panel.getWidth() / 2 - cur.getWidth() / 2, panel.getHeight() / 2 - cur.getHeight() / 2).setComponentPopupMenu(new FieldContext(current));
         List<Virologist> viros = new ArrayList<>(current.GetVirologists());
-        DrawViros(viros, 0, 0, false);
+        DrawViros(viros, 0, 0, false, true);
         JLabel name = new JLabel(EntityManager.GetObjectName(current));
         AddName(panel.getWidth() / 2, panel.getHeight() / 2 - cur.getHeight() / 2, name);
         int size = neighbours.size();
@@ -191,9 +191,9 @@ public class View
             panel.DrawImage(img, x - img.getWidth() / 2, y - img.getHeight() / 2).addMouseListener(new FieldClick(neighbours.get(i)));
             name = new JLabel(EntityManager.GetObjectName(neighbours.get(i)));
             AddName(x, y - img.getHeight() / 2, name);
-
+            
             List<Virologist> virosaround = new ArrayList<>(neighbours.get(i).GetVirologists());
-            DrawViros(virosaround, x -( img.getWidth() / 2), y, true);
+            DrawViros(virosaround, x - (img.getWidth() / 2), y, true, false);
         }
     }
     
@@ -249,14 +249,14 @@ public class View
         return rotatedImage;
     }
     
-    public void DrawViros(java.util.List<Virologist> viros, int xOffset, int yOffset, boolean useOffset)
+    public void DrawViros(java.util.List<Virologist> viros, int xOffset, int yOffset, boolean useOffset, boolean touch)
     {
         int itemHudSize = viros.size() * 64;
         int leftMostPointOfItems = (panel.getWidth() - itemHudSize) / 2;
         for(int i = 0; i < viros.size(); i++)
         {
             int x, y;
-            if (useOffset)
+            if(useOffset)
             {
                 x = xOffset;
                 y = yOffset;
@@ -268,14 +268,17 @@ public class View
             }
             //G2D.drawRect(x - 3, y, 64, 64);
             BufferedImage img = GetImage(viros.get(i));
+            JLabel label;
             if(viros.get(i).dead)
             {
-                panel.DrawImage(rotateImage(img, 90), x, y + img.getHeight() / 2).setComponentPopupMenu(new ViroContext(viros.get(i)));
+                label = panel.DrawImage(rotateImage(img, 90), x, y + img.getHeight() / 2);
             }
             else
             {
-                panel.DrawImage(img, x, y + img.getHeight() / 2).setComponentPopupMenu(new ViroContext(viros.get(i)));
+                label = panel.DrawImage(img, x, y + img.getHeight() / 2);
             }
+            if(touch)
+                label.setComponentPopupMenu(new ViroContext(viros.get(i)));
             JLabel name = new JLabel(EntityManager.GetObjectName(viros.get(i)));
             AddName(x + img.getWidth() / 2 - 1, y + img.getHeight() + 50, name);
             name.grabFocus();
