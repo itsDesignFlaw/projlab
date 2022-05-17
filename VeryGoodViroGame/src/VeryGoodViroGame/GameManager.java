@@ -62,7 +62,7 @@ public class GameManager
         
         currentViro = new Random().nextInt(virocount);
         
-        controller.PlaySound("bgmusic1.wav", 2.0f, true);
+        //controller.PlaySound("bgmusic1.wav", 2.0f, true);
     }
     
     /**

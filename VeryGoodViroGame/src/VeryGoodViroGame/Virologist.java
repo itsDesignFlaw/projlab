@@ -34,7 +34,7 @@ public class Virologist implements DrawableComponent
     List<Agent> stash = new ArrayList<>();
     
     //Amin áll (vine boom sound effect)
-    Field mezo = new Field();
+    Field mezo = null;
     private Resource resource = new Resource();
     List<Equipment> equipments = new ArrayList<>();
     boolean dead = false;
@@ -322,6 +322,7 @@ public class Virologist implements DrawableComponent
         if(equipments.size() >= 3)
             return false;
         this.equipments.add(equipment);
+        equipment.SetHost(this);
         AddItem(equipment);
         return true;
     }

@@ -39,21 +39,26 @@ public class Map
     
     static HashMap<String, Integer> placed_fields = new HashMap<String, Integer>();
     static HashMap<String, Integer> place_these = new HashMap<String, Integer>();
-    
+
+    static boolean VerboseLog = false;
+
     static void printnn(String msg)
     {
-        System.out.print(msg);
+        if (VerboseLog)
+            System.out.print(msg);
     }
     
     static void printas(String msg)
     {
-        System.out.println("[MAPGEN] " + msg);
+
+        if (VerboseLog)
+            System.out.println("[MAPGEN] " + msg);
     }
     
     
     static int[][] NoiseMap()
     {
-        int sd = maxfields-1;
+        int sd = maxfields - 1;
         int[][] map = new int[sd][sd];
         Random rand = new Random();
         rand.setSeed(useSeed);
@@ -108,7 +113,7 @@ public class Map
     {
         Random rand = new Random();
         rand.setSeed(useSeed);
-        int sd = maxfields-1;
+        int sd = maxfields - 1;
         int remainingSpots = maxfields;
         int inspectedFieldCount = 0;
         
@@ -134,7 +139,7 @@ public class Map
     
     static String[][] SelectNodes(int[][] noisemap)
     {
-        int sd = maxfields-1;
+        int sd = maxfields - 1;
         int ceiling = 10000;
         int foundfields = 0;
         String[][] mapnodes = new String[sd][sd];
@@ -165,27 +170,30 @@ public class Map
         }
         return mapnodes;
     }
-
+    
     static String[] AdjacencyMatrixHeader(String[][] nodemap)
     {
         int sd = maxfields - 1;
         int c = 0;
-        String[] header = new String[sd+1];
-        for (int x = 0; x < sd; x++) {
-            for (int y = 0; y < sd; y++) {
+        String[] header = new String[sd + 1];
+        for(int x = 0; x < sd; x++)
+        {
+            for(int y = 0; y < sd; y++)
+            {
                 String FID = nodemap[x][y];
-                if (!FID.equals(""))
+                if(!FID.equals(""))
                 {
                     printas("found new: " + x + ", " + y + " :: " + FID + " with c: " + c);
-                  header[c++] = FID;
+                    header[c++] = FID;
                 }
             }
         }
         return header;
     }
-
-
-    private static class Node {
+    
+    
+    private static class Node
+    {
         public String name;
         public Point location;
         //public Node[] neighbours = new Node[0];
@@ -257,7 +265,6 @@ public class Map
 
         //use traces to create neighbourhoods
         Node last = primaryWeb[0];
-        printas("trying two: " + primaryWeb[1].toString() + " || " + last.toString());
         for (int i = 1; i < primaryWeb.length; i++) {
             if (last == null)
                 printas("last node is null, wtf? info: " +i + " and " +primaryWeb.length);
@@ -338,7 +345,7 @@ public class Map
                 }
             }
         }
-
+        
         return ret;
     }
     
@@ -438,14 +445,14 @@ public class Map
     {
         String[][] arr = NameFields(SelectNodes(NoiseMap()));
         String str = CreateFields(arr);
-
+        
         arr = UniquifyNodemap(arr);
-
+        
         String[] GraphMatrixHeader = AdjacencyMatrixHeader(arr);
         boolean[][] GraphMatrix = AdjacencyMatrix(GraphMatrixHeader, arr);
-
+        
         str += "\n" + ConnectFields(GraphMatrixHeader, GraphMatrix);
-
+        
         Path path = Paths.get(name + ".map");
         try
         {
@@ -497,7 +504,8 @@ public class Map
             viro = (Virologist) EntityManager.CreateEntity("viro", VName);
             
             Field foundField;
-            viro.SetField(GetRandomField());
+            while(viro.GetField() == null)
+                viro.SetField(GetRandomField());
         }
     }
     
@@ -579,7 +587,7 @@ public class Map
     
     public void GenerateMapDefault(int vc)
     {
-        GenerateMap("defaultmap", "", 6*vc, 2*vc, 3*vc, 2*vc, 0*vc);
+        GenerateMap("defaultmap", "", 6*vc, 2*vc, 1*vc, 1*vc, 0*vc);
         printas("Generated default map, multiplying size by virocount");
     }
     

@@ -174,7 +174,7 @@ public class View
         panel.removeAll();
     }
     
-    private BufferedImage GetImage(Object name)
+    private BufferedImage GetImage(Object name)//todo mi a faszert name?
     {
         return GetImage(name, "");
     }
@@ -188,14 +188,16 @@ public class View
             ViewObject obj = objects.get(name);
             if(obj == null)
             {
-                System.out.println(name.toString());
+                System.out.println("View/BufferedImage.GetImage obj==null! information:\n " + name.toString());
+
+                System.out.println("Does entity exist? " + EntityManager.NameFromObject(name) + "\n\t if not it probably indicates that viro has invalid field set, should check for that!");
                 return null;
             }
             String file = obj.png.replace(offset, "");
             URL u = Main.class.getResource(ResourcePath + file);
             if(u == null)
             {
-                System.out.println(name.toString());
+                System.out.println("View/BufferedImage.GetImage u==null! information:\n " + name.toString());
                 return null;
             }
             BufferedImage im = ImageIO.read(u);
@@ -227,11 +229,10 @@ public class View
     public void DrawMap(Field current, java.util.List<Field> neighbours)
     {
         BufferedImage cur = GetImage(current);
-        panel.DrawImage(cur, panel.getWidth() / 2 - cur.getWidth() / 2, panel.getHeight() / 2 - cur.getHeight() / 2).setComponentPopupMenu(new FieldContext(current));
-        List<Virologist> viros = new ArrayList<>(current.GetVirologists());
-        DrawViros(viros, 0, 0, false, true);
-        JLabel name = new JLabel(EntityManager.GetObjectName(current));
-        AddName(panel.getWidth() / 2, panel.getHeight() / 2 - cur.getHeight() / 2, name);
+        JLabel curr = panel.DrawImage(cur, panel.getWidth() / 2 - cur.getWidth() / 2,
+                panel.getHeight() / 2 - cur.getHeight() / 2);
+        curr.setComponentPopupMenu(new FieldContext(current));
+        curr.addMouseListener(new FieldClick(current, curr));
         int size = neighbours.size();
         for(int i = 0; i < size; i++)
         {
@@ -241,13 +242,25 @@ public class View
             int y = (int) (Math.sin(a) * (panel.getHeight() / 2 - 100) + panel.getHeight() / 2);
             //Work in Progress, ha valami jobb ötlet, nyugodtan lehet cserélni
             JLabel FieldLabel = panel.DrawImage(img, x - img.getWidth() / 2, y - img.getHeight() / 2);
-            FieldLabel.addMouseListener(new FieldClick( neighbours.get(i), FieldLabel) );
-
+            FieldLabel.addMouseListener(new FieldClick(neighbours.get(i), FieldLabel));
+            
+        }
+        List<Virologist> viros = new ArrayList<>(current.GetVirologists());
+        DrawViros(viros, 0, 0, false);
+        JLabel name = new JLabel(EntityManager.GetObjectName(current));
+        AddName(panel.getWidth() / 2, panel.getHeight() / 2 - cur.getHeight() / 2, name);
+        panel.setComponentZOrder(name, 0);
+        for(int i = 0; i < size; i++)
+        {
+            BufferedImage img = GetImage(neighbours.get(i));
+            double a = i * 2 * Math.PI / size - Math.PI / 4;
+            int x = (int) (Math.cos(a) * (panel.getWidth() / 2 - 100) + panel.getWidth() / 2);
+            int y = (int) (Math.sin(a) * (panel.getHeight() / 2 - 100) + panel.getHeight() / 2);
             name = new JLabel(EntityManager.GetObjectName(neighbours.get(i)));
             AddName(x, y - img.getHeight() / 2, name);
-
+            
             List<Virologist> virosaround = new ArrayList<>(neighbours.get(i).GetVirologists());
-            DrawViros(virosaround, x - (img.getWidth() / 2), y, true, false);
+            DrawViros(virosaround, x - (img.getWidth() / 2), y, true);
         }
     }
     
@@ -255,7 +268,7 @@ public class View
     {
         AddName(x, y, name, Color.red);
     }
-
+    
     private void AddName(int x, int y, JLabel name, Color col)
     {
         panel.add(name);
@@ -307,21 +320,22 @@ public class View
         
         return rotatedImage;
     }
-
+    
     String ActiveViro;
     JLabel ActiveViroLabel;
     JLabel ActiveViroLabelName;
+    
     public void MarkActiveViro(String name)
     {
         ActiveViro = name;
     }
-
+    
     public void MoveCurViro(Field to)
     {
-
+    
     }
-
-    public void DrawViros(java.util.List<Virologist> viros, int xOffset, int yOffset, boolean useOffset, boolean touch)
+    
+    public void DrawViros(java.util.List<Virologist> viros, int xOffset, int yOffset, boolean useOffset)
     {
         int itemHudSize = viros.size() * 64;
         int leftMostPointOfItems = (panel.getWidth() - itemHudSize) / 2;
@@ -348,22 +362,21 @@ public class View
             {
                 CurViroLabel = panel.DrawImage(img, x, y + img.getHeight() / 2);
             }
-            if(touch)
-                CurViroLabel.setComponentPopupMenu(new ViroContext(viros.get(i)));
-
+            CurViroLabel.setComponentPopupMenu(new ViroContext(viros.get(i)));
+            
             String vironame = EntityManager.GetObjectName(viros.get(i));
             JLabel name = new JLabel(vironame);
-            AddName(x + img.getWidth() / 2-1, y + img.getHeight() + 50, name);
+            AddName(x + img.getWidth() / 2 - 1, y + img.getHeight() + 50, name);
             name.grabFocus();
-            if (vironame.equals(ActiveViro))
+            if(vironame.equals(ActiveViro))
             {
                 ActiveViroLabel = CurViroLabel;
                 ActiveViroLabelName = name;
-                AddName(x + img.getWidth() / 2-1, y + img.getHeight() + 50, name, Color.yellow);
+                AddName(x + img.getWidth() / 2 - 1, y + img.getHeight() + 50, name, Color.yellow);
             }
             else
             {
-                AddName(x + img.getWidth() / 2-1, y + img.getHeight() + 50, name, Color.red);
+                AddName(x + img.getWidth() / 2 - 1, y + img.getHeight() + 50, name, Color.red);
             }
         }
     }
@@ -446,15 +459,20 @@ public class View
         @Override
         public void mouseClicked(MouseEvent e)
         {
-            if (ismoving) return;
-            ismoving=true;
-
-            panel.NiceMoveLabel(ActiveViroLabel, fieldIMG.getX(), fieldIMG.getY());
-            panel.NiceMoveLabel(ActiveViroLabelName, fieldIMG.getX() + (fieldIMG.getWidth()/2), fieldIMG.getY() + ActiveViroLabel.getHeight());
+            if(e.getButton() != MouseEvent.BUTTON1)
+                return;
+            if(ismoving)
+                return;
+            ismoving = true;
+            
+            panel.NiceMoveLabel(ActiveViroLabel, fieldIMG.getX(), fieldIMG.getY() + fieldIMG.getHeight() + 5);
+            panel.NiceMoveLabel(ActiveViroLabelName,
+                    fieldIMG.getX() + (fieldIMG.getWidth() / 2) - (ActiveViroLabelName.getWidth() / 2),
+                    fieldIMG.getY() + fieldIMG.getHeight() + ActiveViroLabel.getHeight() + 5);
             ismoving = false;
             controller.MoveViro(f);
-            if(e.getButton() == MouseEvent.BUTTON1)
-                controller.MoveViro(f);
+            /*if(e.getButton() == MouseEvent.BUTTON1)
+                controller.MoveViro(f);*/
         }
     }
     
@@ -522,7 +540,7 @@ public class View
             
             
         }
-
+        
         
         void BgPaint()
         {
@@ -583,42 +601,40 @@ public class View
             //label.setComponentPopupMenu(new ContextMenu());
             return label;
         }
-
+        
         int lerp(float fraction, Integer start, Integer end)
         {
-            return (int)((start.floatValue() * (1.0 - fraction)) + (end.floatValue() * fraction));
+            return (int) ((start.floatValue() * (1.0 - fraction)) + (end.floatValue() * fraction));
         }
-
+        
         public void NiceMoveLabel(JLabel label, int tox, int toy)
         {
-            System.out.println("startpos:: " + label.getX() + "-..-" + label.getY());
 
 
             Timer Timo = new Timer("nicetimer");
-            TimerTask Task = new TimerTask() {
+            TimerTask Task = new TimerTask()
+            {
                 int i;
-
+                
                 @Override
-                public void run() {
+                public void run()
+                {
                     int cx = label.getLocation().x;
                     int cy = label.getLocation().y;
                     label.setLocation( lerp(0.045f, cx, tox), lerp(0.045f, cy, toy) );
 
-                    System.out.println("Moved to: " + cx + "-"+cy);
-                    System.out.println("Target: " + tox + "-"+toy);
                     i++;
-                    if (i>=40)
+                    if(i >= 40)
                     {
                         Timo.cancel();
-                        System.out.println("iter:" + i);
                     }
                 }
             };
-
-
+            
+            
             Timo.scheduleAtFixedRate(Task, 0, 20);
-
-
+            
+            
         }
         
         
@@ -682,23 +698,27 @@ public class View
                 JMenuItem equipIter = new JMenuItem(equipment.getName());
                 equipIter.addActionListener(e ->
                 {
-                    controller.StealEquipment(v, equipment);
+                    if(controller.activeViro.GetField() == v.GetField())
+                        controller.StealEquipment(v, equipment);
                 });
                 stealeq.add(equipIter);
             }
             
             stealres.addActionListener(e ->
             {
-                controller.StealResource(v);
+                if(controller.activeViro.GetField() == v.GetField())
+                    controller.StealResource(v);
             });
             
             useagent.addActionListener(e ->
             {
-                controller.UseAgentOnViro(v);
+                if(controller.activeViro.GetField() == v.GetField())
+                    controller.UseAgentOnViro(v);
             });
             useeq.addActionListener(e ->
             {
-                controller.UseEquipment(v);
+                if(controller.activeViro.GetField() == v.GetField())
+                    controller.UseEquipment(v);
             });
             
             add(stealres);
