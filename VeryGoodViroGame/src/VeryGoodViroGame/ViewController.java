@@ -32,11 +32,14 @@ public class ViewController
         this.mainmenu = mainmenu;
         view = new View(this);
         view.Init();
+        //Debug mode,betölti a devmapot
+        GameManager.DEBUG_MODE_TEST = true;
         GameManager.controller = this;
         GameManager.StartGame(NumberOfViros, new String[]{"Laci", "Maci"});
         Update(GameManager.GetCurrent());
         //Test();
     }
+    
     
     public void Test()
     {

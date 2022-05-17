@@ -177,7 +177,7 @@ public class View
         BufferedImage cur = GetImage(current);
         panel.DrawImage(cur, panel.getWidth() / 2 - cur.getWidth() / 2, panel.getHeight() / 2 - cur.getHeight() / 2).setComponentPopupMenu(new FieldContext(current));
         List<Virologist> viros = new ArrayList<>(current.GetVirologists());
-        DrawViros(viros, 0, 0, false);
+        DrawViros(viros, 0, 0, false, true);
         JLabel name = new JLabel(EntityManager.GetObjectName(current));
         AddName(panel.getWidth() / 2, panel.getHeight() / 2 - cur.getHeight() / 2, name);
         int size = neighbours.size();
@@ -194,9 +194,8 @@ public class View
             name = new JLabel(EntityManager.GetObjectName(neighbours.get(i)));
             AddName(x, y - img.getHeight() / 2, name);
 
-
             List<Virologist> virosaround = new ArrayList<>(neighbours.get(i).GetVirologists());
-            DrawViros(virosaround, x -( img.getWidth() / 2), y, true);
+            DrawViros(virosaround, x - (img.getWidth() / 2), y, true, false);
         }
     }
     
@@ -211,7 +210,18 @@ public class View
     
     public void DrawGeneticCodes(java.util.List<GeneticCode> codes)
     {
-    
+        int itemHudSize = codes.size() * 64;
+        int leftMostPointOfItems = (panel.getHeight() - itemHudSize) / 2;
+        for(int i = 0; i < codes.size(); i++)
+        {
+            int x = panel.getWidth() - 100;
+            int y = leftMostPointOfItems + i * 64;
+            //G2D.drawRect(x - 3, y, 64, 64);
+            BufferedImage img = GetImage(codes.get(i).getAgent());
+            JLabel l = panel.DrawImage(img, x, y);
+            l.setBorder(BorderFactory.createLineBorder(Color.black, 3));
+            l.setComponentPopupMenu(new GeneticContext(codes.get(i)));
+        }
     }
     
     private static BufferedImage rotateImage(BufferedImage buffImage, double angle)
@@ -254,14 +264,14 @@ public class View
 
     }
 
-    public void DrawViros(java.util.List<Virologist> viros, int xOffset, int yOffset, boolean useOffset)
+    public void DrawViros(java.util.List<Virologist> viros, int xOffset, int yOffset, boolean useOffset, boolean touch)
     {
         int itemHudSize = viros.size() * 64;
         int leftMostPointOfItems = (panel.getWidth() - itemHudSize) / 2;
         for(int i = 0; i < viros.size(); i++)
         {
             int x, y;
-            if (useOffset)
+            if(useOffset)
             {
                 x = xOffset;
                 y = yOffset;
@@ -282,18 +292,18 @@ public class View
             {
                 CurViroLabel = panel.DrawImage(img, x, y + img.getHeight() / 2);
             }
-            CurViroLabel.setComponentPopupMenu(new ViroContext(viros.get(i)));
+            if(touch)
+                CurViroLabel.setComponentPopupMenu(new ViroContext(viros.get(i)));
 
             String vironame = EntityManager.GetObjectName(viros.get(i));
             JLabel name = new JLabel(vironame);
             AddName(x + img.getWidth() / 2-1, y + img.getHeight() + 50, name);
+            name.grabFocus();
             if (vironame.equals(ActiveViro))
             {
                 ActiveViroLabel = CurViroLabel;
                 ActiveViroLabelName = name;
             }
-
-            name.grabFocus();
         }
     }
     
@@ -310,9 +320,14 @@ public class View
             JLabel l = panel.DrawImage(img, x, y);
             l.setBorder(BorderFactory.createLineBorder(Color.black, 3));
             if(items.get(i) instanceof Agent)
+            {
                 l.addMouseListener(new AgentClick((Agent) items.get(i)));
+            }
             else
+            {
                 l.addMouseListener(new EquipmentClick((Equipment) items.get(i)));
+                l.setComponentPopupMenu(new EqContext((Equipment) items.get(i)));
+            }
             
         }
     }
@@ -324,7 +339,17 @@ public class View
     
     public void DrawEffects(java.util.List<Agent> effects)
     {
-    
+        int itemHudSize = effects.size() * 64;
+        int leftMostPointOfItems = (panel.getHeight() - itemHudSize) / 2;
+        for(int i = 0; i < effects.size(); i++)
+        {
+            int x = 100;
+            int y = leftMostPointOfItems + i * 64;
+            //G2D.drawRect(x - 3, y, 64, 64);
+            BufferedImage img = GetImage(effects.get(i));
+            JLabel l = panel.DrawImage(img, x, y);
+            l.setBorder(BorderFactory.createLineBorder(Color.black, 3));
+        }
     }
     
     //Ez nem kell, mert beépített popup van
@@ -360,6 +385,8 @@ public class View
             panel.NiceMoveLabel(ActiveViroLabelName, fieldIMG.getX() + (fieldIMG.getWidth()/2), fieldIMG.getY() + ActiveViroLabel.getHeight());
             ismoving = false;
             controller.MoveViro(f);
+            if(e.getButton() == MouseEvent.BUTTON1)
+                controller.MoveViro(f);
         }
     }
     
@@ -375,7 +402,8 @@ public class View
         @Override
         public void mouseClicked(MouseEvent e)
         {
-            controller.SetAgent(f);
+            if(e.getButton() == MouseEvent.BUTTON1)
+                controller.SetAgent(f);
         }
     }
     
@@ -391,7 +419,8 @@ public class View
         @Override
         public void mouseClicked(MouseEvent e)
         {
-            controller.SetEquipment(f);
+            if(e.getButton() == MouseEvent.BUTTON1)
+                controller.SetEquipment(f);
         }
     }
     
@@ -631,9 +660,16 @@ public class View
     
     class EqContext extends JPopupMenu
     {
-        public EqContext(Equipment e)
+        public EqContext(Equipment eq)
         {
-        
+            
+            JMenuItem dropEq = new JMenuItem("Drop");
+            
+            dropEq.addActionListener(e ->
+            {
+                controller.DropEquipment(eq);
+            });
+            add(dropEq);
         }
     }
     

@@ -519,16 +519,21 @@ public class Map
         List<GeneticCode> tempCodes = new ArrayList<>();
         for(FieldLab fieldLab : field_labs)
         {
-            if(tempCodes.size() == 0) {
+            if(tempCodes.size() == 0)
+            {
                 tempCodes.add(fieldLab.getCode());
             }
-            else {
-                for(GeneticCode geneticCode : tempCodes) {
-                    if(fieldLab.getCode().CompareCodes(geneticCode)) {
+            else
+            {
+                for(GeneticCode geneticCode : tempCodes)
+                {
+                    if(fieldLab.getCode().CompareCodes(geneticCode))
+                    {
                         notFound++;
                     }
                 }
-                if(tempCodes.size() == notFound) {
+                if(tempCodes.size() == notFound)
+                {
                     tempCodes.add(fieldLab.getCode());
                 }
                 notFound = 0;
@@ -576,5 +581,10 @@ public class Map
     {
         GenerateMap("defaultmap", "", 6*vc, 2*vc, 3*vc, 2*vc, 0*vc);
         printas("Generated default map, multiplying size by virocount");
+    }
+    
+    public void GenerateTestMap(int vc)
+    {
+        ConsoleIO.RunCMD("load", new String[]{"devmap.map"});
     }
 }

@@ -23,7 +23,8 @@ public class GameManager
     private static int currentViro;
     static Map map;
     static int CodeCount = 0;
-    static ViewController controller;
+    public static ViewController controller;
+    public static boolean DEBUG_MODE_TEST = false;
     
     public static Map GetMap()
     {
@@ -49,12 +50,17 @@ public class GameManager
     {
         map = new Map();
         //map.GenerateMap();
-        map.GenerateMapDefault(virocount); //a GenerateMap-be kellenek parameterek a palyahoz, ez meg default ertekekkel
+        if(DEBUG_MODE_TEST)
+            map.GenerateTestMap(virocount);
+        else
+            map.GenerateMapDefault(virocount); //a GenerateMap-be kellenek parameterek a palyahoz, ez meg default
+        // ertekekkel
         // csinalja ugyanazt
         
         
         map.SpitViros(virocount, names); //lerakja a virokat random helyre
-        CodeCount = map.CountDiffCodes();
+        if(!DEBUG_MODE_TEST)
+            CodeCount = map.CountDiffCodes();
         
         currentViro = new Random().nextInt(virocount);
         

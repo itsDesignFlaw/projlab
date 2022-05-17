@@ -139,7 +139,7 @@ public class Virologist implements DrawableComponent
             resource.Remove(cost);
             Agent created = code.CreateVirus();
             AddAgentToStash(created);
-            EntityManager.PutCraftedObject("craft", created);
+            //EntityManager.PutCraftedObject("craft", created);
         }
     }
     
@@ -170,7 +170,6 @@ public class Virologist implements DrawableComponent
         {
             if(!item.CanCraft())
             {
-                Logger.ReturnFunction();
                 return;
             }
         }
