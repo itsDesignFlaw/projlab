@@ -462,7 +462,7 @@ public class Map
     
     public void GenerateMapDefault(int vc)
     {
-        GenerateMap("defaultmap", "", 20 * vc, 5 * vc, 4 * vc, 5 * vc, 1 * vc);
+        GenerateMap("defaultmap", "", 2 * vc, 2 * vc, 1 * vc, 1 * vc, 1 * vc);
         printas("Generated default map, multiplying size by virocount");
     }
     
