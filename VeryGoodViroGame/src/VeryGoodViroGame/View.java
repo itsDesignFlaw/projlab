@@ -103,6 +103,24 @@ public class View
     {
         controller = c;
     }
+
+    public int Close()
+    {
+        JFrame popup = new JFrame();
+        //default icon, custom title
+        int n = JOptionPane.showConfirmDialog(
+                popup,
+                "Are you sure you ki akarsz lépni?",
+                "Exit",
+                JOptionPane.YES_NO_OPTION);
+
+        if(n==0) {
+            frame.setVisible(false);
+            return 0;
+        }
+        return -1;
+
+    }
     
     public void RemoveObject(Object o)
     {
@@ -128,6 +146,11 @@ public class View
         JMenuItem turn = new JMenuItem("End turn");
         turn.addActionListener(x -> controller.EndTurn());
         menu.add(turn);
+
+
+        JMenuItem newgame = new JMenuItem("Exit");
+        newgame.addActionListener(x -> controller.getMainmenu().setVisible());
+        menu.add(newgame);
         menubar.add(menu);
         
         frame.setLayout(new BorderLayout());

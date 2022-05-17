@@ -26,7 +26,15 @@ public class ViewController
     View view;
     MainMenu mainmenu;
     private boolean moved = false;
-    
+
+    public MainMenu getMainmenu() {
+        return mainmenu;
+    }
+
+    public void setMainmenu(MainMenu mainmenu) {
+        this.mainmenu = mainmenu;
+    }
+
     public ViewController(int NumberOfViros, MainMenu mainmenu)
     {
         this.mainmenu = mainmenu;
@@ -39,8 +47,11 @@ public class ViewController
         Update(GameManager.GetCurrent());
         //Test();
     }
-    
-    
+
+    public View getView() {
+        return view;
+    }
+
     public void Test()
     {
         Virologist v = new Virologist();
