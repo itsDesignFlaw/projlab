@@ -17,6 +17,7 @@ interface IEntityGenerator
 public class EntityManager
 {
     public static HashMap<String, Object> namedObjects = new HashMap<String, Object>();
+    static HashMap<Object, String> classObject = new HashMap<Object, String>();
     static HashMap<String, IEntityGenerator> EntityGen = new HashMap<String, IEntityGenerator>();
     
     static
@@ -57,17 +58,19 @@ public class EntityManager
         return "DHaN, maybe bear?";
     }
     
-    public static void PutNamedObject(String name, Object object)
+    public static void PutNamedObject(String name, Object object, String c)
     {
         namedObjects.put(name, object);
+        classObject.put(object, c);
     }
     
-    public static void PutCraftedObject(String name, Object object)
+    public static void PutCraftedObject(String name, Object object, String c)
     {
         int db = 0;
         while(namedObjects.containsKey(name + db))
             db++;
-        PutNamedObject(name + db, object);
+        PutNamedObject(name + db, object, c);
+        GameManager.controller.AddObject(object, c);
     }
     
     public static Object CreateEntity(String classname)
@@ -86,9 +89,14 @@ public class EntityManager
             return null;
         
         Object ent = EntityGen.get(classname).generate();
-        PutNamedObject(name, ent);
+        PutNamedObject(name, ent, classname);
         GameManager.controller.AddObject(ent, classname);
         return ent;
+    }
+    
+    public static void AdminClone(Cloneable e, Cloneable c)
+    {
+        PutCraftedObject(GetObjectName(e), c, classObject.get(e));
     }
     
     public static String ToStringByName(String name)

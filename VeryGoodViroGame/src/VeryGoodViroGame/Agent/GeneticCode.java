@@ -9,10 +9,7 @@ package VeryGoodViroGame.Agent;//
 //
 //
 
-import VeryGoodViroGame.DrawableComponent;
-import VeryGoodViroGame.Logger;
-import VeryGoodViroGame.Resource;
-import VeryGoodViroGame.Timer;
+import VeryGoodViroGame.*;
 
 /**
  * Ez az osztály felelős a hozzájuk tartozó vakcinák és vírusok létrehozásáért,
@@ -59,6 +56,11 @@ public class GeneticCode implements DrawableComponent
         a = agent;
     }
     
+    public Agent getAgent()
+    {
+        return a;
+    }
+    
     /**
      * létrehozza az adott genetikai kódhoz tartozó vírust.
      *
@@ -68,6 +70,7 @@ public class GeneticCode implements DrawableComponent
     {
         Agent clone = a.Clone();
         Timer.AddSteppable(clone);
+        
         return clone;
     }
     

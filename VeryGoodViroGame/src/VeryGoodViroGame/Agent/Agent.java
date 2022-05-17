@@ -76,7 +76,11 @@ public abstract class Agent extends InvItem implements iSteppable, Cloneable, Dr
     {
         try
         {
-            return (Agent) super.clone();
+            
+            Agent clone = (Agent) super.clone();
+            EntityManager.AdminClone(this, clone);
+            return clone;
+            
         }
         catch(Exception e)
         {
@@ -90,5 +94,8 @@ public abstract class Agent extends InvItem implements iSteppable, Cloneable, Dr
         return "\tactiveTime: " + activeTime + "\n\thost: " + EntityManager.GetObjectName(host) + "\n\tstartegy: " + strategy.getClass().getSimpleName();
     }
     
-    public String getName() { return "name"; } //MIAFASZ VAN KRISZTOFER
+    public String getName()
+    {
+        return "name";
+    } //MIAFASZ VAN KRISZTOFER
 }
