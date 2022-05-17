@@ -79,14 +79,12 @@ public class ViewController
         Field f = v.GetField();
         List<Field> fields = f.GetNeighbours();
         List<GeneticCode> codes = v.learntCodes;
-        List<Virologist> viros = new ArrayList<>(f.GetVirologists());
         List<InvItem> effect = v.items;
         List<Agent> stash = new ArrayList<>(v.stash);
         List<Equipment> eq = v.equipments;
         
         
         view.DrawMap(f, fields);
-        view.DrawViros(viros);
         
         ArrayList<InvItem> it = new ArrayList<>(stash);
         it.addAll(eq);

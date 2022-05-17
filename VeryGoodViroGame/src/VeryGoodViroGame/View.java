@@ -17,6 +17,7 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class View
 {
@@ -175,6 +176,8 @@ public class View
     {
         BufferedImage cur = GetImage(current);
         panel.DrawImage(cur, panel.getWidth() / 2 - cur.getWidth() / 2, panel.getHeight() / 2 - cur.getHeight() / 2).setComponentPopupMenu(new FieldContext(current));
+        List<Virologist> viros = new ArrayList<>(current.GetVirologists());
+        DrawViros(viros, 0, 0, false);
         JLabel name = new JLabel(EntityManager.GetObjectName(current));
         AddName(panel.getWidth() / 2, panel.getHeight() / 2 - cur.getHeight() / 2, name);
         int size = neighbours.size();
@@ -188,6 +191,9 @@ public class View
             panel.DrawImage(img, x - img.getWidth() / 2, y - img.getHeight() / 2).addMouseListener(new FieldClick(neighbours.get(i)));
             name = new JLabel(EntityManager.GetObjectName(neighbours.get(i)));
             AddName(x, y - img.getHeight() / 2, name);
+
+            List<Virologist> virosaround = new ArrayList<>(neighbours.get(i).GetVirologists());
+            DrawViros(virosaround, x -( img.getWidth() / 2), y, true);
         }
     }
     
@@ -232,14 +238,23 @@ public class View
         return rotatedImage;
     }
     
-    public void DrawViros(java.util.List<Virologist> viros)
+    public void DrawViros(java.util.List<Virologist> viros, int xOffset, int yOffset, boolean useOffset)
     {
         int itemHudSize = viros.size() * 64;
         int leftMostPointOfItems = (panel.getWidth() - itemHudSize) / 2;
         for(int i = 0; i < viros.size(); i++)
         {
-            int x = leftMostPointOfItems + i * 64;
-            int y = panel.getHeight() / 2;
+            int x, y;
+            if (useOffset)
+            {
+                x = xOffset;
+                y = yOffset;
+            }
+            else
+            {
+                x = leftMostPointOfItems + i * 64;
+                y = panel.getHeight() / 2;
+            }
             //G2D.drawRect(x - 3, y, 64, 64);
             BufferedImage img = GetImage(viros.get(i));
             if(viros.get(i).dead)
