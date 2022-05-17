@@ -151,18 +151,19 @@ public class View
     {
         try
         {
-            //Ezzel a getResource móddal lehet elvileg jar fileból is beolvasni, azaz akkor is jó útvonalat ad meg
-            //Minden fájl ami az src mappán belül van tuti megtalálja
             ViewObject obj = objects.get(name);
             if(obj == null)
             {
-                System.out.println(name.toString());
+                System.out.println("View/BufferedImage.GetImage obj==null! information:\n " + name.toString());
                 return null;
             }
+
+            //Ezzel a getResource móddal lehet elvileg jar fileból is beolvasni, azaz akkor is jó útvonalat ad meg
+            //Minden fájl ami az src mappán belül van tuti megtalálja
             URL u = Main.class.getResource(ResourcePath + objects.get(name).png);
             if(u == null)
             {
-                System.out.println(name.toString());
+                System.out.println("View/BufferedImage.GetImage u==null! information:\n " + name.toString());
                 return null;
             }
             BufferedImage im = ImageIO.read(u);

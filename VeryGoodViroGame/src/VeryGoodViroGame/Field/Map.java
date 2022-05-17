@@ -584,7 +584,7 @@ public class Map
     
     public void GenerateMapDefault(int vc)
     {
-        GenerateMap("defaultmap", "", 6*vc, 2*vc, 3*vc, 2*vc, 0*vc);
+        GenerateMap("defaultmap", "", 1*vc, 0*vc, 0*vc, 0*vc, 0*vc);
         printas("Generated default map, multiplying size by virocount");
     }
     
