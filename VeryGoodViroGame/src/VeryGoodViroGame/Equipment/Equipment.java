@@ -25,11 +25,19 @@ public abstract class Equipment extends InvItem implements DrawableComponent
     {
     }
     
+    public void SetHost(Virologist host)
+    {
+        this.host = host;
+    }
+    
     @Override
     public String toString()
     {
         return "\thost: " + EntityManager.GetObjectName(host);
     }
     
-    public String getName() { return name; }
+    public String getName()
+    {
+        return name;
+    }
 }

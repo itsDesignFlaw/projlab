@@ -57,7 +57,7 @@ public class View
         images.put("virus", "bg_virus.png");
         images.put("bunker", "bunker.png");
         images.put("coat", "coat.png");
-        images.put("dance", "dance.png");
+        images.put("dance", "dance_virus.png");
         images.put("effect_agent", "effect_agent.png");
         images.put("effect_equipment", "effect_equipment.png");
         images.put("effect_equipment_broken", "effect_equipment_broken.png");
@@ -67,8 +67,8 @@ public class View
         images.put("lab", "lab.png");
         images.put("bearlab", "lab.png");
         images.put("nuki", "nucleotid.png");
-        images.put("paralyze", "paralyze.png");
-        images.put("protect", "protect.png");
+        images.put("paralyze", "paralyze_virus.png");
+        images.put("protect", "protect_virus.png");
         images.put("sack", "sack.png");
         images.put("viro", "viro.png");
         images.put("bearviro", "viro.png");
@@ -77,6 +77,10 @@ public class View
         images.put("paralyze_vaccine", "paralyze_vaccine.png");
         images.put("dance_vaccine", "dance_vaccine.png");
         images.put("protect_vaccine", "protect_vaccine.png");
+        images.put("forget_code", "forget.png");
+        images.put("paralyze_code", "paralyze.png");
+        images.put("dance_code", "dance.png");
+        images.put("protect_code", "protect.png");
     }
     
     //Esetleg HashMap, és a value egy Levels, hogy melyik szinten van?
@@ -98,6 +102,24 @@ public class View
     public View(ViewController c)
     {
         controller = c;
+    }
+
+    public int Close()
+    {
+        JFrame popup = new JFrame();
+        //default icon, custom title
+        int n = JOptionPane.showConfirmDialog(
+                popup,
+                "Are you sure you ki akarsz lépni?",
+                "Exit",
+                JOptionPane.YES_NO_OPTION);
+
+        if(n==0) {
+            frame.setVisible(false);
+            return 0;
+        }
+        return -1;
+
     }
     
     public void RemoveObject(Object o)
@@ -124,6 +146,11 @@ public class View
         JMenuItem turn = new JMenuItem("End turn");
         turn.addActionListener(x -> controller.EndTurn());
         menu.add(turn);
+
+
+        JMenuItem newgame = new JMenuItem("Exit");
+        newgame.addActionListener(x -> controller.getMainmenu().setVisible());
+        menu.add(newgame);
         menubar.add(menu);
         
         frame.setLayout(new BorderLayout());
@@ -149,8 +176,15 @@ public class View
     
     private BufferedImage GetImage(Object name)//todo mi a faszert name?
     {
+        return GetImage(name, "");
+    }
+    
+    private BufferedImage GetImage(Object name, String offset)
+    {
         try
         {
+            //Ezzel a getResource móddal lehet elvileg jar fileból is beolvasni, azaz akkor is jó útvonalat ad meg
+            //Minden fájl ami az src mappán belül van tuti megtalálja
             ViewObject obj = objects.get(name);
             if(obj == null)
             {
@@ -159,10 +193,8 @@ public class View
                 System.out.println("Does entity exist? " + EntityManager.NameFromObject(name) + "\n\t if not it probably indicates that viro has invalid field set, should check for that!");
                 return null;
             }
-
-            //Ezzel a getResource móddal lehet elvileg jar fileból is beolvasni, azaz akkor is jó útvonalat ad meg
-            //Minden fájl ami az src mappán belül van tuti megtalálja
-            URL u = Main.class.getResource(ResourcePath + objects.get(name).png);
+            String file = obj.png.replace(offset, "");
+            URL u = Main.class.getResource(ResourcePath + file);
             if(u == null)
             {
                 System.out.println("View/BufferedImage.GetImage u==null! information:\n " + name.toString());
@@ -197,27 +229,38 @@ public class View
     public void DrawMap(Field current, java.util.List<Field> neighbours)
     {
         BufferedImage cur = GetImage(current);
-        panel.DrawImage(cur, panel.getWidth() / 2 - cur.getWidth() / 2, panel.getHeight() / 2 - cur.getHeight() / 2).setComponentPopupMenu(new FieldContext(current));
-        List<Virologist> viros = new ArrayList<>(current.GetVirologists());
-        DrawViros(viros, 0, 0, false, true);
-        JLabel name = new JLabel(EntityManager.GetObjectName(current));
-        AddName(panel.getWidth() / 2, panel.getHeight() / 2 - cur.getHeight() / 2, name);
+        JLabel curr = panel.DrawImage(cur, panel.getWidth() / 2 - cur.getWidth() / 2,
+                panel.getHeight() / 2 - cur.getHeight() / 2);
+        curr.setComponentPopupMenu(new FieldContext(current));
+        curr.addMouseListener(new FieldClick(current, curr));
         int size = neighbours.size();
         for(int i = 0; i < size; i++)
         {
             BufferedImage img = GetImage(neighbours.get(i));
-            double a = i * 2 * Math.PI / size;
+            double a = i * 2 * Math.PI / size - Math.PI / 4;
             int x = (int) (Math.cos(a) * (panel.getWidth() / 2 - 100) + panel.getWidth() / 2);
             int y = (int) (Math.sin(a) * (panel.getHeight() / 2 - 100) + panel.getHeight() / 2);
             //Work in Progress, ha valami jobb ötlet, nyugodtan lehet cserélni
             JLabel FieldLabel = panel.DrawImage(img, x - img.getWidth() / 2, y - img.getHeight() / 2);
-            FieldLabel.addMouseListener(new FieldClick( neighbours.get(i), FieldLabel) );
-
+            FieldLabel.addMouseListener(new FieldClick(neighbours.get(i), FieldLabel));
+            
+        }
+        List<Virologist> viros = new ArrayList<>(current.GetVirologists());
+        DrawViros(viros, 0, 0, false);
+        JLabel name = new JLabel(EntityManager.GetObjectName(current));
+        AddName(panel.getWidth() / 2, panel.getHeight() / 2 - cur.getHeight() / 2, name);
+        panel.setComponentZOrder(name, 0);
+        for(int i = 0; i < size; i++)
+        {
+            BufferedImage img = GetImage(neighbours.get(i));
+            double a = i * 2 * Math.PI / size - Math.PI / 4;
+            int x = (int) (Math.cos(a) * (panel.getWidth() / 2 - 100) + panel.getWidth() / 2);
+            int y = (int) (Math.sin(a) * (panel.getHeight() / 2 - 100) + panel.getHeight() / 2);
             name = new JLabel(EntityManager.GetObjectName(neighbours.get(i)));
             AddName(x, y - img.getHeight() / 2, name);
-
+            
             List<Virologist> virosaround = new ArrayList<>(neighbours.get(i).GetVirologists());
-            DrawViros(virosaround, x - (img.getWidth() / 2), y, true, false);
+            DrawViros(virosaround, x - (img.getWidth() / 2), y, true);
         }
     }
     
@@ -225,7 +268,7 @@ public class View
     {
         AddName(x, y, name, Color.red);
     }
-
+    
     private void AddName(int x, int y, JLabel name, Color col)
     {
         panel.add(name);
@@ -244,7 +287,7 @@ public class View
             int x = panel.getWidth() - 100;
             int y = leftMostPointOfItems + i * 64;
             //G2D.drawRect(x - 3, y, 64, 64);
-            BufferedImage img = GetImage(codes.get(i).getAgent());
+            BufferedImage img = GetImage(codes.get(i).getAgent(), "_virus");
             JLabel l = panel.DrawImage(img, x, y);
             l.setBorder(BorderFactory.createLineBorder(Color.black, 3));
             l.setComponentPopupMenu(new GeneticContext(codes.get(i)));
@@ -277,21 +320,22 @@ public class View
         
         return rotatedImage;
     }
-
+    
     String ActiveViro;
     JLabel ActiveViroLabel;
     JLabel ActiveViroLabelName;
+    
     public void MarkActiveViro(String name)
     {
         ActiveViro = name;
     }
-
+    
     public void MoveCurViro(Field to)
     {
-
+    
     }
-
-    public void DrawViros(java.util.List<Virologist> viros, int xOffset, int yOffset, boolean useOffset, boolean touch)
+    
+    public void DrawViros(java.util.List<Virologist> viros, int xOffset, int yOffset, boolean useOffset)
     {
         int itemHudSize = viros.size() * 64;
         int leftMostPointOfItems = (panel.getWidth() - itemHudSize) / 2;
@@ -318,22 +362,21 @@ public class View
             {
                 CurViroLabel = panel.DrawImage(img, x, y + img.getHeight() / 2);
             }
-            if(touch)
-                CurViroLabel.setComponentPopupMenu(new ViroContext(viros.get(i)));
-
+            CurViroLabel.setComponentPopupMenu(new ViroContext(viros.get(i)));
+            
             String vironame = EntityManager.GetObjectName(viros.get(i));
             JLabel name = new JLabel(vironame);
-            AddName(x + img.getWidth() / 2-1, y + img.getHeight() + 50, name);
+            AddName(x + img.getWidth() / 2 - 1, y + img.getHeight() + 50, name);
             name.grabFocus();
-            if (vironame.equals(ActiveViro))
+            if(vironame.equals(ActiveViro))
             {
                 ActiveViroLabel = CurViroLabel;
                 ActiveViroLabelName = name;
-                AddName(x + img.getWidth() / 2-1, y + img.getHeight() + 50, name, Color.yellow);
+                AddName(x + img.getWidth() / 2 - 1, y + img.getHeight() + 50, name, Color.yellow);
             }
             else
             {
-                AddName(x + img.getWidth() / 2-1, y + img.getHeight() + 50, name, Color.red);
+                AddName(x + img.getWidth() / 2 - 1, y + img.getHeight() + 50, name, Color.red);
             }
         }
     }
@@ -416,15 +459,20 @@ public class View
         @Override
         public void mouseClicked(MouseEvent e)
         {
-            if (ismoving) return;
-            ismoving=true;
-
-            panel.NiceMoveLabel(ActiveViroLabel, fieldIMG.getX(), fieldIMG.getY());
-            panel.NiceMoveLabel(ActiveViroLabelName, fieldIMG.getX() + (fieldIMG.getWidth()/2), fieldIMG.getY() + ActiveViroLabel.getHeight());
+            if(e.getButton() != MouseEvent.BUTTON1)
+                return;
+            if(ismoving)
+                return;
+            ismoving = true;
+            
+            panel.NiceMoveLabel(ActiveViroLabel, fieldIMG.getX(), fieldIMG.getY() + fieldIMG.getHeight() + 5);
+            panel.NiceMoveLabel(ActiveViroLabelName,
+                    fieldIMG.getX() + (fieldIMG.getWidth() / 2) - (ActiveViroLabelName.getWidth() / 2),
+                    fieldIMG.getY() + fieldIMG.getHeight() + ActiveViroLabel.getHeight() + 5);
             ismoving = false;
             controller.MoveViro(f);
-            if(e.getButton() == MouseEvent.BUTTON1)
-                controller.MoveViro(f);
+            /*if(e.getButton() == MouseEvent.BUTTON1)
+                controller.MoveViro(f);*/
         }
     }
     
@@ -492,7 +540,7 @@ public class View
             
             
         }
-
+        
         
         void BgPaint()
         {
@@ -553,38 +601,40 @@ public class View
             //label.setComponentPopupMenu(new ContextMenu());
             return label;
         }
-
+        
         int lerp(float fraction, Integer start, Integer end)
         {
-            return (int)((start.floatValue() * (1.0 - fraction)) + (end.floatValue() * fraction));
+            return (int) ((start.floatValue() * (1.0 - fraction)) + (end.floatValue() * fraction));
         }
-
+        
         public void NiceMoveLabel(JLabel label, int tox, int toy)
         {
 
 
             Timer Timo = new Timer("nicetimer");
-            TimerTask Task = new TimerTask() {
+            TimerTask Task = new TimerTask()
+            {
                 int i;
-
+                
                 @Override
-                public void run() {
+                public void run()
+                {
                     int cx = label.getLocation().x;
                     int cy = label.getLocation().y;
                     label.setLocation( lerp(0.045f, cx, tox), lerp(0.045f, cy, toy) );
 
                     i++;
-                    if (i>=40)
+                    if(i >= 40)
                     {
                         Timo.cancel();
                     }
                 }
             };
-
-
+            
+            
             Timo.scheduleAtFixedRate(Task, 0, 20);
-
-
+            
+            
         }
         
         
@@ -599,6 +649,10 @@ public class View
             g.drawImage(hud, 0, 0, null);
             
             paintChildren(g);
+            
+            
+            g.setColor(Color.RED);
+            g.fillRect(getWidth() / 2 - 2, getHeight() / 2 - 2, 2, 2);
             
             //g.setColor(Color.gray);
             //g.fillRect(0, 0, getWidth(), getHeight());
@@ -644,23 +698,27 @@ public class View
                 JMenuItem equipIter = new JMenuItem(equipment.getName());
                 equipIter.addActionListener(e ->
                 {
-                    controller.StealEquipment(v, equipment);
+                    if(controller.activeViro.GetField() == v.GetField())
+                        controller.StealEquipment(v, equipment);
                 });
                 stealeq.add(equipIter);
             }
             
             stealres.addActionListener(e ->
             {
-                controller.StealResource(v);
+                if(controller.activeViro.GetField() == v.GetField())
+                    controller.StealResource(v);
             });
             
             useagent.addActionListener(e ->
             {
-                controller.UseAgentOnViro(v);
+                if(controller.activeViro.GetField() == v.GetField())
+                    controller.UseAgentOnViro(v);
             });
             useeq.addActionListener(e ->
             {
-                controller.UseEquipment(v);
+                if(controller.activeViro.GetField() == v.GetField())
+                    controller.UseEquipment(v);
             });
             
             add(stealres);

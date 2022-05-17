@@ -26,21 +26,63 @@ public class ViewController
     View view;
     MainMenu mainmenu;
     private boolean moved = false;
-    
+
+    public MainMenu getMainmenu() {
+        return mainmenu;
+    }
+
+    public void setMainmenu(MainMenu mainmenu) {
+        this.mainmenu = mainmenu;
+    }
+
     public ViewController(int NumberOfViros, MainMenu mainmenu)
     {
         this.mainmenu = mainmenu;
         view = new View(this);
         view.Init();
         //Debug mode,betölti a devmapot
-        GameManager.DEBUG_MODE_TEST = true;
         GameManager.controller = this;
         GameManager.StartGame(NumberOfViros, new String[]{"Laci", "Maci"});
         Update(GameManager.GetCurrent());
         //Test();
     }
-    
 
+    public View getView() {
+        return view;
+    }
+
+    public void Test()
+    {
+        Virologist v = new Virologist();
+        Field f = new Field();
+        Field l = new FieldLab();
+        Field b = new FieldBunker();
+        Field bear = new FieldLabBear();
+        Field ware = new FieldWarehouse();
+        AddObject(v, "viro");
+        AddObject(l, "lab");
+        AddObject(f, "field");
+        AddObject(b, "bunker");
+        AddObject(bear, "bearlab");
+        AddObject(ware, "ware");
+        
+        v.SetField(f);
+        Agent vitus = new Dance(), para = new Paralyze();
+        AddObject(vitus, "dance");
+        AddObject(para, "paralyze");
+        Equipment e = new EquipmentAxe();
+        AddObject(e, "axe");
+        
+        v.AddEquipment(e);
+        v.AddAgentToStash(vitus);
+        v.AddAgentToStash(para);
+        
+        f.AddNeighbour(l);
+        f.AddNeighbour(b);
+        f.AddNeighbour(bear);
+        f.AddNeighbour(ware);
+        Update(v);
+    }
     
     public void Update()
     {
@@ -94,12 +136,14 @@ public class ViewController
         ConsoleIO.RunCMD(CMD, args);
     }
     
-    public void MoveViro(Field f)
+    public boolean MoveViro(Field f)
     {
+        Field cur = activeViro.GetField();
         activeViro.MoveTo(f);
-        moved = true;
+        moved = activeViro.GetField() != cur;
+        return !moved;
         //Update();
-       //mark: nem kell neki, majd ha change turn van, a View addig animal
+        //mark: nem kell neki, majd ha change turn van, a View addig animal
     }
     
     public void CraftVirus(GeneticCode gc)
