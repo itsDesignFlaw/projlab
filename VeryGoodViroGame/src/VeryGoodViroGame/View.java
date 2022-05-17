@@ -54,7 +54,7 @@ public class View
         images.put("virus", "bg_virus.png");
         images.put("bunker", "bunker.png");
         images.put("coat", "coat.png");
-        images.put("dance", "dance.png");
+        images.put("dance", "dance_virus.png");
         images.put("effect_agent", "effect_agent.png");
         images.put("effect_equipment", "effect_equipment.png");
         images.put("effect_equipment_broken", "effect_equipment_broken.png");
@@ -64,8 +64,8 @@ public class View
         images.put("lab", "lab.png");
         images.put("bearlab", "lab.png");
         images.put("nuki", "nucleotid.png");
-        images.put("paralyze", "paralyze.png");
-        images.put("protect", "protect.png");
+        images.put("paralyze", "paralyze_virus.png");
+        images.put("protect", "protect_virus.png");
         images.put("sack", "sack.png");
         images.put("viro", "viro.png");
         images.put("bearviro", "viro.png");
@@ -74,6 +74,10 @@ public class View
         images.put("paralyze_vaccine", "paralyze_vaccine.png");
         images.put("dance_vaccine", "dance_vaccine.png");
         images.put("protect_vaccine", "protect_vaccine.png");
+        images.put("forget_code", "forget.png");
+        images.put("paralyze_code", "paralyze.png");
+        images.put("dance_code", "dance.png");
+        images.put("protect_code", "protect.png");
     }
     
     //Esetleg HashMap, és a value egy Levels, hogy melyik szinten van?
@@ -146,6 +150,11 @@ public class View
     
     private BufferedImage GetImage(Object name)
     {
+        return GetImage(name, "");
+    }
+    
+    private BufferedImage GetImage(Object name, String offset)
+    {
         try
         {
             //Ezzel a getResource móddal lehet elvileg jar fileból is beolvasni, azaz akkor is jó útvonalat ad meg
@@ -156,7 +165,8 @@ public class View
                 System.out.println(name.toString());
                 return null;
             }
-            URL u = Main.class.getResource(ResourcePath + objects.get(name).png);
+            String file = obj.png.replace(offset, "");
+            URL u = Main.class.getResource(ResourcePath + file);
             if(u == null)
             {
                 System.out.println(name.toString());
@@ -200,7 +210,7 @@ public class View
         for(int i = 0; i < size; i++)
         {
             BufferedImage img = GetImage(neighbours.get(i));
-            double a = i * 2 * Math.PI / size;
+            double a = i * 2 * Math.PI / size - Math.PI / 4;
             int x = (int) (Math.cos(a) * (panel.getWidth() / 2 - 100) + panel.getWidth() / 2);
             int y = (int) (Math.sin(a) * (panel.getHeight() / 2 - 100) + panel.getHeight() / 2);
             //Work in Progress, ha valami jobb ötlet, nyugodtan lehet cserélni
@@ -231,7 +241,7 @@ public class View
             int x = panel.getWidth() - 100;
             int y = leftMostPointOfItems + i * 64;
             //G2D.drawRect(x - 3, y, 64, 64);
-            BufferedImage img = GetImage(codes.get(i).getAgent());
+            BufferedImage img = GetImage(codes.get(i).getAgent(), "_virus");
             JLabel l = panel.DrawImage(img, x, y);
             l.setBorder(BorderFactory.createLineBorder(Color.black, 3));
             l.setComponentPopupMenu(new GeneticContext(codes.get(i)));
@@ -544,6 +554,10 @@ public class View
             g.drawImage(hud, 0, 0, null);
             
             paintChildren(g);
+            
+            
+            g.setColor(Color.RED);
+            g.fillRect(getWidth() / 2 - 2, getHeight() / 2 - 2, 2, 2);
             
             //g.setColor(Color.gray);
             //g.fillRect(0, 0, getWidth(), getHeight());
