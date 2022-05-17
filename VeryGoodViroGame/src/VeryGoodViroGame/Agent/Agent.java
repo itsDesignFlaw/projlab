@@ -25,6 +25,7 @@ public abstract class Agent extends InvItem implements iSteppable, Cloneable, Dr
     public Virologist host;
     iMoveStrategy strategy = new MSSimple();
     boolean active = false;
+    int deep = 0;
     
     /**
      * A source paraméterként kapott virológus megkísérli felkenni az ágenst a targetként megkapott virológusra.
@@ -34,7 +35,9 @@ public abstract class Agent extends InvItem implements iSteppable, Cloneable, Dr
      */
     public void Apply(Virologist source, Virologist target)
     {
-        host = null;
+        if(deep > 10)
+            return;
+        deep++;
         if(target.ApplyAgent(this, source))
         {
             target.ChangeMoveStrategy(strategy);
@@ -43,6 +46,7 @@ public abstract class Agent extends InvItem implements iSteppable, Cloneable, Dr
             active = true;
             Timer.AddSteppable(this);
         }
+        deep = 0;
     }
     
     /**

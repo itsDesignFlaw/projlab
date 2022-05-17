@@ -33,7 +33,6 @@ public class ViewController
         view = new View(this);
         view.Init();
         //Debug mode,betölti a devmapot
-        GameManager.DEBUG_MODE_TEST = true;
         GameManager.controller = this;
         GameManager.StartGame(NumberOfViros, new String[]{"Laci", "Maci"});
         Update(GameManager.GetCurrent());
@@ -126,12 +125,14 @@ public class ViewController
         ConsoleIO.RunCMD(CMD, args);
     }
     
-    public void MoveViro(Field f)
+    public boolean MoveViro(Field f)
     {
+        Field cur = activeViro.GetField();
         activeViro.MoveTo(f);
-        moved = true;
+        moved = activeViro.GetField() != cur;
+        return !moved;
         //Update();
-       //mark: nem kell neki, majd ha change turn van, a View addig animal
+        //mark: nem kell neki, majd ha change turn van, a View addig animal
     }
     
     public void CraftVirus(GeneticCode gc)
