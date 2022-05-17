@@ -10,17 +10,15 @@ package VeryGoodViroGame.Field;//
 //
 
 
+import VeryGoodViroGame.Agent.GeneticCode;
 import VeryGoodViroGame.ConsoleIO;
-import VeryGoodViroGame.Field.Field;
-import VeryGoodViroGame.Logger;
+import VeryGoodViroGame.EntityManager;
+import VeryGoodViroGame.Virologist;
 
 import java.io.*;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 /**
  * Az osztály felelős a játéktér létrehozásáért, és annak kezeléséért.
@@ -28,6 +26,7 @@ import java.util.Random;
 public class Map
 {
     List<Field> fields = new ArrayList<>();
+    List<FieldLab> field_labs = new ArrayList<>();
     
     //mapgenbol kopi
     static String name = "default";
@@ -275,7 +274,7 @@ public class Map
     static String CreateWare()
     {
         placed_fields.put("ware", placed_fields.get("ware") + 1);
-        return "create w" + placed_fields.get("ware") + " ware\nware w" + placed_fields.get("ware") + " " + r.nextInt(30) + " " + r.nextInt(30);
+        return "create w" + placed_fields.get("ware") + " ware\nware w" + placed_fields.get("ware") + " " + (15 + r.nextInt(30)) + " " + (15 + r.nextInt(30));
     }
     
     static String CreateBear()
@@ -345,17 +344,84 @@ public class Map
         return path.toAbsolutePath().toString();
     }
     
-    public void Swallow()
+    public void Swallow(Field what)
     {
+        Swallow(what, false);
+    }
     
+    public void Swallow(Field what, boolean isLab)
+    {
+        if(isLab)
+        {
+            field_labs.add((FieldLab) what);
+        }
+        fields.add(what);
     }
     
     public void SpitViros(int ViroCount, String[] nameViros)
     {
-    
+        boolean useVNames = false;
+        if(nameViros.length > 0)
+        {
+            if(nameViros.length < ViroCount)
+                printas("Invalid number of names provided to SpitViros, ignoring");
+            else
+                useVNames = true;
+        }
+        for(int vir = 0; vir < ViroCount; vir++)
+        {
+            Virologist viro;
+            String VName;
+            if(useVNames)
+                VName = nameViros[vir];
+            else
+                VName = "viro" + vir;
+            
+            viro = (Virologist) EntityManager.CreateEntity("viro", VName);
+            
+            Field foundField;
+            viro.SetField(GetRandomField());
+        }
     }
     
-    public void GenerateMap(String gmInput, String gmSeed, int gmNField, int gmNLabs, int gmNWarehouses, int gmNBunkers, int gmNBearLabs)
+    Field GetRandomField()
+    {
+        int rand = new Random().nextInt(fields.size());
+        return fields.get(rand);
+    }
+    
+    /*
+        Megszamolja hany tenylegesen megtalalhato genetic code van a palyan
+        van egy fields_labs array, azon vegigmesz es megnezed hogy hany kulonbozo codot talalsz
+        aztan szivunk egy iqost
+     */
+    
+    public int CountDiffCodes()
+    {
+        int notFound = 0;
+        List<GeneticCode> tempCodes = new ArrayList<>();
+        for(FieldLab fieldLab : field_labs)
+        {
+            if(tempCodes.size() == 0) {
+                tempCodes.add(fieldLab.getCode());
+            }
+            else {
+                for(GeneticCode geneticCode : tempCodes) {
+                    if(fieldLab.getCode().CompareCodes(geneticCode)) {
+                        notFound++;
+                    }
+                }
+                if(tempCodes.size() == notFound) {
+                    tempCodes.add(fieldLab.getCode());
+                }
+                notFound = 0;
+            }
+        }
+        return tempCodes.size();
+    }
+    
+    public void GenerateMap(String gmInput, String gmSeed, int gmNField, int gmNLabs, int gmNWarehouses,
+                            int gmNBunkers, int gmNBearLabs)
     {
         name = gmInput;
         place_these.put("field", gmNField);
@@ -372,16 +438,16 @@ public class Map
         }
         place_these.put("lab", gmNLabs);
         placed_fields.put("lab", -1);
-    
+        
         place_these.put("bunker", gmNBunkers);
         placed_fields.put("bunker", -1);
-    
+        
         place_these.put("ware", gmNWarehouses);
         placed_fields.put("ware", -1);
-    
+        
         place_these.put("bearlab", gmNBearLabs);
         placed_fields.put("bearlab", -1);
-    
+        
         maxfields = place_these.values().stream().reduce(0, Integer::sum);
         
         String full = GenerateNewMap();
@@ -389,8 +455,9 @@ public class Map
         ConsoleIO.RunCMD("load", new String[]{full});
     }
     
-    public void GenerateMapDefault()
+    public void GenerateMapDefault(int vc)
     {
-        GenerateMap("defaultmap", "", 20, 5, 4, 5, 1);
+        GenerateMap("defaultmap", "", 20*vc, 5*vc, 4*vc, 5*vc, 1*vc);
+        printas("Generated default map, multiplying size by virocount");
     }
 }

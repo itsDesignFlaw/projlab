@@ -11,6 +11,7 @@ package VeryGoodViroGame.Field;//
 
 import VeryGoodViroGame.Agent.GeneticCode;
 import VeryGoodViroGame.EntityManager;
+import VeryGoodViroGame.GameManager;
 import VeryGoodViroGame.Logger;
 import VeryGoodViroGame.Virologist;
 
@@ -21,6 +22,15 @@ import VeryGoodViroGame.Virologist;
 public class FieldLab extends Field
 {
     private GeneticCode code = new GeneticCode();
+    
+    public FieldLab()
+    {
+        Map curmap = GameManager.GetMap();
+        if(curmap != null)
+        {
+            curmap.Swallow(this, true);
+        }
+    }
     
     /**
      * Ez a metódus valósítja meg a genetikai kód letapogatást.
@@ -52,4 +62,6 @@ public class FieldLab extends Field
     {
         return super.toString() + "\n\tcode: " + code.toString();
     }
+    
+    public GeneticCode getCode() { return code; }
 }

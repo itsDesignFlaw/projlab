@@ -29,7 +29,11 @@ public class Field implements DrawableComponent
     
     public Field()
     {
-        neighbours = new ArrayList<Field>();
+        Map curmap = GameManager.GetMap();
+        if(curmap != null)
+        {
+            curmap.Swallow(this);
+        }
     }
     
     /**
@@ -40,6 +44,8 @@ public class Field implements DrawableComponent
      */
     public void AcceptViro(Virologist v)
     {
+        if(virologists.contains(v))
+            return;
         virologists.add(v);
         v.SetField(this);
     }
@@ -70,7 +76,10 @@ public class Field implements DrawableComponent
      */
     public void AddNeighbour(Field f)
     {
+        if(neighbours.contains(f))
+            return;
         neighbours.add(f);
+        f.AddNeighbour(this);
     }
     
     XRandom r = new XRandom();
@@ -102,6 +111,7 @@ public class Field implements DrawableComponent
     {
         return "\tneighbours: " + neighbours.stream().map(EntityManager::GetObjectName).collect(Collectors.joining(", ")) + "\n\tvirologists: " + virologists.stream().map(EntityManager::GetObjectName).collect(Collectors.joining(", "));
     }
+    
     @Override
     public String GetDrawString()
     {

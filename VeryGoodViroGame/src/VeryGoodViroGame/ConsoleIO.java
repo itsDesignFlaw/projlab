@@ -281,6 +281,7 @@ public class ConsoleIO
         cmds.put("clear", (args) ->
         {
             EntityManager.BigRedButton();
+            GameManager.BigRedButton();
             return "";
         });
     }
