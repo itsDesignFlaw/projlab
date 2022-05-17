@@ -1,7 +1,6 @@
 package VeryGoodViroGame;
 
-import VeryGoodViroGame.Agent.Agent;
-import VeryGoodViroGame.Agent.GeneticCode;
+import VeryGoodViroGame.Agent.*;
 import VeryGoodViroGame.Equipment.Equipment;
 import VeryGoodViroGame.Field.Field;
 
@@ -60,7 +59,7 @@ public class View
         images.put("effect_equipment", "effect_equipment.png");
         images.put("effect_equipment_broken", "effect_equipment_broken.png");
         images.put("field", "field_simple.png");
-        images.put("forget", "forget.png");
+        images.put("forget", "forget_virus.png");
         images.put("gloves", "gloves.png");
         images.put("lab", "lab.png");
         images.put("bearlab", "lab.png");
@@ -71,6 +70,10 @@ public class View
         images.put("viro", "viro.png");
         images.put("bearviro", "viro.png");
         images.put("ware", "warehouse.png");
+        images.put("forget_vaccine", "forget_vaccine.png");
+        images.put("paralyze_vaccine", "paralyze_vaccine.png");
+        images.put("dance_vaccine", "dance_vaccine.png");
+        images.put("protect_vaccine", "protect_vaccine.png");
     }
     
     //Esetleg HashMap, és a value egy Levels, hogy melyik szinten van?

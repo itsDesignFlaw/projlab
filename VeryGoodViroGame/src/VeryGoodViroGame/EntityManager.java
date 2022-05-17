@@ -73,6 +73,11 @@ public class EntityManager
         GameManager.controller.AddObject(object, c);
     }
     
+    public static String GetType(Object o)
+    {
+        return classObject.get(o);
+    }
+    
     public static Object CreateEntity(String classname)
     {
         int db = 0;
