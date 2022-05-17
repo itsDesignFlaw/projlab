@@ -49,11 +49,9 @@ public class GameManager
     public static void StartGame(int virocount, String[] names)
     {
         map = new Map();
+
         //map.GenerateMap();
-        if(DEBUG_MODE_TEST)
-            map.GenerateTestMap(virocount);
-        else
-            map.GenerateMapDefault(virocount); //a GenerateMap-be kellenek parameterek a palyahoz, ez meg default
+        map.GenerateMapDefault(virocount); //a GenerateMap-be kellenek parameterek a palyahoz, ez meg default
         // ertekekkel
         // csinalja ugyanazt
         

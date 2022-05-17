@@ -201,9 +201,14 @@ public class View
     
     private void AddName(int x, int y, JLabel name)
     {
+        AddName(x, y, name, Color.red);
+    }
+
+    private void AddName(int x, int y, JLabel name, Color col)
+    {
         panel.add(name);
         name.setFont(name.getFont().deriveFont(16.0f));
-        name.setForeground(Color.red);
+        name.setForeground(col);
         name.setSize(name.getPreferredSize());
         name.setLocation(x - name.getWidth() / 2, y - name.getHeight() - 1);
     }
@@ -303,6 +308,11 @@ public class View
             {
                 ActiveViroLabel = CurViroLabel;
                 ActiveViroLabelName = name;
+                AddName(x + img.getWidth() / 2-1, y + img.getHeight() + 50, name, Color.yellow);
+            }
+            else
+            {
+                AddName(x + img.getWidth() / 2-1, y + img.getHeight() + 50, name, Color.red);
             }
         }
     }
