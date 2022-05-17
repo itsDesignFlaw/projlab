@@ -11,22 +11,54 @@ package VeryGoodViroGame;//
 
 import VeryGoodViroGame.Field.Map;
 
+import java.util.ArrayList;
+import java.util.Random;
+
 /**
  * Ez a statikus osztály felelős az új játék elindításáért, és a játék befejezéséért.
  */
 public class GameManager
 {
-    
+    static ArrayList<Virologist> virologists = new ArrayList<>();
+    private static int currentViro;
     static Map map;
-    static int CodeCount = 4;
+    static int CodeCount = 0;
+    static ViewController controller;
+    
+    public static Map GetMap()
+    {
+        return map;
+    }
+    
+    public static void AddViro(Virologist v)
+    {
+        virologists.add(v);
+    }
+    
+    public static void BigRedButton()
+    {
+        virologists = new ArrayList<>();
+        CodeCount = 0;
+    }
+    
     
     /**
      * Ez a metódus felelős a játék elindításáért.
      */
-    public static void StartGame()
+    public static void StartGame(int virocount, String[] names)
     {
         map = new Map();
-        map.GenerateMap();
+        //map.GenerateMap();
+        map.GenerateMapDefault(virocount); //a GenerateMap-be kellenek parameterek a palyahoz, ez meg default ertekekkel
+        // csinalja ugyanazt
+        
+        
+        map.SpitViros(virocount, names); //lerakja a virokat random helyre
+        CodeCount = map.CountDiffCodes();
+        
+        currentViro = new Random().nextInt(virocount);
+        
+        controller.PlaySound("bgmusic1.wav", 2.0f, true);
     }
     
     /**
@@ -37,5 +69,16 @@ public class GameManager
     public static void EndGame(Virologist winner)
     {
         System.out.println("A nyertes: " + winner.toString());
+    }
+    
+    public static void EndTurn()
+    {
+        currentViro = ++currentViro % virologists.size();
+        controller.Update(virologists.get(currentViro));
+    }
+    
+    public static Virologist GetCurrent()
+    {
+        return virologists.get(currentViro);
     }
 }

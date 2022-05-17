@@ -62,7 +62,7 @@ public class Main
             ConsoleMode(args);
             return;
         }
-        ViewController controller = new ViewController();
+        MainMenu menu = new MainMenu();
     }
     
     private static void ConsoleMode(String[] args) throws FileNotFoundException

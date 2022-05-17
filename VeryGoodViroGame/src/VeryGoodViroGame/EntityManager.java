@@ -76,7 +76,8 @@ public class EntityManager
         while(namedObjects.containsKey(classname + db))
             db++;
         
-        return CreateEntity(classname, classname + db);
+        Object o = CreateEntity(classname, classname + db);
+        return o;
     }
     
     public static Object CreateEntity(String classname, String name)
@@ -86,6 +87,7 @@ public class EntityManager
         
         Object ent = EntityGen.get(classname).generate();
         PutNamedObject(name, ent);
+        GameManager.controller.AddObject(ent, classname);
         return ent;
     }
     

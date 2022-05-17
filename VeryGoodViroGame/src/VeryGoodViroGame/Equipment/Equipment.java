@@ -30,4 +30,6 @@ public abstract class Equipment extends InvItem implements DrawableComponent
     {
         return "\thost: " + EntityManager.GetObjectName(host);
     }
+    
+    public String getName() { return name; }
 }

@@ -12,6 +12,7 @@ package VeryGoodViroGame;//
 
 import VeryGoodViroGame.Agent.Agent;
 import VeryGoodViroGame.Agent.GeneticCode;
+import VeryGoodViroGame.Agent.Paralyze;
 import VeryGoodViroGame.Equipment.Equipment;
 import VeryGoodViroGame.Field.Field;
 import VeryGoodViroGame.MoveStrategy.*;
@@ -32,11 +33,16 @@ public class Virologist implements DrawableComponent
     List<GeneticCode> learntCodes = new ArrayList<>();
     List<Agent> stash = new ArrayList<>();
     
-    //Amin áll
+    //Amin áll (vine boom sound effect)
     Field mezo = new Field();
     private Resource resource = new Resource();
     List<Equipment> equipments = new ArrayList<>();
     boolean dead = false;
+    
+    public Virologist()
+    {
+        GameManager.AddViro(this);
+    }
     
     /**
      * Beállítja a virológus erőforrás tagváltozóját.
@@ -55,7 +61,10 @@ public class Virologist implements DrawableComponent
      */
     public void SetField(Field f)
     {
+        if(mezo == f)
+            return;
         mezo = f;
+        f.AcceptViro(this);
     }
     
     
@@ -186,6 +195,8 @@ public class Virologist implements DrawableComponent
      */
     public boolean ApplyAgent(Agent agent, Virologist source)
     {
+        if(dead)
+            return false;
         for(InvItem item : items)
         {
             if(!item.CanAgentBeApplied(agent, source))
@@ -432,6 +443,9 @@ public class Virologist implements DrawableComponent
     public void KillVirologist()
     {
         dead = true;
+        Paralyze p = new Paralyze();
+        items.add(p);
+        ChangeMoveStrategy(new MSParalyzed());
     }
     
     public void UseEquipment(Equipment e, Virologist target)

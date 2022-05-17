@@ -5,6 +5,7 @@ import VeryGoodViroGame.MoveStrategy.MSBear;
 
 public class Bear extends Agent
 {
+   
     public Bear()
     {
         super();

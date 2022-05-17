@@ -1,12 +1,18 @@
 package VeryGoodViroGame;
 
+import VeryGoodViroGame.Agent.Agent;
+import VeryGoodViroGame.Agent.GeneticCode;
+import VeryGoodViroGame.Equipment.Equipment;
 import VeryGoodViroGame.Field.Field;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.geom.GeneralPath;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -14,6 +20,17 @@ import java.util.HashMap;
 
 public class View
 {
+    class ViewObject
+    {
+        String png;
+        Object ref;
+        
+        ViewObject(String s, Object r)
+        {
+            png = s;
+            ref = r;
+        }
+    }
     
     enum Levels
     {
@@ -22,6 +39,7 @@ public class View
     
     //Lefordítás fájlokra
     private static HashMap<String, String> images = new HashMap<>();
+    private HashMap<Object, ViewObject> objects = new HashMap<>();
     private final static String ResourcePath = "/resources/";
     public ViewController controller;
     
@@ -64,11 +82,25 @@ public class View
     //Sajat Componens
     MapPanel panel;
     
+    public void AddObject(Object o, String s)
+    {
+        objects.put(o, new ViewObject(images.get(s), o));
+    }
+    
+    public View(ViewController c)
+    {
+        controller = c;
+    }
+    
+    public void RemoveObject(Object o)
+    {
+        objects.remove(o);
+    }
     
     public void Init()
     {
         frame = new JFrame("Very Good Viro Game --pre alpha test v0.0.0.-2");
-        frame.setSize(800, 600);
+        frame.setSize(1024, 768);
         ImageIcon icon = new ImageIcon(Main.class.getResource("/resources/az.png"));
         frame.setIconImage(icon.getImage());
         
@@ -81,6 +113,9 @@ public class View
         
         
         menu.add(menuitem);
+        JMenuItem turn = new JMenuItem("End turn");
+        turn.addActionListener(x -> controller.EndTurn());
+        menu.add(turn);
         menubar.add(menu);
         
         frame.setLayout(new BorderLayout());
@@ -99,13 +134,18 @@ public class View
         
     }
     
-    private BufferedImage GetImage(String name)
+    public void Clear()
+    {
+        panel.removeAll();
+    }
+    
+    private BufferedImage GetImage(Object name)
     {
         try
         {
             //Ezzel a getResource móddal lehet elvileg jar fileból is beolvasni, azaz akkor is jó útvonalat ad meg
             //Minden fájl ami az src mappán belül van tuti megtalálja
-            BufferedImage im = ImageIO.read(Main.class.getResource(ResourcePath + images.get(name)));
+            BufferedImage im = ImageIO.read(Main.class.getResource(ResourcePath + objects.get(name).png));
             return im;
         }
         catch(Exception e)
@@ -122,7 +162,7 @@ public class View
             //Ezzel a getResource móddal lehet elvileg jar fileból is beolvasni, azaz akkor is jó útvonalat ad meg
             //Minden fájl ami az src mappán belül van tuti megtalálja
             BufferedImage im = ImageIO.read(Main.class.getResource(ResourcePath + images.get(name)));
-            panel.DrawImage(Levels.MAP, im, 200, 100);
+            panel.DrawImage(im, 200, 100);
             panel.repaint();
         }
         catch(Exception e)
@@ -131,11 +171,12 @@ public class View
         }
     }
     
-    public void DrawMap(String current, java.util.List<String> neighbours)
+    public void DrawMap(Field current, java.util.List<Field> neighbours)
     {
         BufferedImage cur = GetImage(current);
-        panel.DrawImage(Levels.MAP, cur, panel.getWidth() / 2 - cur.getWidth() / 2,
-                panel.getHeight() / 2 - cur.getHeight() / 2);
+        panel.DrawImage(cur, panel.getWidth() / 2 - cur.getWidth() / 2, panel.getHeight() / 2 - cur.getHeight() / 2).setComponentPopupMenu(new FieldContext(current));
+        JLabel name = new JLabel(EntityManager.GetObjectName(current));
+        AddName(panel.getWidth() / 2, panel.getHeight() / 2 - cur.getHeight() / 2, name);
         int size = neighbours.size();
         for(int i = 0; i < size; i++)
         {
@@ -144,23 +185,95 @@ public class View
             int x = (int) (Math.cos(a) * (panel.getWidth() / 2 - 60) + panel.getWidth() / 2);
             int y = (int) (Math.sin(a) * (panel.getHeight() / 2 - 60) + panel.getHeight() / 2);
             //Work in Progress, ha valami jobb ötlet, nyugodtan lehet cserélni
-            panel.DrawImage(Levels.MAP, img, x - img.getWidth() / 2, y - img.getHeight() / 2);
+            panel.DrawImage(img, x - img.getWidth() / 2, y - img.getHeight() / 2).addMouseListener(new FieldClick(neighbours.get(i)));
+            name = new JLabel(EntityManager.GetObjectName(neighbours.get(i)));
+            AddName(x, y - img.getHeight() / 2, name);
         }
     }
     
-    public void DrawGeneticCodes(java.util.List<String> codes)
+    private void AddName(int x, int y, JLabel name)
+    {
+        panel.add(name);
+        name.setFont(name.getFont().deriveFont(16.0f));
+        name.setForeground(Color.red);
+        name.setSize(name.getPreferredSize());
+        name.setLocation(x - name.getWidth() / 2, y - name.getHeight() - 1);
+    }
+    
+    public void DrawGeneticCodes(java.util.List<GeneticCode> codes)
     {
     
     }
     
-    public void DrawViros(java.util.List<String> viros)
+    private static BufferedImage rotateImage(BufferedImage buffImage, double angle)
     {
-    
+        double radian = Math.toRadians(angle);
+        double sin = Math.abs(Math.sin(radian));
+        double cos = Math.abs(Math.cos(radian));
+        
+        int width = buffImage.getWidth();
+        int height = buffImage.getHeight();
+        
+        int nWidth = (int) Math.floor((double) width * cos + (double) height * sin);
+        int nHeight = (int) Math.floor((double) height * cos + (double) width * sin);
+        
+        BufferedImage rotatedImage = new BufferedImage(nWidth, nHeight, BufferedImage.TYPE_INT_ARGB);
+        
+        Graphics2D graphics = rotatedImage.createGraphics();
+        
+        graphics.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BICUBIC);
+        
+        graphics.translate((nWidth - width) / 2, (nHeight - height) / 2);
+        // rotation around the center point
+        graphics.rotate(radian, (double) (width / 2), (double) (height / 2));
+        graphics.drawImage(buffImage, 0, 0, null);
+        graphics.dispose();
+        
+        return rotatedImage;
     }
     
-    public void DrawItems(java.util.List<String> hud)
+    public void DrawViros(java.util.List<Virologist> viros)
     {
+        int itemHudSize = viros.size() * 64;
+        int leftMostPointOfItems = (panel.getWidth() - itemHudSize) / 2;
+        for(int i = 0; i < viros.size(); i++)
+        {
+            int x = leftMostPointOfItems + i * 64;
+            int y = panel.getHeight() / 2;
+            //G2D.drawRect(x - 3, y, 64, 64);
+            BufferedImage img = GetImage(viros.get(i));
+            if(viros.get(i).dead)
+            {
+                panel.DrawImage(rotateImage(img, 90), x, y + img.getHeight() / 2).setComponentPopupMenu(new ViroContext(viros.get(i)));
+            }
+            else
+            {
+                panel.DrawImage(img, x, y + img.getHeight() / 2).setComponentPopupMenu(new ViroContext(viros.get(i)));
+            }
+            JLabel name = new JLabel(EntityManager.GetObjectName(viros.get(i)));
+            AddName(x + img.getWidth() / 2-1, y + img.getHeight() + 50, name);
+            name.grabFocus();
+        }
+    }
     
+    public void DrawItems(ArrayList<InvItem> items)
+    {
+        int itemHudSize = items.size() * 64;
+        int leftMostPointOfItems = (panel.getWidth() - itemHudSize) / 2;
+        for(int i = 0; i < items.size(); i++)
+        {
+            int x = leftMostPointOfItems + i * 64;
+            int y = panel.getHeight() - 100;
+            //G2D.drawRect(x - 3, y, 64, 64);
+            BufferedImage img = GetImage(items.get(i));
+            JLabel l = panel.DrawImage(img, x, y);
+            l.setBorder(BorderFactory.createLineBorder(Color.black, 3));
+            if(items.get(i) instanceof Agent)
+                l.addMouseListener(new AgentClick((Agent) items.get(i)));
+            else
+                l.addMouseListener(new EquipmentClick((Equipment) items.get(i)));
+            
+        }
     }
     
     public void AddHUDElement(String name, int count)
@@ -168,7 +281,7 @@ public class View
     
     }
     
-    public void DrawEffects(java.util.List<String> effects)
+    public void DrawEffects(java.util.List<Agent> effects)
     {
     
     }
@@ -182,6 +295,54 @@ public class View
     public void Repaint()
     {
         panel.repaint();
+    }
+    
+    private class FieldClick extends MouseAdapter
+    {
+        Field f;
+        
+        FieldClick(Field f)
+        {
+            this.f = f;
+        }
+        
+        @Override
+        public void mouseClicked(MouseEvent e)
+        {
+            controller.MoveViro(f);
+        }
+    }
+    
+    private class AgentClick extends MouseAdapter
+    {
+        Agent f;
+        
+        AgentClick(Agent f)
+        {
+            this.f = f;
+        }
+        
+        @Override
+        public void mouseClicked(MouseEvent e)
+        {
+            controller.SetAgent(f);
+        }
+    }
+    
+    private class EquipmentClick extends MouseAdapter
+    {
+        Equipment f;
+        
+        EquipmentClick(Equipment f)
+        {
+            this.f = f;
+        }
+        
+        @Override
+        public void mouseClicked(MouseEvent e)
+        {
+            controller.SetEquipment(f);
+        }
     }
     
     class MapPanel extends JPanel
@@ -274,12 +435,11 @@ public class View
         }
         
         /**
-         * @param level Melyik képre akarunk rajzolni
-         * @param im    Amit kirajzolunk
-         * @param x     Pozíció X koordinátája
-         * @param y     Pozíció Y koordinátája
+         * @param im Amit kirajzolunk
+         * @param x  Pozíció X koordinátája
+         * @param y  Pozíció Y koordinátája
          */
-        public void DrawImage(Levels level, Image im, int x, int y)
+        public JLabel DrawImage(Image im, int x, int y)
         {
             //A szintek kellenek még a JLabellel is, csak máshogy kéne szervezni, esetleg Listákban tárolni?
             /*switch(level)
@@ -295,19 +455,12 @@ public class View
                     break;
             }*/
             JLabel label = new JLabel(new ImageIcon(im));
-            label.addMouseListener(new MouseAdapter()
-            {
-                @Override
-                public void mouseClicked(MouseEvent e)
-                {
-                    System.out.println("Viro");
-                }
-            });
             setLayout(null);
             add(label);
             label.setLocation(x, y);
             label.setSize(im.getWidth(null), im.getHeight(null));
-            label.setComponentPopupMenu(new ContextMenu());
+            //label.setComponentPopupMenu(new ContextMenu());
+            return label;
         }
         
         
@@ -327,10 +480,6 @@ public class View
             //g.fillRect(0, 0, getWidth(), getHeight());
         }
         
-        public void Resize()
-        {
-        
-        }
     }
     
     class ContextMenu extends JPopupMenu
@@ -338,10 +487,94 @@ public class View
         public ContextMenu()
         {
             //Itt lehet több cuccot hozzáadni meg ilyenek
-            add(new JMenuItem("Hello there"));
+            JMenu menu = new JMenu("Hello there");
+            menu.add(new JMenuItem("General Kenobi"));
+            add(menu);
         }
     }
     
+    class FieldContext extends JPopupMenu
+    {
+        public FieldContext(Field f)
+        {
+            JMenuItem interact = new JMenuItem("Interact");
+            interact.addActionListener(e ->
+            {
+                controller.Interact();
+            });
+            add(interact);
+        }
+    }
+    
+    class ViroContext extends JPopupMenu
+    {
+        public ViroContext(Virologist v)
+        {
+            JMenuItem stealres = new JMenuItem("Steal Resource");
+            JMenu stealeq = new JMenu("Steal Equipment");
+            JMenuItem useagent = new JMenuItem("Use Agent");
+            JMenuItem useeq = new JMenuItem("Use Equipment");
+            
+            for(Equipment equipment : v.equipments)
+            {
+                JMenuItem equipIter = new JMenuItem(equipment.getName());
+                equipIter.addActionListener(e ->
+                {
+                    controller.StealEquipment(v, equipment);
+                });
+                stealeq.add(equipIter);
+            }
+            
+            stealres.addActionListener(e ->
+            {
+                controller.StealResource(v);
+            });
+            
+            useagent.addActionListener(e ->
+            {
+                controller.UseAgentOnViro(v);
+            });
+            useeq.addActionListener(e ->
+            {
+                controller.UseEquipment(v);
+            });
+            
+            add(stealres);
+            add(stealeq);
+            add(useagent);
+            add(useeq);
+        }
+    }
+    
+    class GeneticContext extends JPopupMenu
+    {
+        public GeneticContext(GeneticCode code)
+        {
+            JMenuItem craftVaccine = new JMenuItem("Craft vaccine");
+            JMenuItem craftVirus = new JMenuItem("Craft virus");
+            
+            craftVaccine.addActionListener(e ->
+            {
+                controller.CraftVaccine(code);
+            });
+            
+            craftVirus.addActionListener(e ->
+            {
+                controller.CraftVirus(code);
+            });
+            
+            add(craftVaccine);
+            add(craftVirus);
+        }
+    }
+    
+    class EqContext extends JPopupMenu
+    {
+        public EqContext(Equipment e)
+        {
+        
+        }
+    }
     
     //Már nem kell, de mintának jó, egér kattintás kezelése
     //Ha vizsgálni akarjuk hova kattintottuk, vagy ilyesmi, akkor lehet kell

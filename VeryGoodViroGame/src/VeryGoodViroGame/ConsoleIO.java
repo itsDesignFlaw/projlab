@@ -281,6 +281,7 @@ public class ConsoleIO
         cmds.put("clear", (args) ->
         {
             EntityManager.BigRedButton();
+            GameManager.BigRedButton();
             return "";
         });
     }
@@ -295,7 +296,7 @@ public class ConsoleIO
         print(false, str);
     }
     
-    static void RunCMD(String cmd, String[] args)
+    static public void RunCMD(String cmd, String[] args)
     {
         String ucmd = cmd.toLowerCase();
         String[] uparams = new String[args.length];
@@ -327,5 +328,10 @@ public class ConsoleIO
         
         if(retStr != "")
             print(true, "Can't run '" + ucmd + "'! " + retStr);
+    }
+    
+    static public void RunCMD(String cmd)
+    {
+        RunCMD(cmd, new String[]{});
     }
 }
