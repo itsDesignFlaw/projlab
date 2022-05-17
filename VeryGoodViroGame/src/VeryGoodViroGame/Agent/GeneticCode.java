@@ -83,6 +83,7 @@ public class GeneticCode implements DrawableComponent
     {
         Agent clone = a.Clone();
         Vaccine vaccine = new Vaccine(clone);
+        EntityManager.PutCraftedObject("vaccine", vaccine, EntityManager.GetType(clone) + "_vaccine");
         Timer.AddSteppable(vaccine);
         return vaccine;
     }

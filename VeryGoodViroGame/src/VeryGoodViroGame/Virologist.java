@@ -129,7 +129,6 @@ public class Virologist implements DrawableComponent
         {
             if(!item.CanCraft())
             {
-                Logger.ReturnFunction();
                 return;
             }
         }
@@ -151,7 +150,7 @@ public class Virologist implements DrawableComponent
     public void AddAgentToStash(Agent agent)
     {
         stash.add(agent);
-        
+        agent.host = this;
     }
     
     public void RemoveAgentFromStash(Agent agent)
@@ -444,6 +443,7 @@ public class Virologist implements DrawableComponent
         dead = true;
         Paralyze p = new Paralyze();
         items.add(p);
+        EntityManager.PutCraftedObject("para", p, "paralyze");
         ChangeMoveStrategy(new MSParalyzed());
     }
     

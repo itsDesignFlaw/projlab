@@ -1,7 +1,6 @@
 package VeryGoodViroGame;
 
-import VeryGoodViroGame.Agent.Agent;
-import VeryGoodViroGame.Agent.GeneticCode;
+import VeryGoodViroGame.Agent.*;
 import VeryGoodViroGame.Equipment.Equipment;
 import VeryGoodViroGame.Field.Field;
 
@@ -15,9 +14,13 @@ import java.awt.event.MouseEvent;
 import java.awt.geom.GeneralPath;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+
+import java.net.URL;
 import java.util.*;
 import java.util.List;
 import java.util.Timer;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class View
 {
@@ -59,7 +62,7 @@ public class View
         images.put("effect_equipment", "effect_equipment.png");
         images.put("effect_equipment_broken", "effect_equipment_broken.png");
         images.put("field", "field_simple.png");
-        images.put("forget", "forget.png");
+        images.put("forget", "forget_virus.png");
         images.put("gloves", "gloves.png");
         images.put("lab", "lab.png");
         images.put("bearlab", "lab.png");
@@ -70,6 +73,10 @@ public class View
         images.put("viro", "viro.png");
         images.put("bearviro", "viro.png");
         images.put("ware", "warehouse.png");
+        images.put("forget_vaccine", "forget_vaccine.png");
+        images.put("paralyze_vaccine", "paralyze_vaccine.png");
+        images.put("dance_vaccine", "dance_vaccine.png");
+        images.put("protect_vaccine", "protect_vaccine.png");
     }
     
     //Esetleg HashMap, és a value egy Levels, hogy melyik szinten van?
@@ -146,7 +153,19 @@ public class View
         {
             //Ezzel a getResource móddal lehet elvileg jar fileból is beolvasni, azaz akkor is jó útvonalat ad meg
             //Minden fájl ami az src mappán belül van tuti megtalálja
-            BufferedImage im = ImageIO.read(Main.class.getResource(ResourcePath + objects.get(name).png));
+            ViewObject obj = objects.get(name);
+            if(obj == null)
+            {
+                System.out.println(name.toString());
+                return null;
+            }
+            URL u = Main.class.getResource(ResourcePath + objects.get(name).png);
+            if(u == null)
+            {
+                System.out.println(name.toString());
+                return null;
+            }
+            BufferedImage im = ImageIO.read(u);
             return im;
         }
         catch(Exception e)
@@ -184,9 +203,9 @@ public class View
         for(int i = 0; i < size; i++)
         {
             BufferedImage img = GetImage(neighbours.get(i));
-            double a = i * 2 * Math.PI / size - Math.PI / 4;
-            int x = (int) (Math.cos(a) * (panel.getWidth() / 2 - 60) + panel.getWidth() / 2);
-            int y = (int) (Math.sin(a) * (panel.getHeight() / 2 - 60) + panel.getHeight() / 2);
+            double a = i * 2 * Math.PI / size;
+            int x = (int) (Math.cos(a) * (panel.getWidth() / 2 - 100) + panel.getWidth() / 2);
+            int y = (int) (Math.sin(a) * (panel.getHeight() / 2 - 100) + panel.getHeight() / 2);
             //Work in Progress, ha valami jobb ötlet, nyugodtan lehet cserélni
             JLabel FieldLabel = panel.DrawImage(img, x - img.getWidth() / 2, y - img.getHeight() / 2);
             FieldLabel.addMouseListener(new FieldClick( neighbours.get(i), FieldLabel) );
@@ -286,7 +305,6 @@ public class View
                 x = leftMostPointOfItems + i * 64;
                 y = panel.getHeight() / 2;
             }
-            //G2D.drawRect(x - 3, y, 64, 64);
             BufferedImage img = GetImage(viros.get(i));
             JLabel CurViroLabel;
             if(viros.get(i).dead)
@@ -325,18 +343,25 @@ public class View
         {
             int x = leftMostPointOfItems + i * 64;
             int y = panel.getHeight() - 100;
-            //G2D.drawRect(x - 3, y, 64, 64);
             BufferedImage img = GetImage(items.get(i));
             JLabel l = panel.DrawImage(img, x, y);
             l.setBorder(BorderFactory.createLineBorder(Color.black, 3));
             if(items.get(i) instanceof Agent)
             {
                 l.addMouseListener(new AgentClick((Agent) items.get(i)));
+                if(items.get(i) == controller.GetSelectedAgent())
+                {
+                    l.setBorder(BorderFactory.createLineBorder(Color.red, 5));
+                }
             }
             else
             {
                 l.addMouseListener(new EquipmentClick((Equipment) items.get(i)));
                 l.setComponentPopupMenu(new EqContext((Equipment) items.get(i)));
+                if(items.get(i) == controller.GetSelectedEq())
+                {
+                    l.setBorder(BorderFactory.createLineBorder(Color.red, 5));
+                }
             }
             
         }
