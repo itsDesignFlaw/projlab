@@ -15,9 +15,9 @@ import java.awt.event.MouseEvent;
 import java.awt.geom.GeneralPath;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.*;
 import java.util.List;
+import java.util.Timer;
 
 public class View
 {
@@ -188,9 +188,12 @@ public class View
             int x = (int) (Math.cos(a) * (panel.getWidth() / 2 - 60) + panel.getWidth() / 2);
             int y = (int) (Math.sin(a) * (panel.getHeight() / 2 - 60) + panel.getHeight() / 2);
             //Work in Progress, ha valami jobb ötlet, nyugodtan lehet cserélni
-            panel.DrawImage(img, x - img.getWidth() / 2, y - img.getHeight() / 2).addMouseListener(new FieldClick(neighbours.get(i)));
+            JLabel FieldLabel = panel.DrawImage(img, x - img.getWidth() / 2, y - img.getHeight() / 2);
+            FieldLabel.addMouseListener(new FieldClick( neighbours.get(i), FieldLabel) );
+
             name = new JLabel(EntityManager.GetObjectName(neighbours.get(i)));
             AddName(x, y - img.getHeight() / 2, name);
+
 
             List<Virologist> virosaround = new ArrayList<>(neighbours.get(i).GetVirologists());
             DrawViros(virosaround, x -( img.getWidth() / 2), y, true);
@@ -237,7 +240,20 @@ public class View
         
         return rotatedImage;
     }
-    
+
+    String ActiveViro;
+    JLabel ActiveViroLabel;
+    JLabel ActiveViroLabelName;
+    public void MarkActiveViro(String name)
+    {
+        ActiveViro = name;
+    }
+
+    public void MoveCurViro(Field to)
+    {
+
+    }
+
     public void DrawViros(java.util.List<Virologist> viros, int xOffset, int yOffset, boolean useOffset)
     {
         int itemHudSize = viros.size() * 64;
@@ -257,16 +273,26 @@ public class View
             }
             //G2D.drawRect(x - 3, y, 64, 64);
             BufferedImage img = GetImage(viros.get(i));
+            JLabel CurViroLabel;
             if(viros.get(i).dead)
             {
-                panel.DrawImage(rotateImage(img, 90), x, y + img.getHeight() / 2).setComponentPopupMenu(new ViroContext(viros.get(i)));
+                CurViroLabel = panel.DrawImage(rotateImage(img, 90), x, y + img.getHeight() / 2);
             }
             else
             {
-                panel.DrawImage(img, x, y + img.getHeight() / 2).setComponentPopupMenu(new ViroContext(viros.get(i)));
+                CurViroLabel = panel.DrawImage(img, x, y + img.getHeight() / 2);
             }
-            JLabel name = new JLabel(EntityManager.GetObjectName(viros.get(i)));
+            CurViroLabel.setComponentPopupMenu(new ViroContext(viros.get(i)));
+
+            String vironame = EntityManager.GetObjectName(viros.get(i));
+            JLabel name = new JLabel(vironame);
             AddName(x + img.getWidth() / 2-1, y + img.getHeight() + 50, name);
+            if (vironame.equals(ActiveViro))
+            {
+                ActiveViroLabel = CurViroLabel;
+                ActiveViroLabelName = name;
+            }
+
             name.grabFocus();
         }
     }
@@ -315,15 +341,24 @@ public class View
     private class FieldClick extends MouseAdapter
     {
         Field f;
+        JLabel fieldIMG;
+        boolean ismoving = false;
         
-        FieldClick(Field f)
+        FieldClick(Field f, JLabel fieldIMG)
         {
             this.f = f;
+            this.fieldIMG = fieldIMG;
         }
         
         @Override
         public void mouseClicked(MouseEvent e)
         {
+            if (ismoving) return;
+            ismoving=true;
+
+            panel.NiceMoveLabel(ActiveViroLabel, fieldIMG.getX(), fieldIMG.getY());
+            panel.NiceMoveLabel(ActiveViroLabelName, fieldIMG.getX() + (fieldIMG.getWidth()/2), fieldIMG.getY() + ActiveViroLabel.getHeight());
+            ismoving = false;
             controller.MoveViro(f);
         }
     }
@@ -390,33 +425,7 @@ public class View
             
             
         }
-        
-        public void ShowTestCaseMap()
-        {
-            try
-            {
-                BufferedImage bg = ImageIO.read(Main.class.getResource("/resources/bg.png"));
-                BufferedImage axe = ImageIO.read(Main.class.getResource("/resources/axe.png"));
-                BufferedImage viro = ImageIO.read(Main.class.getResource("/resources/viro.png"));
-                BufferedImage lab = ImageIO.read(Main.class.getResource("/resources/lab.png"));
-                BufferedImage bunker = ImageIO.read(Main.class.getResource("/resources/bunker.png"));
-                
-                //createGraphics egy Graphics2d objektumot ad vissza, a getGraphics csak sima Graphicsot
-                //Mindkettő ugyanúgy működik (konkrétan a getGraphics a createGraphicsot hívja meg BufferedImage esetén)
-                background.createGraphics().drawImage(bg.getScaledInstance(getWidth(), getHeight(),
-                        Image.SCALE_DEFAULT), 0, 0, null);
-                map.createGraphics().drawImage(lab, 100, 100, null);
-                map.createGraphics().drawImage(bunker, getWidth() / 2 - bunker.getWidth() / 2,
-                        getHeight() / 2 - bunker.getHeight() / 2, null);
-                map.createGraphics().drawImage(viro, getWidth() / 2 - viro.getWidth(), getHeight() / 2, null);
-                hud.createGraphics().drawImage(axe, getWidth() / 2 - axe.getWidth() / 2,
-                        getHeight() - axe.getHeight() - 10, null);
-            }
-            catch(IOException e)
-            {
-                e.printStackTrace();
-            }
-        }
+
         
         void BgPaint()
         {
@@ -476,6 +485,43 @@ public class View
             label.setSize(im.getWidth(null), im.getHeight(null));
             //label.setComponentPopupMenu(new ContextMenu());
             return label;
+        }
+
+        int lerp(float fraction, Integer start, Integer end)
+        {
+            return (int)((start.floatValue() * (1.0 - fraction)) + (end.floatValue() * fraction));
+        }
+
+        public void NiceMoveLabel(JLabel label, int tox, int toy)
+        {
+            System.out.println("startpos:: " + label.getX() + "-..-" + label.getY());
+
+
+            Timer Timo = new Timer("nicetimer");
+            TimerTask Task = new TimerTask() {
+                int i;
+
+                @Override
+                public void run() {
+                    int cx = label.getLocation().x;
+                    int cy = label.getLocation().y;
+                    label.setLocation( lerp(0.045f, cx, tox), lerp(0.045f, cy, toy) );
+
+                    System.out.println("Moved to: " + cx + "-"+cy);
+                    System.out.println("Target: " + tox + "-"+toy);
+                    i++;
+                    if (i>=40)
+                    {
+                        Timo.cancel();
+                        System.out.println("iter:" + i);
+                    }
+                }
+            };
+
+
+            Timo.scheduleAtFixedRate(Task, 0, 20);
+
+
         }
         
         

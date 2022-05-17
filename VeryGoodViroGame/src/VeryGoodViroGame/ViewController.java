@@ -16,6 +16,7 @@ import java.util.stream.Collectors;
 
 
 import javax.sound.sampled.*;
+import javax.swing.text.html.parser.Entity;
 
 
 public class ViewController
@@ -83,7 +84,7 @@ public class ViewController
         List<Agent> stash = new ArrayList<>(v.stash);
         List<Equipment> eq = v.equipments;
         
-        
+        view.MarkActiveViro(EntityManager.GetObjectName(v));
         view.DrawMap(f, fields);
         
         ArrayList<InvItem> it = new ArrayList<>(stash);
@@ -116,7 +117,8 @@ public class ViewController
     {
         activeViro.MoveTo(f);
         moved = true;
-        Update(activeViro);
+
+        //Update(activeViro);
     }
     
     public void CraftVirus(GeneticCode gc)
