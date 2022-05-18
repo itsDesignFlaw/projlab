@@ -25,7 +25,7 @@ import java.util.HashMap;
 /**
  *
  */
-public class View
+public class View implements IView
 {
     class ViewObject
     {
@@ -100,11 +100,22 @@ public class View
     //Sajat Componens
     MapPanel panel;
     
+    /**
+     * Egy megjelnítendő objektum hozzáaadása, kötelező
+     *
+     * @param o Az objektum
+     * @param s Típusa az objektumnak
+     */
     public void AddObject(Object o, String s)
     {
         objects.put(o, new ViewObject(images.get(s), o));
     }
     
+    /**
+     * Ctor
+     *
+     * @param c ViewController objektum ,ami ehhez az objektumhoz tartozik
+     */
     public View(ViewController c)
     {
         controller = c;
@@ -118,6 +129,11 @@ public class View
         }
     }
     
+    /**
+     * Feldob egy Popup ablakot,amiben megkérdezi a felhasználót, tuti be akarja e zárni az ablakot
+     *
+     * @return 0 ha leokézta, -1 ha a nem gombra kattintott
+     */
     public int Close()
     {
         JFrame popup = new JFrame();
@@ -134,11 +150,19 @@ public class View
         
     }
     
+    /**
+     * Kiszed egy objektumot a megjelenítendő objektumok listájából
+     *
+     * @param o az objektum
+     */
     public void RemoveObject(Object o)
     {
         objects.remove(o);
     }
     
+    /**
+     * Az egész form inicializálása, itt jön létre, és jelenik is meg
+     */
     public void Init()
     {
         frame = new JFrame("Very Good Viro Game --pre alpha test v0.0.0.-1");
@@ -188,16 +212,28 @@ public class View
         
     }
     
+    /**
+     * Clear, mi más lenne? Törli az összes megjelenítendő objektumot
+     */
     public void Clear()
     {
         panel.removeAll();
     }
     
+    /**
+     * Betölti a megadott objektumhoz tartozó képet
+     *
+     * @param name
+     * @return
+     */
     private BufferedImage GetImage(Object name)
     {
         return GetImage(name, "");
     }
     
+    /**
+     * @param r
+     */
     public void DrawResource(Resource r)
     {
         try
@@ -501,6 +537,12 @@ public class View
     public void Repaint()
     {
         panel.repaint();
+    }
+    
+    @Override
+    public JFrame getFrame()
+    {
+        return frame;
     }
     
     private class FieldClick extends MouseAdapter

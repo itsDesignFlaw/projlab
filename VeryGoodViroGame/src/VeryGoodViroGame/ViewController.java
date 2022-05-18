@@ -25,12 +25,12 @@ public class ViewController
 {
     private boolean useItem = false;
     public Virologist activeViro;
-    View view;
+    IView view;
     MainMenu mainmenu;
     private Field currentfield;
     private boolean moved = false;
     private HashMap<Virologist, Field> prevfield = new HashMap<>();
-
+    
     /**
      * @return mainmenu visszaadása
      */
@@ -43,11 +43,12 @@ public class ViewController
     {
         this.mainmenu = mainmenu;
     }
-
+    
     /**
      * Konstruktor, létrehoz egy új viewt, elindítja a játékot
+     *
      * @param NumberOfViros virológusok száma a játékban
-     * @param mainmenu a Main Menu
+     * @param mainmenu      a Main Menu
      */
     public ViewController(int NumberOfViros, MainMenu mainmenu)
     {
@@ -61,7 +62,7 @@ public class ViewController
         //Test();
     }
     
-    public View getView()
+    public IView getView()
     {
         return view;
     }
@@ -98,7 +99,7 @@ public class ViewController
         f.AddNeighbour(ware);
         Update(v);
     }
-
+    
     /**
      * Update-eli az aktuális virológust
      */
@@ -107,7 +108,7 @@ public class ViewController
         if(activeViro != null)
             Update(activeViro);
     }
-
+    
     /**
      * @return Az előző mező ahol az activeViro tartózkodott
      */
@@ -115,9 +116,10 @@ public class ViewController
     {
         return prevfield.get(activeViro);
     }
-
+    
     /**
      * Átlép a következő játékosra (vagyis virológusra), újra kirajzol, az új viró szemszögéből
+     *
      * @param v a sorban követkeő virológus
      */
     public void Update(Virologist v)
@@ -153,7 +155,7 @@ public class ViewController
         
         view.Repaint();
     }
-
+    
     /**
      * Uj object hozzáadása a kirajzolandó objektumokhoz
      */
@@ -171,9 +173,10 @@ public class ViewController
     {
         ConsoleIO.RunCMD(CMD, args);
     }
-
+    
     /**
      * Átlépteti grafikusan a virót a kiválasztott mezőre
+     *
      * @param f az új mező ahova lépünk
      * @return visszaadja a current mezőt
      */
@@ -186,9 +189,10 @@ public class ViewController
         //Update();
         //mark: nem kell neki, majd ha change turn van, a View addig animal
     }
-
+    
     /**
      * Legyárt egy vírust az activeVirónak
+     *
      * @param gc a genetikai kód ami alapján craftolni akar
      */
     public void CraftVirus(GeneticCode gc)
@@ -201,8 +205,10 @@ public class ViewController
         activeViro.CraftVirus(gc);
         Update();
     }
+    
     /**
      * Legyárt egy vakcinát az activeVirónak
+     *
      * @param gc a genetikai kód ami alapján craftolni akar
      */
     public void CraftVaccine(GeneticCode gc)
@@ -215,9 +221,10 @@ public class ViewController
         activeViro.CraftVaccine(gc);
         Update();
     }
-
+    
     /**
      * Ráteszi a kiválasztott ágenst a kiválasztott viróra
+     *
      * @param v a kiválasztott viró
      */
     public void UseAgentOnViro(Virologist v)
@@ -232,7 +239,7 @@ public class ViewController
         activeViro.UseAgent(usea, v);
         Update();
     }
-
+    
     /**
      * Meghívja a viró interactWithField fv-ét, ha már az új mezőn van
      */
@@ -246,11 +253,12 @@ public class ViewController
         activeViro.InteractWithField();
         Update();
     }
-
+    
     /**
      * Egyik viró a másiktól equipmentet lop
+     *
      * @param target akitől lopni fog
-     * @param eq amit lopni akar
+     * @param eq     amit lopni akar
      */
     public void StealEquipment(Virologist target, Equipment eq)
     {
@@ -262,8 +270,10 @@ public class ViewController
         activeViro.StealEquipmentFromViro(target, eq);
         Update();
     }
+    
     /**
      * Egyik viró a másiktól resource-t lop
+     *
      * @param target akitől lopni fog
      */
     public void StealResource(Virologist target)
@@ -276,9 +286,10 @@ public class ViewController
         activeViro.StealResourceFromViro(target);
         Update();
     }
-
+    
     /**
      * Használ egy eszközt egy másik virón
+     *
      * @param target a mit sem sejtő célpont
      */
     public void UseEquipment(Virologist target)
@@ -293,9 +304,10 @@ public class ViewController
         activeViro.UseEquipment(usee, target);
         Update();
     }
-
+    
     /**
      * Kidobja a kiválasztott eszközt
+     *
      * @param e a kiválasztott eszköz
      */
     public void DropEquipment(Equipment e)
@@ -349,7 +361,7 @@ public class ViewController
             usee = null;
         Update();
     }
-
+    
     /**
      * Ezzel fejezi be az activeViro a körét
      */

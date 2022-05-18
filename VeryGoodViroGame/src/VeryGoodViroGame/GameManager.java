@@ -43,10 +43,11 @@ public class GameManager
         virologists = new ArrayList<>();
         CodeCount = 0;
     }
-
-
+    
+    
     /**
      * Ez a metódus felelős a játék elindításáért.
+     *
      * @param virocount a jatekban hany virologus lesz
      * @param names
      */
@@ -81,7 +82,7 @@ public class GameManager
         //custom title, no icon
         JOptionPane.showMessageDialog(popup, "The Winner is: " + (winner == null ? "the bears :(" :
                 EntityManager.GetObjectName(winner)), "Game Over", JOptionPane.PLAIN_MESSAGE);
-        controller.getView().frame.setVisible(false);
+        controller.getView().getFrame().setVisible(false);
         // System.out.println("A nyertes: " + winner.toString());
         controller.getMainmenu().setVisible();
     }
