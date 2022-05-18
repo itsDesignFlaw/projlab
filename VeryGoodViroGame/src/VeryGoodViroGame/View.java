@@ -233,6 +233,7 @@ public class View implements IView
     
     /**
      * Kirajzolja, mennyi resource van
+     *
      * @param r Virologus resource-a
      */
     public void DrawResource(Resource r)
@@ -436,6 +437,7 @@ public class View implements IView
     String ActiveViro;
     JLabel ActiveViroLabel;
     JLabel ActiveViroLabelName;
+    
     /**
      * Besetteli az aktív virológust
      *
@@ -490,7 +492,7 @@ public class View implements IView
                 }
                 catch(IOException e)
                 {
-                    CurViroLabel = null;
+                    CurViroLabel = panel.DrawImage(error404, x, y + error404.getHeight() / 2);
                 }
             }
             else
