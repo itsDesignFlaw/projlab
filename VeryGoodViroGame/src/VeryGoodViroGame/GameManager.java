@@ -86,7 +86,10 @@ public class GameManager
         // System.out.println("A nyertes: " + winner.toString());
         controller.getMainmenu().setVisible();
     }
-    
+
+    /**
+     * Következő körre vált
+     */
     public static void EndTurn()
     {
         //TODO:Minden viro end turnnél menjen az idő, vagy 1 tick, ha minden Viro volt?
@@ -115,7 +118,10 @@ public class GameManager
         }
         controller.Update(virologists.get(currentViro));
     }
-    
+
+    /**
+     * @return a viró akinek a köre van épp
+     */
     public static Virologist GetCurrent()
     {
         return virologists.get(currentViro);

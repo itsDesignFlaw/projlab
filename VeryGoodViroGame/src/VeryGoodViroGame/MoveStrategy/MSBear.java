@@ -7,9 +7,18 @@ import VeryGoodViroGame.Logger;
 import VeryGoodViroGame.Virologist;
 
 import java.util.List;
-
+/**
+ * Ez az osztály felelős a virológus medve mozgási stratégiájának megvalósításáért.
+ */
 public class MSBear implements iMoveStrategy
 {
+    /**
+     * Ennek a metódusnak a hatására a virológus egy véletlenszerűen választott mezőre lép, valamint
+     * ha egy mezőre lép egy másik viróval, rá is medve vírust ken.
+     * @param v A virológus, akin a mozgást végrehajtjuk.
+     * @param from a Mező amiről mozgatjuk a virológust
+     * @param to a Mező amire mozgatjuk a virológust
+     */
     @Override
     public void ExecuteMove(Virologist v, Field from, Field to)
     {
