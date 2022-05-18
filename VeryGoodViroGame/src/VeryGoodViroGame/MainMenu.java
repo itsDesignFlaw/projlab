@@ -149,9 +149,9 @@ public class MainMenu
     {
 
         //controller.view.frame.setVisible(false);
-        if(controller.getView().Close()==0){
+
             frame.setVisible(true);
-        }
+
 
 
 
