@@ -103,23 +103,21 @@ public class View
     {
         controller = c;
     }
-
+    
     public int Close()
     {
         JFrame popup = new JFrame();
         //default icon, custom title
-        int n = JOptionPane.showConfirmDialog(
-                popup,
-                "Are you sure you ki akarsz lépni?",
-                "Exit",
+        int n = JOptionPane.showConfirmDialog(popup, "Are you sure you ki akarsz lépni?", "Exit",
                 JOptionPane.YES_NO_OPTION);
-
-        if(n==0) {
+        
+        if(n == 0)
+        {
             frame.setVisible(false);
             return 0;
         }
         return -1;
-
+        
     }
     
     public void RemoveObject(Object o)
@@ -146,8 +144,8 @@ public class View
         JMenuItem turn = new JMenuItem("End turn");
         turn.addActionListener(x -> controller.EndTurn());
         menu.add(turn);
-
-
+        
+        
         JMenuItem newgame = new JMenuItem("Exit");
         newgame.addActionListener(x -> controller.getMainmenu().setVisible());
         menu.add(newgame);
@@ -179,6 +177,11 @@ public class View
         return GetImage(name, "");
     }
     
+    public void DrawResource(Resource r)
+    {
+    
+    }
+    
     private BufferedImage GetImage(Object name, String offset)
     {
         try
@@ -189,8 +192,9 @@ public class View
             if(obj == null)
             {
                 System.out.println("View/BufferedImage.GetImage obj==null! information:\n " + name.toString());
-
-                System.out.println("Does entity exist? " + EntityManager.NameFromObject(name) + "\n\t if not it probably indicates that viro has invalid field set, should check for that!");
+                
+                System.out.println("Does entity exist? " + EntityManager.GetObjectName(name) + "\n\t if not it " +
+                                   "probably indicates that viro has invalid field set, should check for that!");
                 return null;
             }
             String file = obj.png.replace(offset, "");
@@ -463,6 +467,8 @@ public class View
                 return;
             if(ismoving)
                 return;
+            if(controller.MoveViro(f))
+                return;
             ismoving = true;
             
             panel.NiceMoveLabel(ActiveViroLabel, fieldIMG.getX(), fieldIMG.getY() + fieldIMG.getHeight() + 5);
@@ -470,7 +476,6 @@ public class View
                     fieldIMG.getX() + (fieldIMG.getWidth() / 2) - (ActiveViroLabelName.getWidth() / 2),
                     fieldIMG.getY() + fieldIMG.getHeight() + ActiveViroLabel.getHeight() + 5);
             ismoving = false;
-            controller.MoveViro(f);
             /*if(e.getButton() == MouseEvent.BUTTON1)
                 controller.MoveViro(f);*/
         }
@@ -609,8 +614,8 @@ public class View
         
         public void NiceMoveLabel(JLabel label, int tox, int toy)
         {
-
-
+            
+            
             Timer Timo = new Timer("nicetimer");
             TimerTask Task = new TimerTask()
             {
@@ -621,8 +626,8 @@ public class View
                 {
                     int cx = label.getLocation().x;
                     int cy = label.getLocation().y;
-                    label.setLocation( lerp(0.045f, cx, tox), lerp(0.045f, cy, toy) );
-
+                    label.setLocation(lerp(0.045f, cx, tox), lerp(0.045f, cy, toy));
+                    
                     i++;
                     if(i >= 40)
                     {

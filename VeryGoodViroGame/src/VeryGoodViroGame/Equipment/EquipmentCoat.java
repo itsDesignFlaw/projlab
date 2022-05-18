@@ -25,11 +25,17 @@ public class EquipmentCoat extends Equipment
     static final float Chance = 0.17f;//Nem emlékszem pontosan mennyi, és hogy így csináljuk e vagy fordítva
     XRandom r = new XRandom();
     
+    public EquipmentCoat()
+    {
+        name = "Coat";
+    }
+    
     @Override
     public String GetDrawString()
     {
         return "coat";
     }
+    
     /**
      * (InvItem metódus) véletlenszerűen, előre megadott eséllyel blokkolja
      * (hamis érték visszaadásával) az ágens felkenődését

@@ -13,7 +13,8 @@ import VeryGoodViroGame.Logger;
 import VeryGoodViroGame.Resource;
 
 /**
- * A zsák virológus felszerelést reprezentálja, az ezt viselő virológus által szállítható anyagmennyiségek megnövelődnek.
+ * A zsák virológus felszerelést reprezentálja, az ezt viselő virológus által szállítható anyagmennyiségek
+ * megnövelődnek.
  */
 public class EquipmentSack extends Equipment
 {
@@ -21,15 +22,21 @@ public class EquipmentSack extends Equipment
     //Nem lehet, hogy inkánn int?
     //Mert ez az a mennyiség, amivel megnöveli a kapacitást
     private Resource amount;
-
+    
+    public EquipmentSack()
+    {
+        name = "Sack";
+    }
+    
     /**
-     * 0-nál nagyobb számot ad vissza, ezzel jelezve a tartalmazó virológusnak, hogy több nyersanyagot is tud tárolni/szállítani
-     *
+     * 0-nál nagyobb számot ad vissza, ezzel jelezve a tartalmazó virológusnak, hogy több nyersanyagot is tud
+     * tárolni/szállítani
      */
     public int GetMaxResource()
     {
         return 20;
     }
+    
     @Override
     public String GetDrawString()
     {

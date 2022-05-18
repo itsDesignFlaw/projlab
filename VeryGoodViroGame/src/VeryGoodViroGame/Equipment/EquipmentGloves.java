@@ -28,6 +28,11 @@ public class EquipmentGloves extends Equipment
         return "gloves";
     }
     
+    public EquipmentGloves()
+    {
+        name = "Gloves";
+    }
+    
     /**
      * (InvItem metódus) hamis érték visszaadásával blokkolja
      * az ágens felkenődését, illetve véletlenszerűen, előre

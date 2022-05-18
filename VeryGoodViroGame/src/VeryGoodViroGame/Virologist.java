@@ -35,6 +35,12 @@ public class Virologist implements DrawableComponent
     
     //Amin áll (vine boom sound effect)
     Field mezo = null;
+    
+    public Resource getResource()
+    {
+        return resource;
+    }
+    
     private Resource resource = new Resource();
     List<Equipment> equipments = new ArrayList<>();
     boolean dead = false;
@@ -301,7 +307,8 @@ public class Virologist implements DrawableComponent
      */
     public boolean RemoveEquipment(Equipment equipment)
     {
-        IsParalyzed();
+        if(!IsParalyzed())
+            return false;
         DestroyEquipment(equipment);
         return true;
     }

@@ -26,15 +26,17 @@ public class ViewController
     View view;
     MainMenu mainmenu;
     private boolean moved = false;
-
-    public MainMenu getMainmenu() {
+    
+    public MainMenu getMainmenu()
+    {
         return mainmenu;
     }
-
-    public void setMainmenu(MainMenu mainmenu) {
+    
+    public void setMainmenu(MainMenu mainmenu)
+    {
         this.mainmenu = mainmenu;
     }
-
+    
     public ViewController(int NumberOfViros, MainMenu mainmenu)
     {
         this.mainmenu = mainmenu;
@@ -46,11 +48,12 @@ public class ViewController
         Update(GameManager.GetCurrent());
         //Test();
     }
-
-    public View getView() {
+    
+    public View getView()
+    {
         return view;
     }
-
+    
     public void Test()
     {
         Virologist v = new Virologist();
@@ -116,7 +119,7 @@ public class ViewController
         
         view.DrawGeneticCodes(codes);
         view.DrawEffects(effect.stream().filter(x -> x instanceof Agent).map(x -> (Agent) x).collect(Collectors.toList()));
-        
+        view.DrawResource(v.getResource());
         
         view.Repaint();
     }
