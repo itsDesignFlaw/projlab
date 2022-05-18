@@ -146,14 +146,15 @@ public class View
         
         //Ez a felső menübár
         JMenuBar menubar = new JMenuBar();
-        JMenu menu = new JMenu("titkos üzenet");
-        JMenuItem menuitem = new JMenuItem("száll a széllel");
+        JMenu menu = new JMenu("Settings");
+        JMenu action = new JMenu("Actions");
+        //JMenuItem menuitem = new JMenuItem("száll a széllel");
         
         
-        menu.add(menuitem);
+        //menu.add(menuitem);
         JMenuItem turn = new JMenuItem("End turn");
         turn.addActionListener(x -> controller.EndTurn());
-        menu.add(turn);
+        action.add(turn);
         
         
         JMenuItem newgame = new JMenuItem("Exit");
@@ -163,7 +164,9 @@ public class View
                 controller.getMainmenu().setVisible();
         });
         menu.add(newgame);
+        menubar.add(action);
         menubar.add(menu);
+        
         
         frame.setLayout(new BorderLayout());
         frame.add(panel, BorderLayout.CENTER);
