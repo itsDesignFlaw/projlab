@@ -87,7 +87,7 @@ public class View
     //Esetleg HashMap, és a value egy Levels, hogy melyik szinten van?
     //Vagy egy új osztály, pozíció, kép, szint
     private ArrayList<DrawableComponent> drawables = new ArrayList<>();
-    
+    private BufferedImage error404;
     
     JFrame frame;
     
@@ -103,6 +103,14 @@ public class View
     public View(ViewController c)
     {
         controller = c;
+        try
+        {
+            error404 = ImageIO.read(Main.class.getResource("/resources/az.png"));
+        }
+        catch(IOException e)
+        {
+            e.printStackTrace();
+        }
     }
     
     public int Close()
@@ -211,14 +219,14 @@ public class View
                 
                 System.out.println("Does entity exist? " + EntityManager.GetObjectName(name) + "\n\t if not it " +
                                    "probably indicates that viro has invalid field set, should check for that!");
-                return null;
+                return error404;
             }
             String file = obj.png.replace(offset, "");
             URL u = Main.class.getResource(ResourcePath + file);
             if(u == null)
             {
                 System.out.println("View/BufferedImage.GetImage u==null! information:\n " + name.toString());
-                return null;
+                return error404;
             }
             BufferedImage im = ImageIO.read(u);
             return im;
@@ -227,7 +235,7 @@ public class View
         {
             e.printStackTrace();
         }
-        return null;
+        return error404;
     }
     
     public void DrawFromString(String name, int x, int y)
