@@ -45,12 +45,22 @@ public class Map
     
     static boolean VerboseLog = false;
     
+    /**
+     * Kiirja
+     *
+     * @param msg az üzenetet
+     */
     static void printnn(String msg)
     {
         if(VerboseLog)
             System.out.print(msg);
     }
     
+    /**
+     * Kiirja
+     *
+     * @param msg az üzenetet
+     */
     static void printas(String msg)
     {
         
@@ -58,7 +68,11 @@ public class Map
             System.out.println("[MAPGEN] " + msg);
     }
     
-    
+    /**
+     * Erő a zavarban mátrix
+     *
+     * @return Zaj mátrix
+     */
     static int[][] NoiseMap()
     {
         int sd = maxfields - 1;
@@ -77,6 +91,11 @@ public class Map
         return map;
     }
     
+    /**
+     * Hány mezőt kell még letenni
+     *
+     * @return hány
+     */
     static int GetPlaceableLeft()
     {
         int ret = 0;
@@ -87,6 +106,11 @@ public class Map
         return ret;
     }
     
+    /**
+     * Visszaad egy pszeudorandom még lerakható mezőt
+     *
+     * @returnrandom mező neve
+     */
     static String GetRandomPlaceable()
     {
         int total = GetPlaceableLeft();
@@ -105,6 +129,13 @@ public class Map
         return selector[rand.nextInt(total)];
     }
     
+    /**
+     * Lerak egy mezőt a mapra
+     *
+     * @param x       hova x
+     * @param y       hova y, hawaii?
+     * @param nodemap a map
+     */
     static void placeSomething(int x, int y, String[][] nodemap)
     {
         String place = GetRandomPlaceable();
@@ -113,6 +144,13 @@ public class Map
         place_these.put(place, place_these.get(place) - 1);
     }
     
+    /**
+     * A brit tudósok se tudják hogy ez mit csinál. A már kiválasztott mezőket átalakítja valamilyen típussá, pl
+     * field, lab
+     *
+     * @param nodemap a map
+     * @return A jobb map
+     */
     static String[][] NameFields(String[][] nodemap)
     {
         Random rand = new Random();
@@ -141,6 +179,13 @@ public class Map
         return nodemap;
     }
     
+    /**
+     * Same mint felette, brit tudós, Trump kitalált valamit, és nem mernek ellenkezni vele. A zajos mapból
+     * kiválasztja, hogy hol legyenek mezők
+     *
+     * @param noisemap Zaj map
+     * @return Hol lesznek mezők
+     */
     static String[][] SelectNodes(int[][] noisemap)
     {
         int sd = maxfields - 1;
@@ -175,6 +220,12 @@ public class Map
         return mapnodes;
     }
     
+    /**
+     * A szomszédokat összekapcsolja
+     *
+     * @param nodemap Map egy sora=oszlopa
+     * @return szomszédok
+     */
     static String[] AdjacencyMatrixHeader(String[][] nodemap)
     {
         int sd = maxfields - 1;
@@ -195,7 +246,9 @@ public class Map
         return header;
     }
     
-    
+    /**
+     * Egy Node a maphoz
+     */
     private static class Node
     {
         public String name;
@@ -222,6 +275,12 @@ public class Map
         }
     }
     
+    /**
+     * Kialakítja a szomszédsági mátrixot
+     * @param header szomszédsági valami
+     * @param nodemap Map
+     * @return Ki kinek a szomszédja
+     */
     static boolean[][] AdjacencyMatrix(String[] header, String[][] nodemap)
     {
         int LEN = header.length;
