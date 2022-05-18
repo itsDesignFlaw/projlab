@@ -18,7 +18,9 @@ import java.util.stream.Collectors;
 
 import javax.sound.sampled.*;
 
-
+/**
+ * Osztály ami kezeli a megjelentítést, vagyis a View osztályt
+ */
 public class ViewController
 {
     private boolean useItem = false;
@@ -28,7 +30,10 @@ public class ViewController
     private Field currentfield;
     private boolean moved = false;
     private HashMap<Virologist, Field> prevfield = new HashMap<>();
-    
+
+    /**
+     * @return mainmenu visszaadása
+     */
     public MainMenu getMainmenu()
     {
         return mainmenu;
@@ -38,7 +43,12 @@ public class ViewController
     {
         this.mainmenu = mainmenu;
     }
-    
+
+    /**
+     * Konstruktor, létrehoz egy új viewt, elindítja a játékot
+     * @param NumberOfViros virológusok száma a játékban
+     * @param mainmenu a Main Menu
+     */
     public ViewController(int NumberOfViros, MainMenu mainmenu)
     {
         this.mainmenu = mainmenu;
@@ -88,18 +98,28 @@ public class ViewController
         f.AddNeighbour(ware);
         Update(v);
     }
-    
+
+    /**
+     * Update-eli az aktuális virológust
+     */
     public void Update()
     {
         if(activeViro != null)
             Update(activeViro);
     }
-    
+
+    /**
+     * @return Az előző mező ahol az activeViro tartózkodott
+     */
     public Field GetPrevField()
     {
         return prevfield.get(activeViro);
     }
-    
+
+    /**
+     * Átlép a következő játékosra (vagyis virológusra), újra kirajzol, az új viró szemszögéből
+     * @param v a sorban követkeő virológus
+     */
     public void Update(Virologist v)
     {
         if(v != activeViro)
@@ -133,7 +153,10 @@ public class ViewController
         
         view.Repaint();
     }
-    
+
+    /**
+     * Uj object hozzáadása a kirajzolandó objektumokhoz
+     */
     public void AddObject(Object o, String s)
     {
         view.AddObject(o, s);
@@ -148,7 +171,12 @@ public class ViewController
     {
         ConsoleIO.RunCMD(CMD, args);
     }
-    
+
+    /**
+     * Átlépteti grafikusan a virót a kiválasztott mezőre
+     * @param f az új mező ahova lépünk
+     * @return visszaadja a current mezőt
+     */
     public boolean MoveViro(Field f)
     {
         Field cur = activeViro.GetField();

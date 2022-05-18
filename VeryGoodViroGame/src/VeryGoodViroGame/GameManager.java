@@ -43,10 +43,12 @@ public class GameManager
         virologists = new ArrayList<>();
         CodeCount = 0;
     }
-    
-    
+
+
     /**
      * Ez a metódus felelős a játék elindításáért.
+     * @param virocount a jatekban hany virologus lesz
+     * @param names
      */
     public static void StartGame(int virocount, String[] names)
     {
