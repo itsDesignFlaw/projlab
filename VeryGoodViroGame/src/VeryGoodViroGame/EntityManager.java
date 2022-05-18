@@ -56,7 +56,7 @@ public class EntityManager
                 return objname;
         }
         ;
-        return "DHaN, maybe bear?";
+        return "DHaN, maybe bear?"; //todo ez mia  fasz?
     }
     
     public static void PutNamedObject(String name, Object object, String c)
