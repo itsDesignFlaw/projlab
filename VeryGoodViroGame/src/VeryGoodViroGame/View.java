@@ -46,6 +46,7 @@ public class View
     
     //Lefordítás fájlokra
     private static HashMap<String, String> images = new HashMap<>();
+    //Objektumok, és megfeleltetéseik
     private HashMap<Object, ViewObject> objects = new HashMap<>();
     private final static String ResourcePath = "/resources/";
     public ViewController controller;
@@ -192,7 +193,7 @@ public class View
         panel.removeAll();
     }
     
-    private BufferedImage GetImage(Object name)//todo mi a faszert name?
+    private BufferedImage GetImage(Object name)
     {
         return GetImage(name, "");
     }
@@ -268,8 +269,8 @@ public class View
     /**
      * Kirajzolja a pályát a Virológusokkal együtt
      *
-     * @param current
-     * @param neighbours
+     * @param current    A jelenlegi mező ,amin áll
+     * @param neighbours A Mezőnek a szomszédjai
      */
     public void DrawMap(Field current, java.util.List<Field> neighbours)
     {
