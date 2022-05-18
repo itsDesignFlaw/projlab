@@ -348,11 +348,26 @@ public class View implements IView
         }
     }
     
+    /**
+     * Kirajzolja a megadott JLabel objektumot a megadott helyre
+     *
+     * @param x    X koor
+     * @param y    Y koor
+     * @param name JLabel objektum
+     */
     private void AddName(int x, int y, JLabel name)
     {
         AddName(x, y, name, Color.red);
     }
     
+    /**
+     * Kirajzolja a megadott JLabel objektumot a megadott helyre
+     *
+     * @param x    X koor
+     * @param y    Y koor
+     * @param name JLabel objektum
+     * @param col  Betűszín
+     */
     private void AddName(int x, int y, JLabel name, Color col)
     {
         panel.add(name);
@@ -362,6 +377,11 @@ public class View implements IView
         name.setLocation(x - name.getWidth() / 2, y - name.getHeight() - 1);
     }
     
+    /**
+     * Kirajzolja a Genetikai kódokat
+     *
+     * @param codes Genetikai kódok
+     */
     public void DrawGeneticCodes(java.util.List<GeneticCode> codes)
     {
         int itemHudSize = codes.size() * 64;
@@ -378,6 +398,13 @@ public class View implements IView
         }
     }
     
+    /**
+     * Elforgatja a megadott képet, eskü nem lopott, alig használt
+     *
+     * @param buffImage Kép amit elforgatunk
+     * @param angle     Forgatási szög fokban
+     * @return Elforgatott kép
+     */
     private static BufferedImage rotateImage(BufferedImage buffImage, double angle)
     {
         double radian = Math.toRadians(angle);
@@ -418,6 +445,14 @@ public class View implements IView
     {
     }
     
+    /**
+     * Kirajzolja a megadott helyre a virológusokat
+     *
+     * @param viros     Virológusok, amiket egymás mellé rajzol
+     * @param xOffset   Offset X
+     * @param yOffset   Offset Y
+     * @param useOffset Ha igaz, akkor a középpont az Offset, ha hamis, akkor a képernyő közepére rajzol
+     */
     public void DrawViros(java.util.List<Virologist> viros, int xOffset, int yOffset, boolean useOffset)
     {
         int itemHudSize = viros.size() * 64;
@@ -476,6 +511,11 @@ public class View implements IView
         }
     }
     
+    /**
+     * Itemek rajzol ki a HUDra
+     *
+     * @param items A virológus itemjei
+     */
     public void DrawItems(ArrayList<InvItem> items)
     {
         int itemHudSize = items.size() * 64;
@@ -508,11 +548,11 @@ public class View implements IView
         }
     }
     
-    public void AddHUDElement(String name, int count)
-    {
-    
-    }
-    
+    /**
+     * Kirajzolja a virológusra ható effeketeket
+     *
+     * @param effects Virológus effektjei
+     */
     public void DrawEffects(java.util.List<Agent> effects)
     {
         int itemHudSize = effects.size() * 64;
@@ -534,6 +574,7 @@ public class View implements IView
     
     }
     
+    //Újrarajzolja a panelt
     public void Repaint()
     {
         panel.repaint();
@@ -545,6 +586,9 @@ public class View implements IView
         return frame;
     }
     
+    /**
+     * Fieldre történő kattintás
+     */
     private class FieldClick extends MouseAdapter
     {
         Field f;
@@ -578,6 +622,9 @@ public class View implements IView
         }
     }
     
+    /**
+     * Ágensre kattintottunk
+     */
     private class AgentClick extends MouseAdapter
     {
         Agent f;
@@ -595,6 +642,9 @@ public class View implements IView
         }
     }
     
+    /**
+     * Felszerelésre kattintottunk
+     */
     private class EquipmentClick extends MouseAdapter
     {
         Equipment f;
@@ -612,10 +662,11 @@ public class View implements IView
         }
     }
     
+    /**
+     * A mgejelenítésre szolgáló módosított Jpanel
+     */
     class MapPanel extends JPanel
     {
-        //TODO: Akár a virológusok szétszedése, hogy mindig a pálya felett legyen?
-        //TODO: A JLabelös megoldás jobb, ezek már nem kellenek, legfeljebb a háttér
         BufferedImage background, map, hud;
         
         public MapPanel()
@@ -709,6 +760,13 @@ public class View implements IView
             return (int) ((start.floatValue() * (1.0 - fraction)) + (end.floatValue() * fraction));
         }
         
+        /**
+         * ANIMÁCIÓÓÓÓÓÓÓÓÓ
+         *
+         * @param label Animálni kívánt JLabel objektum
+         * @param tox   Cél X koor
+         * @param toy   Cél Y koor
+         */
         public void NiceMoveLabel(JLabel label, int tox, int toy)
         {
             
@@ -762,6 +820,9 @@ public class View implements IView
         
     }
     
+    /**
+     * Kontext menu, elavult
+     */
     class ContextMenu extends JPopupMenu
     {
         public ContextMenu()
@@ -773,6 +834,9 @@ public class View implements IView
         }
     }
     
+    /**
+     * Fieldek context menuje
+     */
     class FieldContext extends JPopupMenu
     {
         public FieldContext(Field f)
@@ -786,6 +850,9 @@ public class View implements IView
         }
     }
     
+    /**
+     * Virológusok context menuje
+     */
     class ViroContext extends JPopupMenu
     {
         public ViroContext(Virologist v)
@@ -830,6 +897,9 @@ public class View implements IView
         }
     }
     
+    /**
+     * Genetikai kódok kontext menuje
+     */
     class GeneticContext extends JPopupMenu
     {
         public GeneticContext(GeneticCode code)
@@ -852,6 +922,9 @@ public class View implements IView
         }
     }
     
+    /**
+     * Felszerelés kontext menüje
+     */
     class EqContext extends JPopupMenu
     {
         public EqContext(Equipment eq)

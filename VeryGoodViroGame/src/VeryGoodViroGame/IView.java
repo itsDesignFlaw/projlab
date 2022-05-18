@@ -32,5 +32,6 @@ public interface IView
     void DrawEffects(java.util.List<Agent> effects);
     
     void Repaint();
+    
     JFrame getFrame();
 }
