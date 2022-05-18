@@ -74,6 +74,7 @@ public class GameManager
      */
     public static void EndGame(Virologist winner)
     {
+        controller.Update(virologists.get(currentViro));
         JFrame popup = new JFrame();
         //custom title, no icon
         JOptionPane.showMessageDialog(popup, "The Winner is: " + (winner == null ? "the bears :(" :

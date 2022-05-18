@@ -43,6 +43,8 @@ public class EquipmentGloves extends Equipment
      */
     public boolean CanAgentBeApplied(Agent agent, Virologist source)
     {
+        if(source == null)
+            return true;
         agent.Apply(host, source);
         remainingHealth--;
         if(remainingHealth == 0)

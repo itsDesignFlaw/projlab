@@ -52,7 +52,7 @@ public class View
         
         images.put("ami", "aminoacid.png");
         images.put("axe", "axe.png");
-        images.put("bear", "bear.png");
+        images.put("bear", "lab.png");
         images.put("vaccine", "bg_vaccine.png");
         images.put("virus", "bg_virus.png");
         images.put("bunker", "bunker.png");
@@ -82,6 +82,7 @@ public class View
         images.put("dance_code", "dance.png");
         images.put("protect_code", "protect.png");
         images.put("bear_virus", "bear.png");
+        images.put("viro_bear", "viro_bear.png");
     }
     
     //Esetleg HashMap, és a value egy Levels, hogy melyik szinten van?
@@ -396,6 +397,18 @@ public class View
             if(viros.get(i).dead)
             {
                 CurViroLabel = panel.DrawImage(rotateImage(img, 90), x, y + img.getHeight() / 2);
+            }
+            else if(viros.get(i).IsBear())
+            {
+                try
+                {
+                    BufferedImage bear = ImageIO.read(Main.class.getResource(ResourcePath + images.get("viro_bear")));
+                    CurViroLabel = panel.DrawImage(bear, x, y + bear.getHeight() / 2);
+                }
+                catch(IOException e)
+                {
+                    CurViroLabel = null;
+                }
             }
             else
             {

@@ -11,6 +11,7 @@ package VeryGoodViroGame;//
 
 
 import VeryGoodViroGame.Agent.Agent;
+import VeryGoodViroGame.Agent.Bear;
 import VeryGoodViroGame.Agent.GeneticCode;
 import VeryGoodViroGame.Agent.Paralyze;
 import VeryGoodViroGame.Equipment.Equipment;
@@ -52,7 +53,7 @@ public class Virologist implements DrawableComponent
     
     public boolean IsBear()
     {
-        return moveStrategy instanceof MSBear;
+        return items.stream().anyMatch(x -> x instanceof Bear);
     }
     
     /**

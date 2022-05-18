@@ -20,7 +20,7 @@ public class MSBear implements iMoveStrategy
         for(Virologist viro : virologists)
         {
             Bear b = new Bear();
-            viro.ApplyAgent(b, v);
+            b.Apply(v, viro);
             EntityManager.PutCraftedObject("bear", b, "bear_virus");
         }
         
