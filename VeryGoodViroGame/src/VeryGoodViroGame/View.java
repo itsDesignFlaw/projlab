@@ -81,6 +81,7 @@ public class View
         images.put("paralyze_code", "paralyze.png");
         images.put("dance_code", "dance.png");
         images.put("protect_code", "protect.png");
+        images.put("bear_virus", "bear.png");
     }
     
     //Esetleg HashMap, és a value egy Levels, hogy melyik szinten van?

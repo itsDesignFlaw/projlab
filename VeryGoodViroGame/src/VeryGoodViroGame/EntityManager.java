@@ -40,6 +40,7 @@ public class EntityManager
         EntityGen.put("paralyze_vaccine", () -> new Vaccine(new Paralyze()));
         EntityGen.put("dance_vaccine", () -> new Vaccine(new Dance()));
         EntityGen.put("protect_vaccine", () -> new Vaccine(new Protect()));
+        EntityGen.put("bear_virus", Bear::new);
     }
     
     public static Object GetObjectByName(String name)
