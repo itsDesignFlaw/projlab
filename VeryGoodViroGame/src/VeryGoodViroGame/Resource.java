@@ -15,6 +15,16 @@ package VeryGoodViroGame;//
 public class Resource
 {
     
+    public int getAmi()
+    {
+        return ami;
+    }
+    
+    public int getNuki()
+    {
+        return nuki;
+    }
+    
     /**
      * ami - aminosav
      * nuki - nukleotid

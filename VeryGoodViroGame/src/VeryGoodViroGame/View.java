@@ -179,7 +179,22 @@ public class View
     
     public void DrawResource(Resource r)
     {
-    
+        try
+        {
+            Image ami = ImageIO.read(Main.class.getResource(ResourcePath + images.get("ami"))).getScaledInstance(30,
+                    30, Image.SCALE_DEFAULT);
+            Image nuki = ImageIO.read(Main.class.getResource(ResourcePath + images.get("nuki"))).getScaledInstance(30
+                    , 30, Image.SCALE_DEFAULT);
+            JLabel amicount = new JLabel(r.getAmi() + ""), nukicount = new JLabel(r.getNuki() + "");
+            AddName(panel.getWidth() - 20, 50, amicount);
+            AddName(panel.getWidth() - 20, 80, nukicount);
+            panel.DrawImage(ami, amicount.getX() - ami.getWidth(null) - 5, amicount.getY() - 2);
+            panel.DrawImage(nuki, nukicount.getX() - nuki.getWidth(null) - 5, nukicount.getY() - 2);
+        }
+        catch(IOException e)
+        {
+            e.printStackTrace();
+        }
     }
     
     private BufferedImage GetImage(Object name, String offset)
@@ -214,15 +229,15 @@ public class View
         return null;
     }
     
-    public void DrawFromString(String name)
+    public void DrawFromString(String name, int x, int y)
     {
         try
         {
             //Ezzel a getResource móddal lehet elvileg jar fileból is beolvasni, azaz akkor is jó útvonalat ad meg
             //Minden fájl ami az src mappán belül van tuti megtalálja
             BufferedImage im = ImageIO.read(Main.class.getResource(ResourcePath + images.get(name)));
-            panel.DrawImage(im, 200, 100);
-            panel.repaint();
+            panel.DrawImage(im, x, y);
+            //panel.repaint();
         }
         catch(Exception e)
         {
@@ -336,7 +351,6 @@ public class View
     
     public void MoveCurViro(Field to)
     {
-    
     }
     
     public void DrawViros(java.util.List<Virologist> viros, int xOffset, int yOffset, boolean useOffset)
