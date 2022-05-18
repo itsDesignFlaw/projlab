@@ -13,10 +13,16 @@ package VeryGoodViroGame;//
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Az "idő múlásáért" és a Steppable objektumok steppeléséért felelős osztály
+ */
 public class Timer
 {
     static List<iSteppable> steppable_reg = new ArrayList<>();
-    
+
+    /**
+     * Stebbebelek léptetése
+     */
     public static void Step()
     {
         List<iSteppable> temp = new ArrayList<>(steppable_reg);
