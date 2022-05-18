@@ -11,12 +11,12 @@ import VeryGoodViroGame.Field.*;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.stream.Collectors;
 
 
 import javax.sound.sampled.*;
-import javax.swing.text.html.parser.Entity;
 
 
 public class ViewController
@@ -25,7 +25,9 @@ public class ViewController
     public Virologist activeViro;
     View view;
     MainMenu mainmenu;
+    private Field currentfield;
     private boolean moved = false;
+    private HashMap<Virologist, Field> prevfield = new HashMap<>();
     
     public MainMenu getMainmenu()
     {
@@ -93,6 +95,11 @@ public class ViewController
             Update(activeViro);
     }
     
+    public Field GetPrevField()
+    {
+        return prevfield.get(activeViro);
+    }
+    
     public void Update(Virologist v)
     {
         if(v != activeViro)
@@ -104,6 +111,8 @@ public class ViewController
         view.Clear();
         
         Field f = v.GetField();
+        currentfield = f;
+        
         List<Field> fields = f.GetNeighbours();
         List<GeneticCode> codes = v.learntCodes;
         List<InvItem> effect = v.items;
@@ -234,6 +243,8 @@ public class ViewController
     
     public void EndTurn()
     {
+        if(currentfield != activeViro.GetField())
+            prevfield.put(activeViro, currentfield);
         GameManager.EndTurn();
     }
     

@@ -262,6 +262,8 @@ public class View
             //Work in Progress, ha valami jobb ötlet, nyugodtan lehet cserélni
             JLabel FieldLabel = panel.DrawImage(img, x - img.getWidth() / 2, y - img.getHeight() / 2);
             FieldLabel.addMouseListener(new FieldClick(neighbours.get(i), FieldLabel));
+            if(neighbours.get(i) == controller.GetPrevField())
+                FieldLabel.setBorder(BorderFactory.createLineBorder(Color.cyan));
             
         }
         List<Virologist> viros = new ArrayList<>(current.GetVirologists());
