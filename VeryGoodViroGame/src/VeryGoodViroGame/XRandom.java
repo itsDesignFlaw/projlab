@@ -4,6 +4,9 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Random;
 
+/**
+ * Determinisztikusságot segítő, random számokat tároló osztály.
+ */
 public class XRandom
 {
     static Queue<Float> randoms = new LinkedList<>();
@@ -13,8 +16,7 @@ public class XRandom
     {
     
     }
-    
-    
+
     public int nextInt(int size)
     {
         if(randoms.size() == 0)
