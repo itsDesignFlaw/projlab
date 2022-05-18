@@ -107,7 +107,8 @@ public class Map
     }
     
     /**
-     * Visszaad egy pszeudorandom még lerakható mezőt
+     * Visszaad egy lerakható különleges mezőt, weighted random a hátra-
+     * lévő darabszám alapján, majd csökkenti a számot magát
      *
      * @returnrandom mező neve
      */
@@ -133,7 +134,7 @@ public class Map
      * Lerak egy mezőt a mapra
      *
      * @param x       hova x
-     * @param y       hova y, hawaii?
+     * @param y       hova y, hawaii? xd
      * @param nodemap a map
      */
     static void placeSomething(int x, int y, String[][] nodemap)
@@ -145,8 +146,8 @@ public class Map
     }
     
     /**
-     * A brit tudósok se tudják hogy ez mit csinál. A már kiválasztott mezőket átalakítja valamilyen típussá, pl
-     * field, lab
+     * Elhelyezi a különleges mezőket a mostmég egyáltalán nem
+     * különleges nodemappen
      *
      * @param nodemap a map
      * @return A jobb map
@@ -180,8 +181,8 @@ public class Map
     }
     
     /**
-     * Same mint felette, brit tudós, Trump kitalált valamit, és nem mernek ellenkezni vele. A zajos mapból
-     * kiválasztja, hogy hol legyenek mezők
+     * A fake noisemap legmagasabb pontjait addig választja ki ameddig
+     * a szükséges mezőkhöz elegendő pontunk nem lesz
      *
      * @param noisemap Zaj map
      * @return Hol lesznek mezők
@@ -221,7 +222,7 @@ public class Map
     }
     
     /**
-     * A szomszédokat összekapcsolja
+     * A mezők szomszédsági mátrixának fejlécét adja meg
      *
      * @param nodemap Map egy sora=oszlopa
      * @return szomszédok
@@ -276,10 +277,11 @@ public class Map
     }
     
     /**
-     * Kialakítja a szomszédsági mátrixot
-     * @param header szomszédsági valami
+     * A nodemap és egy headerből létrehoz egy nagyon basic adjacency matrixot
+     *
+     * @param header szomszédsági mátrix fejléce
      * @param nodemap Map
-     * @return Ki kinek a szomszédja
+     * @return Adjacency matrix
      */
     static boolean[][] AdjacencyMatrix(String[] header, String[][] nodemap)
     {
@@ -394,7 +396,13 @@ public class Map
         
         return matrix;
     }
-    
+
+    /**
+     * A nodemap mezőit egyedivé nevezi el
+     *
+     * @param nodemap Map
+     * @return Map nodemapje, egyedi nevekket
+     */
     static String[][] UniquifyNodemap(String[][] nodemap)
     {
         int sd = maxfields - 1;
@@ -415,7 +423,14 @@ public class Map
         
         return nodemap;
     }
-    
+
+    /**
+     * A teljes adjacency matrix alapjan legeneralja a tenyleges osszekotteteseket a mapfajlba
+     *
+     * @param GraphMatrixHeader szomszédsági mátrix fejléce
+     * @param GraphMatrix szomszédsági mátrixc
+     * @return A mapfájl stringje
+     */
     static String ConnectFields(String[] GraphMatrixHeader, boolean[][] GraphMatrix)
     {
         String ret = "";
@@ -435,7 +450,8 @@ public class Map
         
         return ret;
     }
-    
+
+
     private static String getFieldName(String[][] nodemap, int i, int j)
     {
         String name = "";
@@ -493,8 +509,14 @@ public class Map
         placed_fields.put("bunker", placed_fields.get("bunker") + 1);
         return "create b" + placed_fields.get("bunker") + " bunker\nbunker b" + placed_fields.get("bunker") + " " + bunkerEq[r.nextInt(bunkerEq.length)];
     }
-    
-    
+
+    /**
+     * A nodemap alapján legenerálja a tényleges mezőket és a tartalmukat
+     * a map fájlába
+     *
+     * @param nodemap nodemap
+     * @return A mapfájl stringje
+     */
     static String CreateFields(String[][] nodemap)
     {
         int sd = maxfields - 1;
@@ -554,7 +576,10 @@ public class Map
         }
         return path.toAbsolutePath().toString();
     }
-    
+
+    /*
+
+     */
     public void Swallow(Field what)
     {
         Swallow(what, false);
