@@ -108,6 +108,7 @@ public class ViewController
             usea = null;
             usee = null;
         }
+        moved = false;
         view.Clear();
         
         Field f = v.GetField();
@@ -246,7 +247,7 @@ public class ViewController
             //PopUp mozogtal
             return;
         }
-        activeViro.RemoveEquipment(e);
+        activeViro.DestroyEquipment(e);
         Update();
     }
     

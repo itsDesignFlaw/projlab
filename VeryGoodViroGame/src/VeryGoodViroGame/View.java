@@ -136,7 +136,7 @@ public class View
     
     public void Init()
     {
-        frame = new JFrame("Very Good Viro Game --pre alpha test v0.0.0.-2");
+        frame = new JFrame("Very Good Viro Game --pre alpha test v0.0.0.-1");
         frame.setSize(1024, 768);
         ImageIcon icon = new ImageIcon(Main.class.getResource("/resources/az.png"));
         frame.setIconImage(icon.getImage());
@@ -156,7 +156,11 @@ public class View
         
         
         JMenuItem newgame = new JMenuItem("Exit");
-        newgame.addActionListener(x -> controller.getMainmenu().setVisible());
+        newgame.addActionListener(x ->
+        {
+            if(Close() == 0)
+                controller.getMainmenu().setVisible();
+        });
         menu.add(newgame);
         menubar.add(menu);
         
@@ -256,6 +260,7 @@ public class View
     
     /**
      * Kirajzolja a pályát a Virológusokkal együtt
+     *
      * @param current
      * @param neighbours
      */

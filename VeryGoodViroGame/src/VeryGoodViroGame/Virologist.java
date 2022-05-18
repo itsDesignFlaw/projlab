@@ -50,6 +50,11 @@ public class Virologist implements DrawableComponent
         GameManager.AddViro(this);
     }
     
+    public boolean IsBear()
+    {
+        return moveStrategy instanceof MSBear;
+    }
+    
     /**
      * Beállítja a virológus erőforrás tagváltozóját.
      *
@@ -342,6 +347,11 @@ public class Virologist implements DrawableComponent
     public void RemoveItem(InvItem item)
     {
         items.remove(item);
+    }
+    
+    public void CureAgent(Agent tocure)
+    {
+        items.removeIf(x -> x.getClass() == tocure.getClass());
     }
     
     /**

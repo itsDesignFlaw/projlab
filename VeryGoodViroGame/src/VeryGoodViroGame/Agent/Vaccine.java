@@ -45,10 +45,11 @@ public class Vaccine extends Agent
      */
     public void Apply(Virologist source, Virologist target)
     {
-        target.RemoveItem(agentToCure);//TODO: instance of?
+        target.CureAgent(agentToCure);//TODO: instance of?
         Timer.RemoveSteppable(agentToCure);
         Timer.RemoveSteppable(this);
     }
+    
     @Override
     public String GetDrawString()
     {

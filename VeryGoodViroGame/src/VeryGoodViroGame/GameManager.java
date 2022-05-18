@@ -14,6 +14,7 @@ import VeryGoodViroGame.Field.Map;
 import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.stream.Collectors;
 
 /**
  * Ez a statikus osztály felelős az új játék elindításáért, és a játék befejezéséért.
@@ -50,7 +51,7 @@ public class GameManager
     public static void StartGame(int virocount, String[] names)
     {
         map = new Map();
-
+        
         //map.GenerateMap();
         map.GenerateMapDefault(virocount); //a GenerateMap-be kellenek parameterek a palyahoz, ez meg default
         // ertekekkel
@@ -75,12 +76,10 @@ public class GameManager
     {
         JFrame popup = new JFrame();
         //custom title, no icon
-        JOptionPane.showMessageDialog(popup,
-                "The Winner is: "+EntityManager.GetObjectName(virologists.get(currentViro)),
-                "Game Over",
-                JOptionPane.PLAIN_MESSAGE);
-       controller.getView().frame.setVisible(false);
-       // System.out.println("A nyertes: " + winner.toString());
+        JOptionPane.showMessageDialog(popup, "The Winner is: " + (winner == null ? "the bears :(" :
+                EntityManager.GetObjectName(winner)), "Game Over", JOptionPane.PLAIN_MESSAGE);
+        controller.getView().frame.setVisible(false);
+        // System.out.println("A nyertes: " + winner.toString());
         controller.getMainmenu().setVisible();
     }
     
@@ -89,6 +88,27 @@ public class GameManager
         //TODO:Minden viro end turnnél menjen az idő, vagy 1 tick, ha minden Viro volt?
         Timer.Step();
         currentViro = ++currentViro % virologists.size();
+        if(virologists.get(currentViro).IsBear())
+        {
+            if(virologists.stream().allMatch(Virologist::IsBear))
+            {
+                EndGame(null);
+                return;
+            }
+            virologists.get(currentViro).MoveTo(null);
+            EndTurn();
+            return;
+        }
+        if(virologists.get(currentViro).dead)
+        {
+            if(virologists.stream().filter(x -> x.dead).count() >= virologists.size() - 1)
+            {
+                EndGame(virologists.stream().filter(x -> !x.dead).findFirst().orElse(null));
+                return;
+            }
+            EndTurn();
+            return;
+        }
         controller.Update(virologists.get(currentViro));
     }
     

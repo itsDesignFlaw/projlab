@@ -1,6 +1,7 @@
 package VeryGoodViroGame.MoveStrategy;
 
 import VeryGoodViroGame.Agent.Bear;
+import VeryGoodViroGame.EntityManager;
 import VeryGoodViroGame.Field.Field;
 import VeryGoodViroGame.Logger;
 import VeryGoodViroGame.Virologist;
@@ -18,7 +19,9 @@ public class MSBear implements iMoveStrategy
         List<Virologist> virologists = random.GetVirologists();
         for(Virologist viro : virologists)
         {
-            viro.ApplyAgent(new Bear(), v);
+            Bear b = new Bear();
+            viro.ApplyAgent(b, v);
+            EntityManager.PutCraftedObject("bear", b, "bear_virus");
         }
         
         random.AcceptViro(v);
