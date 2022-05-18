@@ -152,26 +152,41 @@ public class ViewController
     {
         Field cur = activeViro.GetField();
         activeViro.MoveTo(f);
-        moved = activeViro.GetField() != cur;
-        return !moved;
+        moved = activeViro.GetField() != currentfield;
+        return activeViro.GetField() == cur;
         //Update();
         //mark: nem kell neki, majd ha change turn van, a View addig animal
     }
     
     public void CraftVirus(GeneticCode gc)
     {
+        if(moved)
+        {
+            //PopUp mozogtal
+            return;
+        }
         activeViro.CraftVirus(gc);
         Update();
     }
     
     public void CraftVaccine(GeneticCode gc)
     {
+        if(moved)
+        {
+            //PopUp mozogtal
+            return;
+        }
         activeViro.CraftVaccine(gc);
         Update();
     }
     
     public void UseAgentOnViro(Virologist v)
     {
+        if(moved)
+        {
+            //PopUp mozogtal
+            return;
+        }
         if(usea == null)
             return;
         activeViro.UseAgent(usea, v);
@@ -180,24 +195,44 @@ public class ViewController
     
     public void Interact()
     {
+        if(moved)
+        {
+            //PopUp mozogtal
+            return;
+        }
         activeViro.InteractWithField();
         Update();
     }
     
     public void StealEquipment(Virologist target, Equipment eq)
     {
+        if(moved)
+        {
+            //PopUp mozogtal
+            return;
+        }
         activeViro.StealEquipmentFromViro(target, eq);
         Update();
     }
     
     public void StealResource(Virologist target)
     {
+        if(moved)
+        {
+            //PopUp mozogtal
+            return;
+        }
         activeViro.StealResourceFromViro(target);
         Update();
     }
     
     public void UseEquipment(Virologist target)
     {
+        if(moved)
+        {
+            //PopUp mozogtal
+            return;
+        }
         if(usee == null)
             return;
         activeViro.UseEquipment(usee, target);
@@ -206,6 +241,11 @@ public class ViewController
     
     public void DropEquipment(Equipment e)
     {
+        if(moved)
+        {
+            //PopUp mozogtal
+            return;
+        }
         activeViro.RemoveEquipment(e);
         Update();
     }
@@ -225,6 +265,11 @@ public class ViewController
     
     public void SetAgent(Agent a)
     {
+        if(moved)
+        {
+            //PopUp mozogtal
+            return;
+        }
         if(usea != a)
             usea = a;
         else
@@ -234,6 +279,11 @@ public class ViewController
     
     public void SetEquipment(Equipment e)
     {
+        if(moved)
+        {
+            //PopUp mozogtal
+            return;
+        }
         if(usee != e)
             usee = e;
         else
