@@ -11,6 +11,7 @@ package VeryGoodViroGame;//
 
 import VeryGoodViroGame.Field.Map;
 
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -72,7 +73,15 @@ public class GameManager
      */
     public static void EndGame(Virologist winner)
     {
-        System.out.println("A nyertes: " + winner.toString());
+        JFrame popup = new JFrame();
+        //custom title, no icon
+        JOptionPane.showMessageDialog(popup,
+                "The Winner is: "+EntityManager.GetObjectName(virologists.get(currentViro)),
+                "Game Over",
+                JOptionPane.PLAIN_MESSAGE);
+       controller.getView().frame.setVisible(false);
+       // System.out.println("A nyertes: " + winner.toString());
+        controller.getMainmenu().setVisible();
     }
     
     public static void EndTurn()
