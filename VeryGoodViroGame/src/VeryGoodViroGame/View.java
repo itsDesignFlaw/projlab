@@ -23,7 +23,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
- *
+ * A játék grafikus megjelenítésére szolgáló osztály
  */
 public class View implements IView
 {
@@ -224,7 +224,7 @@ public class View implements IView
      * Betölti a megadott objektumhoz tartozó képet
      *
      * @param name
-     * @return
+     * @return kép
      */
     private BufferedImage GetImage(Object name)
     {
@@ -232,7 +232,8 @@ public class View implements IView
     }
     
     /**
-     * @param r
+     * Kirajzolja, mennyi resource van
+     * @param r Virologus resource-a
      */
     public void DrawResource(Resource r)
     {
@@ -435,7 +436,11 @@ public class View implements IView
     String ActiveViro;
     JLabel ActiveViroLabel;
     JLabel ActiveViroLabelName;
-    
+    /**
+     * Besetteli az aktív virológust
+     *
+     * @param name aktív virológus
+     */
     public void MarkActiveViro(String name)
     {
         ActiveViro = name;
