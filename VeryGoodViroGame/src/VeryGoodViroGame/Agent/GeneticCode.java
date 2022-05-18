@@ -103,7 +103,15 @@ public class GeneticCode implements DrawableComponent
         //TODO:valami ilyesmi kéne
         /*Class c = a.getClass();
         return code.a instanceof c;*/
-        return code.a.getClass() == a.getClass();
+
+        if ((code.a == null) || this.a == null)
+        {
+            return true;
+        }
+        else
+        {
+            return code.a.getClass() == a.getClass();
+        }
     }
     
     @Override

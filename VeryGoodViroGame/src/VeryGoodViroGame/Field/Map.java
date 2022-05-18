@@ -105,6 +105,7 @@ public class Map
     static void placeSomething(int x, int y, String[][] nodemap)
     {
         String place = GetRandomPlaceable();
+        printas("got ourselves a random placeable: " + place);
         nodemap[x][y] = place;
         place_these.put(place, place_these.get(place) - 1);
     }
@@ -245,7 +246,7 @@ public class Map
                 {
                     bridge[x][y] = c;
                     primaryWeb[c++] = new Node( nodemap[x][y], new Point(x, y));
-                    printas("[PR] added new node: " + primaryWeb[c-1].toString() + " at c: " + (c-1) + "  bridge: " + x + "|"+ y + "|"+(c-1));
+                    //rintas("[PR] added new node: " + primaryWeb[c-1].toString() + " at c: " + (c-1) + "  bridge: " + x + "|"+ y + "|"+(c-1));
 
                 }
             }
@@ -256,8 +257,8 @@ public class Map
                 if (!nodemap[x][y].equals(""))
                 {
                     secondaryWeb[c++] = primaryWeb[bridge[x][y]];
-                    printas("[SQ] added new node: " + secondaryWeb[c-1].toString() + " at c: " + (c-1));
-                    printas("accessing bridge yielded:" + bridge[x][y]);
+                    //printas("[SQ] added new node: " + secondaryWeb[c-1].toString() + " at c: " + (c-1));
+                    //printas("accessing bridge yielded:" + bridge[x][y]);
                 }
             }
         }
@@ -284,7 +285,7 @@ public class Map
         HashMap<String, Integer> lut = new HashMap<>();
         for (int i = 0; i < primaryWeb.length; i++) {
             lut.put(primaryWeb[i].name, lut.size());
-            printas("put into LUT:" + i + " this: " + lut.get(primaryWeb[i].name) + "  called: " + primaryWeb[i].name);
+            //printas("put into LUT:" + i + " this: " + lut.get(primaryWeb[i].name) + "  called: " + primaryWeb[i].name);
         }
 
         // lets follow one of our traces once again to mark neighbouring nodes
@@ -293,8 +294,8 @@ public class Map
             int cc = lut.get(cur.name);
 
             for (int nc = 0; nc < cur.neighbours.size(); nc++) {
-                printas("trying NB: " + cur);
-                printas("\t nc, " + nc + ": " + cur.neighbours.get(nc));
+                //printas("trying NB: " + cur);
+                //printas("\t nc, " + nc + ": " + cur.neighbours.get(nc));
                 int ccn = lut.get(cur.neighbours.get(nc).name);
                 matrix[cc][ccn] = true;
                 matrix[ccn][cc] = true; //it should be true both ways
@@ -366,8 +367,8 @@ public class Map
             case "ware":
                 name = "w" + placed_fields.get("ware");
                 break;
-            case "bear":
-                name = "lb" + placed_fields.get("bear");
+            case "bearlab":
+                name = "lb" + placed_fields.get("bearlab");
                 break;
         }
         return name;
@@ -397,8 +398,8 @@ public class Map
     
     static String CreateBear()
     {
-        placed_fields.put("bear", placed_fields.get("bear") + 1);
-        return "create lb" + placed_fields.get("bear") + " bear";
+        placed_fields.put("bearlab", placed_fields.get("bearlab") + 1);
+        return "create lb" + placed_fields.get("bearlab") + " bear";
     }
     
     static String CreateBunker()
@@ -431,7 +432,7 @@ public class Map
                     case "ware":
                         ret.append(CreateWare()).append("\n");
                         break;
-                    case "bear":
+                    case "bearlab":
                         ret.append(CreateBear()).append("\n");
                         break;
                 }
@@ -587,7 +588,7 @@ public class Map
     
     public void GenerateMapDefault(int vc)
     {
-        GenerateMap("defaultmap", "", 6*vc, 2*vc, 1*vc, 1*vc, 0*vc);
+        GenerateMap("defaultmap", "", 6*vc, 2*vc, 1*vc, 1*vc, 2*vc);
         printas("Generated default map, multiplying size by virocount");
     }
     
