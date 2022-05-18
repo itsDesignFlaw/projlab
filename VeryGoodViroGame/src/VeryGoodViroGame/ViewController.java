@@ -186,7 +186,11 @@ public class ViewController
         //Update();
         //mark: nem kell neki, majd ha change turn van, a View addig animal
     }
-    
+
+    /**
+     * Legyárt egy vírust az activeVirónak
+     * @param gc a genetikai kód ami alapján craftolni akar
+     */
     public void CraftVirus(GeneticCode gc)
     {
         if(moved)
@@ -197,7 +201,10 @@ public class ViewController
         activeViro.CraftVirus(gc);
         Update();
     }
-    
+    /**
+     * Legyárt egy vakcinát az activeVirónak
+     * @param gc a genetikai kód ami alapján craftolni akar
+     */
     public void CraftVaccine(GeneticCode gc)
     {
         if(moved)
@@ -208,7 +215,11 @@ public class ViewController
         activeViro.CraftVaccine(gc);
         Update();
     }
-    
+
+    /**
+     * Ráteszi a kiválasztott ágenst a kiválasztott viróra
+     * @param v a kiválasztott viró
+     */
     public void UseAgentOnViro(Virologist v)
     {
         if(moved)
@@ -221,7 +232,10 @@ public class ViewController
         activeViro.UseAgent(usea, v);
         Update();
     }
-    
+
+    /**
+     * Meghívja a viró interactWithField fv-ét, ha már az új mezőn van
+     */
     public void Interact()
     {
         if(moved)
@@ -232,7 +246,12 @@ public class ViewController
         activeViro.InteractWithField();
         Update();
     }
-    
+
+    /**
+     * Egyik viró a másiktól equipmentet lop
+     * @param target akitől lopni fog
+     * @param eq amit lopni akar
+     */
     public void StealEquipment(Virologist target, Equipment eq)
     {
         if(moved)
@@ -243,7 +262,10 @@ public class ViewController
         activeViro.StealEquipmentFromViro(target, eq);
         Update();
     }
-    
+    /**
+     * Egyik viró a másiktól resource-t lop
+     * @param target akitől lopni fog
+     */
     public void StealResource(Virologist target)
     {
         if(moved)
@@ -254,7 +276,11 @@ public class ViewController
         activeViro.StealResourceFromViro(target);
         Update();
     }
-    
+
+    /**
+     * Használ egy eszközt egy másik virón
+     * @param target a mit sem sejtő célpont
+     */
     public void UseEquipment(Virologist target)
     {
         if(moved)
@@ -267,7 +293,11 @@ public class ViewController
         activeViro.UseEquipment(usee, target);
         Update();
     }
-    
+
+    /**
+     * Kidobja a kiválasztott eszközt
+     * @param e a kiválasztott eszköz
+     */
     public void DropEquipment(Equipment e)
     {
         if(moved)
@@ -319,7 +349,10 @@ public class ViewController
             usee = null;
         Update();
     }
-    
+
+    /**
+     * Ezzel fejezi be az activeViro a körét
+     */
     public void EndTurn()
     {
         if(currentfield != activeViro.GetField())
