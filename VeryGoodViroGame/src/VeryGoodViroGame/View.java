@@ -254,6 +254,11 @@ public class View
         }
     }
     
+    /**
+     * Kirajzolja a pályát a Virológusokkal együtt
+     * @param current
+     * @param neighbours
+     */
     public void DrawMap(Field current, java.util.List<Field> neighbours)
     {
         BufferedImage cur = GetImage(current);
